@@ -1,0 +1,16 @@
+<svg width="1440" height="3" viewBox="0 0 1440 3" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Bitmap</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-632 5187)">
+<g id="Bitmap">
+<use xlink:href="#path0_fill" fill="url(#pattern0)" transform="translate(632 -5187)"/>
+</g>
+</g>
+<defs>
+<pattern id="pattern0" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="matrix(0.0025 0 0 0.333333 0 0)"/>
+</pattern>
+<path id="path0_fill" d="M 0 0L 1440 0L 1440 3L 0 3L 0 0Z"/>
+<image id="image0" width="400" height="3" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAADCAIAAAAyWM7CAAAAAXNSR0IArs4c6QAAAEVJREFUSA1jbI64wTCSwHZziZHkXYYbyldGlH9vf0gYUf79NN9uRPmXaUT5dtSzoyEwGgJDOgRGC6whHX2jjh8NgZEVAgCxdQiI4B7CJQAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>
