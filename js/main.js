@@ -58,9 +58,9 @@ $(function() {
 	});
 
 	//delayed youtube video loading
-    setTimeout(function() { 
-        $('iframe.delayed').attr('src', $('iframe.delayed').attr('data-src')); 
-    }, 500);
+    // setTimeout(function() { 
+    //     $('iframe.delayed').attr('src', $('iframe.delayed').attr('data-src')); 
+    // }, 500);
 
     //anchor 
     $('.nav__main-menu a').click(function(event) {
@@ -81,12 +81,20 @@ $(function() {
     });
 
     //videos slider
-    // $('.faq-section__videos').slick({
-    // 	arrows: false,
-    // 	swipeToSlide: true
-    // });
-    $('.about-section .about-section__video iframe').height($('.about-section .about-section__video iframe').width()*0.56);
+    if($(window).width() < 768) {
+	    $('.faq-section__videos').slick({
+	    	arrows: false,
+	    	swipeToSlide: true,
+	    	variableWidth: true
+	    });
+    }
+   $('.faq-section .faq-section__videos li span').click(function(event){
+   	console.log(11);
+   })
+    $('.about-section .about-section__video iframe,.faq-section .faq-section__videos li iframe').height($('.about-section .about-section__video iframe').width()*0.56);
 
+
+    //mobile illustartion slider
     $('.illustrations-mobile__list').slick({
     	arrows: false,
     	swipeToSlide: true,
