@@ -167,7 +167,7 @@ a.btn, .btn {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 13;
+  z-index: 31;
   transition: padding 0.2s; }
   .page-header .header-logo img {
     transition: 0.2s;
@@ -220,9 +220,24 @@ a.btn, .btn {
 
 .welcome-section {
   padding: 70px 0 50px;
-  background: #24D5A6 url(../img/main_section_phone.png) no-repeat 72% bottom;
   color: #FFFFFF;
-  margin: 111px 0 0; }
+  margin: 111px 0 0;
+  background: #24D5A6; }
+  .welcome-section::before {
+    content: '';
+    width: 40%;
+    height: 89%;
+    position: absolute;
+    bottom: 0;
+    right: 17%;
+    background: url(../img/main_section_phone.png) no-repeat 72% bottom;
+    transition: 0.7s;
+    transform: scale(0.5);
+    opacity: 0;
+    transform-origin: center bottom; }
+  .welcome-section.ready::before {
+    transform: scale(1);
+    opacity: 1; }
   .welcome-section .welcome-section__content {
     max-width: 50%; }
     .welcome-section .welcome-section__content .welcome-section__header {
