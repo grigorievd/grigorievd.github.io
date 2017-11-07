@@ -116,16 +116,17 @@ a.btn, .btn {
 	
 	&::before {
 		content:'';
-		width: 40%;
+		width: 606px;
     height: 89%;
 		position: absolute;
 		bottom:0;
-		right:17%;
+		right: calc((100% - 1000px) / 2);
 	   background: url(../img/main_section_phone.png) no-repeat 72% bottom;
 		transition: 0.7s;
 		transform: scale(0.5);
 		opacity: 0;
 		transform-origin: center bottom;
+	   background-size: 100% auto;
 	}
 	
 	&.ready::before {
@@ -345,6 +346,16 @@ a.btn, .btn {
 .tips-section {
 	background: #F0F5FC;
 	padding: 70px 0px;
+	
+	.wrap {
+		width: 100%;
+		overflow: hidden;
+		
+		.two-columns {
+			width: 93%;
+			margin: 0 auto;
+		}
+	}
 	
 	&.with-arrow-down::after {
 		border-top-color: #F0F5FC;

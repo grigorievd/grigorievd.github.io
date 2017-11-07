@@ -93,7 +93,7 @@ $(function() {
     });
 
     //videos slider
-    if($(window).width() < 768) {
+    if($(window).width() < 1024) {
 	    $('.faq-section__videos').slick({
 	    	arrows: false,
 	    	swipeToSlide: true,
