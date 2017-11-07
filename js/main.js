@@ -86,5 +86,12 @@ $(function() {
     // 	swipeToSlide: true
     // });
     $('.about-section .about-section__video iframe').height($('.about-section .about-section__video iframe').width()*0.56);
+
+    $('.illustrations-mobile__list').slick({
+    	arrows: false,
+    	swipeToSlide: true,
+    	centerMode: true,
+    	variableWidth: true
+    });
 });
     
