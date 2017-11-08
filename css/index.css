@@ -299,7 +299,8 @@ a.btn, .btn {
       align-content: center;
       justify-content: center; }
       .scores-section .scores-section__scores-list li .scores-list-item__img {
-        margin: 0 0 40px; }
+        margin: 0 0 40px;
+        align-self: center; }
       .scores-section .scores-section__scores-list li .scores-list-item__title {
         font-size: 18px;
         color: #343A5A;
@@ -387,7 +388,7 @@ a.btn, .btn {
     width: 100%;
     overflow: hidden; }
     .tips-section .wrap .two-columns {
-      width: 93%;
+      width: 1005px;
       margin: 0 auto; }
   .tips-section.with-arrow-down::after {
     border-top-color: #F0F5FC; }
@@ -672,6 +673,8 @@ a.footer__links__link {
 
   .tips-section {
     overflow: hidden; }
+    .tips-section .wrap .two-columns {
+      width: 93%; }
     .tips-section .tips-section__tips-illustartions .tips-illustartions__title {
       font-size: 15px;
       margin-bottom: 5px; }

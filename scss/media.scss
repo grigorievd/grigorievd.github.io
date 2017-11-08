@@ -135,6 +135,12 @@
 	.tips-section {
 		overflow: hidden;
 		
+		.wrap {
+			.two-columns {
+				width: 93%;
+			}
+		}
+		
 		.tips-section__tips-illustartions {
 			.tips-illustartions__title {
 				font-size: 15px;
