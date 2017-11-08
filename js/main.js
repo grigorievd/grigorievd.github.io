@@ -1,27 +1,64 @@
 $(function() {
-	// function noscroll() {
-	//   window.scrollTo( 0, scrollTopAmount );
-	// }
+	function noscroll() {
+	  window.scrollTo( 0, scrollTopAmount );
+	}
 
-	// var bool = false;
-	// var counter = 0;
+	var bool = false;
+	var flag = false;
+	var counter = 0;
+	var stucked = false;
 
 	$('.welcome-section').addClass('ready');
 
 	$('.scores-section__dots-nav li').click(function(event) {
 		$('.scores-section__dots-nav li').removeClass('active');
 		$(this).addClass('active');
-		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + $(this).index()*$('.col.scroll-box').height() + 'px, 0)'})
+		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + $(this).index()*$('.col.scroll-box').height() + 'px, 0)'});
 	});
-	
+
+	var isFirefox = (/Firefox/i.test(navigator.userAgent));
+	var mousewheelevt = isFirefox ? "DOMMouseScroll" : "mousewheel";
+
+	 $('body').on(mousewheelevt, function(e){
+	 	var delta = isFirefox ? (e.originalEvent.detail < 0) : (e.originalEvent.wheelDelta > 0);
+
+        if(delta) {
+        	console.log('up');
+            if(!flag && (counter > 0) && stucked) {
+        		flag = true;
+        		$('.scores-section__dots-nav li').removeClass('active');
+        		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + --counter*$('.col.scroll-box').height() + 'px, 0)'});
+				$('.scores-section__dots-nav li').eq(counter).addClass('active');
+        		setTimeout(function() {
+        			flag = false;
+        		},500)
+        	} else if(counter <= 0) {
+        		$(window).disablescroll("undo");
+        		stucked = false;
+        	}
+        }
+        else { 
+        	console.log('down');
+        	if(!flag && (counter < 4) && stucked) {
+        		flag = true;
+        		$('.scores-section__dots-nav li').removeClass('active');
+				$(this).addClass('active');
+        		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + ++counter*$('.col.scroll-box').height() + 'px, 0)'});
+        		$('.scores-section__dots-nav li').eq(counter).addClass('active');
+        		setTimeout(function() {
+        			flag = false;
+        		},500)
+        	}
+        }
+    });
 
 	// //scores scroll
-	// var headerHeight = $('.page-header').outerHeight();
-	// var windowHeight = $(window).height();
-	// var scoresOffsetTop = $("#scores-section").offset().top;
-	// var scoresHeight = $("#scores-section").outerHeight();
-	// var scrollTopAmount = scoresOffsetTop - ((windowHeight - scoresHeight) / 2) - 75/2;
-	// console.log(scrollTopAmount);
+	var headerHeight = $('.page-header').outerHeight();
+	var windowHeight = $(window).height();
+	var scoresOffsetTop = $("#scores-section").offset().top;
+	var scoresHeight = $("#scores-section").outerHeight();
+	var scrollTopAmount = scoresOffsetTop - ((windowHeight - scoresHeight) / 2) - 75/2;
+	console.log(scrollTopAmount);
 
 	//fixed header
 	$(window).scroll(function(event) {
@@ -37,24 +74,26 @@ $(function() {
 			$('.mobile-join-link').removeClass('active');
 		}
 
-		// if($(window).scrollTop() > scrollTopAmount) {
-		// 	// $(window).disablescroll({
-		// 	//     handleScrollbar: false
-		// 	// });
+		if($(window).scrollTop() > scrollTopAmount) {
+			$(window).disablescroll({
+			    handleScrollbar: true
+			});
 
-		// 	// window.onscroll = function () { console.log(22) };
-		// 	// console.log($(window).scrollTop());
+			stucked = true;
 
-		// 	// add listener to disable scroll
-		// 	if(!bool) {
-		// 		window.addEventListener('scroll', noscroll);
-		// 		bool = true;
-		// 	}
-		// }
+			// window.onscroll = function () { console.log(22) };
+			// console.log($(window).scrollTop());
 
-		// if(bool) {
+			// add listener to disable scroll
+			// if(!bool) {
+			// 	window.addEventListener('scroll', noscroll);
+			// 	bool = true;
+			// }
+		}
 
-		// }
+		if(bool) {
+
+		}
 
 		//console.log(11);
 	});
