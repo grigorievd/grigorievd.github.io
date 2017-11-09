@@ -124,9 +124,6 @@ a.btn, .btn {
 		bottom:0;
 		right: calc((100% - 1000px) / 2);
 	   background: url(../img/main_section_phone.svg) no-repeat 72% bottom;
-		transition: 0.7s;
-		transform: scale(0.5);
-		opacity: 0;
 		transform-origin: center bottom;
 	   background-size: 100% auto;
 	}
@@ -321,11 +318,11 @@ a.btn, .btn {
 	
 	.score-quote__thumb-up {
 		position: absolute;
-		width: 364px;
+		width: 23%;
 		height: 295px;
 		bottom: 0;
-		right:0;
-		background: url("../img/Thumbs up arm.svg") no-repeat bottom right;
+		right: 0%;
+		background: url("../img/Thumbs up arm.png") no-repeat bottom left / auto 100%;
 	}
 }
 
@@ -341,6 +338,7 @@ a.btn, .btn {
 		height: 750px;
 		background: url(../img/hand_base.png) no-repeat right bottom;
 		position: relative;
+		transform: translateX(15%);
 		
 		.tools-section__phone-illustration__screen {
 			position: absolute;

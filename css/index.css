@@ -232,9 +232,6 @@ a.btn, .btn {
     bottom: 0;
     right: calc((100% - 1000px) / 2);
     background: url(../img/main_section_phone.svg) no-repeat 72% bottom;
-    transition: 0.7s;
-    transform: scale(0.5);
-    opacity: 0;
     transform-origin: center bottom;
     background-size: 100% auto; }
   .welcome-section.ready::before {
@@ -361,11 +358,11 @@ a.btn, .btn {
       padding: 0 0 0 20px; }
   .scores-quote .score-quote__thumb-up {
     position: absolute;
-    width: 364px;
+    width: 23%;
     height: 295px;
     bottom: 0;
-    right: 0;
-    background: url("../img/Thumbs up arm.svg") no-repeat bottom right; }
+    right: 0%;
+    background: url("../img/Thumbs up arm.png") no-repeat bottom left/auto 100%; }
 
 .tools-section {
   z-index: 5; }
@@ -375,7 +372,8 @@ a.btn, .btn {
     width: 489px;
     height: 750px;
     background: url(../img/hand_base.png) no-repeat right bottom;
-    position: relative; }
+    position: relative;
+    transform: translateX(15%); }
     .tools-section .tools-section__phone-illustration .tools-section__phone-illustration__screen {
       position: absolute;
       width: 232px;
@@ -608,6 +606,24 @@ a.footer__links__link {
   .footer-top-top .wrap {
     flex-wrap: wrap; }
 
+@media screen and (min-width: 1600px) {
+  .scores-quote .score-quote__thumb-up {
+    right: calc((100% - 1600px)/2);
+    width: 410px; } }
+@media screen and (max-width: 1170px) {
+  .wrap {
+    width: 95%; }
+
+  .scores-quote blockquote {
+    max-width: 83%; }
+  .scores-quote .score-quote__thumb-up {
+    height: 240px;
+    bottom: auto;
+    top: -20px;
+    width: 180px; }
+
+  .tips-section .wrap .two-columns {
+    width: 95%; } }
 @media screen and (max-width: 1023px) {
   .wrap {
     width: 93%; }
@@ -666,8 +682,10 @@ a.footer__links__link {
       font-size: 18px; }
     .scores-quote .score-quote__thumb-up {
       background-size: 100% auto;
-      width: 225px;
-      background-position: 90px bottom; }
+      width: 245px;
+      background-position: 110px bottom;
+      top: auto;
+      bottom: 5px; }
 
   .tools-section .section-header .section-header__text {
     max-width: 300px; }
@@ -746,7 +764,7 @@ a.footer__links__link {
     color: #fff !important;
     text-align: center;
     line-height: 56px !important;
-    box-shadow: 1px 1px 5px 1px gray;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     position: fixed;
     bottom: 20px;
     right: 20px;

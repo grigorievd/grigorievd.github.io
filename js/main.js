@@ -133,11 +133,16 @@ $(function() {
 
     //videos slider
     if($(window).width() < 1024) {
-	    $('.faq-section__videos').slick({
+	    /*$('.faq-section__videos').slick({
 	    	arrows: false,
 	    	swipeToSlide: true,
 	    	variableWidth: true,
     		infinite: false
+	    });*/
+
+	    $('.faq-section__videos.owl-carousel').owlCarousel({
+	    	autoWidth: true,
+	    	smartSpeed: 500
 	    });
     }
     $('.about-section .about-section__video iframe').height($('.about-section .about-section__video iframe').width()*0.56);

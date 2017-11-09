@@ -1,3 +1,35 @@
+@media screen and (min-width: 1600px) {
+	.scores-quote  {
+		.score-quote__thumb-up {
+			right:calc((100% - 1600px)/2);
+			width: 410px;
+		}
+	}
+}
+
+@media screen and (max-width: 1170px) {
+	.wrap {
+		width: 95%;
+	}
+	
+	.scores-quote  {
+		blockquote {
+			max-width: 83%;
+		}
+		
+		.score-quote__thumb-up {
+			height: 240px;
+			bottom: auto;
+			top:-20px;
+			width: 180px;
+		}
+	}
+	
+	.tips-section .wrap .two-columns {
+		width: 95%
+	}
+}
+
 @media screen and (max-width: 1023px) {
 	.wrap {
 		width: 93%;
@@ -99,8 +131,10 @@
 		
 		.score-quote__thumb-up {
 			background-size: 100% auto;
-			width: 225px;
-			background-position: 90px bottom;
+			width: 245px;
+			background-position: 110px bottom;
+			top: auto;
+			bottom: 5px;
 		}
 	}
 	
@@ -234,7 +268,7 @@
 		color:#fff !important;
 		text-align: center;
 		line-height: 56px !important;
-		box-shadow: 1px 1px 5px 1px gray;
+		box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
 		position: fixed;
 		bottom: 20px;
 		right: 20px;
