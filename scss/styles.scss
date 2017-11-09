@@ -19,7 +19,7 @@ a.btn, .btn {
 }
 
 .page-header {
-	background: #283249 url(../img/Bitmap.svg) no-repeat top center / 100% 3px;
+	background: #283249 url(../img/Bitmap.png) no-repeat center 0 / 100% 3px;
 		padding: 28px 0 23px;
 	position: fixed;
 	width: 100%;
@@ -373,6 +373,18 @@ a.btn, .btn {
 	background: #F0F5FC;
 	padding: 70px 0px;
 	
+	&.in-view {
+		.tips-illustartions__title {
+			transform: translateX(0) !important;
+			opacity:0.5 !important;
+		}
+		
+		.tips-illustartions__img {
+			transform: translateX(0) !important;
+			opacity:1 !important;
+		}
+	}
+	
 	.wrap {
 		width: 100%;
 		overflow: hidden;
@@ -404,6 +416,15 @@ a.btn, .btn {
 			color: #24304C;
 			opacity: 0.5;
 			margin: 0 0 18px 7px;
+			transform: translateX(140px);
+			opacity: 0;
+			transition: 0.7s 0.1s;
+		}
+		
+		.tips-illustartions__img {
+			transform: translateX(140px);
+			opacity: 0;
+			transition: 0.7s 0.2s;
 		}
 	}
 }

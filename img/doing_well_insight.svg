@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="384px" height="136px" viewBox="0 0 384 136" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47 (45396) - http://www.bohemiancoding.com/sketch -->
+    <title>doing_well_insight</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="370" height="117.101791" rx="6"></rect>
+        <filter x="-5.4%" y="-12.8%" width="110.8%" height="134.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.128028759 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0859091938 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-7" transform="translate(-831.000000, -2353.000000)">
+            <g id="doing_well_insight" transform="translate(838.000000, 2360.000000)">
+                <g id="Group-3">
+                    <g id="Rectangle-4">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Happy-face" transform="translate(19.886551, 16.399622)">
+                        <circle id="Oval-2" stroke="#8CC340" stroke-width="2" cx="15.5" cy="15.5" r="14.3076923"></circle>
+                        <path d="M7.15384615,25.6173508 C7.94315385,23.20412 10.2133077,21.4609662 12.8912308,21.4609662 C15.6251923,21.4609662 17.9346923,23.2792354 18.6763077,25.7735431" id="Page-1" stroke="#8CC340" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="translate(14.107862, 22.425233) rotate(-180.000000) translate(-14.107862, -22.425233) "></path>
+                        <circle id="Oval-4" fill="#8CC340" fill-rule="evenodd" cx="10.1346154" cy="11.3269231" r="2.98076923"></circle>
+                        <circle id="Oval-4-Copy" fill="#8CC340" fill-rule="evenodd" cx="20.8653846" cy="11.3269231" r="2.98076923"></circle>
+                    </g>
+                    <rect id="Rectangle-8" fill-opacity="0.2" fill="#24304C" x="22.0895522" y="63.3853731" width="325.820896" height="10.7432836"></rect>
+                    <rect id="Rectangle-8" fill-opacity="0.4" fill="#24304C" x="64.0597015" y="23.6352239" width="184.447761" height="12.8919403"></rect>
+                    <rect id="Rectangle-8" fill-opacity="0.2" fill="#24304C" x="22.0895522" y="89.1692537" width="292.686567" height="10.7432836"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

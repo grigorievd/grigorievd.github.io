@@ -162,7 +162,7 @@ a.btn, .btn {
   padding: 13px 30px; }
 
 .page-header {
-  background: #283249 url(../img/Bitmap.svg) no-repeat top center/100% 3px;
+  background: #283249 url(../img/Bitmap.png) no-repeat center 0/100% 3px;
   padding: 28px 0 23px;
   position: fixed;
   width: 100%;
@@ -399,6 +399,12 @@ a.btn, .btn {
 .tips-section {
   background: #F0F5FC;
   padding: 70px 0px; }
+  .tips-section.in-view .tips-illustartions__title {
+    transform: translateX(0) !important;
+    opacity: 0.5 !important; }
+  .tips-section.in-view .tips-illustartions__img {
+    transform: translateX(0) !important;
+    opacity: 1 !important; }
   .tips-section .wrap {
     width: 100%;
     overflow: hidden; }
@@ -418,7 +424,14 @@ a.btn, .btn {
       font: 500 20.4px museo_slab;
       color: #24304C;
       opacity: 0.5;
-      margin: 0 0 18px 7px; }
+      margin: 0 0 18px 7px;
+      transform: translateX(140px);
+      opacity: 0;
+      transition: 0.7s 0.1s; }
+    .tips-section .tips-section__tips-illustartions .tips-illustartions__img {
+      transform: translateX(140px);
+      opacity: 0;
+      transition: 0.7s 0.2s; }
 
 .about-section {
   padding: 55px 0 32px; }
