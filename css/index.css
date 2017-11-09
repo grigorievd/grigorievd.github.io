@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*----------------------------------------------------------------------------------*/
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -341,11 +342,21 @@ a.btn, .btn {
       font-size: 35px;
       line-height: 1.15;
       font-weight: 500;
-      margin: 0 0 25px; }
+      margin: 0 0 25px;
+      overflow: hidden;
+      padding: 0 0 0 20px;
+      position: relative; }
+      .scores-quote blockquote p::before {
+        content: '“ ';
+        position: absolute;
+        left: 0; }
+      .scores-quote blockquote p::after {
+        content: ' ”'; }
     .scores-quote blockquote cite {
       font-size: 24px;
       line-height: 1;
-      font-style: normal; }
+      font-style: normal;
+      padding: 0 0 0 20px; }
   .scores-quote .score-quote__thumb-up {
     position: absolute;
     width: 364px;
@@ -907,10 +918,10 @@ a.footer__links__link {
       .scores-quote blockquote p {
         font-size: 35px;
         line-height: 40px;
-        padding: 0 2%; }
+        padding: 0 10% 0 20px; }
       .scores-quote blockquote cite {
         font: 500 18px "Quicksand";
-        padding: 0 0 0 3%;
+        padding: 0 0 0 20px;
         display: block; }
     .scores-quote .score-quote__thumb-up {
       display: none; }

@@ -150,7 +150,8 @@ $(function() {
     	swipeToSlide: true,
     	centerMode: true,
     	variableWidth: true,
-    	infinite: false
+    	infinite: false,
+    	useTransform: false
     });
 
     //MSE abbreviation
