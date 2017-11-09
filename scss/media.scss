@@ -28,6 +28,18 @@
 	.tips-section .wrap .two-columns {
 		width: 95%
 	}
+	
+	.tools-section {
+		.section-header {
+			.section-header__text {
+				max-width: 400px;
+			}
+		}
+		
+		.tools-section__phone-illustration {
+			transform: translateX(0);
+		}
+	}
 }
 
 @media screen and (max-width: 1023px) {
