@@ -152,11 +152,15 @@ $(function() {
     	variableWidth: true,
     	infinite: false
     });*/
-    $('.illustrations-mobile__list').flickity({
+    /*$('.illustrations-mobile__list').flickity({
     	prevNextButtons: false,
 		pageDots: false,
 		selectedAttraction: 0.01,
 		friction: 0.15
+    });*/
+    $('.illustrations-mobile__list.owl-carousel').owlCarousel({
+    	center: true,
+    	autoWidth: true
     });
 
     //MSE abbreviation
