@@ -145,13 +145,16 @@ $(function() {
 
 
     //mobile illustartion slider
-    $('.illustrations-mobile__list').slick({
+    /*$('.illustrations-mobile__list').slick({
     	arrows: false,
     	swipeToSlide: true,
     	centerMode: true,
     	variableWidth: true,
-    	infinite: false,
-    	useTransform: false
+    	infinite: false
+    });*/
+    $('.illustrations-mobile__list').flickity({
+    	prevNextButtons: false,
+		pageDots: false
     });
 
     //MSE abbreviation
