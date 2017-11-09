@@ -160,7 +160,8 @@ $(function() {
     });*/
     $('.illustrations-mobile__list.owl-carousel').owlCarousel({
     	center: true,
-    	autoWidth: true
+    	autoWidth: true,
+    	smartSpeed: 500
     });
 
     //MSE abbreviation
