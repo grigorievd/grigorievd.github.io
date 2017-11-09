@@ -154,7 +154,9 @@ $(function() {
     });*/
     $('.illustrations-mobile__list').flickity({
     	prevNextButtons: false,
-		pageDots: false
+		pageDots: false,
+		selectedAttraction: 0.2,
+		friction: 0.8
     });
 
     //MSE abbreviation
