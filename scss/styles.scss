@@ -17,7 +17,7 @@ a.btn, .btn {
 }
 
 .page-header {
-	background: #283249 url(../img/bitmap.svg) no-repeat top center / 100% 3px;
+	background: #283249 url(../img/Bitmap.svg) no-repeat top center / 100% 3px;
 		padding: 28px 0 23px;
 	position: fixed;
 	width: 100%;
@@ -235,6 +235,12 @@ a.btn, .btn {
 				color: #343A5A;
 				margin: 0 0 20px;
 				width: 100%;
+				
+				.scores-list-item__title__MSE {
+					color:#C30016;
+					font-family: museo_slab;
+					font-weight: 500;
+				}
 			}
 			
 			.scores-list-item__text {

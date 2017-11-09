@@ -161,7 +161,7 @@ a.btn, .btn {
   padding: 13px 30px; }
 
 .page-header {
-  background: #283249 url(../img/bitmap.svg) no-repeat top center/100% 3px;
+  background: #283249 url(../img/Bitmap.svg) no-repeat top center/100% 3px;
   padding: 28px 0 23px;
   position: fixed;
   width: 100%;
@@ -306,6 +306,10 @@ a.btn, .btn {
         color: #343A5A;
         margin: 0 0 20px;
         width: 100%; }
+        .scores-section .scores-section__scores-list li .scores-list-item__title .scores-list-item__title__MSE {
+          color: #C30016;
+          font-family: museo_slab;
+          font-weight: 500; }
       .scores-section .scores-section__scores-list li .scores-list-item__text {
         color: #39393A; }
   .scores-section .scores-section__dots-nav {
@@ -652,6 +656,8 @@ a.footer__links__link {
       width: 225px;
       background-position: 90px bottom; }
 
+  .tools-section .section-header .section-header__text {
+    max-width: 300px; }
   .tools-section .tools-section__phone-illustration {
     background: none;
     width: 330px;
@@ -746,7 +752,7 @@ a.footer__links__link {
   section .section-header {
     text-align: center;
     padding: 0 3%;
-    margin: 0 0 40px; }
+    margin: 0 auto 40px; }
     section .section-header .section-header__title {
       font-size: 24px; }
     section .section-header .section-header__text {
@@ -851,6 +857,7 @@ a.footer__links__link {
       width: 100%; }
     .welcome-section .welcome-section__content {
       max-width: 100%;
+      width: 100%;
       text-align: center; }
       .welcome-section .welcome-section__content .welcome-section__header {
         font-size: 28px;
@@ -886,6 +893,8 @@ a.footer__links__link {
           max-width: 50%; }
         .scores-section .scores-section__scores-list li .scores-list-item__title {
           font-size: 18px; }
+          .scores-section .scores-section__scores-list li .scores-list-item__title .scores-list-item__title__MSE {
+            font-weight: 700; }
         .scores-section .scores-section__scores-list li .scores-list-item__text {
           font-size: 16px; }
     .scores-section .scores-section__dots-nav {
@@ -912,6 +921,8 @@ a.footer__links__link {
       width: 100%; }
     .tools-section .section-header {
       width: 93%; }
+      .tools-section .section-header .section-header__text {
+        margin: 0 auto; }
     .tools-section .tools-section__illustrations-mobile {
       overflow: hidden;
       width: 100%; }
@@ -932,7 +943,8 @@ a.footer__links__link {
         .tools-section .tools-section__illustrations-mobile .illustrations-mobile__list li h3 {
           font-weight: 400;
           line-height: 22px;
-          margin: 0 0 20px; }
+          margin: 0 0 20px;
+          font-size: 16px; }
         .tools-section .tools-section__illustrations-mobile .illustrations-mobile__list li img {
           max-width: 100%;
           height: auto;

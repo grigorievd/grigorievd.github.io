@@ -20,36 +20,36 @@ $(function() {
 	var mousewheelevt = isFirefox ? "DOMMouseScroll" : "mousewheel";
 
 	 $('body').on(mousewheelevt, function(e){
-	 	var delta = isFirefox ? (e.originalEvent.detail < 0) : (e.originalEvent.wheelDelta > 0);
+	 	// var delta = isFirefox ? (e.originalEvent.detail < 0) : (e.originalEvent.wheelDelta > 0);
 
-        if(delta) {
-        	console.log('up');
-            if(!flag && (counter > 0) && stucked) {
-        		flag = true;
-        		$('.scores-section__dots-nav li').removeClass('active');
-        		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + --counter*$('.col.scroll-box').height() + 'px, 0)'});
-				$('.scores-section__dots-nav li').eq(counter).addClass('active');
-        		setTimeout(function() {
-        			flag = false;
-        		},500)
-        	} else if(counter <= 0) {
-        		$(window).disablescroll("undo");
-        		stucked = false;
-        	}
-        }
-        else { 
-        	console.log('down');
-        	if(!flag && (counter < 4) && stucked) {
-        		flag = true;
-        		$('.scores-section__dots-nav li').removeClass('active');
-				$(this).addClass('active');
-        		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + ++counter*$('.col.scroll-box').height() + 'px, 0)'});
-        		$('.scores-section__dots-nav li').eq(counter).addClass('active');
-        		setTimeout(function() {
-        			flag = false;
-        		},500)
-        	}
-        }
+   //      if(delta) {
+   //      	console.log('up');
+   //          if(!flag && (counter > 0) && stucked) {
+   //      		flag = true;
+   //      		$('.scores-section__dots-nav li').removeClass('active');
+   //      		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + --counter*$('.col.scroll-box').height() + 'px, 0)'});
+			// 	$('.scores-section__dots-nav li').eq(counter).addClass('active');
+   //      		setTimeout(function() {
+   //      			flag = false;
+   //      		},500)
+   //      	} else if(counter <= 0) {
+   //      		$(window).disablescroll("undo");
+   //      		stucked = false;
+   //      	}
+   //      }
+   //      else { 
+   //      	console.log('down');
+   //      	if(!flag && (counter < 4) && stucked) {
+   //      		flag = true;
+   //      		$('.scores-section__dots-nav li').removeClass('active');
+			// 	$(this).addClass('active');
+   //      		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + ++counter*$('.col.scroll-box').height() + 'px, 0)'});
+   //      		$('.scores-section__dots-nav li').eq(counter).addClass('active');
+   //      		setTimeout(function() {
+   //      			flag = false;
+   //      		},500)
+   //      	}
+   //      }
     });
 
 	// //scores scroll
@@ -75,11 +75,11 @@ $(function() {
 		}
 
 		if($(window).scrollTop() > scrollTopAmount) {
-			$(window).disablescroll({
+			/*$(window).disablescroll({
 			    handleScrollbar: true
 			});
 
-			stucked = true;
+			stucked = true;*/
 
 			// window.onscroll = function () { console.log(22) };
 			// console.log($(window).scrollTop());
@@ -136,7 +136,8 @@ $(function() {
 	    $('.faq-section__videos').slick({
 	    	arrows: false,
 	    	swipeToSlide: true,
-	    	variableWidth: true
+	    	variableWidth: true,
+    		infinite: false
 	    });
     }
     $('.about-section .about-section__video iframe').height($('.about-section .about-section__video iframe').width()*0.56);
@@ -148,7 +149,11 @@ $(function() {
     	arrows: false,
     	swipeToSlide: true,
     	centerMode: true,
-    	variableWidth: true
+    	variableWidth: true,
+    	infinite: false
     });
+
+    //MSE abbreviation
+    if($(window).width() < 768) $('.scores-list-item__title__MSE').text('MSE');
 });
     
