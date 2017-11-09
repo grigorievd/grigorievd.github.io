@@ -231,7 +231,7 @@ a.btn, .btn {
     position: absolute;
     bottom: 0;
     right: calc((100% - 1000px) / 2);
-    background: url(../img/main_section_phone.png) no-repeat 72% bottom;
+    background: url(../img/main_section_phone.svg) no-repeat 72% bottom;
     transition: 0.7s;
     transform: scale(0.5);
     opacity: 0;
@@ -299,6 +299,8 @@ a.btn, .btn {
       flex-wrap: wrap;
       align-content: center;
       justify-content: center; }
+      .scores-section .scores-section__scores-list li:nth-child(3) .scores-list-item__img {
+        max-width: 280px; }
       .scores-section .scores-section__scores-list li .scores-list-item__img {
         margin: 0 0 40px;
         align-self: center; }
@@ -363,7 +365,7 @@ a.btn, .btn {
     height: 295px;
     bottom: 0;
     right: 0;
-    background: url("../img/Thumbs up arm.png") no-repeat bottom right; }
+    background: url("../img/Thumbs up arm.svg") no-repeat bottom right; }
 
 .tools-section {
   z-index: 5; }
@@ -386,7 +388,7 @@ a.btn, .btn {
       width: 433px;
       height: 706px;
       bottom: 43px;
-      background: url(../img/Phone.png) no-repeat center center; }
+      background: url(../img/Phone.svg) no-repeat center center; }
     .tools-section .tools-section__phone-illustration .tools-section__phone-illustration__finger {
       position: absolute;
       z-index: 3;
@@ -877,7 +879,7 @@ a.footer__links__link {
         position: relative;
         width: 100%;
         padding: 37% 0 0;
-        background: url(../img/hands_card_mobile.png) no-repeat center top/100% auto;
+        background: url(../img/hands_card_mobile.svg) no-repeat center top/100% auto;
         margin: 0 0 20px; }
       .welcome-section .welcome-section__content .welcome-section__text {
         font-size: 18px; }
