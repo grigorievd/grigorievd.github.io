@@ -155,8 +155,8 @@ $(function() {
     $('.illustrations-mobile__list').flickity({
     	prevNextButtons: false,
 		pageDots: false,
-		selectedAttraction: 0.2,
-		friction: 0.8
+		selectedAttraction: 0.01,
+		friction: 0.15
     });
 
     //MSE abbreviation
