@@ -70,7 +70,7 @@ $(function() {
 			//console.log(e.originalEvent.detail);
         }
 
-        $('.scroll-direction').text(delta);
+        $('.scroll-direction').text(y);
 
         if($window.width() >= 768) {
 
