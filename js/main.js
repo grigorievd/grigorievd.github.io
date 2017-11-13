@@ -44,21 +44,33 @@ $(function() {
     var $window = $(window);
     var lastY = $window.scrollTop();
 
-    if($window.width() >= 768 && ($window.scrollTop() > (scrollTopAmount+scoresHeight/2)) ) {
+    /*if($window.width() >= 768 && ($window.scrollTop() > (scrollTopAmount+scoresHeight/2)) ) {
     	counter = 5;
     	$('.scores-section__dots-nav li').removeClass('active');
 		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + --counter*$('.col.scroll-box').height() + 'px, 0)'});
 		$('.scores-section__dots-nav li').eq(counter).addClass('active');
-    }
+    }*/
 
     $window.on('scroll touchmove mousewheel DOMMouseScroll', function(e){
-    	var delta = isFirefox ? (e.originalEvent.detail < 0) : (e.originalEvent.wheelDelta > 0);
+    	var delta;
+
+    	if(e.type == 'mousewheel') {
+    		delta = (e.originalEvent.wheelDelta > 0)
+    	} else if(e.type == 'DOMMouseScroll') {
+    		delta = (e.originalEvent.detail < 0)
+    	}
     	var scrollTop = Math.round($(window).scrollTop());
 
     	var currY = scrollTop;
         
         // determine current scroll direction
         y = (currY > lastY) ? 'down' : ((currY === lastY) ? 'none' : 'up');
+
+        if(e.type == 'touchmove') {
+			//console.log(e.originalEvent.detail);
+        }
+
+        $('.scroll-direction').text(delta);
 
         if($window.width() >= 768) {
 
@@ -105,6 +117,12 @@ $(function() {
 				return false;	
 			}
         }
+
+        //new scroller 
+       /* if (scrollTop >= scrollTopAmount) {
+        	disableScroll.on()
+        	$window.scrollTop(scrollTopAmount)
+        }*/
 
 		//sticky header
 		if($(window).scrollTop() > 50) {

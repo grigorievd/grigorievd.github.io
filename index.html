@@ -10,6 +10,17 @@
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/index.css">
+	<style>
+		.scroll-direction {
+			position: fixed;
+			top:40px;
+			padding: 10px;
+			background: black;
+			color: white;
+			left: 50%;
+			z-index: 1000;
+		}
+	</style>
 </head>
 <body>
 	<header class="page-header">
@@ -42,7 +53,7 @@
 				</h1>
 				<div class="desktop-hidden welcome-section__card-icon-mobile"></div>
 				<p class="welcome-section__text">
-					Access your credit score and more. <br> Improve your chances of acceptance. <br> Save money with the top products.
+					Access your credit score and more. <br> Improve your chances of acceptance. <br> Save money with the right products.
 				</p>
 				<a href="" class="btn welcome-section__join-btn">Join Credit Club</a>
 			
@@ -323,11 +334,14 @@
         </div>
     </div>
     <a class="desktop-hidden mobile-join-link" href="">Join</a>
+
+    <div class="scroll-direction">test</div>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" ></script>
 	<!-- <script type="text/javascript" src="js/slick.min.js"></script>
 	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
 	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/disable-scroll.min.js"></script>
 	<script src="js/jquery.disablescroll.min.js" ></script>
 	<script src="js/main.js"></script>
 </body>
