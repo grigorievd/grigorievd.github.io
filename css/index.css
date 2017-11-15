@@ -175,9 +175,9 @@ a.btn, .btn {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     width: 240px; }
-  .page-header.sticky {
+  .page-header.sticky, .page-header.sticky-important {
     padding: 20px 0 15px; }
-    .page-header.sticky .header-logo img {
+    .page-header.sticky .header-logo img, .page-header.sticky-important .header-logo img {
       width: 160px; }
   .page-header .wrap {
     display: -webkit-box;
@@ -681,6 +681,30 @@ a.footer__links__link {
   .footer-top-top .wrap {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
+
+.scores-section.fixed .wrap {
+  display: block !important; }
+.scores-section.fixed .section-header {
+  position: fixed;
+  z-index: 70;
+  left: 3%;
+  width: 40%;
+  top: 0 !important; }
+.scores-section.fixed .scores-section__dots-nav {
+  position: fixed !important;
+  top: 0 !important;
+  z-index: 70; }
+
+.scores-section__scores-list li:last-child {
+  margin-bottom: 0 !important; }
+
+.scores-section .two-columns {
+  display: block !important; }
+  .scores-section .two-columns .col.scroll-box {
+    float: right; }
+
+.col.scroll-box, .scores-section__scores-list {
+  height: auto !important; }
 
 @media screen and (min-width: 1600px) {
   .scores-quote .score-quote__thumb-up {

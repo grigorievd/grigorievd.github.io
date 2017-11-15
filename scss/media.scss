@@ -1,3 +1,41 @@
+.scores-section.fixed {
+	
+	.wrap {
+		display: block !important;
+	}
+
+	.section-header {
+		position: fixed;
+		z-index: 70;
+		left: 3%;
+    	width: 40%;
+    	top:0 !important;
+	}
+	.scores-section__dots-nav {
+		position: fixed !important;
+		top: 0 !important;
+		z-index: 70;
+	}
+}
+
+.scores-section__scores-list li:last-child {
+	margin-bottom: 0 !important;
+}
+
+
+.scores-section	.two-columns {
+		display: block !important;
+
+		.col.scroll-box {
+			float:right;
+		}
+	}
+
+
+.col.scroll-box,.scores-section__scores-list {
+	height: auto !important;
+}
+
 @media screen and (min-width: 1600px) {
 	.scores-quote  {
 		.score-quote__thumb-up {
