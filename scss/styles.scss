@@ -281,8 +281,11 @@ a.btn, .btn {
 		position: absolute;
 		left:50%;
 		top:50%;
+		margin: -62.5px 0 0 -6.5px;/*
 		-webkit-transform: translateX(-50%) translateY(-50%); 
-		        transform: translateX(-50%) translateY(-50%);
+		        transform: translateX(-50%) translateY(-50%);*/
+		-webkit-transform: translate3d(0, 0,0);
+		transform: translate3d(0, 0,0);	
 		
 		li {
 			width: 13px;
@@ -565,6 +568,9 @@ section {
 	}
 	
 	.section-header {
+
+    	-webkit-transform: translate3d(0,0,0);
+    	transform: translate3d(0,0,0);	
 		.section-header__title {
 			font: 34px museo_slab;
 			line-height: 1.2;
