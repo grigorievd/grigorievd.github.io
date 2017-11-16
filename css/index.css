@@ -763,7 +763,11 @@ a.footer__links__link {
       /*float:right;*/ }
 
   .col.scroll-box, .scores-section__scores-list {
-    height: auto !important; } }
+    height: auto !important; }
+
+  .col.scroll-box .scores-section__scores-list {
+    float: right;
+    margin-right: 5px !important; } }
 @media screen and (min-width: 1600px) {
   .scores-quote .score-quote__thumb-up {
     right: calc((100% - 1600px)/2);
