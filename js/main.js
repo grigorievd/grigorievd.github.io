@@ -1,10 +1,23 @@
 $(function() {
 
+    var $window = $(window),
+    	windowWidth = $window.width(),
+    	windowHeight = $window.height();
+
+	var isTouchDevice = (('ontouchstart' in window)
+	      || (navigator.MaxTouchPoints > 0)
+	      || (navigator.msMaxTouchPoints > 0)),
+		
+		isFirefox = (/Firefox/i.test(navigator.userAgent));
+
+	var $header = $('.page-header'),
+		$scoresSection = $("#scores-section"),
+		$scoresSectionNavItems = $('.scores-section__dots-nav li');
+
 	//check if in view
     var $animation_elements = $('.animation-element');
-    var $window = $(window);
     var check_if_in_view = function() {
-        var window_height = $window.height();
+        var window_height = windowHeight;
         var window_top_position = $window.scrollTop();
         var window_bottom_position = (window_top_position + window_height);
         $.each($animation_elements, function() {
@@ -28,51 +41,43 @@ $(function() {
 	var counter = -1;
 	var stucked = false;
 
-	$('.scores-section__dots-nav li').click(function(event) {
-		$('.scores-section__dots-nav li').removeClass('active');
-		$(this).addClass('active');
-		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + $(this).index()*$('.col.scroll-box').height() + 'px, 0)'});
+	$scoresSectionNavItems.click(function(event) {
+		moveScores($(this).index());
 	});
 
-	 var isTouchDevice = (('ontouchstart' in window)
-	      || (navigator.MaxTouchPoints > 0)
-	      || (navigator.msMaxTouchPoints > 0));
-
-
 	// //scores scroll
-	var headerHeight = $('.page-header').outerHeight();
-	var windowHeight = $(window).height();
-	var scoresOffsetTop = $("#scores-section").offset().top;
-	var scoresHeight = $("#scores-section").outerHeight();
+	var headerHeight = $header.outerHeight();
+	var scoresOffsetTop = $scoresSection.offset().top;
+	var scoresHeight = $scoresSection.outerHeight();
 	var scrollTopAmount = Math.round(scoresOffsetTop - ((windowHeight - scoresHeight) / 2) - 75/2);
-	console.log('scrollTopamount: ' + scrollTopAmount);
 
-	var isFirefox = (/Firefox/i.test(navigator.userAgent));
 	var mousewheelevt = isFirefox ? "DOMMouseScroll" : "mousewheel";
 
-    var delay = false;
-    var $window = $(window);
     var lastY = $window.scrollTop();
 
-    if($window.width() >= 1025 && ($window.scrollTop() > (scrollTopAmount+scoresHeight/2)) && !isTouchDevice ) {
+    function moveScores(counter) {
+    	$scoresSectionNavItems.removeClass('active');
+		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + counter*$('.col.scroll-box').height() + 'px, 0)'});
+		$scoresSectionNavItems.eq(counter).addClass('active');
+    }
+
+    if(windowWidth >= 1025 && ($window.scrollTop() > (scrollTopAmount+scoresHeight/2)) && !isTouchDevice ) {
     	counter = 5;
-    	$('.scores-section__dots-nav li').removeClass('active');
-		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + --counter*$('.col.scroll-box').height() + 'px, 0)'});
-		$('.scores-section__dots-nav li').eq(counter).addClass('active');
+    	moveScores(counter - 1);
     }
 
     var scrollLocked = false;
 
     function stuckScroll(check) {
     	if(check) {
-    		console.log('windowScrollTop: ' + $(window).scrollTop());
+    		console.log('windowScrollTop: ' + $window.scrollTop());
     		$.scrollLock( true );
-    		$('.page-header').addClass('sticky-important');
+    		$header.addClass('sticky-important');
     		scrollLocked = true;
     	} else {
     		console.log('unlock');
 			$.scrollLock( false );
-    		$('.page-header').removeClass('sticky-important');
+    		$header.removeClass('sticky-important');
     		scrollLocked = false;
     	}
     }
@@ -87,7 +92,7 @@ $(function() {
     	} else if(e.type == 'DOMMouseScroll') {
     		delta = (e.originalEvent.detail < 0)
     	}
-    	var scrollTop = Math.round($(window).scrollTop());
+    	var scrollTop = Math.round($window.scrollTop());
     	//console.log('onscroll: ' + scrollTop);
 
     	var currY = scrollTop;
@@ -95,13 +100,7 @@ $(function() {
         // determine current scroll direction
         y = (currY > lastY) ? 'down' : ((currY === lastY) ? 'none' : 'up');
 
-        if(e.type == 'touchmove') {
-			//console.log(e.originalEvent.detail);
-        }
-
-        $('.scroll-direction').text(delta);
-
-        if($window.width() >= 1025) {
+        if(windowWidth >= 1025) {
 
         	if(delta /*|| y == 'up'*/) {
 				if(scrollTop <= scrollTopAmount && !stucked) {
@@ -109,14 +108,12 @@ $(function() {
 				}
 	            if(!flag && (counter > 0) && stucked) {
 	        		flag = true;
-	        		$('.scores-section__dots-nav li').removeClass('active');
-	        		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + --counter*$('.col.scroll-box').height() + 'px, 0)'});
-					$('.scores-section__dots-nav li').eq(counter).addClass('active');
+					moveScores(--counter);
 	        		setTimeout(function() {
 	        			flag = false;
 	        		},400)
 	        	} else if(counter <= 0) {
-	        		// $(window).disablescroll("undo");
+	        		// $window.disablescroll("undo");
 	        		stucked = false;
 	        		counter = -1;
 	        	}
@@ -127,10 +124,7 @@ $(function() {
 				}
 	        	if(!flag && (counter < 4) && stucked) {
 	        		flag = true;
-	        		$('.scores-section__dots-nav li').removeClass('active');
-					$(this).addClass('active');
-	        		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + ++counter*$('.col.scroll-box').height() + 'px, 0)'});
-	        		$('.scores-section__dots-nav li').eq(counter).addClass('active');
+	        		moveScores(++counter);
 	        		setTimeout(function() {
 	        			flag = false;
 	        		},400)
@@ -141,9 +135,9 @@ $(function() {
 	        }
 			if(stucked) {
 				$window.scrollTop(scrollTopAmount)
-				// $('html, body').stop().animate({
-			 //        scrollTop: scrollTopAmount
-			 //    }, 30);
+				/*$('html, body').stop().animate({
+			        scrollTop: scrollTopAmount
+			    }, 30);*/
 				e.preventDefault();
 				e.stopPropagation();
 				return false;	
@@ -155,10 +149,10 @@ $(function() {
 				}
 				if(!flag && (counter < 4) && scrollLocked) {
 	        		flag = true;
-	        		$('.scores-section__dots-nav li').removeClass('active');
+	        		$scoresSectionNavItems.removeClass('active');
 					$(this).addClass('active');
 	        		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + ++counter*$('.col.scroll-box').height() + 'px, 0)'});
-	        		$('.scores-section__dots-nav li').eq(counter).addClass('active');
+	        		$scoresSectionNavItems.eq(counter).addClass('active');
 	        		setTimeout(function() {
 	        			flag = false;
 	        		},400)
@@ -172,9 +166,9 @@ $(function() {
 				}
 				if(!flag && (counter > 0) && scrollLocked) {
 	        		flag = true;
-	        		$('.scores-section__dots-nav li').removeClass('active');
+	        		$scoresSectionNavItems.removeClass('active');
 	        		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + --counter*$('.col.scroll-box').height() + 'px, 0)'});
-					$('.scores-section__dots-nav li').eq(counter).addClass('active');
+					$scoresSectionNavItems.eq(counter).addClass('active');
 	        		setTimeout(function() {
 	        			flag = false;
 	        		},400)
@@ -192,16 +186,16 @@ $(function() {
         }*/
 
 		//sticky header
-		if($(window).scrollTop() > 50) {
-			$('.page-header').addClass('sticky');
-			headerHeight = $('.page-header').outerHeight();
+		if(scrollTop > 50) {
+			$header.addClass('sticky');
+			headerHeight = $header.outerHeight();
 		} else {
-			$('.page-header').removeClass('sticky');
-			headerHeight = $('.page-header').outerHeight();
+			$header.removeClass('sticky');
+			headerHeight = $header.outerHeight();
 		}
 
 		//join link on mobile
-		if($(window).scrollTop() > $('.welcome-section__join-btn').offset().top+50) {
+		if(scrollTop > $('.welcome-section__join-btn').offset().top+50) {
 			$('.mobile-join-link').addClass('active');
 		} else {
 			$('.mobile-join-link').removeClass('active');
@@ -212,26 +206,24 @@ $(function() {
 		lastY = currY;
 	})
 
-	if($(window).width() >= 768 && $(window).width() <= 1023) {
-		var sectionHeaderTopIntitial = ($(window).height()
+	if(windowWidth >= 768 && windowWidth <= 1023) {
+		console.log(headerHeight);
+		var sectionHeaderTopIntitial = (windowHeight
 								- 73
 								- $('.scores-section .section-header').outerHeight()) / 2
 								+ headerHeight;
 		var sectionHeaderTopSecond = sectionHeaderTopIntitial - 73;
 
-		var dotsTopIntitial = ($(window).height()
+		var dotsTopIntitial = (windowHeight
 								- 73
 								- $('.scores-section__dots-nav').outerHeight()) / 2
 								+ headerHeight;
 		var dotsTopSecond = sectionHeaderTopIntitial - 73;
 								
-		var marginTop = ($(window).height()
+		var marginTop = (windowHeight
 						- headerHeight
 						- $('.scores-section__scores-list li').outerHeight()) / 2
 						+ headerHeight/2;
-		console.log($(window).height())
-		console.log($('.page-header').outerHeight())
-		console.log($('.scores-section__scores-list li').outerHeight())
 
 		
 		$('.scores-section .section-header').css({'top': sectionHeaderTopSecond + 'px'});
@@ -244,29 +236,29 @@ $(function() {
 
 			$('.scores-list__item').each(function(index, el) {
 				if($(this).hasClass('in-view')) {
-					$('.scores-section__dots-nav li').eq(index).addClass('active');
+					$scoresSectionNavItems.eq(index).addClass('active');
 				} else {
-					$('.scores-section__dots-nav li').eq(index).removeClass('active');
+					$scoresSectionNavItems.eq(index).removeClass('active');
 				}
 			});
-			var bottom = (parseFloat($(window).scrollTop()) + parseFloat($(window).height())) > $('.scores-quote').offset().top;
+			var bottom = (parseFloat($window.scrollTop()) + parseFloat(windowHeight)) > $('.scores-quote').offset().top;
 
-			if(($(window).scrollTop() + $('.page-header').outerHeight() + 70) >= $('.scores-section').offset().top ) {
-				$('.scores-section').addClass('fixed');
+			if(($window.scrollTop() + $header.outerHeight() + 70) >= $scoresSection.offset().top ) {
+				$scoresSection.addClass('fixed');
 
 				$('.scores-section .section-header').css({'top': sectionHeaderTopIntitial + 'px'});
 				$('.scores-section__dots-nav').css({'top': dotsTopIntitial + 'px'});
 
 				if (bottom) {
-					$('.scores-section').addClass('bottom');
-					$('.scores-section').removeClass('fixed');
+					$scoresSection.addClass('bottom');
+					$scoresSection.removeClass('fixed');
 					$('.scores-section .section-header').css({'bottom': sectionHeaderTopSecond + 'px','top': 'auto'});
 					$('.scores-section__dots-nav').css({'bottom': dotsTopSecond + 'px', 'top': 'auto'});
 				} else {
-					$('.scores-section').removeClass('bottom');
+					$scoresSection.removeClass('bottom');
 				}
 			} else {
-				$('.scores-section').removeClass('fixed');
+				$scoresSection.removeClass('fixed');
 
 				$('.scores-section .section-header').css({'top': sectionHeaderTopSecond + 'px'});
 				$('.scores-section__dots-nav').css({'top': dotsTopSecond + 'px'});
@@ -279,16 +271,16 @@ $(function() {
     	event.preventDefault();
     	var self = $(this);
 
-    	if($('.page-header').hasClass('menu-opened')) {
+    	if($header.hasClass('menu-opened')) {
     		$('.toggle-mobile-menu').click();
     		setTimeout(function(){
     			$('html, body').stop().animate({
-			        scrollTop: $( self.attr('href') ).offset().top - $('.page-header').outerHeight()
+			        scrollTop: $( self.attr('href') ).offset().top - $header.outerHeight()
 			    }, 800);
     		}, 450)
     	} else {
     		$('html, body').stop().animate({
-		        scrollTop: $( self.attr('href') ).offset().top - $('.page-header').outerHeight()
+		        scrollTop: $( self.attr('href') ).offset().top - $header.outerHeight()
 		    }, 800);
     	}
 	});
@@ -296,14 +288,14 @@ $(function() {
 	//mobile menu
 	$('.toggle-mobile-menu').click(function (event) {
         $(this).toggleClass('active');
-        $('.page-header').toggleClass('menu-opened');
+        $header.toggleClass('menu-opened');
         $('.mobile-join-link').toggleClass('active');
         $('.page-header__nav').slideToggle(400);
         $('body').toggleClass('overflow');
     });
 
     //videos slider
-    if($(window).width() < 1024) {
+    if(windowWidth < 1024) {
 	    /*$('.faq-section__videos').slick({
 	    	arrows: false,
 	    	swipeToSlide: true,
@@ -341,6 +333,6 @@ $(function() {
     });
 
     //MSE abbreviation
-    if($(window).width() < 768) $('.scores-list-item__title__MSE').text('MSE');
+    if(windowWidth < 768) $('.scores-list-item__title__MSE').text('MSE');
 });
     
