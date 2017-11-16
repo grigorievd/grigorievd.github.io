@@ -286,17 +286,20 @@ $(function() {
     $('.nav__main-menu a').click(function(event) {
     	event.preventDefault();
     	var self = $(this);
+    	var headerHeight = $header.outerHeight();
+
+    	if(windowWidth >= 768) headerHeight = 75
 
     	if($header.hasClass('menu-opened')) {
     		$('.toggle-mobile-menu').click();
     		setTimeout(function(){
     			$('html, body').stop().animate({
-			        scrollTop: $( self.attr('href') ).offset().top - $header.outerHeight()
+			        scrollTop: $( self.attr('href') ).offset().top - headerHeight
 			    }, 800);
     		}, 450)
     	} else {
     		$('html, body').stop().animate({
-		        scrollTop: $( self.attr('href') ).offset().top - $header.outerHeight()
+		        scrollTop: $( self.attr('href') ).offset().top - headerHeight
 		    }, 800);
     	}
 	});

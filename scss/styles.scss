@@ -191,10 +191,28 @@ a.btn, .btn {
 			
 			a {
 				color: #fff;
-			font-weight: 500;
+				font-weight: 500;
+				position: relative;
+
+				&::after {
+					content: "";
+				    position: absolute;
+				    bottom: -3px;
+				    left: 50%;
+				    -webkit-transform: translateX(-50%);
+				    transform: translateX(-50%);
+				    height: 1.5px;
+				    width: 0%;
+				    background: #fff;
+				    border-radius: 0.7px;
+				    -webkit-transition: 0.3s;
+				    transition: 0.3s;
+				}
 				
 				&:hover {
-					text-decoration: underline;
+					&::after {
+						width: 100%;
+					}
 				}
 			}
 		}

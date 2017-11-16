@@ -280,9 +280,23 @@ a.btn, .btn {
       margin: 45px 0 0; }
       .welcome-section .welcome-section__content .welcome-section__login-note a {
         color: #fff;
-        font-weight: 500; }
-        .welcome-section .welcome-section__content .welcome-section__login-note a:hover {
-          text-decoration: underline; }
+        font-weight: 500;
+        position: relative; }
+        .welcome-section .welcome-section__content .welcome-section__login-note a::after {
+          content: "";
+          position: absolute;
+          bottom: -3px;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          height: 1.5px;
+          width: 0%;
+          background: #fff;
+          border-radius: 0.7px;
+          -webkit-transition: 0.3s;
+          transition: 0.3s; }
+        .welcome-section .welcome-section__content .welcome-section__login-note a:hover::after {
+          width: 100%; }
 
 .scores-section {
   /* 	padding: 120px 0 155px; */
