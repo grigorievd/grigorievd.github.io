@@ -108,14 +108,22 @@ $(function() {
 				}
 	            if(!flag && (counter > 0) && stucked) {
 	        		flag = true;
-					moveScores(--counter);
-	        		setTimeout(function() {
-	        			flag = false;
-	        		},400)
+	        		if(counter == 7) {
+	        			var time = 500
+	        			counter = 5;
+	        		} else {
+	        			var time = 0;
+	        		}
+	        		setTimeout(function(){
+						moveScores(--counter);
+		        		setTimeout(function() {
+		        			flag = false;
+		        		},400)
+        			},time)
 	        	} else if(counter <= 0) {
 	        		// $window.disablescroll("undo");
 	        		stucked = false;
-	        		counter = -1;
+	        		counter = -3;
 	        	}
 	        }
 	        else if (!delta /*|| 'down'*/) {
@@ -124,13 +132,21 @@ $(function() {
 				}
 	        	if(!flag && (counter < 4) && stucked) {
 	        		flag = true;
-	        		moveScores(++counter);
-	        		setTimeout(function() {
-	        			flag = false;
-	        		},400)
+	        		if(counter == -3) {
+	        			var time = 500
+	        			counter = -1;
+	        		} else {
+	        			var time = 0;
+	        		}
+        			setTimeout(function(){
+						moveScores(++counter);
+		        		setTimeout(function() {
+		        			flag = false;
+		        		},400)
+        			},time)	
 	        	} else if(counter >= 4) {
 	        		stucked = false;
-	        		counter = 5;
+	        		counter = 7;
 	        	}
 	        }
 			if(stucked) {
