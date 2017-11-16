@@ -285,21 +285,22 @@ $(function() {
     //anchor 
     $('.nav__main-menu a').click(function(event) {
     	event.preventDefault();
-    	var self = $(this);
-    	var headerHeight = $header.outerHeight();
 
-    	if(windowWidth >= 768) headerHeight = 75
+    	var headerHeight = (windowWidth >= 768) ? 75 : $header.outerHeight(),
+    		top = $($(this).attr('href')).offset().top - headerHeight
+
+    	if($(this).hasClass('scores-anchor')) top = scrollTopAmount
 
     	if($header.hasClass('menu-opened')) {
     		$('.toggle-mobile-menu').click();
     		setTimeout(function(){
     			$('html, body').stop().animate({
-			        scrollTop: $( self.attr('href') ).offset().top - headerHeight
+			        scrollTop: top
 			    }, 800);
     		}, 450)
     	} else {
     		$('html, body').stop().animate({
-		        scrollTop: $( self.attr('href') ).offset().top - headerHeight
+		        scrollTop: top
 		    }, 800);
     	}
 	});
