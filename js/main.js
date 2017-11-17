@@ -36,6 +36,10 @@ $(function() {
     }
     check_if_in_view();
 
+    if(isTouchDevice) {
+    	$('html').addClass('touch');
+    }
+
     setTimeout(function() {
     	$('.welcome-section').addClass('in-view');
     }, 100)
@@ -65,7 +69,7 @@ $(function() {
 		$scoresSectionNavItems.eq(counter).addClass('active');
     }
 
-    if(windowWidth >= 1025 && ($window.scrollTop() > (scrollTopAmount+scoresHeight/2)) && !isTouchDevice ) {
+    if(windowWidth >= 1024 && ($window.scrollTop() > (scrollTopAmount+scoresHeight/2)) && !isTouchDevice ) {
     	counter = 5;
     	moveScores(counter - 1);
     }
@@ -104,7 +108,7 @@ $(function() {
         // determine current scroll direction
         y = (currY > lastY) ? 'down' : ((currY === lastY) ? 'none' : 'up');
 
-        if(windowWidth >= 1025) {
+        if(windowWidth >= 1024 && !isTouchDevice) {
 
         	if(delta /*|| y == 'up'*/) {
 				if(scrollTop <= scrollTopAmount && !stucked) {
@@ -226,7 +230,7 @@ $(function() {
 		lastY = currY;
 	})
 
-	if(windowWidth >= 768 && windowWidth <= 1023) {
+	if(windowWidth >= 768 && windowWidth <= 1024 && isTouchDevice) {
 		console.log(headerHeight);
 		var sectionHeaderTopIntitial = (windowHeight
 								- 73

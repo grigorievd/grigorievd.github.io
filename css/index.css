@@ -475,8 +475,8 @@ a.btn, .btn {
     right: 0%;
     background: url("../img/Thumbs up arm.png") no-repeat left 100%/auto 100%;
     background-position: left 0 bottom -70px;
-    -webkit-transition: 0.7s;
-    transition: 0.7s;
+    -webkit-transition: opacity 0.7s, background-position 0.7s;
+    transition: opacity 0.7s, background-position 0.7s;
     opacity: 0;
     -webkit-transform-origin: bottom right;
     transform-origin: bottom right; }
@@ -794,34 +794,28 @@ a.footer__links__link {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .scores-section.fixed .section-header {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .touch .scores-section.fixed .section-header {
     position: fixed;
     z-index: 70;
     left: 3%;
     width: 40%;
     -webkit-transform: translate3d(0, 0px, 0) !important;
     transform: translate3d(0, 0px, 0) !important; }
-  .scores-section.fixed .scores-section__dots-nav {
+  .touch .scores-section.fixed .scores-section__dots-nav {
     position: fixed !important;
     z-index: 70;
     -webkit-transform: translate3d(0, 0px, 0) !important;
     transform: translate3d(0, 0px, 0) !important; }
-  .scores-section.fixed .scores-section__scores-list li:first-child {
+  .touch .scores-section.fixed .scores-section__scores-list li:first-child {
     -webkit-transform: translate3d(0, 0px, 0) !important;
     transform: translate3d(0, 0px, 0) !important; }
-
-  .scores-section.bottom .section-header {
+  .touch .scores-section.bottom .section-header,
+  .touch .scores-section.bottom .scores-section__dots-nav,
+  .touch .scores-section.bottom .scores-section__scores-list li:first-child {
     -webkit-transform: translate3d(0, 0px, 0) !important;
     transform: translate3d(0, 0px, 0) !important; }
-  .scores-section.bottom .scores-section__dots-nav {
-    -webkit-transform: translate3d(0, 0px, 0) !important;
-    transform: translate3d(0, 0px, 0) !important; }
-  .scores-section.bottom .scores-section__scores-list li:first-child {
-    -webkit-transform: translate3d(0, 0px, 0) !important;
-    transform: translate3d(0, 0px, 0) !important; }
-
-  .scores-section__dots-nav {
+  .touch .scores-section__dots-nav {
     margin-top: 0 !important;
     -webkit-transform: translate3d(0, -200px, 0) !important;
     transform: translate3d(0, -200px, 0) !important;
@@ -830,8 +824,7 @@ a.footer__links__link {
     -o-transition: transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s; }
-
-  .scores-section__scores-list li:first-child {
+  .touch .scores-section__scores-list li:first-child {
     -webkit-transform: translate3d(0, -225px, 0) !important;
     transform: translate3d(0, -225px, 0) !important;
     -webkit-transition: -webkit-transform 0.3s;
@@ -839,11 +832,9 @@ a.footer__links__link {
     -o-transition: transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s; }
-
-  .scores-section__scores-list {
+  .touch .scores-section__scores-list {
     overflow: visible !important; }
-
-  .scores-section .section-header {
+  .touch .scores-section .section-header {
     position: absolute;
     z-index: 70;
     left: 3%;
@@ -855,24 +846,31 @@ a.footer__links__link {
     -o-transition: transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s; }
-
-  .scores-section__scores-list li:last-child {
+  .touch .scores-section__scores-list li:last-child {
     margin-bottom: 0 !important; }
-
-  .scores-section .two-columns {
+  .touch .scores-section .two-columns {
     /*display: block !important;*/
     -webkit-box-align: start !important;
     -ms-flex-align: start !important;
     align-items: flex-start !important; }
-    .scores-section .two-columns .col.scroll-box {
+    .touch .scores-section .two-columns .col.scroll-box {
       /*float:right;*/ }
-
-  .col.scroll-box, .scores-section__scores-list {
+  .touch .col.scroll-box, .touch .scores-section__scores-list {
     height: auto !important; }
-
-  .col.scroll-box .scores-section__scores-list {
+  .touch .col.scroll-box .scores-section__scores-list {
     float: right;
     margin-right: 5px !important; } }
+@media screen and (min-height: 700px) {
+  .touch .scores-section__dots-nav {
+    margin-top: 0 !important;
+    -webkit-transform: translate3d(0, -150px, 0) !important;
+    transform: translate3d(0, -150px, 0) !important; }
+  .touch .scores-section__scores-list li:first-child {
+    -webkit-transform: translate3d(0, -175px, 0) !important;
+    transform: translate3d(0, -175px, 0) !important; }
+  .touch .scores-section .section-header {
+    -webkit-transform: translate3d(0, -150px, 0) !important;
+    transform: translate3d(0, -150px, 0) !important; } }
 @media screen and (min-width: 1600px) {
   .scores-quote .score-quote__thumb-up {
     right: calc((100% - 1600px)/2);
