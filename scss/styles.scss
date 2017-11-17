@@ -74,6 +74,35 @@ a.btn, .btn {
 					font-weight: 700;
 					padding: 11px 24px;
 					border-radius: 30px;
+					position: relative;
+					
+					> span {
+						z-index: 3;
+						position: relative;
+					}
+					
+					&::before {
+						content:'';
+						width: 80px;
+						height:100%;
+						border-radius: 30px;
+						position: absolute;
+						top:0;
+						left:0;
+						background: $primary-green;
+						z-index: 2;
+						-webkit-transform: scale(0.3);
+						        transform: scale(0.3);
+						opacity: 0;
+						-webkit-transition: 0.5s;
+						transition: 0.5s;
+					}
+					
+					&:hover::before {
+						-webkit-transform: scale(1);
+						        transform: scale(1);
+						opacity: 1;
+					}
 					
 					&::after {
 						content: none;
@@ -126,7 +155,7 @@ a.btn, .btn {
 .welcome-section {
 	padding: 70px 0 50px;
 	color: #FFFFFF;
-	margin: 111px 0 0;
+	margin: 107px 0 0;
 	background: #24D5A6;
 	
 	&::before {
@@ -140,22 +169,48 @@ a.btn, .btn {
 		-webkit-transform-origin: center bottom;
 		        transform-origin: center bottom;
 	   background-size: 100% auto;
+		opacity: 0;
+		-webkit-transition: 0.7s 0.3s;
+		transition: 0.7s 0.3s;
 	}
 	
-	&.ready::before {
+	&.in-view::before {
 		-webkit-transform: scale(1);
 		        transform: scale(1);
 		opacity: 1;
+	}
+	
+	& {
+		.welcome-section__content {
+			.welcome-section__header,
+			.welcome-section__text,
+			.welcome-section__join-btn,
+			.welcome-section__login-note{
+        opacity: 0;
+			}
+		}
+		&.in-view {
+			.welcome-section__content {
+				.welcome-section__header,
+				.welcome-section__text,
+				.welcome-section__join-btn,
+				.welcome-section__login-note{
+					opacity: 1;
+				}
+			}
+		}
 	}
 	
 	.welcome-section__content {
 		max-width: 50%;
 		
 	 .welcome-section__header {
-			font-size: 42px;
+		font-size: 42px;
 		 margin: 0 0 35px;
 		 line-height: 42px;
 		 font-weight: 400;
+		 -webkit-transition: 0.7s 0.1s;
+		 transition: 0.7s 0.1s;
 
 			span {
 				font-family: museo_slab;
@@ -167,14 +222,47 @@ a.btn, .btn {
 			font-weight: 500;
 			font-size: 22px;
 			margin: 0 0 50px;
+		 -webkit-transition: 0.7s 0.2s;
+		 transition: 0.7s 0.2s;
 		}
 		
 		.welcome-section__join-btn {
 			color:#FFFFFF;
 			background: #444C6D;
+		 -webkit-transition: background 0.3s, opacity 0.7s 0.3s;
+		 transition: background 0.3s, opacity 0.7s 0.3s;
+			position: relative;
+			
+			> span {
+				position: relative;
+				z-index: 3;
+			}
+			
+			&:before {
+				content:'';
+					position: absolute;
+				left: 0;
+				top:0;
+				width: 100%;
+				height: 100%;
+				background: #283249;
+				z-index: 2;
+				border-radius: 30px;
+				-webkit-transition: 0.3s;
+				transition: 0.3s;
+				opacity: 0;
+				-webkit-transform: scale(0.3);
+				        transform: scale(0.3);
+			}
 			
 			&:hover {
 				background: #283249;
+				
+				&::before {
+					opacity: 1;
+				  -webkit-transform: scale(1);
+				          transform: scale(1);
+				}
 			}
 			
 			&:active {
@@ -188,6 +276,8 @@ a.btn, .btn {
 			font-weight: 500;
 			color:#343A5A;
 			margin: 45px 0 0;
+		 -webkit-transition: 0.7s 0.4s;
+		 transition: 0.7s 0.4s;
 			
 			a {
 				color: #fff;
@@ -370,7 +460,20 @@ a.btn, .btn {
 		height: 295px;
 		bottom: 0;
 		right: 0%;
-		background: url("../img/Thumbs up arm.png") no-repeat bottom left / auto 100%;
+		background: url("../img/Thumbs up arm.png") no-repeat left 100% / auto 100%;
+		background-position: left 0 bottom -70px;
+		-webkit-transition:0.7s;
+		transition:0.7s;
+		opacity: 0;
+		-webkit-transform-origin: bottom right;
+		        transform-origin: bottom right;
+	}
+	
+	&.in-view {
+		.score-quote__thumb-up {
+			opacity:1;
+			background-position: left 0 bottom 0px;
+		}
 	}
 }
 
@@ -585,10 +688,39 @@ section {
 		border-color: $primary-green transparent transparent transparent;
 	}
 	
+	&.animation-element {
+		.section-header {
+			.section-header__title,
+			.section-header__text {
+				-webkit-transform: translateX(-140px);
+        transform: translateX(-140px);
+				-webkit-transition: 0.7s 0.1s;
+        transition: 0.7s 0.1s;
+				opacity: 0;
+			}
+			
+			.section-header__text {
+				-webkit-transition: 0.7s 0.2s;
+				transition: 0.7s 0.2s;
+			}
+		}
+		
+		&.in-view {
+			.section-header {
+				.section-header__title,
+				.section-header__text {
+					-webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	
 	.section-header {
-
-    	-webkit-transform: translate3d(0,0,0);
-    	transform: translate3d(0,0,0);	
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);	
+		
 		.section-header__title {
 			font: 34px museo_slab;
 			line-height: 1.2;

@@ -36,6 +36,10 @@ $(function() {
     }
     check_if_in_view();
 
+    setTimeout(function() {
+    	$('.welcome-section').addClass('in-view');
+    }, 100)
+
 	var bool = false;
 	var flag = false;
 	var counter = -1;
@@ -286,7 +290,7 @@ $(function() {
     $('.nav__main-menu a').click(function(event) {
     	event.preventDefault();
 
-    	var headerHeight = (windowWidth >= 768) ? 75 : $header.outerHeight(),
+    	var headerHeight = (windowWidth >= 768) ? 73 : $header.outerHeight(),
     		top = $($(this).attr('href')).offset().top - headerHeight
 
     	if($(this).hasClass('scores-anchor')) top = scrollTopAmount
