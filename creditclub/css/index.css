@@ -794,7 +794,7 @@ a.footer__links__link {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .touch .scores-section.fixed .section-header {
     position: fixed;
     z-index: 70;
@@ -860,7 +860,7 @@ a.footer__links__link {
   .touch .col.scroll-box .scores-section__scores-list {
     float: right;
     margin-right: 5px !important; } }
-@media screen and (min-height: 500px) {
+@media screen and (min-height: 700px) {
   .touch .scores-section__dots-nav {
     margin-top: 0 !important;
     -webkit-transform: translate3d(0, -150px, 0) !important;
@@ -1182,7 +1182,7 @@ a.footer__links__link {
               content: none; }
 
   .welcome-section {
-    margin: 55px 0 0;
+    margin: 58px 0 0;
     background-image: none;
     padding: 50px 0 30px; }
     .welcome-section::before {

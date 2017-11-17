@@ -230,7 +230,7 @@ $(function() {
 		lastY = currY;
 	})
 
-	if(windowWidth >= 768 && isTouchDevice) {
+	if(windowWidth >= 768 && windowWidth <= 1024 && isTouchDevice) {
 		console.log(headerHeight);
 		var sectionHeaderTopIntitial = (windowHeight
 								- 73
