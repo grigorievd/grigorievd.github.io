@@ -261,12 +261,12 @@ a.btn, .btn {
   background: #24D5A6; }
   .welcome-section::before {
     content: '';
-    width: 606px;
-    height: 89%;
+    width: 406px;
+    height: 92%;
     position: absolute;
-    bottom: 0;
-    right: calc((100% - 1000px) / 2);
-    background: url(../img/main_section_phone.png) no-repeat 72% bottom;
+    bottom: 0px;
+    right: calc((100% - 900px) / 2);
+    background: url(../img/PhoneandCard.png) no-repeat 72% bottom;
     -webkit-transform-origin: center bottom;
     transform-origin: center bottom;
     background-size: 100% auto;
@@ -469,12 +469,12 @@ a.btn, .btn {
       padding: 0 0 0 20px; }
   .scores-quote .score-quote__thumb-up {
     position: absolute;
-    width: 23%;
-    height: 295px;
+    width: 31%;
+    height: 101%;
     bottom: 0;
     right: 0%;
-    background: url("../img/Thumbs up arm.png") no-repeat left 100%/auto 100%;
-    background-position: left 0 bottom -70px;
+    background: url("../img/CardandTick.png") no-repeat 40px 100%/auto 100%;
+    background-position: left 100px bottom 0px;
     -webkit-transition: opacity 0.7s, background-position 0.7s;
     transition: opacity 0.7s, background-position 0.7s;
     opacity: 0;
@@ -879,8 +879,7 @@ a.footer__links__link {
     transform: translate3d(0, -70px, 0) !important; } }
 @media screen and (min-width: 1600px) {
   .scores-quote .score-quote__thumb-up {
-    right: calc((100% - 1600px)/2);
-    width: 410px; } }
+    right: calc((100% - 1600px)/2); } }
 @media screen and (max-width: 1170px) {
   .wrap {
     width: 95%; }
@@ -888,10 +887,7 @@ a.footer__links__link {
   .scores-quote blockquote {
     max-width: 83%; }
   .scores-quote .score-quote__thumb-up {
-    height: 240px;
-    bottom: auto;
-    top: -20px;
-    width: 180px; }
+    height: 220px; }
 
   .tips-section .wrap .two-columns {
     width: 95%; }
@@ -904,7 +900,7 @@ a.footer__links__link {
     transform: translateX(0); } }
 @media screen and (max-width: 1024px) {
   .score-quote__thumb-up {
-    background-position: 110px bottom !important; } }
+    background-position: 20px bottom !important; } }
 @media screen and (max-width: 1023px) {
   .wrap {
     width: 93%; }
@@ -927,8 +923,8 @@ a.footer__links__link {
     padding: 70px 0 30px;
     margin: 78px 0 0; }
     .welcome-section::before {
-      right: 5%;
-      width: 417px;
+      right: calc((100% - 665px) / 2);
+      width: 280px;
       background-size: 100% auto; }
     .welcome-section .welcome-section__content .welcome-section__header {
       font-size: 30px;
@@ -962,11 +958,10 @@ a.footer__links__link {
     .scores-quote blockquote cite {
       font-size: 18px; }
     .scores-quote .score-quote__thumb-up {
-      background-size: 100% auto;
-      width: 245px;
-      background-position: 110px bottom !important;
+      height: 95%;
+      background-position: 20px bottom !important;
       top: auto;
-      bottom: 5px; }
+      bottom: 0px; }
 
   .tools-section .section-header .section-header__text {
     max-width: 300px; }

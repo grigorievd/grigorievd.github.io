@@ -136,7 +136,6 @@
 	.scores-quote  {
 		.score-quote__thumb-up {
 			right:calc((100% - 1600px)/2);
-			width: 410px;
 		}
 	}
 }
@@ -152,10 +151,7 @@
 		}
 		
 		.score-quote__thumb-up {
-			height: 240px;
-			bottom: auto;
-			top:-20px;
-			width: 180px;
+			height: 220px;
 		}
 	}
 	
@@ -180,7 +176,7 @@
 
 @media screen and (max-width: 1024px) {
 	.score-quote__thumb-up {
-		background-position: 110px bottom !important;
+		background-position: 20px bottom !important;
 	}
 }
 
@@ -221,8 +217,8 @@
 		margin: 78px 0 0;
 		
 		&::before {
-			right: 5%;
-			width: 417px;
+			right: calc((100% - 665px) / 2);
+			width: 280px;
 			background-size: 100% auto;
 		}
 		
@@ -284,11 +280,10 @@
 		}
 		
 		.score-quote__thumb-up {
-			background-size: 100% auto;
-			width: 245px;
-			background-position: 110px bottom !important;
+			height: 95%;
+			background-position: 20px bottom !important;
 			top: auto;
-			bottom: 5px;
+			bottom: 0px;
 		}
 	}
 	

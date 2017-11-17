@@ -160,12 +160,12 @@ a.btn, .btn {
 	
 	&::before {
 		content:'';
-		width: 606px;
-    height: 89%;
+		width: 406px;
+    height: 92%;
 		position: absolute;
-		bottom:0;
-		right: calc((100% - 1000px) / 2);
-	   background: url(../img/main_section_phone.png) no-repeat 72% bottom;
+		bottom:0px;
+		right: calc((100% - 900px) / 2);
+	   background: url(../img/PhoneandCard.png) no-repeat 72% bottom;
 		-webkit-transform-origin: center bottom;
 		        transform-origin: center bottom;
 	   background-size: 100% auto;
@@ -456,12 +456,12 @@ a.btn, .btn {
 	
 	.score-quote__thumb-up {
 		position: absolute;
-		width: 23%;
-		height: 295px;
+		width: 31%;
+		height: 101%;
 		bottom: 0;
 		right: 0%;
-		background: url("../img/Thumbs up arm.png") no-repeat left 100% / auto 100%;
-		background-position: left 0 bottom -70px;
+		background: url("../img/CardandTick.png") no-repeat 40px 100% / auto 100%;
+		background-position: left 100px bottom 0px;
 		-webkit-transition: opacity 0.7s, background-position 0.7s;
 		transition:opacity 0.7s, background-position 0.7s;
 		opacity: 0;
