@@ -239,6 +239,10 @@ $(function() {
 
 		$(window).resize(function(event) {
 			console.log(11);
+			
+			windowWidth = $window.width(),
+    		windowHeight = $window.height();
+
 			sectionHeaderTopIntitial = (windowHeight
 									- 73
 									- $('.scores-section .section-header').outerHeight()) / 2
