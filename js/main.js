@@ -231,29 +231,39 @@ $(function() {
 	})
 
 	if(windowWidth >= 768 && windowWidth <= 1024 && isTouchDevice) {
-		console.log(headerHeight);
-		var sectionHeaderTopIntitial = (windowHeight
-								- 73
-								- $('.scores-section .section-header').outerHeight()) / 2
-								+ headerHeight;
-		var sectionHeaderTopSecond = sectionHeaderTopIntitial - 73;
+		var sectionHeaderTopIntitial, 
+			sectionHeaderTopSecond, 
+			dotsTopIntitial, 
+			dotsTopSecond, 	
+			marginTop; 
 
-		var dotsTopIntitial = (windowHeight
-								- 73
-								- $('.scores-section__dots-nav').outerHeight()) / 2
-								+ headerHeight;
-		var dotsTopSecond = sectionHeaderTopIntitial - 73;
-								
-		var marginTop = (windowHeight
-						- headerHeight
-						- $('.scores-section__scores-list li').outerHeight()) / 2
-						+ headerHeight/2;
+		$(window).resize(function(event) {
+			console.log(11);
+			sectionHeaderTopIntitial = (windowHeight
+									- 73
+									- $('.scores-section .section-header').outerHeight()) / 2
+									+ headerHeight;
+			sectionHeaderTopSecond = sectionHeaderTopIntitial - 73;
 
-		
-		$('.scores-section .section-header').css({'top': sectionHeaderTopSecond + 'px'});
-		$('.scores-section__dots-nav').css({'top': dotsTopSecond + 'px'});
-		$('.scores-section__scores-list').css({'margin': marginTop + 'px 0'});
-		$('.scores-section__scores-list li').css({'margin-bottom': marginTop-80 + 'px'});
+			dotsTopIntitial = (windowHeight
+									- 73
+									- $('.scores-section__dots-nav').outerHeight()) / 2
+									+ headerHeight;
+			dotsTopSecond = sectionHeaderTopIntitial - 73;
+									
+			marginTop = (windowHeight
+							- headerHeight
+							- $('.scores-section__scores-list li').outerHeight()) / 2
+							+ headerHeight/2;
+
+			
+			$('.scores-section .section-header').css({'top': sectionHeaderTopSecond + 'px'});
+			$('.scores-section__dots-nav').css({'top': dotsTopSecond + 'px'});
+			$('.scores-section__scores-list').css({'margin': marginTop + 'px 0'});
+			$('.scores-section__scores-list li').css({'margin-bottom': marginTop-80 + 'px'});
+		});
+
+		$(window).trigger('resize');
 
 		$window.on('scroll', function(){
 	//scrollable on ipad

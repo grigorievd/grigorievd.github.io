@@ -101,8 +101,7 @@
 	}
 }
 
-
-@media screen and (max-height: 700px) {
+@media screen and (min-width: 768px) and (max-height: 700px) {
 	.touch {
 		.scores-section__dots-nav {
 			margin-top:0 !important;
@@ -119,6 +118,16 @@
 		    	-webkit-transform: translate3d(0,-100px, 0) !important;
 		    	        transform: translate3d(0,-100px, 0) !important;
 		    }
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-height: 500px) {
+	.touch {
+
+		.scores-section__scores-list li:first-child {
+			-webkit-transform: translate3d(0,-70px, 0) !important;
+		    	        transform: translate3d(0,-70px, 0) !important;
 		}
 	}
 }
