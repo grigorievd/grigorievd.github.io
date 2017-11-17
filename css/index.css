@@ -902,6 +902,9 @@ a.footer__links__link {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0); } }
+@media screen and (max-width: 1024px) {
+  .score-quote__thumb-up {
+    background-position: 110px bottom !important; } }
 @media screen and (max-width: 1023px) {
   .wrap {
     width: 93%; }

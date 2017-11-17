@@ -178,6 +178,12 @@
 	}
 }
 
+@media screen and (max-width: 1024px) {
+	.score-quote__thumb-up {
+		background-position: 110px bottom !important;
+	}
+}
+
 @media screen and (max-width: 1023px) {
 	.wrap {
 		width: 93%;
