@@ -794,7 +794,7 @@ a.footer__links__link {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
   .touch .scores-section.fixed .section-header {
     position: fixed;
     z-index: 70;
@@ -858,19 +858,21 @@ a.footer__links__link {
   .touch .col.scroll-box, .touch .scores-section__scores-list {
     height: auto !important; }
   .touch .col.scroll-box .scores-section__scores-list {
+    transition: 0s;
     float: right;
-    margin-right: 5px !important; } }
-@media screen and (min-height: 700px) {
+    margin-right: 5px !important;
+    margin-top: calc((100vh - 73px - 400px)/2 + 73px/2); } }
+@media screen and (max-height: 700px) {
   .touch .scores-section__dots-nav {
     margin-top: 0 !important;
-    -webkit-transform: translate3d(0, -150px, 0) !important;
-    transform: translate3d(0, -150px, 0) !important; }
+    -webkit-transform: translate3d(0, -100px, 0) !important;
+    transform: translate3d(0, -100px, 0) !important; }
   .touch .scores-section__scores-list li:first-child {
-    -webkit-transform: translate3d(0, -175px, 0) !important;
-    transform: translate3d(0, -175px, 0) !important; }
+    -webkit-transform: translate3d(0, -125px, 0) !important;
+    transform: translate3d(0, -125px, 0) !important; }
   .touch .scores-section .section-header {
-    -webkit-transform: translate3d(0, -150px, 0) !important;
-    transform: translate3d(0, -150px, 0) !important; } }
+    -webkit-transform: translate3d(0, -100px, 0) !important;
+    transform: translate3d(0, -100px, 0) !important; } }
 @media screen and (min-width: 1600px) {
   .scores-quote .score-quote__thumb-up {
     right: calc((100% - 1600px)/2);
@@ -955,7 +957,7 @@ a.footer__links__link {
     .scores-quote .score-quote__thumb-up {
       background-size: 100% auto;
       width: 245px;
-      background-position: 110px bottom;
+      background-position: 110px bottom !important;
       top: auto;
       bottom: 5px; }
 
@@ -1182,7 +1184,7 @@ a.footer__links__link {
               content: none; }
 
   .welcome-section {
-    margin: 58px 0 0;
+    margin: 55px 0 0;
     background-image: none;
     padding: 50px 0 30px; }
     .welcome-section::before {

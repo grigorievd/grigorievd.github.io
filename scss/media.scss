@@ -93,29 +93,31 @@
 		}
 
 		.col.scroll-box .scores-section__scores-list {
+			transition: 0s;
 			float: right;
 			margin-right: 5px !important;
+			margin-top: calc((100vh - 73px - 400px)/2 + 73px/2);
 		}
 	}
 }
 
 
-@media screen and (min-height: 500px) {
+@media screen and (max-height: 700px) {
 	.touch {
 		.scores-section__dots-nav {
 			margin-top:0 !important;
-			-webkit-transform: translate3d(0,-150px, 0) !important;
-		    	        transform: translate3d(0,-150px, 0) !important;
+			-webkit-transform: translate3d(0,-100px, 0) !important;
+		    	        transform: translate3d(0,-100px, 0) !important;
 		}
 
 		.scores-section__scores-list li:first-child {
-			-webkit-transform: translate3d(0,-175px, 0) !important;
-		    	        transform: translate3d(0,-175px, 0) !important;
+			-webkit-transform: translate3d(0,-125px, 0) !important;
+		    	        transform: translate3d(0,-125px, 0) !important;
 		}
 		.scores-section {
 			.section-header {
-		    	-webkit-transform: translate3d(0,-150px, 0) !important;
-		    	        transform: translate3d(0,-150px, 0) !important;
+		    	-webkit-transform: translate3d(0,-100px, 0) !important;
+		    	        transform: translate3d(0,-100px, 0) !important;
 		    }
 		}
 	}
