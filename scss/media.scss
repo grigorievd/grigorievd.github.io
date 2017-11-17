@@ -1,4 +1,4 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 	.touch {
 		.scores-section.fixed {
 			.section-header {
@@ -100,7 +100,7 @@
 }
 
 
-@media screen and (min-height: 500px) {
+@media screen and (min-height: 700px) {
 	.touch {
 		.scores-section__dots-nav {
 			margin-top:0 !important;
@@ -269,7 +269,7 @@
 		.score-quote__thumb-up {
 			background-size: 100% auto;
 			width: 245px;
-			background-position: 110px bottom !important;
+			background-position: 110px bottom;
 			top: auto;
 			bottom: 5px;
 		}
@@ -612,7 +612,7 @@
 	}
 	
 	.welcome-section {
-		margin: 55px 0 0;
+		margin: 58px 0 0;
 		background-image: none;
 		padding: 50px 0 30px;
 		

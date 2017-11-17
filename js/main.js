@@ -230,7 +230,7 @@ $(function() {
 		lastY = currY;
 	})
 
-	if(windowWidth >= 768 && isTouchDevice) {
+	if(windowWidth >= 768 && windowWidth <= 1024 && isTouchDevice) {
 		console.log(headerHeight);
 		var sectionHeaderTopIntitial = (windowHeight
 								- 73
@@ -265,7 +265,7 @@ $(function() {
 					$scoresSectionNavItems.eq(index).removeClass('active');
 				}
 			});
-			var bottom = (parseFloat($window.scrollTop()) + parseFloat(windowHeight)) > $('.scores-quote').offset().top - 22;
+			var bottom = (parseFloat($window.scrollTop()) + parseFloat(windowHeight)) > $('.scores-quote').offset().top;
 
 			if(($window.scrollTop() + $header.outerHeight() + 70) >= $scoresSection.offset().top ) {
 				$scoresSection.addClass('fixed');
