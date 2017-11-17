@@ -265,7 +265,7 @@ $(function() {
 					$scoresSectionNavItems.eq(index).removeClass('active');
 				}
 			});
-			var bottom = (parseFloat($window.scrollTop()) + parseFloat(windowHeight)) > $('.scores-quote').offset().top;
+			var bottom = (parseFloat($window.scrollTop()) + parseFloat(windowHeight)) > $('.scores-quote').offset().top - 22;
 
 			if(($window.scrollTop() + $header.outerHeight() + 70) >= $scoresSection.offset().top ) {
 				$scoresSection.addClass('fixed');
