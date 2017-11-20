@@ -171,7 +171,7 @@ a.btn, .btn {
 	   background-size: 100% auto;
 		opacity: 0;
 		-webkit-transition: 0.7s 0.3s;
-		transition: 0.7s 0.3s;
+		transition: 0.7s 0.1s;
 	}
 	
 	&.in-view::before {

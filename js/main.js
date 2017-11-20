@@ -281,7 +281,7 @@ $(function() {
 			});
 			var bottom = (parseFloat($window.scrollTop()) + parseFloat(windowHeight)) > $('.scores-quote').offset().top - 22;
 
-			if(($window.scrollTop() + $header.outerHeight() + 70) >= $scoresSection.offset().top ) {
+			if(($window.scrollTop() + $header.outerHeight()) >= $scoresSection.offset().top ) {
 				$scoresSection.addClass('fixed');
 
 				$('.scores-section .section-header').css({'top': sectionHeaderTopIntitial + 'px'});
