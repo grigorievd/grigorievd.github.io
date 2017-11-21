@@ -157,7 +157,7 @@ img {
 
 a.btn, .btn {
   border-radius: 25px;
-  font-weight: 700;
+  font-weight: 500;
   display: inline-block;
   padding: 13px 30px; }
 
@@ -198,7 +198,7 @@ a.btn, .btn {
       .page-header .page-header__nav .nav__profile-menu .nav__profile-menu__join-link a {
         background: #fff;
         color: #444C6D;
-        font-weight: 700;
+        font-weight: 500;
         padding: 11px 24px;
         border-radius: 30px;
         position: relative; }
@@ -409,7 +409,8 @@ a.btn, .btn {
         font-size: 18px;
         color: #343A5A;
         margin: 0 0 20px;
-        width: 100%; }
+        width: 100%;
+        font-weight: 500; }
         .scores-section .scores-section__scores-list li .scores-list-item__title .scores-list-item__title__MSE {
           color: #C30016;
           font-family: museo_slab;
