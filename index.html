@@ -10,6 +10,18 @@
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/index.css">
+	<style>
+		.debug {
+			background: black;
+			color: white;
+			padding: 10px;
+			font-size: 25px;
+			position: fixed;
+			top:40px;
+			left:50%;
+			z-index: 200;
+		}
+	</style>
 </head>
 <body>
 	<header class="page-header">
@@ -330,6 +342,7 @@
     <a class="desktop-hidden mobile-join-link" href="">Join</a>
 
     <!-- <div class="scroll-direction">testnew</div> -->
+    <!-- <div class="debug">test</div> -->
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" ></script>
 	<!-- <script type="text/javascript" src="js/slick.min.js"></script>
@@ -338,6 +351,10 @@
 	<script src="js/disable-scroll.min.js"></script>
 	<script src="js/lockscroll.js"></script>
 	<script src="js/jquery.disablescroll.min.js" ></script>
+	<!-- <script>
+		$('.debug').text( $('.scores-section .section-header').height() + ':' + $('.scores-section__dots-nav').outerHeight());
+		$('.animation-element').addClass('in-view');
+	</script> -->
 	<script src="js/main.js"></script>
 </body>
 </html>

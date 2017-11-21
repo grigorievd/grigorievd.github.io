@@ -14,6 +14,11 @@ $(function() {
 		$scoresSection = $("#scores-section"),
 		$scoresSectionNavItems = $('.scores-section__dots-nav li');
 
+    if(isTouchDevice) {
+    	$('html').addClass('touch');
+    	$('.scores-section').addClass('in-view');
+    }
+
 	//check if in view
     var $animation_elements = $('.animation-element');
     var check_if_in_view = function() {
@@ -35,10 +40,6 @@ $(function() {
         });
     }
     check_if_in_view();
-
-    if(isTouchDevice) {
-    	$('html').addClass('touch');
-    }
 
     setTimeout(function() {
     	$('.welcome-section').addClass('in-view');
@@ -230,6 +231,8 @@ $(function() {
 		lastY = currY;
 	})
 
+	$window.trigger('scroll');
+
 	if(windowWidth >= 768 && windowWidth <= 1024 && isTouchDevice) {
 		var sectionHeaderTopIntitial, 
 			sectionHeaderTopSecond, 
@@ -245,7 +248,7 @@ $(function() {
 
 			sectionHeaderTopIntitial = (windowHeight
 									- 73
-									- $('.scores-section .section-header').outerHeight()) / 2
+									- /*$('.scores-section .section-header').outerHeight()*/ 130) / 2
 									+ headerHeight;
 									console.log(headerHeight);
 			sectionHeaderTopSecond = sectionHeaderTopIntitial - 73;
@@ -254,7 +257,7 @@ $(function() {
 									- 73
 									- $('.scores-section__dots-nav').outerHeight()) / 2
 									+ headerHeight;
-			dotsTopSecond = sectionHeaderTopIntitial - 73;
+			dotsTopSecond = dotsTopIntitial - 73;
 									
 			marginTop = (windowHeight
 							- headerHeight
@@ -263,11 +266,15 @@ $(function() {
 
 			
 			$('.scores-section .section-header').css({'top': sectionHeaderTopSecond + 'px'});
+			$('.debug').text(sectionHeaderTopSecond + ':' + dotsTopSecond + ':' + windowHeight + ':' + headerHeight + ':' + $('.scores-section .section-header').height() + ':' + $('.scores-section__dots-nav').outerHeight());
 			$('.scores-section__dots-nav').css({'top': dotsTopSecond + 'px'});
 			$('.scores-section__scores-list').css({'margin': marginTop + 'px 0'});
 			$('.scores-section__scores-list li').css({'margin-bottom': marginTop-80 + 'px'});
 		}
 		changePositions();
+		// setTimeout(function(){
+		// 	changePositions()
+		// },2000);
 
 		$(window).resize(function(event) {
 			changePositions();
