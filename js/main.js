@@ -78,12 +78,12 @@ $(function() {
 
     function stuckScroll(check) {
     	if(check) {
-    		console.log('windowScrollTop: ' + $window.scrollTop());
+    		// console.log('windowScrollTop: ' + $window.scrollTop());
     		$.scrollLock( true );
     		$header.addClass('sticky-important');
     		scrollLocked = true;
     	} else {
-    		console.log('unlock');
+    		// console.log('unlock');
 			$.scrollLock( false );
     		$header.removeClass('sticky-important');
     		scrollLocked = false;
@@ -237,9 +237,9 @@ $(function() {
 			dotsTopSecond, 	
 			marginTop; 
 
-		$(window).resize(function(event) {
+		function changePositions() {
 			console.log(11);
-			
+		
 			windowWidth = $window.width(),
     		windowHeight = $window.height();
 
@@ -247,6 +247,7 @@ $(function() {
 									- 73
 									- $('.scores-section .section-header').outerHeight()) / 2
 									+ headerHeight;
+									console.log(headerHeight);
 			sectionHeaderTopSecond = sectionHeaderTopIntitial - 73;
 
 			dotsTopIntitial = (windowHeight
@@ -265,8 +266,12 @@ $(function() {
 			$('.scores-section__dots-nav').css({'top': dotsTopSecond + 'px'});
 			$('.scores-section__scores-list').css({'margin': marginTop + 'px 0'});
 			$('.scores-section__scores-list li').css({'margin-bottom': marginTop-80 + 'px'});
-		});
+		}
+		changePositions();
 
+		$(window).resize(function(event) {
+			changePositions();
+		});
 		$(window).trigger('resize');
 
 		$window.on('scroll', function(){

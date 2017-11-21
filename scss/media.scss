@@ -32,6 +32,7 @@
 
 		.scores-section__dots-nav {
 			margin-top:0 !important;
+			top: calc((100vh - 73px - 125px)/2 + 88px - 73px);
 			-webkit-transform: translate3d(0,-200px, 0) !important;
 		    	        transform: translate3d(0,-200px, 0) !important;
 		    	-webkit-transition:-webkit-transform 0.7s;
@@ -60,6 +61,7 @@
 				position: absolute;
 				z-index: 70;
 				left: 3%;
+				top:calc((100vh - 73px - 130px)/2 + 88px - 73px);
 		    	width: 40%;
 		    	-webkit-transform: translate3d(0,-200px, 0) !important;
 		    	        transform: translate3d(0,-200px, 0) !important;
