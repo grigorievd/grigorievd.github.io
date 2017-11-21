@@ -284,8 +284,8 @@ $(function() {
 			if(($window.scrollTop() + $header.outerHeight()) >= $scoresSection.offset().top ) {
 				$scoresSection.addClass('fixed');
 
-				$('.scores-section .section-header').css({'top': sectionHeaderTopIntitial + 'px'});
-				$('.scores-section__dots-nav').css({'top': dotsTopIntitial + 'px'});
+				$('.scores-section .section-header').css({'top': sectionHeaderTopIntitial + 'px', 'bottom': 'auto'});
+				$('.scores-section__dots-nav').css({'top': dotsTopIntitial + 'px', 'bottom': 'auto'});
 
 				if (bottom) {
 					$scoresSection.addClass('bottom');
@@ -298,8 +298,8 @@ $(function() {
 			} else {
 				$scoresSection.removeClass('fixed');
 
-				$('.scores-section .section-header').css({'top': sectionHeaderTopSecond + 'px'});
-				$('.scores-section__dots-nav').css({'top': dotsTopSecond + 'px'});
+				$('.scores-section .section-header').css({'top': sectionHeaderTopSecond + 'px', 'bottom': 'auto'});
+				$('.scores-section__dots-nav').css({'top': dotsTopSecond + 'px', 'bottom': 'auto'});
 			}
 		})
 	}
