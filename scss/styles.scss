@@ -309,6 +309,16 @@ a.btn, .btn {
   }
 }
 
+.touch {
+	.scores-section {
+		.section-header {
+			.section-header__text {
+				max-width: 540px;
+			}
+		}
+	}	
+}
+
 .scores-section {
 /* 	padding: 120px 0 155px; */
 	position: relative;
