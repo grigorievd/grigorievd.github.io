@@ -34,7 +34,7 @@ $(function() {
             var element_height = $element.outerHeight();
             var element_top_position = $element.offset().top;
             var element_bottom_position = (element_top_position + element_height);
-            if ((element_bottom_position >= window_top_position) && (element_top_position + 230 <= window_bottom_position)) {
+            if ((element_bottom_position >= window_top_position) && (element_top_position + 200 <= window_bottom_position)) {
                 $element.addClass('in-view');
             } else {
             	/*if(element_top_position >= window_bottom_position && $element.hasClass('scores-list__item')) {
@@ -327,7 +327,7 @@ $(function() {
     	var headerHeight = (windowWidth >= 768) ? 73 : $header.outerHeight(),
     		top = $($(this).attr('href')).offset().top - headerHeight
 
-    	if($(this).hasClass('scores-anchor')) top = scrollTopAmount
+    	if($(this).hasClass('scores-anchor') && !isTouchDevice) top = scrollTopAmount
 
     	if($header.hasClass('menu-opened')) {
     		$('.toggle-mobile-menu').click();

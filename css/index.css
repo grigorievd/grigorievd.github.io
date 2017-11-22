@@ -640,12 +640,12 @@ section {
   section.animation-element .section-header .section-header__text {
     -webkit-transform: translateX(-140px);
     transform: translateX(-140px);
-    -webkit-transition: 0.7s 0.1s;
-    transition: 0.7s 0.1s;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
     opacity: 0; }
   section.animation-element .section-header .section-header__text {
-    -webkit-transition: 0.7s 0.2s;
-    transition: 0.7s 0.2s; }
+    -webkit-transition: 0.7s 0.1s;
+    transition: 0.7s 0.1s; }
   section.animation-element.in-view .section-header .section-header__title,
   section.animation-element.in-view .section-header .section-header__text {
     -webkit-transform: translateX(0) !important;
