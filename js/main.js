@@ -361,10 +361,12 @@ $(function() {
     		infinite: false
 	    });*/
 
-	    $('.faq-section__videos.owl-carousel').owlCarousel({
-	    	autoWidth: true,
-	    	smartSpeed: 500
-	    });
+	    // $('.faq-section__videos.owl-carousel').owlCarousel({
+	    // 	autoWidth: true,
+	    // 	smartSpeed: 500
+	    // });
+
+	    $('.faq-section__videos').width(($('.faq-section__videos li').width()+10)*($('.faq-section__videos li').length)-5);
     }
     $('.about-section .about-section__video iframe').height($('.about-section .about-section__video iframe').width()*0.56);
     $('.faq-section .faq-section__videos li iframe').height($('.faq-section .faq-section__videos li iframe').width()*0.56);
