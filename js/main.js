@@ -48,21 +48,21 @@ $(function() {
     setTimeout(function() {
     	$('.welcome-section').addClass('in-view');
     }, 100)
-
-	var bool = false;
-	var flag = false;
-	var counter = -1;
-	var stucked = false;
+    
+	//scores scroll
+	var bool = false, 
+		flag = false,
+		counter = -1,
+		stucked = false;
 
 	$scoresSectionNavItems.click(function(event) {
 		moveScores($(this).index());
 	});
 
-	// //scores scroll
-	var headerHeight = $header.outerHeight();
-	var scoresOffsetTop = $scoresSection.offset().top;
-	var scoresHeight = $scoresSection.outerHeight();
-	var scrollTopAmount = Math.round(scoresOffsetTop - ((windowHeight - scoresHeight) / 2) - 75/2);
+	var headerHeight = $header.outerHeight(),
+		scoresOffsetTop = $scoresSection.offset().top,
+		scoresHeight = $scoresSection.outerHeight(),
+		scrollTopAmount = Math.round(scoresOffsetTop - ((windowHeight - scoresHeight) / 2) - 75/2);
 
 	var mousewheelevt = isFirefox ? "DOMMouseScroll" : "mousewheel";
 
@@ -83,12 +83,10 @@ $(function() {
 
     function stuckScroll(check) {
     	if(check) {
-    		// console.log('windowScrollTop: ' + $window.scrollTop());
     		$.scrollLock( true );
     		$header.addClass('sticky-important');
     		scrollLocked = true;
     	} else {
-    		// console.log('unlock');
 			$.scrollLock( false );
     		$header.removeClass('sticky-important');
     		scrollLocked = false;
@@ -106,7 +104,6 @@ $(function() {
     		delta = (e.originalEvent.detail < 0)
     	}
     	var scrollTop = Math.round($window.scrollTop());
-    	//console.log('onscroll: ' + scrollTop);
 
     	var currY = scrollTop;
         
@@ -164,55 +161,11 @@ $(function() {
 	        }
 			if(stucked) {
 				$window.scrollTop(scrollTopAmount)
-				/*$('html, body').stop().animate({
-			        scrollTop: scrollTopAmount
-			    }, 30);*/
 				e.preventDefault();
 				e.stopPropagation();
 				return false;	
 			}
-
-			/*if(!delta) { //down
-				if(scrollTop >= scrollTopAmount && counter == -1) {
-					stuckScroll(true);
-				}
-				if(!flag && (counter < 4) && scrollLocked) {
-	        		flag = true;
-	        		$scoresSectionNavItems.removeClass('active');
-					$(this).addClass('active');
-	        		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + ++counter*$('.col.scroll-box').height() + 'px, 0)'});
-	        		$scoresSectionNavItems.eq(counter).addClass('active');
-	        		setTimeout(function() {
-	        			flag = false;
-	        		},400)
-	        	} else if(counter >= 4) {
-	        		counter = 5;
-	        		stuckScroll(false);
-	        	}
-			} else { //up
-				if(scrollTop <= scrollTopAmount && counter == 5) {
-					stuckScroll(true);
-				}
-				if(!flag && (counter > 0) && scrollLocked) {
-	        		flag = true;
-	        		$scoresSectionNavItems.removeClass('active');
-	        		$('.scores-section__scores-list').css({'transform' : 'translate3d(0, -' + --counter*$('.col.scroll-box').height() + 'px, 0)'});
-					$scoresSectionNavItems.eq(counter).addClass('active');
-	        		setTimeout(function() {
-	        			flag = false;
-	        		},400)
-	        	} else if(counter <= 0) {
-	        		counter = -1;
-	        		stuckScroll(false);
-	        	}
-			}*/
         }
-
-        //new scroller 
-       /* if (scrollTop >= scrollTopAmount) {
-        	disableScroll.on()
-        	$window.scrollTop(scrollTopAmount)
-        }*/
 
 		//sticky header
 		if(scrollTop > 50) {
@@ -235,92 +188,9 @@ $(function() {
 		lastY = currY;
 	})
 
-	// $window.trigger('scroll');
+	$window.trigger('scroll');
 
-	// if(windowWidth >= 768 && windowWidth <= 1024 && isTouchDevice) {
-	// 	var sectionHeaderTopIntitial, 
-	// 		sectionHeaderTopSecond, 
-	// 		dotsTopIntitial, 
-	// 		dotsTopSecond, 	
-	// 		marginTop; 
-
-	// 	function changePositions() {
-	// 		console.log(11);
-		
-	// 		windowWidth = $window.width(),
- //    		windowHeight = $window.height();
-
-	// 		sectionHeaderTopIntitial = (windowHeight
-	// 								- 73
-	// 								- /*$('.scores-section .section-header').outerHeight()*/ 130) / 2
-	// 								+ headerHeight;
-	// 								console.log(headerHeight);
-	// 		sectionHeaderTopSecond = sectionHeaderTopIntitial - 73;
-
-	// 		dotsTopIntitial = (windowHeight
-	// 								- 73
-	// 								- $('.scores-section__dots-nav').outerHeight()) / 2
-	// 								+ headerHeight;
-	// 		dotsTopSecond = dotsTopIntitial - 73;
-									
-	// 		marginTop = (windowHeight
-	// 						- headerHeight
-	// 						- $('.scores-section__scores-list li').outerHeight()) / 2
-	// 						+ headerHeight/2;
-
-			
-	// 		$('.scores-section .section-header').css({'top': sectionHeaderTopSecond + 'px'});
-	// 		$('.debug').text(sectionHeaderTopSecond + ':' + dotsTopSecond + ':' + windowHeight + ':' + headerHeight + ':' + $('.scores-section .section-header').height() + ':' + $('.scores-section__dots-nav').outerHeight());
-	// 		$('.scores-section__dots-nav').css({'top': dotsTopSecond + 'px'});
-	// 		$('.scores-section__scores-list').css({'margin': marginTop + 'px 0'});
-	// 		$('.scores-section__scores-list li').css({'margin-bottom': marginTop-80 + 'px'});
-	// 	}
-	// 	changePositions();
-	// 	// setTimeout(function(){
-	// 	// 	changePositions()
-	// 	// },2000);
-
-	// 	$(window).resize(function(event) {
-	// 		changePositions();
-	// 	});
-	// 	$(window).trigger('resize');
-
-	// 	$window.on('scroll', function(){
-	// //scrollable on ipad
-
-	// 		$('.scores-list__item').each(function(index, el) {
-	// 			if($(this).hasClass('in-view')) {
-	// 				$scoresSectionNavItems.eq(index).addClass('active');
-	// 			} else {
-	// 				$scoresSectionNavItems.eq(index).removeClass('active');
-	// 			}
-	// 		});
-	// 		var bottom = (parseFloat($window.scrollTop()) + parseFloat(windowHeight)) > $('.scores-quote').offset().top - 22;
-
-	// 		if(($window.scrollTop() + $header.outerHeight()) >= $scoresSection.offset().top ) {
-	// 			$scoresSection.addClass('fixed');
-
-	// 			$('.scores-section .section-header').css({'top': sectionHeaderTopIntitial + 'px', 'bottom': 'auto'});
-	// 			$('.scores-section__dots-nav').css({'top': dotsTopIntitial + 'px', 'bottom': 'auto'});
-
-	// 			if (bottom) {
-	// 				$scoresSection.addClass('bottom');
-	// 				$scoresSection.removeClass('fixed');
-	// 				$('.scores-section .section-header').css({'bottom': sectionHeaderTopSecond + 'px','top': 'auto'});
-	// 				$('.scores-section__dots-nav').css({'bottom': dotsTopSecond + 'px', 'top': 'auto'});
-	// 			} else {
-	// 				$scoresSection.removeClass('bottom');
-	// 			}
-	// 		} else {
-	// 			$scoresSection.removeClass('fixed');
-
-	// 			$('.scores-section .section-header').css({'top': sectionHeaderTopSecond + 'px', 'bottom': 'auto'});
-	// 			$('.scores-section__dots-nav').css({'top': dotsTopSecond + 'px', 'bottom': 'auto'});
-	// 		}
-	// 	})
-	// }
-
-    //anchor 
+    //anchors nav
     $('.nav__main-menu a').click(function(event) {
     	event.preventDefault();
 
@@ -354,45 +224,22 @@ $(function() {
 
     //videos slider
     if(windowWidth < 1024) {
-	    /*$('.faq-section__videos').slick({
-	    	arrows: false,
-	    	swipeToSlide: true,
-	    	variableWidth: true,
-    		infinite: false
-	    });*/
-
-	    // $('.faq-section__videos.owl-carousel').owlCarousel({
-	    // 	autoWidth: true,
-	    // 	smartSpeed: 500
-	    // });
-
+    	//videos slider
 	    $('.faq-section__videos').width(($('.faq-section__videos li').width()+10)*($('.faq-section__videos li').length)-5);
+
+	    //MSE abbreviation
+	    $('.scores-list-item__title__MSE').text('MSE');
     }
+    //youtube video proportions
     $('.about-section .about-section__video iframe').height($('.about-section .about-section__video iframe').width()*0.56);
     $('.faq-section .faq-section__videos li iframe').height($('.faq-section .faq-section__videos li iframe').width()*0.56);
 
 
     //mobile illustartion slider
-    /*$('.illustrations-mobile__list').slick({
-    	arrows: false,
-    	swipeToSlide: true,
-    	centerMode: true,
-    	variableWidth: true,
-    	infinite: false
-    });*/
-    /*$('.illustrations-mobile__list').flickity({
-    	prevNextButtons: false,
-		pageDots: false,
-		selectedAttraction: 0.01,
-		friction: 0.15
-    });*/
     $('.illustrations-mobile__list.owl-carousel').owlCarousel({
     	center: true,
     	autoWidth: true,
     	smartSpeed: 500
     });
-
-    //MSE abbreviation
-    if(windowWidth < 1024) $('.scores-list-item__title__MSE').text('MSE');
 });
     

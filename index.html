@@ -2,33 +2,40 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Credit Club</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0 user-scalable=yes" />
+
+	<title>Credit Club | Get your FREE Credit Score, Credit Report & more</title>
+	<!-- <meta name="description" content="Access your full credit profile, boost your credit score and see your chances of getting the market's top deals. This and more in Credit Club, all for FREE." /> -->
+
+	<!-- <base href="/creditclub/"> -->
+	<!-- <link rel="canonical" href="https://www.moneysavingexpert.com/creditclub"/>
+
+	<link rel="apple-touch-icon-precomposed" href="https://images6.moneysavingexpert.com/images/siteIcons/apple-touch-icon-precomposed.png">
+	<link rel="icon" type="image/png" href="https://images6.moneysavingexpert.com/images/CC-favicon.png" />
+	<link rel="apple-touch-icon" href="https://images6.moneysavingexpert.com/images/credit_club_iOS.png">
+	<meta name="apple-mobile-web-app-title" content="Credit Club">  -->
+
+	<!-- OpenGraph -->
+	<!-- <meta property="og:title" content="Credit Club | Get your FREE Credit Score, Credit Report & more"/>
+	<meta property="og:type" content="article"/>
+	<meta property="og:url" content="https://www.moneysavingexpert.com/creditclub"/>
+	<meta property="og:image" content="https://images6.moneysavingexpert.com/images/mse_sharing_logo.png"/>
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="627" />
+	<meta property="og:site_name" content="Credit Club"/>
+	<meta property="og:description" content="Access your full credit profile, boost your credit score and see your chances of getting the market's top deals. This and more in Credit Club, all for FREE."/> -->
+
 	<link rel="stylesheet" type="text/css" href="https://images6.moneysavingexpert.com/stylesheets/mb_website_base/masthead_rhs_foot.1509701633.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/index.css">
-	<style>
-		.debug {
-			background: black;
-			color: white;
-			padding: 10px;
-			font-size: 25px;
-			position: fixed;
-			top:40px;
-			left:50%;
-			z-index: 200;
-		}
-	</style>
+	<!-- <link rel="stylesheet" href="css/index.css"> -->
+	<link rel="stylesheet" href="css/index.min.css">
 </head>
 <body>
 	<header class="page-header">
 		<div class="wrap">
-			<a href="" class="header-logo">
-				<img class="" src="img/creditclub_logo.svg" alt="">
-				<!-- <img class="desktop-hidden" src="img/creditclub_logo_mobile.png" alt=""> -->
+			<a href="/creditclub/" class="header-logo">
+				<img class="" src="img/creditclub_logo.svg" alt="Credit Club">
 			</a>
 			<nav class="page-header__nav">
 				<ul class="nav__main-menu">
@@ -38,8 +45,8 @@
 					<li><a href="#faq-section">FAQs</a></li>
 				</ul>
 				<ul class="nav__profile-menu">
-					<li><a href="">Login</a></li>
-					<li class="nav__profile-menu__join-link"><a href=""><span>Join <span class="desktop-hidden">credit club</span></span></a></li>
+					<li><a href="https://clubs.moneysavingexpert.com/creditclub/login">Login</a></li>
+					<li class="nav__profile-menu__join-link"><a href="https://clubs.moneysavingexpert.com/creditclub/register"><span>Join <span class="desktop-hidden">credit club</span></span></a></li>
 				</ul>
 			</nav>
 			<button class="desktop-hidden toggle-mobile-menu"><span></span><span></span><span></span></button>
@@ -56,9 +63,9 @@
 				<p class="welcome-section__text">
 					Access your credit score and more. <br> Improve your chances of acceptance. <br> Save money with the right products.
 				</p>
-				<a href="" class="btn welcome-section__join-btn"><span>Join Credit Club</span></a>
+				<a href="https://clubs.moneysavingexpert.com/creditclub/register" class="btn welcome-section__join-btn"><span>Join Credit Club</span></a>
 			
-				<span class="welcome-section__login-note">Already have an account? <a href="">Login</a></span>
+				<span class="welcome-section__login-note">Already have an account? <a href="https://clubs.moneysavingexpert.com/creditclub/login">Login</a></span>
 			</div>
 		</div>
 	</section>
@@ -82,7 +89,7 @@
 						</li>
 						<li class="scores-list__item animation-element">
 							<div class="scores-list-item__img-wrap">
-								<img src="img/Hit Rate.png" alt="MoneySavingExpert Credit Hit Rate" class="scores-list-item__img">
+								<img src="img/HitRate.png" alt="MoneySavingExpert Credit Hit Rate" class="scores-list-item__img">
 							</div>
 							<h3 class="scores-list-item__title"><span class="scores-list-item__title__MSE" >MoneySavingExpert</span> Credit Hit Rate</h3>
 							<p class="scores-list-item__text">An overview of what really counts – your chances of getting the market’s top deals.</p>
@@ -142,7 +149,6 @@
 				</div>
 				<div class="col">
 					<div class="tools-section__phone-illustration mobile-hidden">
-						<!-- <img class="tools-section__phone-illustration__screen" src="img/walletworkout_master.gif" alt=""> -->
 						<video class="tools-section__phone-illustration__screen" loop src="video/cc_walletworkout_master.mp4" autoplay>
 				  				Sorry, your browser doesn't support embedded videos.
 						</video>		
@@ -153,19 +159,19 @@
 						<ul class="illustrations-mobile__list owl-carousel">
 							<li>
 								<h3>Get acquainted with <br> one another…</h3>
-								<img src="img/mobile-illustrations/ww_hello.svg" alt="">
+								<img src="img/mobile-illustrations/ww_hello.svg" alt="Wallet Workout hello">
 							</li>
 							<li>
 								<h3>…answer a few simple <br> questions…</h3>
-								<img src="img/mobile-illustrations/ww_question.svg" alt="">
+								<img src="img/mobile-illustrations/ww_question.svg" alt="Wallet Workout question">
 							</li>
 							<li>
 								<h3>…we’ll sift through the top <br> options for you…</h3>
-								<img src="img/mobile-illustrations/ww_card_shuffle.svg" alt="">
+								<img src="img/mobile-illustrations/ww_card_shuffle.svg" alt="Wallet Workout card shuffle">
 							</li>
 							<li>
 								<h3>…and give you tailored results</h3>
-								<img src="img/mobile-illustrations/ww_categories.svg" alt="">
+								<img src="img/mobile-illustrations/ww_categories.svg" alt="Wallet Workout categories">
 							</li>
 						</ul>
 					</div>
@@ -186,11 +192,11 @@
 					<ul class="tips-section__tips-illustartions">
 						<li>
 							<p class="tips-illustartions__title">Things you’re doing well</p>
-							<img src="img/doing_well_insight.svg" class="tips-illustartions__img" alt="">
+							<img src="img/doing_well_insight.svg" class="tips-illustartions__img" alt="Things you’re doing well">
 						</li>
 						<li>
 							<p class="tips-illustartions__title">Things you could improve</p>
-							<img src="img/things_to_improve_insight.svg" class="tips-illustartions__img" alt="">
+							<img src="img/things_to_improve_insight.svg" class="tips-illustartions__img" alt="Things you could improve">
 						</li>
 					</ul>
 				</div>
@@ -211,7 +217,6 @@
 			<div class="faq-section__videos__scroll-wrap">
 				<ul class="faq-section__videos owl-carousel">
 					<li>
-						<!-- <iframe style="transform: translate3d(0,0,0);" class="delayed" src="https://www.youtube.com/embed/b1Knf1W34Aw" frameborder="0" allowfullscreen></iframe> -->
 						<iframe style="transform: translate3d(0,0,0);" width="1280" height="720" src="https://www.youtube.com/embed/66V3jZ7sorI" frameborder="0" gesture="media" allowfullscreen></iframe>
 						<span></span>
 					</li>
@@ -238,7 +243,7 @@
 					</li>
 				</ul>
 			</div>
-			<a href="" class="btn faq-section__btn">Full FAQs</a>
+			<a href="https://www.moneysavingexpert.com/creditclub/faq" target="_blank" class="btn faq-section__btn">Full FAQs</a>
 		</div>
 	</section>
 	<section class="footer-top-top">
@@ -351,22 +356,11 @@
             </div>
         </div>
     </div>
-    <a class="desktop-hidden mobile-join-link" href="">Join</a>
-
-    <!-- <div class="scroll-direction">testnew</div> -->
-    <!-- <div class="debug">test</div> -->
+    <a class="desktop-hidden mobile-join-link" href="https://clubs.moneysavingexpert.com/creditclub/register">Join</a>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" ></script>
-	<!-- <script type="text/javascript" src="js/slick.min.js"></script>
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
 	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/disable-scroll.min.js"></script>
-	<script src="js/lockscroll.js"></script>
-	<script src="js/jquery.disablescroll.min.js" ></script>
-	<!-- <script>
-		$('.debug').text( $('.scores-section .section-header').height() + ':' + $('.scores-section__dots-nav').outerHeight());
-		$('.animation-element').addClass('in-view');
-	</script> -->
-	<script src="js/main.js"></script>
+	<!-- <script src="js/main.js"></script> -->
+	<script src="js/compressed.js"></script>
 </body>
 </html>
