@@ -110,62 +110,62 @@ $(function() {
         // determine current scroll direction
         y = (currY > lastY) ? 'down' : ((currY === lastY) ? 'none' : 'up');
 
-        if(windowWidth >= 1024 && !isTouchDevice) {
+        //if(windowWidth >= 1024 && !isTouchDevice) {
 
-        	if(delta /*|| y == 'up'*/) {
-				if(scrollTop <= scrollTopAmount && !stucked) {
-					stucked = true;	
-				}
-	            if(!flag && (counter > 0) && stucked) {
-	        		flag = true;
-	        		if(counter == 7) {
-	        			var time = 500
-	        			counter = 5;
-	        		} else {
-	        			var time = 0;
-	        		}
-	        		setTimeout(function(){
-						moveScores(--counter);
-		        		setTimeout(function() {
-		        			flag = false;
-		        		},400)
-        			},time)
-	        	} else if(counter <= 0) {
-	        		// $window.disablescroll("undo");
-	        		stucked = false;
-	        		counter = -3;
-	        	}
-	        }
-	        else if (!delta /*|| 'down'*/) {
-				if(scrollTop >= scrollTopAmount && !stucked) {
-					stucked = true;	
-				}
-	        	if(!flag && (counter < 4) && stucked) {
-	        		flag = true;
-	        		if(counter == -3) {
-	        			var time = 500
-	        			counter = -1;
-	        		} else {
-	        			var time = 0;
-	        		}
-        			setTimeout(function(){
-						moveScores(++counter);
-		        		setTimeout(function() {
-		        			flag = false;
-		        		},400)
-        			},time)	
-	        	} else if(counter >= 4) {
-	        		stucked = false;
-	        		counter = 7;
-	        	}
-	        }
-			if(stucked) {
-				$window.scrollTop(scrollTopAmount)
-				e.preventDefault();
-				e.stopPropagation();
-				return false;	
-			}
-        }
+   //      	if(delta /*|| y == 'up'*/) {
+			// 	if(scrollTop <= scrollTopAmount && !stucked) {
+			// 		stucked = true;	
+			// 	}
+	  //           if(!flag && (counter > 0) && stucked) {
+	  //       		flag = true;
+	  //       		if(counter == 7) {
+	  //       			var time = 500
+	  //       			counter = 5;
+	  //       		} else {
+	  //       			var time = 0;
+	  //       		}
+	  //       		setTimeout(function(){
+			// 			moveScores(--counter);
+		 //        		setTimeout(function() {
+		 //        			flag = false;
+		 //        		},400)
+   //      			},time)
+	  //       	} else if(counter <= 0) {
+	  //       		// $window.disablescroll("undo");
+	  //       		stucked = false;
+	  //       		counter = -3;
+	  //       	}
+	  //       }
+	  //       else if (!delta /*|| 'down'*/) {
+			// 	if(scrollTop >= scrollTopAmount && !stucked) {
+			// 		stucked = true;	
+			// 	}
+	  //       	if(!flag && (counter < 4) && stucked) {
+	  //       		flag = true;
+	  //       		if(counter == -3) {
+	  //       			var time = 500
+	  //       			counter = -1;
+	  //       		} else {
+	  //       			var time = 0;
+	  //       		}
+   //      			setTimeout(function(){
+			// 			moveScores(++counter);
+		 //        		setTimeout(function() {
+		 //        			flag = false;
+		 //        		},400)
+   //      			},time)	
+	  //       	} else if(counter >= 4) {
+	  //       		stucked = false;
+	  //       		counter = 7;
+	  //       	}
+	  //       }
+			// if(stucked) {
+			// 	$window.scrollTop(scrollTopAmount)
+			// 	e.preventDefault();
+			// 	e.stopPropagation();
+			// 	return false;	
+			// }
+   //      }
 
 		//sticky header
 		if(scrollTop > 50) {
