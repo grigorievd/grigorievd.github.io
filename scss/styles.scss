@@ -443,6 +443,13 @@ a.btn, .btn {
 					.scores-list-item__title {
 						font-size: 18px;
 						margin: 0 0 10px;
+				    font-weight: 500;
+						margin: 0 0 30px;
+						
+						.scores-list-item__title__MSE {
+							color:#D0021B;
+							display: block;
+						}
 					}
 					.scores-list-item__text {
 						font-size: 16px;
@@ -452,7 +459,7 @@ a.btn, .btn {
 		}
 		
 		.scores-section {
-			padding: 70px 0 40px;
+			padding: 70px 0 60px;
 			
 			.wrap {
 				.two-columns {
@@ -475,10 +482,10 @@ a.btn, .btn {
 			
 			.section-header {
 			  max-width: 100%;
-				text-align: center;
-				margin: 0 auto 15px;
+				margin: 0 auto 55px;
 				
 				.section-header__title {
+					margin: 0 0 10px;
 					.section-header__title--thin {
 						display: inline-block;
 					}
@@ -511,13 +518,18 @@ a.btn, .btn {
 					max-width: initial;
 					margin: 0;
 					width:33.3%;
-					padding: 35px 0% 35px 4%;
-					height: auto;
+					padding: 0px 3.7%;
+					height: 350px;
 				  position: relative;
 					opacity: 0;
 					transition:0.7s;
 					transform: translate3d(0, 60px, 0);
 					text-align: center;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					align-items: center;
+					align-content: center;
 					
 					&.in-view {
 					 opacity: 1;
@@ -527,7 +539,7 @@ a.btn, .btn {
 					.scores-list-item__img-wrap {
 						width: 100%;
 						margin: 0 0 25px;
-						height: 150px;
+						height: 128px;
 						display: -webkit-box;
 						display: -ms-flexbox;
 						display: flex;
@@ -550,31 +562,36 @@ a.btn, .btn {
 					&:nth-child(2) {
 						transition-delay: 0.1s;
 						.scores-list-item__img {
-							max-height:150px;
+							max-height:128px;
 						}
 					}
 					
 					&:nth-child(3) {
 						.scores-list-item__img {
-							max-width:225px;
+							max-width:192px;
 						}
 					}
 					
 					&:nth-child(4) {
 						transition-delay: 0.1s;
+						.scores-list-item__img {
+							max-width: 61px;
+						}
 					}
 					
 					&:nth-child(5) {
 						.scores-list-item__img {
-							width: 150px;
+							width: 108px;
+						}
+					}
+					&:nth-child(6) {
+						.scores-list-item__img {
+							width: 85px;
 						}
 					}
 					
-					&:nth-child(1),
-					&:nth-child(3),
-					&:nth-child(5){
-						padding: 35px 4% 35px 0;
-						
+					&:nth-child(3n + 1),
+					&:nth-child(3n + 2){
 						&::after {
 							content:'';
 							position: absolute;
@@ -586,13 +603,12 @@ a.btn, .btn {
 						}
 					}
 					
-					&:nth-child(1)::before,
-					&:nth-child(3)::before {
+					&:nth-child(1)::before {
 						content:'';
 						position: absolute;
 						left:0px;
 						bottom:0;
-						width:200%;
+						width:300%;
 						background: #E1ECF9;
 						height: 2px;
 					}

@@ -476,12 +476,17 @@ a.btn, .btn {
     /* 					max-height: 140px; */ }
   .scores-section .scores-section__scores-list li .scores-list-item__title {
     font-size: 18px;
-    margin: 0 0 10px; }
+    margin: 0 0 10px;
+    font-weight: 500;
+    margin: 0 0 30px; }
+    .scores-section .scores-section__scores-list li .scores-list-item__title .scores-list-item__title__MSE {
+      color: #D0021B;
+      display: block; }
   .scores-section .scores-section__scores-list li .scores-list-item__text {
     font-size: 16px; }
 
 .scores-section {
-  padding: 70px 0 40px; }
+  padding: 70px 0 60px; }
   .scores-section .wrap .two-columns {
     display: block; }
     .scores-section .wrap .two-columns .col {
@@ -493,10 +498,11 @@ a.btn, .btn {
           margin: 60px 0 0; }
   .scores-section .section-header {
     max-width: 100%;
-    text-align: center;
-    margin: 0 auto 15px; }
-    .scores-section .section-header .section-header__title .section-header__title--thin {
-      display: inline-block; }
+    margin: 0 auto 55px; }
+    .scores-section .section-header .section-header__title {
+      margin: 0 0 10px; }
+      .scores-section .section-header .section-header__title .section-header__title--thin {
+        display: inline-block; }
     .scores-section .section-header .section-header__text {
       /* 					max-width: 420px; */
       display: inline-block; }
@@ -520,20 +526,25 @@ a.btn, .btn {
       max-width: initial;
       margin: 0;
       width: 33.3%;
-      padding: 35px 0% 35px 4%;
-      height: auto;
+      padding: 0px 3.7%;
+      height: 350px;
       position: relative;
       opacity: 0;
       transition: 0.7s;
       transform: translate3d(0, 60px, 0);
-      text-align: center; }
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center; }
       .scores-section .scores-section__scores-list li.in-view {
         opacity: 1;
         transform: translate3d(0, 0px, 0); }
       .scores-section .scores-section__scores-list li .scores-list-item__img-wrap {
         width: 100%;
         margin: 0 0 25px;
-        height: 150px;
+        height: 128px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -550,29 +561,31 @@ a.btn, .btn {
       .scores-section .scores-section__scores-list li:nth-child(2) {
         transition-delay: 0.1s; }
         .scores-section .scores-section__scores-list li:nth-child(2) .scores-list-item__img {
-          max-height: 150px; }
+          max-height: 128px; }
       .scores-section .scores-section__scores-list li:nth-child(3) .scores-list-item__img {
-        max-width: 225px; }
+        max-width: 192px; }
       .scores-section .scores-section__scores-list li:nth-child(4) {
         transition-delay: 0.1s; }
+        .scores-section .scores-section__scores-list li:nth-child(4) .scores-list-item__img {
+          max-width: 61px; }
       .scores-section .scores-section__scores-list li:nth-child(5) .scores-list-item__img {
-        width: 150px; }
-      .scores-section .scores-section__scores-list li:nth-child(1), .scores-section .scores-section__scores-list li:nth-child(3), .scores-section .scores-section__scores-list li:nth-child(5) {
-        padding: 35px 4% 35px 0; }
-        .scores-section .scores-section__scores-list li:nth-child(1)::after, .scores-section .scores-section__scores-list li:nth-child(3)::after, .scores-section .scores-section__scores-list li:nth-child(5)::after {
-          content: '';
-          position: absolute;
-          right: -1px;
-          width: 2px;
-          background: #E1ECF9;
-          height: 100%;
-          top: 0%; }
-      .scores-section .scores-section__scores-list li:nth-child(1)::before, .scores-section .scores-section__scores-list li:nth-child(3)::before {
+        width: 108px; }
+      .scores-section .scores-section__scores-list li:nth-child(6) .scores-list-item__img {
+        width: 85px; }
+      .scores-section .scores-section__scores-list li:nth-child(3n + 1)::after, .scores-section .scores-section__scores-list li:nth-child(3n + 2)::after {
+        content: '';
+        position: absolute;
+        right: -1px;
+        width: 2px;
+        background: #E1ECF9;
+        height: 100%;
+        top: 0%; }
+      .scores-section .scores-section__scores-list li:nth-child(1)::before {
         content: '';
         position: absolute;
         left: 0px;
         bottom: 0;
-        width: 200%;
+        width: 300%;
         background: #E1ECF9;
         height: 2px; }
   .scores-section .scores-section__dots-nav {
