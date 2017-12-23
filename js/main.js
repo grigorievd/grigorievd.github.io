@@ -228,10 +228,13 @@ $(function() {
 	    	//videos slider
 		    $('.faq-section__videos').width(($('.faq-section__videos li').width()+10)*($('.faq-section__videos li').length)-5);
 
-		    //MSE abbreviation
-		    $('.scores-list-item__title__MSE').text('MSE');
 	    } else {
 	    	$('.faq-section__videos').width('100%');
+	    }
+
+	    if($(window).width() < 768) {
+		    //MSE abbreviation
+		    $('.scores-list-item__title__MSE').text('MSE');
 	    }
 
 	    //lazyload youtube videos

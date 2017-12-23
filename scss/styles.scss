@@ -590,27 +590,32 @@ a.btn, .btn {
 						}
 					}
 					
-					&:nth-child(3n + 1),
-					&:nth-child(3n + 2){
-						&::after {
-							content:'';
-							position: absolute;
-							right:-1px;
-							width:2px;
-							background: #E1ECF9;
-							height: 100%;
-							top:0%;
-						}
+					&::after {
+						position: absolute;
+						right:-1px;
+						width:2px;
+						background: #E1ECF9;
+						height: 100%;
+						top:0%;
 					}
 					
-					&:nth-child(1)::before {
-						content:'';
+					&:nth-child(3n + 1),
+					&:nth-child(3n + 2){
+						&::after { content: '';}
+					}
+					
+					&::before {
 						position: absolute;
 						left:0px;
 						bottom:0;
 						width:300%;
 						background: #E1ECF9;
 						height: 2px;
+					}
+					
+					&:nth-child(1)::before,
+					&:nth-child(3)::before{
+						content:'';
 					}
 				}
 			}
