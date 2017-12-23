@@ -223,13 +223,33 @@ $(function() {
     });
 
     //videos slider
-    if(windowWidth < 1024) {
-    	//videos slider
-	    $('.faq-section__videos').width(($('.faq-section__videos li').width()+10)*($('.faq-section__videos li').length)-5);
+	$window.resize(function(event) {
+		if($(window).width() < 1024) {
+	    	//videos slider
+		    $('.faq-section__videos').width(($('.faq-section__videos li').width()+10)*($('.faq-section__videos li').length)-5);
 
-	    //MSE abbreviation
-	    $('.scores-list-item__title__MSE').text('MSE');
-    }
+		    //MSE abbreviation
+		    $('.scores-list-item__title__MSE').text('MSE');
+	    } else {
+	    	$('.faq-section__videos').width('100%');
+	    }
+
+	    //lazyload youtube videos
+	    if($(window).width() >= 1024 && !isTouchDevice) {
+	  	    var elements = $('.lazyframe');
+			lazyframe(elements, {
+			   apikey: 'AIzaSyCVnrhyItngFlAxu_T1BrVazo2yTaxgTBE',
+			   lazyload: true
+			});	
+	    } else {
+	    	$('.faq-section__videos iframe').each(function(index, el) {
+	    		$(this).attr('src', $(this).data('src'));
+	    	});
+	    }
+	});
+
+	$window.trigger('resize');
+    
     //youtube video proportions
     $('.about-section .about-section__video iframe').height($('.about-section .about-section__video iframe').width()*0.56);
     $('.faq-section .faq-section__videos li iframe').height($('.faq-section .faq-section__videos li iframe').width()*0.56);

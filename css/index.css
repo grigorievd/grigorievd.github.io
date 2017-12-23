@@ -584,6 +584,11 @@ a.btn, .btn {
       width: 100%;
       height: 550px; }
 
+.touch .lazyframe {
+  display: none; }
+.touch .faq-section .faq-section__videos li > iframe {
+  display: initial; }
+
 .faq-section {
   text-align: center;
   padding: 0 0 40px; }
@@ -594,6 +599,8 @@ a.btn, .btn {
     font-size: 24px;
     font-weight: 400;
     margin: 0 0 30px; }
+  .faq-section .faq-section__videos__scroll-wrap {
+    width: 100%; }
   .faq-section .faq-section__videos {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -604,12 +611,49 @@ a.btn, .btn {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 100%; }
+    .faq-section .faq-section__videos:after {
+      content: '';
+      background: url(../img/yt-icon-hover.svg);
+      position: absolute; }
     .faq-section .faq-section__videos li {
       width: 32%;
-      margin: 0 0 15px; }
-      .faq-section .faq-section__videos li iframe {
+      margin: 0 0 15px;
+      text-align: left; }
+      .faq-section .faq-section__videos li .lazyframe[data-vendor="youtube"] {
+        background-color: transparent; }
+      .faq-section .faq-section__videos li .lazyframe[data-vendor="youtube"]::after {
+        background-image: url(../img/yt-icon.svg);
+        opacity: 1; }
+      .faq-section .faq-section__videos li .lazyframe[data-vendor="youtube"]:hover::after {
+        background-image: url(../img/yt-icon-hover.svg); }
+      .faq-section .faq-section__videos li .lazyframe__title {
+        padding: 12px 17px; }
+        .faq-section .faq-section__videos li .lazyframe__title span {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          display: inline-block;
+          width: 100%; }
+        .faq-section .faq-section__videos li .lazyframe__title::after {
+          content: '';
+          width: 100%;
+          position: absolute;
+          background-repeat: repeat-x;
+          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==);
+          -moz-transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+          -webkit-transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+          transition: opacity 0.25s cubic-bezier(0, 0, 0.2, 1);
+          pointer-events: none;
+          height: 48px;
+          padding-bottom: 50px;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          background-position: top; }
+      .faq-section .faq-section__videos li > iframe {
         width: 100%;
-        height: 200px; }
+        display: none;
+        /* 				height: 200px; */ }
   .faq-section .faq-section__btn {
     border: 1px solid;
     -ms-flex-item-align: center;
@@ -943,6 +987,10 @@ a.footer__links__link {
     margin: 0 5px;
     position: relative;
     width: 280px; }
+    .faq-section .faq-section__videos li .lazyframe {
+      display: none; }
+    .faq-section .faq-section__videos li iframe {
+      display: initial; }
     .faq-section .faq-section__videos li:first-child {
       margin-left: 0; }
     .faq-section .faq-section__videos li:last-child {
