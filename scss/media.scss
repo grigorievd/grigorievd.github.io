@@ -755,11 +755,19 @@
 	}
 	
 	.scores-section {
-		padding: 60px 0 40px;
+		padding: 60px 0 10px;
+		
+		.section-header {
+			margin: 0 0 40px;
+		}
 		
 		.wrap {
 			.col.scroll-box {
 				height: auto;
+				
+				.btn {
+					display: none;
+				}
 			}
 		}
 		.scores-section__scores-list {
@@ -767,8 +775,13 @@
 			
 			li {
 				height: auto;
-				max-width: 100%;
+				width: 100%;
 				margin: 0 auto 35px;
+				padding: 0;
+				
+				&::before {
+					content: none !important;
+				}
 				
 				&:not(:last-child)::after {
 					content:'';
@@ -776,6 +789,12 @@
 					height: 2px;
 					background: #E1ECF9;
 					margin: 35px 0 0;
+					position: static;
+				}
+				
+				.scores-list-item__img-wrap {
+					margin: 0 0 25px;
+					height: auto;
 				}
 				
 				.scores-list-item__img {
@@ -784,9 +803,11 @@
 				
 				.scores-list-item__title {
 					font-size: 18px;
+					margin: 0 0 15px;
 					
 					.scores-list-item__title__MSE {
 						font-weight: 700;
+						display: inline;
 					}
 				}
 				
