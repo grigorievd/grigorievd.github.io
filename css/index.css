@@ -1085,7 +1085,7 @@ a.footer__links__link {
     max-width: 654px; }
     .scores-section .scores-section__scores-list li {
       width: 50%; }
-      .scores-section .scores-section__scores-list li:nth-child(1)::before {
+      .scores-section .scores-section__scores-list li:nth-child(1)::before, .scores-section .scores-section__scores-list li:nth-child(3)::before {
         width: 200%; }
       .scores-section .scores-section__scores-list li:nth-child(3n+2)::after, .scores-section .scores-section__scores-list li:nth-child(3n+1)::after {
         content: none; }
@@ -1162,11 +1162,12 @@ a.footer__links__link {
     float: left;
     margin: 0 5px;
     position: relative;
-    width: 280px; }
-    .faq-section .faq-section__videos li .lazyframe {
-      display: none; }
+    width: 280px;
+    /* 				.lazyframe {
+    					display: none;
+    				} */ }
     .faq-section .faq-section__videos li iframe {
-      display: initial; }
+      /* 					display: initial; */ }
     .faq-section .faq-section__videos li:first-child {
       margin-left: 0; }
     .faq-section .faq-section__videos li:last-child {

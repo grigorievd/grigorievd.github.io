@@ -144,7 +144,8 @@
 			li {
 				width: 50%;
 				
-				&:nth-child(1)::before {
+				&:nth-child(1)::before,
+				&:nth-child(3)::before{
 					width:200%;
 				}
 				&:nth-child(3n+2)::after,
@@ -279,12 +280,12 @@
 				position: relative;
 				width: 280px;
 				
-				.lazyframe {
+/* 				.lazyframe {
 					display: none;
-				}
+				} */
 				
 				iframe {
-					display: initial;
+/* 					display: initial; */
 				}
 				
 				&:first-child {

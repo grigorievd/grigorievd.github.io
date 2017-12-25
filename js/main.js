@@ -237,17 +237,23 @@ $(function() {
 		    $('.scores-list-item__title__MSE').text('MSE');
 	    }
 
+	    var elements = $('.lazyframe');
+		lazyframe(elements, {
+		   apikey: 'AIzaSyCVnrhyItngFlAxu_T1BrVazo2yTaxgTBE',
+		   lazyload: true
+		});	
+
 	    //lazyload youtube videos
 	    if($(window).width() >= 1024 && !isTouchDevice) {
-	  	    var elements = $('.lazyframe');
-			lazyframe(elements, {
-			   apikey: 'AIzaSyCVnrhyItngFlAxu_T1BrVazo2yTaxgTBE',
-			   lazyload: true
-			});	
+	  // 	    var elements = $('.lazyframe');
+			// lazyframe(elements, {
+			//    apikey: 'AIzaSyCVnrhyItngFlAxu_T1BrVazo2yTaxgTBE',
+			//    lazyload: true
+			// });	
 	    } else {
-	    	$('.faq-section__videos iframe').each(function(index, el) {
-	    		$(this).attr('src', $(this).data('src'));
-	    	});
+	    	// $('.faq-section__videos iframe').each(function(index, el) {
+	    	// 	$(this).attr('src', $(this).data('src'));
+	    	// });
 	    }
 	});
 
