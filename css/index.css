@@ -735,11 +735,6 @@ a.btn, .btn {
       width: 100%;
       height: 550px; }
 
-.touch .lazyframe {
-  display: none; }
-.touch .faq-section .faq-section__videos li > iframe {
-  display: initial; }
-
 .faq-section {
   text-align: center;
   padding: 0 0 40px; }
