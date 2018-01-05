@@ -757,6 +757,15 @@ a.btn, .btn {
 	}
 }
 
+.tips-section,
+.tools-section {
+	.section-header__text {
+		br {
+			display: none;
+		}
+	}
+}
+
 .tips-section {
 	background: #F0F5FC;
 	padding: 70px 0px;

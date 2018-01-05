@@ -688,6 +688,10 @@ a.btn, .btn {
       bottom: 36px;
       background: url(../img/Hand_thumb.svg) no-repeat center center; }
 
+.tips-section .section-header__text br,
+.tools-section .section-header__text br {
+  display: none; }
+
 .tips-section {
   background: #F0F5FC;
   padding: 70px 0px; }
@@ -1115,7 +1119,7 @@ a.footer__links__link {
       bottom: 0px; }
 
   .tools-section .section-header .section-header__text {
-    max-width: 300px; }
+    max-width: 330px; }
   .tools-section .tools-section__phone-illustration {
     background: none;
     width: 330px;
@@ -1198,21 +1202,25 @@ a.footer__links__link {
 @media screen and (min-width: 768px) {
   .desktop-hidden {
     display: none; } }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .tips-section .section-header__text br,
+  .tools-section .section-header__text br {
+    display: block; } }
 @media screen and (max-width: 767px) {
   .mobile-hidden {
     display: none; }
 
   .mobile-join-link {
     border-radius: 50%;
-    font-size: 14px !important;
+    font-size: 17px !important;
     font-weight: bold !important;
-    width: 56px;
-    height: 56px;
+    width: 70px;
+    height: 70px;
     display: inline-block;
     background: #444C6D;
     color: #fff !important;
     text-align: center;
-    line-height: 56px !important;
+    line-height: 70px !important;
     -webkit-box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     position: fixed;
@@ -1397,8 +1405,10 @@ a.footer__links__link {
           margin: 35px 0 0;
           position: static; }
         .scores-section .scores-section__scores-list li .scores-list-item__img-wrap {
-          margin: 0 0 25px;
+          margin: 0 0 25px !important;
           height: auto; }
+        .scores-section .scores-section__scores-list li:nth-child(1) .scores-list-item__img {
+          max-width: 133px; }
         .scores-section .scores-section__scores-list li .scores-list-item__img {
           max-width: 50%; }
         .scores-section .scores-section__scores-list li .scores-list-item__title {
@@ -1409,6 +1419,8 @@ a.footer__links__link {
             display: inline; }
         .scores-section .scores-section__scores-list li .scores-list-item__text {
           font-size: 16px; }
+          .scores-section .scores-section__scores-list li .scores-list-item__text br {
+            display: none; }
     .scores-section .scores-section__dots-nav {
       display: none; }
 

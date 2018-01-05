@@ -185,7 +185,7 @@
 		
 		.section-header {
 			.section-header__text {
-				max-width: 300px;
+				max-width: 330px;
 			}
 		}
 		
@@ -502,6 +502,17 @@
 
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.tips-section,
+	.tools-section {
+		.section-header__text {
+			br {
+				display: block;
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 767px) {
 	
 	.mobile-hidden {
@@ -510,15 +521,15 @@
 	
 	.mobile-join-link {
 		border-radius: 50%;
-		font-size: 14px !important;
+		font-size: 17px !important;
 		font-weight: bold !important;
-		width: 56px;
-		height: 56px;
+		width: 70px;
+		height: 70px;
 		display: inline-block;
 		background: #444C6D;
 		color:#fff !important;
 		text-align: center;
-		line-height: 56px !important;
+		line-height: 70px !important;
 		-webkit-box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
 		        box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.2);
 		position: fixed;
@@ -793,8 +804,14 @@
 				}
 				
 				.scores-list-item__img-wrap {
-					margin: 0 0 25px;
+					margin: 0 0 25px !important;
 					height: auto;
+				}
+				
+				&:nth-child(1) {
+				  .scores-list-item__img {
+						max-width: 133px;
+					}	
 				}
 				
 				.scores-list-item__img {
@@ -813,6 +830,10 @@
 				
 				.scores-list-item__text {
 					font-size: 16px;
+					
+					br {
+						display: none;
+					}
 				}
 			}
 		}
