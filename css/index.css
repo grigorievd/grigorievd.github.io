@@ -538,7 +538,7 @@ a.btn, .btn {
       max-width: initial;
       margin: 0;
       width: 33.3%;
-      padding: 0px 3.7%;
+      padding: 0px 3.7% 20px;
       height: 350px;
       position: relative;
       opacity: 0;
