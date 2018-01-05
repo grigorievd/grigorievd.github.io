@@ -108,10 +108,12 @@ a.btn, .btn {
 		display: flex;
 		
 		.nav__main-menu {
+			padding: 0 7px 0 0;
 		}
 		
 		.nav__profile-menu {
 			border-left:1px solid #fff;
+			padding: 0 0 0 7px;
 			
 			.nav__profile-menu__join-link {
 				a {
@@ -444,11 +446,22 @@ a.btn, .btn {
 						font-size: 18px;
 						margin: 0 0 10px;
 				    font-weight: 500;
-						margin: 0 0 30px;
+						margin: 0 0 32px;
+						position: relative;
+						
+						&--two-lines {
+							margin: 0 0 30px;
+						  transform: translateY(50%);
+						}
 						
 						.scores-list-item__title__MSE {
 							color:#D0021B;
 							display: block;
+							font-family: museo_slab;
+							position: absolute;
+							top:0;
+							left:50%;
+							transform: translateX(-50%) translateY(-100%);
 						}
 					}
 					.scores-list-item__text {
@@ -530,6 +543,14 @@ a.btn, .btn {
 					justify-content: center;
 					align-items: center;
 					align-content: center;
+					
+					&:nth-child(1),
+					&:nth-child(2),
+					&:nth-child(3) {
+						.scores-list-item__img-wrap {
+							margin: 0 0 45px;
+						}
+					}
 					
 					&.in-view {
 					 opacity: 1;

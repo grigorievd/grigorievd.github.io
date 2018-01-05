@@ -227,8 +227,11 @@ a.btn, .btn {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
+    .page-header .page-header__nav .nav__main-menu {
+      padding: 0 7px 0 0; }
     .page-header .page-header__nav .nav__profile-menu {
-      border-left: 1px solid #fff; }
+      border-left: 1px solid #fff;
+      padding: 0 0 0 7px; }
       .page-header .page-header__nav .nav__profile-menu .nav__profile-menu__join-link a {
         background: #fff;
         color: #444C6D;
@@ -478,10 +481,19 @@ a.btn, .btn {
     font-size: 18px;
     margin: 0 0 10px;
     font-weight: 500;
-    margin: 0 0 30px; }
+    margin: 0 0 32px;
+    position: relative; }
+    .scores-section .scores-section__scores-list li .scores-list-item__title--two-lines {
+      margin: 0 0 30px;
+      transform: translateY(50%); }
     .scores-section .scores-section__scores-list li .scores-list-item__title .scores-list-item__title__MSE {
       color: #D0021B;
-      display: block; }
+      display: block;
+      font-family: museo_slab;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100%); }
   .scores-section .scores-section__scores-list li .scores-list-item__text {
     font-size: 16px; }
 
@@ -538,6 +550,8 @@ a.btn, .btn {
       justify-content: center;
       align-items: center;
       align-content: center; }
+      .scores-section .scores-section__scores-list li:nth-child(1) .scores-list-item__img-wrap, .scores-section .scores-section__scores-list li:nth-child(2) .scores-list-item__img-wrap, .scores-section .scores-section__scores-list li:nth-child(3) .scores-list-item__img-wrap {
+        margin: 0 0 45px; }
       .scores-section .scores-section__scores-list li.in-view {
         opacity: 1;
         transform: translate3d(0, 0px, 0); }
