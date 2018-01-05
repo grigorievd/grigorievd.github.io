@@ -1010,7 +1010,7 @@ a.footer__links__link {
 
 @media screen and (min-width: 1600px) {
   .scores-quote .score-quote__thumb-up {
-    right: calc((100% - 1600px)/2); } }
+    right: calc((100% - 1800px)/2); } }
 @media screen and (max-width: 1170px) {
   .wrap {
     width: 95%; }
