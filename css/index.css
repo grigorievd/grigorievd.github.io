@@ -1416,7 +1416,8 @@ a.footer__links__link {
           margin: 0 0 15px; }
           .scores-section .scores-section__scores-list li .scores-list-item__title .scores-list-item__title__MSE {
             font-weight: 700;
-            display: inline; }
+            display: inline;
+            position: static; }
         .scores-section .scores-section__scores-list li .scores-list-item__text {
           font-size: 16px; }
           .scores-section .scores-section__scores-list li .scores-list-item__text br {
