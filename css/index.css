@@ -1208,7 +1208,7 @@ a.footer__links__link {
     display: block; } }
 @media screen and (max-width: 767px) {
   .mobile-hidden {
-    display: none; }
+    display: none !important; }
 
   .mobile-join-link {
     border-radius: 50%;
