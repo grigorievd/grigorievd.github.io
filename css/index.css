@@ -482,7 +482,8 @@ a.btn, .btn {
     margin: 0 0 10px;
     font-weight: 500;
     margin: 0 0 32px;
-    position: relative; }
+    position: relative;
+    color: #444C6D; }
     .scores-section .scores-section__scores-list li .scores-list-item__title--two-lines {
       margin: 0 0 30px;
       transform: translateY(50%); }
@@ -1420,7 +1421,7 @@ a.footer__links__link {
             position: static; }
         .scores-section .scores-section__scores-list li .scores-list-item__text {
           font-size: 16px; }
-          .scores-section .scores-section__scores-list li .scores-list-item__text br {
+          .scores-section .scores-section__scores-list li .scores-list-item__text br:not(.desktop-hidden) {
             display: none; }
     .scores-section .scores-section__dots-nav {
       display: none; }
@@ -1547,5 +1548,8 @@ a.footer__links__link {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; } }
+@media screen and (max-width: 374px) {
+  .welcome-section__text {
+    font-size: 16px !important; } }
 
 /*# sourceMappingURL=index.css.map */

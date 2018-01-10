@@ -832,7 +832,7 @@
 				.scores-list-item__text {
 					font-size: 16px;
 					
-					br {
+					br:not(.desktop-hidden) {
 						display: none;
 					}
 				}
@@ -1021,5 +1021,11 @@
 		}
 	}
 	
+}
+
+@media screen and (max-width: 374px) {
+	.welcome-section__text {
+		font-size: 16px !important;
+	}
 }
 
