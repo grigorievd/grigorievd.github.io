@@ -572,6 +572,11 @@ a.btn, .btn {
 						    -ms-flex-pack: center;
 						        justify-content: center;
 						
+						a {
+							display: block;
+							width: 100%;
+						}
+						
 						.scores-list-item__img {
 							max-height: 100%;
 						}

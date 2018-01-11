@@ -569,6 +569,9 @@ a.btn, .btn {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center; }
+        .scores-section .scores-section__scores-list li .scores-list-item__img-wrap a {
+          display: block;
+          width: 100%; }
         .scores-section .scores-section__scores-list li .scores-list-item__img-wrap .scores-list-item__img {
           max-height: 100%; }
       .scores-section .scores-section__scores-list li:last-child {
@@ -1120,7 +1123,7 @@ a.footer__links__link {
       bottom: 0px; }
 
   .tools-section .section-header .section-header__text {
-    max-width: 330px; }
+    max-width: 340px; }
   .tools-section .tools-section__phone-illustration {
     background: none;
     width: 330px;
