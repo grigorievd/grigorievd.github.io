@@ -197,7 +197,7 @@ $(function() {
     	var headerHeight = (windowWidth >= 768) ? 73 : $header.outerHeight(),
     		top = $($(this).attr('href')).offset().top - headerHeight
 
-    	if($(this).hasClass('scores-anchor') && !isTouchDevice) top = scrollTopAmount
+    	// if($(this).hasClass('scores-anchor') && !isTouchDevice) top = scrollTopAmount
 
     	if($header.hasClass('menu-opened')) {
     		$('.toggle-mobile-menu').click();
