@@ -1417,7 +1417,8 @@ a.footer__links__link {
           max-width: 50%; }
         .scores-section .scores-section__scores-list li .scores-list-item__title {
           font-size: 18px;
-          margin: 0 0 15px; }
+          margin: 0 0 15px;
+          transform: none; }
           .scores-section .scores-section__scores-list li .scores-list-item__title .scores-list-item__title__MSE {
             font-weight: 700;
             display: inline;
@@ -1553,6 +1554,12 @@ a.footer__links__link {
       justify-content: center; } }
 @media screen and (max-width: 374px) {
   .welcome-section__text {
-    font-size: 16px !important; } }
+    font-size: 16px !important; }
+
+  .scores-section .scores-section__scores-list li .scores-list-item__text br.desktop-hidden {
+    display: none; }
+
+  .scores-section .scores-section__scores-list li .scores-list-item__text br:not(.desktop-hidden) {
+    display: block; } }
 
 /*# sourceMappingURL=index.css.map */
