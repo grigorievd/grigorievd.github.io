@@ -1006,11 +1006,11 @@ section {
 		.section-header {
 			.section-header__title,
 			.section-header__text {
-				-webkit-transform: translateX(-140px);
-        transform: translateX(-140px);
+				-webkit-transform: translateX(0px);
+        transform: translateX(0px);
 				-webkit-transition: 0.7s;
         transition: 0.7s;
-				opacity: 0;
+				opacity: 1;
 			}
 			
 			.section-header__text {
