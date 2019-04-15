@@ -777,6 +777,7 @@ $color-green:#1a857d;
 	&__hover {
 		font-size: 14px;
 		font-weight: 700;
+		padding: 0 0 60px;
 		
 		&::before {
 			content:'';
@@ -826,7 +827,7 @@ $color-green:#1a857d;
 	&__hotspot-texts {
 		position: relative;
 		width: 520px;
-		margin: 60px 0 0;
+/* 		margin: 60px 0 0; */
 		
 		li {
 			color: black;

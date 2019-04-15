@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('.loader').fadeOut();
+	
 
 	function isInView(el) {
 		if (scrolled + $(window).height()/1.5 > $(el).offset().top &&
@@ -72,7 +72,7 @@ $(document).ready(function() {
 
     setTimeout(function(){
   		clearInterval(interval);
-	}, 2000)
+	}, 3000)
 
 	$('.case-study-map__hotspots-svg circle').on('mouseenter', function(){
 		$('.case-study-map__hotspot-texts li').removeClass('active');
@@ -196,6 +196,7 @@ $(document).ready(function() {
 
 $(window).load(function(){
 	// $('.case-study-map__dots-svg').addClass('active');
+	$('.loader').fadeOut();
 })
 
 
