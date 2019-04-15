@@ -725,6 +725,8 @@ a {
 
 .business {
   background: #f6c810;
+  /* 	url(../images/article2/9icons.png) no-repeat center bottom / 100% auto; */
+  background-attachment: fixed;
   padding: 80px 0 150px;
   color: black;
   position: relative;
