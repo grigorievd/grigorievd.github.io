@@ -1,0 +1,401 @@
+
+@media (max-width: 1350px) {
+	.content-container {
+		width: 90%;
+	}
+	
+	.masthead__header {
+		width: 555px;
+		
+		h1 {
+		  font-size: 60px;
+		}
+		
+		p {
+			font-size: 19px;
+		}
+	}
+	
+	.audio__player {
+		bottom: 7px;
+	}
+	
+	.mejs__time-handle {
+		height: 50px;
+		top:5px;
+		
+	}
+}
+
+@media (max-width: 1023px) {
+	.audio__player {
+		transform: scale(0.8) translateX(-60%);
+		bottom: 7px;
+/* 		transform-origin: center center; */
+	}
+	
+	.masthead {
+		background: transparent;
+		
+		&__hero {
+			span {
+				position: fixed;
+				width: 90%;
+				left: 5%;
+				top:100px;
+				z-index: -1;
+				transition: 0.05s linear;
+			}
+			
+			&--fixed {
+				span {
+					transform: translateY(-40px);
+				}
+			}
+		}
+		
+		.text {
+			background: white;
+			p {
+				margin: 0;
+				padding: 30px 0;
+			}
+		}
+	}
+	
+	.bg-white {
+		background: white;
+	}
+	
+	.layout-text-illustr {
+		flex-wrap: wrap;
+		
+		&__text {
+			width: 100%;
+			margin: 0 0 30px;
+		}
+		
+		&__illustr {
+			width: 100%;
+			margin: 0;
+		}
+	}
+	
+	.nec-footer__logo {
+		top:60px;
+	}
+	
+	.slick-arrow {
+		top: 20%;
+	}
+}
+
+@media (max-width: 767px) {
+	body {
+		font-size: 16px;
+	}
+	
+	.text {
+		width: 100%;
+	}
+	
+	.title-big {
+		font-size: 35px;
+	}
+	
+	.text-note {
+		font-size: 18px;
+		margin: 0 0 30px !important;
+	}
+	
+	body {
+		.border {
+			width: 5px;
+		}
+	}
+	
+	.navbar {
+		.content-container {
+			height: 46px;
+		}
+		
+		&__back-to-top {
+			display: none;
+		}
+		
+		&__nec-logo {
+			width: 60px;
+		}
+	}
+	
+	.social {
+		&__text {
+			font-size: 16px;
+			margin: 8px 0 0;
+		}
+		
+		&__list {
+			li {
+				a {
+					width: 30px;
+					height: 30px;
+				}
+				
+				i {
+					line-height: 30px;
+					font-size: 21px;
+				}
+			}
+		}
+		
+		&:hover {
+			.social__list {
+				transform: translateY(-20%);
+			}
+		}
+	}
+	
+	.masthead {
+		padding-top:46px;
+	}
+	
+	section {
+/* 		background: white; */
+	}
+	
+	.masthead__header {
+		padding: 0 0 0 0%;
+		width: auto;
+		top:70px;
+		
+		h1 {
+			font-size: 30px;
+			padding: 15px 17px;
+			background: transparent;
+		}
+		
+		p {
+			display: none;
+		}
+	}
+	
+	.tiles {
+		margin: 30px 0 10px;
+		
+		&__swipe {
+		  display: block;
+			text-align: right;
+			font-weight: 600;
+			font-size: 14px;
+			margin: 0 0 8px;
+		}
+		
+		&__arrows,
+		&__absolute{
+			display: none;
+		}
+	}
+	
+	.side-video {
+		flex-wrap: wrap;
+		
+		&__video {
+			
+		}
+		
+		&__text {
+			
+		}
+	}
+	
+	.tiles-list li img {
+		max-height: inherit;
+	}
+	
+	.slick-slide {
+		width: 70vw;
+		margin-left: 7vw;
+	}
+	
+	.slick-list {
+		margin-left: 0;
+	}
+	
+	.slick-arrow {
+		top: 30%;
+		left: 15px;
+		display: none !important;
+	}
+	
+	.audio__player {
+		width: 90%;
+		transform: translateX(-50%);
+		bottom: 5vw;
+	}
+	
+	.mejs__time-rail {
+		background-size: 100% 70%;
+	}
+	
+	.nec-footer__logo {
+		top: 95px;
+	}
+	
+	.city-graphics-mobile {
+		display: block;
+	}
+	
+	.city-graph-illustration {
+		display: none;
+	}
+	
+	.city-graphics-mobile .tiles__swipe {
+		margin: 0 0 20px;
+	}
+	
+	.city-graphics-mobile__images {
+		.slick-track {
+			background: url(../images/city-graphics-mobile.jpg) no-repeat 5vw top / 100% auto;
+		}
+		
+		.slick-slide {
+			text-align: center;
+			padding: 0 0 10%;
+			margin-left: 8vw;
+			
+			img {
+				width: auto !important;
+				height: 160vw !important;
+				opacity: 0;
+			}
+		}
+		
+		.slick-list {
+			margin-left: -13.5vw;
+			margin-right: -5vw;
+		}
+	}
+	
+	.collab-graphs {
+		margin: 50px 0 0;
+		
+		.layout-text-illustr__text {
+			margin: 0;
+		}
+		
+		&__texts {
+			li {
+				opacity: 1;
+				
+				strong {
+					display: block;
+				}
+				
+				*:not(img) {padding: 0 3% 0 0;}
+				
+				img, .illustration__source {
+					display: initial;
+					display: block;
+				}
+				
+				img {
+					transform: scale(0.95);
+					transform-origin: left center;
+					margin: 0 0 10px;
+				}
+				
+				.illustration__source {
+					margin: 0 0 10px;
+				}
+			}
+			
+			.slick-slide {
+				margin-left: 0;
+			}
+		}
+		
+		&__count {
+			display: none;
+		}
+		
+		.layout-text-illustr__illustr {
+			display: none;
+		}
+	}
+	
+	.nec-footer {	
+		text-align: center;
+		overflow: hidden;
+		
+		.title-big {
+			border: 0;
+			margin: 0 0 10px;
+			text-align: left;
+		}
+		
+		&__logo {
+			display: none;
+		}
+	
+		&::after {
+			content: '';
+			display: block;
+			float: right;
+			width: 260px;
+			height: 17px;
+      background: url(../images/statement-logo.svg) no-repeat center center / auto 100%;
+			margin: 30px 0 0;
+		}
+	}
+	
+	.button {
+		width: 90%;
+		font-size: 16px;
+		border-radius: 10px;
+		padding: 11px 42px;
+	}
+	
+	.cnn-footer {
+		margin: 50px 0 0;
+	}
+	
+	#side-video__video {
+		display: none;
+	}
+	
+	.side-video {
+		&__video {
+			margin: 0;
+			width: 100%;
+		}
+		
+		&__mobile-video {
+			width: 100%;
+		}
+	}
+	
+}
+
+.side-video__mobile-video {
+	@media (min-width: 768px) {
+		display: none;
+	}
+}
+
+@media (max-width: 450px) {
+	
+	.city-graphics-mobile__images .slick-track {
+	 background: url(../images/city-graphics-mobile.jpg) no-repeat 26vw top/auto 100%;
+	}
+	.city-graphics-mobile__images .slick-slide {
+    padding: 0;
+    opacity: 0;
+    width: 64vw;
+	}
+
+	.city-graphics-mobile__images .slick-slide img {
+    height: 135vw !important;
+    opacity: 0;
+  }
+}
+

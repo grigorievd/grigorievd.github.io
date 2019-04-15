@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="759.49" height="369.36" viewBox="0 0 759.49 369.36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ea7a12;
+        stroke: #f2a901;
+      }
+
+      .cls-1, .cls-20 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-15, .cls-2, .cls-6 {
+        font-size: 12px;
+      }
+
+      .cls-15, .cls-2 {
+        font-family: Montserrat-Regular, Montserrat;
+      }
+
+      .cls-3 {
+        letter-spacing: 0.01em;
+      }
+
+      .cls-4 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-6 {
+        font-family: Montserrat-Medium, Montserrat Medium;
+        font-weight: 500;
+      }
+
+      .cls-7 {
+        letter-spacing: -0.06em;
+      }
+
+      .cls-8 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-10 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0em;
+      }
+
+      .cls-12 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-13 {
+        letter-spacing: 0em;
+      }
+
+      .cls-14 {
+        letter-spacing: 0.01em;
+      }
+
+      .cls-15, .cls-17 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-16 {
+        letter-spacing: 0em;
+      }
+
+      .cls-18 {
+        letter-spacing: 0em;
+      }
+
+      .cls-19 {
+        fill: #279c89;
+      }
+
+      .cls-20 {
+        fill: none;
+        stroke: #279c89;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <title>professional-chart</title>
+  <g id="Слой_2" data-name="Слой 2">
+    <g id="Layer_1" data-name="Layer 1">
+      <line class="cls-1" x1="34.49" y1="321.43" x2="759.49" y2="321.43"/>
+      <line class="cls-1" x1="34.49" y1="268.93" x2="759.49" y2="268.93"/>
+      <line class="cls-1" x1="34.49" y1="216.43" x2="759.49" y2="216.43"/>
+      <line class="cls-1" x1="34.49" y1="163.93" x2="759.49" y2="163.93"/>
+      <line class="cls-1" x1="34.49" y1="111.43" x2="759.49" y2="111.43"/>
+      <line class="cls-1" x1="34.49" y1="58.93" x2="759.49" y2="58.93"/>
+      <line class="cls-1" x1="34.49" y1="6.43" x2="759.49" y2="6.43"/>
+      <text class="cls-2" transform="translate(6.77 324.2)">0%</text>
+      <text class="cls-2" transform="translate(96.28 340.2)"><tspan class="cls-3">0</tspan><tspan class="cls-4" x="8.04" y="0">-</tspan><tspan x="12.42" y="0">1</tspan></text>
+      <text class="cls-2" transform="translate(243.87 340.2)">1<tspan class="cls-5" x="4.33" y="0">-</tspan><tspan x="8.77" y="0">2</tspan></text>
+      <text class="cls-2" transform="translate(388.59 340.2)">3-5</text>
+      <text class="cls-6" transform="translate(306.75 366.2)">Number of <tspan class="cls-7" x="69.31" y="0">Y</tspan><tspan class="cls-8" x="76.36" y="0">e</tspan><tspan class="cls-9" x="83.52" y="0">ar of </tspan><tspan class="cls-5" x="113.93" y="0">E</tspan><tspan class="cls-9" x="121.82" y="0">xpe</tspan><tspan class="cls-10" x="143.97" y="0">r</tspan><tspan x="148.81" y="0">ie</tspan><tspan class="cls-11" x="159.5" y="0">n</tspan><tspan class="cls-12" x="167.71" y="0">c</tspan><tspan x="174.47" y="0">e</tspan></text>
+      <text class="cls-2" transform="translate(529.65 340.2)"><tspan class="cls-13">6</tspan><tspan class="cls-4" x="7.37" y="0">-</tspan><tspan x="11.75" y="0">10</tspan></text>
+      <text class="cls-2" transform="translate(677.02 340.2)">1<tspan class="cls-14" x="4.33" y="0">0</tspan><tspan class="cls-9" x="12.37" y="0">+</tspan></text>
+      <text class="cls-15" transform="translate(8.04 272.2)">5<tspan class="cls-16" x="6.67" y="0">%</tspan></text>
+      <text class="cls-2" transform="translate(2.44 220.2)">10%</text>
+      <text class="cls-2" transform="translate(3.71 167.2)">1<tspan class="cls-17" x="4.33" y="0">5</tspan><tspan x="11" y="0">%</tspan></text>
+      <text class="cls-2" transform="translate(0 114.2)"><tspan class="cls-18">2</tspan><tspan x="6.77" y="0">0%</tspan></text>
+      <text class="cls-2" transform="translate(1.22 62.2)">2<tspan class="cls-17" x="6.82" y="0">5</tspan><tspan class="cls-16" x="13.49" y="0">%</tspan></text>
+      <text class="cls-2" transform="translate(0 10.2)">30%</text>
+      <path class="cls-19" d="M105,216.43a7.5,7.5,0,1,1-7.5,7.5,7.5,7.5,0,0,1,7.5-7.5m0-4a11.5,11.5,0,1,0,11.5,11.5,11.51,11.51,0,0,0-11.5-11.5Z"/>
+      <path class="cls-19" d="M252,98.43a7.5,7.5,0,1,1-7.5,7.5,7.5,7.5,0,0,1,7.5-7.5m0-4a11.5,11.5,0,1,0,11.5,11.5A11.51,11.51,0,0,0,252,94.43Z"/>
+      <path class="cls-19" d="M398,51.43a7.5,7.5,0,1,1-7.5,7.5,7.5,7.5,0,0,1,7.5-7.5m0-4a11.5,11.5,0,1,0,11.5,11.5A11.51,11.51,0,0,0,398,47.43Z"/>
+      <path class="cls-19" d="M542,81.43a7.5,7.5,0,1,1-7.5,7.5,7.5,7.5,0,0,1,7.5-7.5m0-4a11.5,11.5,0,1,0,11.5,11.5A11.51,11.51,0,0,0,542,77.43Z"/>
+      <path class="cls-19" d="M687,74.43a7.5,7.5,0,1,1-7.5,7.5,7.5,7.5,0,0,1,7.5-7.5m0-4a11.5,11.5,0,1,0,11.5,11.5A11.51,11.51,0,0,0,687,70.43Z"/>
+      <line class="cls-20" x1="112.49" y1="218.43" x2="244.49" y2="110.43"/>
+      <line class="cls-20" x1="262.49" y1="103.43" x2="390.49" y2="58.43"/>
+      <line class="cls-20" x1="405.49" y1="58.43" x2="534.49" y2="85.43"/>
+      <line class="cls-20" x1="553.49" y1="89.43" x2="679.49" y2="81.43"/>
+    </g>
+  </g>
+</svg>

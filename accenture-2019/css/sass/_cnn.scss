@@ -1,0 +1,142 @@
+/*
+ * CNN Header Layout
+ * Updated version on 04/10/2017
+ *
+ */
+
+@function SVG-CNN( $bg: #CC0000, $logo: #FFFFFF){
+	@return svg-process('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100"><g><rect fill="#{$bg}" width="100" height="100"/><g><path fill="#{$logo}" d="M20.3,50c0-4.2,3.4-7.6,7.6-7.6h5.8v-4.3h-5.8C21.3,38.1,16,43.4,16,50s5.3,11.9,11.9,11.9h11.2 c0.6,0,1.1-0.6,1.1-1.1V38.7c0-1.2,0.8-2.2,1.9-2.5c1-0.2,2.3,0,3.2,1.5c0,0.1,2.8,4.8,7,12.1c3.3,5.7,6.7,11.6,6.7,11.7 c0.3,0.6,0.8,0.9,1.3,0.8c0.3-0.1,0.6-0.4,0.6-0.9V38.7c0-1.2,0.8-2.2,1.9-2.5c1-0.2,2.3,0,3.2,1.5c0,0.1,2.5,4.2,6.5,11.2 c3.5,6.1,7.2,12.4,7.3,12.5c0.3,0.6,0.8,0.9,1.3,0.8c0.3-0.1,0.6-0.4,0.6-0.9V32h-4.3v17.4c0,0-7.2-12.5-7.5-13 c-4.6-7.8-13.3-4.6-13.3,2.1v10.9c0,0-7.2-12.5-7.5-13C44.6,28.7,36,31.9,36,38.6v17.8c0,0.7-0.5,1.2-1.2,1.2h-6.8 C23.7,57.6,20.3,54.2,20.3,50z"/><path fill="#{$logo}" d="M83.6,32v29.2c0,1.2-0.8,2.2-1.9,2.5c-0.2,0-0.4,0.1-0.7,0.1c-0.9,0-1.8-0.4-2.6-1.6c0-0.1-2.9-5-7.3-12.5 c-3.2-5.5-6.4-11.1-6.5-11.2c-0.3-0.6-0.8-0.9-1.3-0.8c-0.3,0.1-0.6,0.4-0.6,0.9v22.6c0,1.2-0.8,2.2-1.9,2.5c-1,0.2-2.3,0-3.3-1.5 c0-0.1-2.7-4.7-6.8-11.7c-3.4-5.9-6.9-12-7-12c-0.3-0.6-0.8-0.9-1.3-0.8c-0.3,0.1-0.6,0.4-0.6,0.9v22.1c0,1.5-1.3,2.9-2.9,2.9 H27.8c-7.5,0-13.7-6.1-13.7-13.7c0-7.5,6.1-13.7,13.7-13.7h5.8V32h-5.8c-9.9,0-18,8-18,18s8,18,18,18h11.3c4.3,0,7.1-2.5,7.1-7.2 V50.5c0,0,7.2,12.5,7.5,13c4.6,7.8,13.2,4.6,13.2-2.1V50.5c0,0,7.2,12.5,7.5,13c4.6,7.8,13.2,4.6,13.2-2.1V32H83.6z"/></g></g></svg>');
+}
+
+#cnn-footer {
+	background: #b59343;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 1em;
+	color: #fff;
+	position: relative;
+	clear: both;
+	text-align: center;
+}
+#cnn-header {
+	position: relative;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	z-index: 20000000;
+	color: #fff;
+	line-height: 1em;
+	height: 6em;
+	a {
+		color: inherit;
+		text-decoration: none;
+		font-weight: 400;
+		letter-spacing: 0;
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 1em 1em;
+		cursor: pointer;
+		font-size: 10px;
+	}
+	.cnn-back {
+		background: #000;
+		padding-left: 4em;
+		&:before { 
+			content: '\2039'; 
+			padding-right: .25em;
+		}
+		&:after {
+			content: 'CNN';
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 3em;
+			height: 3em;
+			background: SVG-CNN() no-repeat 0 0;
+			background-size: 100% 100%;
+			z-index: 500000000;
+			color: transparent;
+		}
+		&.money {
+			background: #0666a7;
+			&:after {
+				background-image: SVG-CNN( #FFFFFF, #0666a7 );
+			}
+		}
+	}
+	.cnn-sponsor {
+		background: #b59343;
+		background-size: auto 100%;
+		background-position: -4em 0;
+		transition: background-position .4s, padding .4s;
+		img {
+			display: inline-block;
+			height: 1em;
+			width: auto;
+			vertical-align: middle;
+		}
+	}
+	&.fixed .cnn-sponsor {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-position: 0 0;
+		padding-left: 4em;
+		z-index: 5;
+	}
+	.cnn-menu {
+		position: fixed;
+		right: 0;
+		top: 0;
+		width: 100%;
+		max-width: 200px;
+		overflow: hidden;
+		max-height: 3em;
+		transition: max-height .4s;
+		z-index: 12;
+		a {
+			margin-bottom: 1px;
+			background: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='1px' height='1px' viewBox='0 0 1 1' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='1' height='1' fill='#dd0300' /%3E%3C/svg%3E") no-repeat 100% 0;
+			background-size: 0 100%;
+			background-color: #000;
+			transition: background-size .4s, padding-right .4s, transform .4s, opacity .4s;
+			text-align: right;
+			transform: translateX(2em);
+			opacity: 0;
+			&:hover {
+				background-size: 1em 100%;
+				padding-right: 2em;
+			}
+			&[href="#"]{
+				line-height: 1.2em;
+				text-align: left;
+				background-image: none;
+			}
+			@for $i from 1 through 10 {
+				&:nth-child(11n-#{$i}){
+					transition-delay: 0s, 0s, .05s * (10-$i), .05s * (10-$i);
+				}
+			}
+		}
+		&:before {
+			display: block;
+			width: 100%;
+			height: 3em;
+			content: 'menu';
+			color: transparent;
+			background: url("data:image/svg+xml;charset=utf8,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='40px' height='40px' viewBox='0 0 7 5'%3E%3Cline x1='1' y1='1' x2='6' y2='1' stroke='%23fff' stroke-width='.5' /%3E%3Cline x1='1' y1='2.5' x2='6' y2='2.5' stroke='%23fff' stroke-width='.5' /%3E%3Cline x1='1' y1='4' x2='6' y2='4' stroke='%23fff' stroke-width='.5' /%3E%3C/svg%3E") 100% 0 no-repeat;
+			background-size: 2em auto;
+			background-position: right .5em top .5em;
+		}
+		&.active {
+			max-height: 350px;
+/* 			max-height: 50vh; */
+			overflow: auto;
+			a {
+				transform: translateX(0em);
+				opacity: 1;
+			}
+		}
+	}
+}

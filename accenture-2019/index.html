@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8" />
+	<title>Accenturewws</title>
+	<link rel="shortcut icon" href="images/favicon.png" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<style>
+		.loader{position:fixed;top:0;left:0;background:#fff;width:100%;height:100%;z-index:9999999999999999;display:flex;justify-content:center;align-items:center;flex-wrap:wrap}.loader-logo{width:200px;height:auto}.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none;width:200px;position:absolute;height:3px;top:50%;left:calc(50% - 100px);overflow:hidden}.pace-inactive{display:none}.pace .pace-progress{background:#cd1c1e;width:100%;height:100%;position:relative;left:-200px}@keyframes pulse{0%{transform:scale(1)}30%{transform:scale(1.3)}70%{transform:scale(1.15)}100%{transform:scale(1)}}.progress{width:240px;position:absolute;top:58%;left:calc(50% - 120px)}.progress::before{width:100%;content:'';height:1px}.bar{background-color:#c00;width:0%;height:3px}.percent{position:absolute;display:inline-block;top:3px;left:48%}
+	</style>
+
+	<!-- <link rel="stylesheet" href="fonts/stylesheet.css"> -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600,700,800" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="https://cdn.plyr.io/3.4.8/plyr.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.min.css"/> -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"> -->
+	<!-- <link rel="stylesheet" href="https://cdn.plyr.io/3.4.8/plyr.css"> -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelementplayer.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+
+<body>
+
+<div class="loader">
+	<!-- <img src="images/cnn-Logo.png" class="loader-logo" alt=""> -->
+	<!-- <div class='progress' id="progress_div">
+	    <div class='bar' id='bar1'></div>
+	    <div class='percent' id='percent1'></div>
+	  </div>
+	  <input type="hidden" id="progress_width" value="0"> -->
+</div>
+
+<div id="cnn-header">
+	<a href="http://cnn.com" class="cnn-back">Back to CNN content</a>
+	<a href="" target="_blank" class="cnn-sponsor">Content by </a>
+	<div class="cnn-menu">
+		<a href="#">&copy; 2017 Cable News Network. Turner Broadcasting System Europe, limited. All Rights Reserved.</a>
+		<a href="http://edition.cnn.com/terms">Terms of service</a>
+		<a href="http://edition.cnn.com/privacy">Privacy guidelines</a>
+		<a href="http://edition.cnn.com/#">Ad choices</a>
+		<a href="http://edition.cnn.com/about">About us</a>
+		<a href="http://edition.cnn.com/feedback">Contact us</a>
+		<a href="http://www.turner.com/careers">Work for us</a>
+		<a href="http://edition.cnn.com/help">Help</a>
+	</div>
+	<script type="text/javascript">(function(){if(!String.prototype.trim){String.prototype.trim=function(){return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,'');};} var add = function(n,c){ return (n.className = (rem(n,c) + ' ' + c).trim()); }, rem = function(n,c){ return (n.className = (' ' + n.className + ' ').replace(' ' + c + ' ', ' ').trim()); }, header = document.getElementById('cnn-header'), menu = header.querySelector('.cnn-menu'), isset = false, issetMenu = false; window.addEventListener('scroll', function(){ var toBeSet = (pageYOffset ? pageYOffset : (document.documentElement.clientHeight ? document.documentElement.scrollTop : document.body.scrollTop)) > header.clientHeight / 2; if( !isset && toBeSet ){ add(header,'fixed'), isset = true; } else if( isset && !toBeSet ){ rem(header,'fixed'), isset = false; } }), menu.addEventListener('click', function( event ){ if( event.target === menu ){ if( !issetMenu ){ menu.className = add(menu,'active'), issetMenu = true; } else { menu.className = rem(menu,'active'), issetMenu = false; }} }); })();</script>
+</div>
+
+<header class="header">
+	<a href="" class="accenture-logo"> brought to you by <img src="images/accenture-logo-white.svg" alt="Accenture logo"></a>
+
+	<button class="menu-toggle-btn"></button>
+</header>
+
+<section class="hero">
+	<!-- <div class="container"> -->
+		<h1>Cyber <br> 
+		Resilience <span class="hero__guy"></span></h1>
+	<!-- </div> -->
+
+	<div class="container">
+		<div class="container-small">
+			<p class="hero__text"><strong>Cyber resilience is often equated with a “bend but don’t break” attitude.</strong> Nowhere is it clearer than in enterprises trying to innovate and grow simultaneously within a fragile digital landscape. Doing this successfully demands not just forging digital trust but also ensuring a solid cybersecurity foundation. However, enterprise security among businesses, especially in India, leaves a lot to be desired. </p>
+		</div>
+	</div>
+</section>
+
+<section class="menu">
+	<div class="menu__container">
+		<a href="" class="menu__logo"><img src="images/accenture-logo-black.svg" alt=""></a>
+		<p class="menu__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in velit esse</p>
+		
+		<div class="menu__content">
+			<div class="menu__illustration"></div>
+			<div class="menu__articles">
+				<article class="menu__AI-article">
+					<h1>The AI Influence on <br>
+						the Future of India</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+						<a href="" class="menu__read-more-link">Find out more ></a>
+				</article>
+				<article class="menu__cyber-article">
+					<h1>Cyber Resilience </h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  </p>
+						<a href="" class="menu__read-more-link">Find out more ></a>
+				</article>
+			</div>
+		</div>
+	</div>
+	<button class="close-menu menu-toggle-btn"></button>
+</section>
+
+<section class="intro">
+	<div class="intro__illustration">
+		<div class="points">
+			<div class="points__point points__point1" data-box-pos="bottom"></div>
+			<div class="points__textbox points__textbox1">
+				<p><strong>Cyber Security: </strong> <br>
+					The focus of <strong>preventing/ protecting</strong> business organization networks against cyber attacks and/or events (unauthorized access, network integrity).</p>
+			</div>
+
+			<div class="points__point points__point2" data-box-pos="right"></div>
+			<div class="points__textbox points__textbox2">
+				<p><strong>Cyber Resilience (CR): </strong> <br>
+The ability for an organization to <strong>quickly recover</strong> and <strong>deliver the intended results</strong> even when affected by cyber events and/or attacks that disrupt their day to day business/operations.
+				</p>
+			</div>
+			
+		</div>
+	</div>
+</section>
+
+<section class="case-study">
+	<div class="jagged-graphics"></div>
+	<div class="container-small container-center case-study__jagged">
+		<h2 class="title-big color-orange">A Case Study <br> of the Indian <br> Scenario</h2>
+		<div class="text">
+			<p>Despite the regulatory norms in place, cybercrime reported by NCRB rose from 9,622 to 11,592 in 2014-15.</p>
+
+			<p>Certain sectors of Indian industry are at the forefront of data breaches – Information technology (IT) and IT-enabled services (ITES) (40%), manufacturing (17.88%), education (12.56%), and hospitality (9.17%).</p>
+		</div>
+	</div>
+
+	<div class="graph">
+		<h3 class="graph__title">DETECTIONS PER SECOND</h3>
+		<img src="images/graph-img.svg" alt="" class="graph__placeholder">
+	</div>
+
+	<div class="text container-small container-center">
+		<p>CERT-In reported phishing, scanning/probing, website intrusions/defacements, ransomware, denial of service attacks, use of potentially unwanted applications (PUAs) and adware, infectors, worms and cryptojacking etc. amounting to 27,482 cybersecurity incidents in June, 2017. </p>
+
+		<p>But while ransomware ruled the roost in 2017 with 28% of malware attacks, cryptominers constituted 9% of the threats. In 2018, ransomware accounted for 13% of malware attacks and cryptojackers rose to 27%. </p>
+
+		<p>India was thus placed second only to the US with 37% of global data breaches where “information was stolen, compromised or revealed”. </p>
+
+		<p>Some of the most controversial cybersecurity breaches last year included attacks on India’s Aadhar and Quora, which makes it critical to classify risks and understand them better. </p>
+	</div>
+
+	<div class="case-study-map">
+		<div class="container">
+			<div class="text container-small color-orange">
+				<p><strong>In the first half of 2017 alone, at least one cyber attack was reported every 10 minutes.</strong> Totalling 27,482 reported cases in just 6 months. These include phishing, scanning or probing, site intrusions, defacements, virus or malicious code, ransomware (bitcoin), and denial-of-service attacks.</p>
+
+				<p>In just the past three and a half years since the report, India has seen a total of 171,000 cases of cyber crimes.</p>
+			</div>
+			<p class="case-study-map__note">*Every second in real-time represents an hour in the infographics shown.</p>
+			<p class="case-study-map__hover">Hover the spots to learn more about the cyber attacks</p>
+			<ul class="case-study-map__hotspot-texts">
+				<li>
+					<p><strong>ipsum</strong> dolor sit amet, consectetur adipisicing elit. Consequatur, perspiciatis.</p>
+				</li>
+				<li>
+					<p>Lorem ipsum dolor sit amet,  elit. Consequatur, perspiciatis.</p>
+				</li>
+				<li>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, perspiciatis.</p>
+				</li>
+				<li>
+					<p>Lorem ipsum  amet, consectetur adipisicing elit. Consequatur, perspiciatis.</p>
+				</li>
+				<li>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, perspiciatis.</p>
+				</li>
+				<li>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequas.</p>
+				</li>
+				<li>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, perspiciatis.</p>
+				</li>
+				<li>
+					<p>Lorem ipsum etur adipisicing elit. Consequatur, perspicis.</p>
+				</li>
+			</ul>
+		</div>
+		<div class="case-study-map__graphics">
+			<svg class="case-study-map__dots-svg" xmlns="http://www.w3.org/2000/svg" width="304.48" height="360.65" viewBox="0 0 304.48 360.65">
+			    <defs>
+    <style>
+      .clss-1 {
+        opacity: 0.7;
+      }
+
+      .clss-2 {
+        fill: #31c3ad;
+      }
+
+      .clss-3 {
+        fill: #90cd63;
+      }
+
+      .clss-4 {
+        fill: #fadb37;
+      }
+
+      .clss-5 {
+        fill: #f18d05;
+      }
+
+      .clss-6 {
+        fill: #015af5;
+      }
+
+      .clss-7 {
+        fill: #1a8035;
+      }
+
+      .clss-8 {
+        fill: #e43d1f;
+      }
+
+      .clss-9 {
+        fill: #ef7379;
+      }
+    </style>
+  </defs>
+  <title>map-dots</title>
+  <g id="Слой_2" data-name="Слой 2">
+    <g id="Layer_1" data-name="Layer 1">
+      <g class="clss-1">
+        <circle class="clss-2" cx="72.28" cy="5" r="5"/>
+        <circle class="clss-3" cx="41.23" cy="76.16" r="5"/>
+        <circle class="clss-4" cx="5" cy="201.67" r="5"/>
+        <circle class="clss-5" cx="96.87" cy="236.61" r="5"/>
+        <circle class="clss-6" cx="70.99" cy="355.65" r="5"/>
+        <!-- <circle class="clss-7" cx="103.34" cy="131.8" r="5"/> -->
+        <circle class="clss-8" cx="151.21" cy="276.72" r="5"/>
+        <circle class="clss-9" cx="192.62" cy="272.84" r="5"/>
+      </g>
+      <g class="clss-1">
+        <circle class="clss-2" cx="299.48" cy="230" r="5"/>
+        <circle class="clss-3" cx="288.97" cy="175.75" r="5"/>
+        <circle class="clss-4" cx="163.46" cy="139.52" r="5"/>
+        <!-- <circle class="clss-5" cx="128.52" cy="231.38" r="5"/> -->
+        <circle class="clss-6" cx="9.48" cy="205.51" r="5"/>
+        <circle class="clss-7" cx="233.33" cy="237.85" r="5"/>
+        <!-- <circle class="clss-8" cx="88.41" cy="285.73" r="5"/> -->
+        <circle class="clss-9" cx="92.29" cy="327.13" r="5"/>
+      </g>
+      <g class="clss-1">
+        <!-- <circle class="clss-2" cx="205.48" cy="331" r="5"/> -->
+        <circle class="clss-3" cx="194.97" cy="276.75" r="5"/>
+        <circle class="clss-4" cx="69.46" cy="240.52" r="5"/>
+        <circle class="clss-5" cx="34.52" cy="332.38" r="5"/>
+        <!-- <circle class="clss-6" cx="123.48" cy="58.51" r="5"/> -->
+        <circle class="clss-7" cx="139.33" cy="338.85" r="5"/>
+        <circle class="clss-8" cx="202.41" cy="138.73" r="5"/>
+        <!-- <circle class="clss-9" cx="206.29" cy="180.13" r="5"/> -->
+      </g>
+    </g>
+  </g>
+			</svg>
+
+			<svg class="case-study-map__hotspots-svg" xmlns="http://www.w3.org/2000/svg" width="261" height="424" viewBox="0 0 261 424">
+			  <defs>
+			    <style>
+			      .cls-1, .cls-2 {
+			        fill: #90cd63;
+			      }
+
+			      .cls-1, .cls-11, .cls-13, .cls-15, .cls-3, .cls-5, .cls-7, .cls-9 {
+			        opacity: 0.3;
+			      }
+
+			      .cls-3, .cls-4 {
+			        fill: #fadb37;
+			      }
+
+			      .cls-5, .cls-6 {
+			        fill: #31c3ad;
+			      }
+
+			      .cls-7, .cls-8 {
+			        fill: #1a8035;
+			      }
+
+			      .cls-10, .cls-9 {
+			        fill: #015af5;
+			      }
+
+			      .cls-11, .cls-12 {
+			        fill: #f18d05;
+			      }
+
+			      .cls-13, .cls-14 {
+			        fill: #ef7379;
+			      }
+
+			      .cls-15, .cls-16 {
+			        fill: #e43d1f;
+			      }
+			    </style>
+			  </defs>
+			  <title>map-hotspots</title>
+			  <g id="Слой_2" data-name="Слой 2">
+			    <g id="Layer_1" data-name="Layer 1">
+			      <circle data-text="" class="cls-1" cx="141" cy="408" r="16"/>
+			      <circle data-text="" class="cls-2" cx="141" cy="408" r="7.5"/>
+			      <circle data-text="" class="cls-3" cx="16" cy="81" r="16"/>
+			      <circle data-text="" class="cls-4" cx="16" cy="81" r="7.5"/>
+			      <circle data-text="" class="cls-5" cx="244" cy="289" r="16"/>
+			      <circle data-text="" class="cls-6" cx="244" cy="289" r="7.5"/>
+			      <circle data-text="" class="cls-7" cx="139" cy="92" r="16"/>
+			      <circle data-text="" class="cls-8" cx="139" cy="92" r="7.5"/>
+			      <circle data-text="" class="cls-9" cx="161" cy="16" r="16"/>
+			      <circle data-text="" class="cls-10" cx="161" cy="16" r="7.5"/>
+			      <circle data-text="" class="cls-11" cx="166" cy="190" r="16"/>
+			      <circle data-text="" class="cls-12" cx="166" cy="190" r="7.5"/>
+			      <circle data-text="" class="cls-13" cx="245" cy="140" r="16"/>
+			      <circle data-text="" class="cls-14" cx="245" cy="140" r="7.5"/>
+			      <circle data-text="" class="cls-15" cx="127" cy="246" r="16"/>
+			      <circle data-text="" class="cls-16" cx="127" cy="246" r="7.5"/>
+			    </g>
+			  </g>
+			</svg>
+
+
+		</div>
+	</div>
+
+</section>
+
+<section class="risks">
+	<div class="container-medium container-center">
+		<h2 class="title-big">Categorizing Risks </h2>
+		<article class="risks__risk">
+			<h1>IT/technology risks</h1>
+			<div class="text">
+				<p>These include but are not limited to data thefts, compromised accounts, lost files and disabled systems, obsolete legacy systems. In addition, enterprises may face risks related to – IT strategy, cyber security and incident response, IT resilience and business continuity, vendors and third-parties, data management, IT program execution, technology operations and ineffective risk management. </p>
+
+				<p>Among these, cybersecurity (31%) and disruptive technologies (25%) pose big risks to Indian businesses though the trend is expected to shift by 2021, with cybersecurity taking the lead with 36% followed by technology disruption risk at 33%. 
+				</p>
+			</div>
+			<div class="risks__box">
+				<h2 class="risks__petya-icon">Petya Outbreak</h2>
+				<p>The Petya outbreak occured in June 2017, which left government agencies and private businesses around the globe scrambling for solutions.This attack <span class="short">impacted</span></p>
+				<div class="hidden-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, vitae!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea reiciendis illum expedita amet repellendus eveniet quos nulla, hic commodi quaerat?</p>
+				</div>
+				<div class="risks__box-read-more">
+					<span>Read more</span>
+				</div>
+			</div>
+		</article>
+		<article class="risks__risk">
+			<h1>Operational risks</h1>
+			<div class="text">
+				<p>These arise from employee errors, systems failures, regulatory compliance and embezzlement.</p>
+			</div>
+			<div class="risks__box">
+				<h2 class="risks__wannacry-icon">WannaCry Ransomeware Attack</h2>
+				<p>WannaCry ransomware attack occured in May 2017 targeting systems running Microsoft Windows operating systems. It effectively encrypted data and held it ransom until ransom payment <span class="short">was made</span></p>
+				<div class="hidden-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, vitae!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea reiciendis illum expedita amet repellendus eveniet quos nulla, hic commodi quaerat?</p>
+				</div>
+				<div class="risks__box-read-more">
+					<span>Read more</span>
+				</div>
+			</div>
+		</article>
+		<article class="risks__risk">
+			<h1>Fraud and financial crime risks</h1>
+			<div class="text">
+				<p>These span money laundering, terrorist financing, fraud, bribery and corruption, market abuse and insider trading. </p>
+			</div>
+			<div class="risks__box">
+				<h2 class="risks__cosmos-icon">Cosmos Bank Cyber Heist</h2>
+				<p>In August 2018, Cyber criminals hacked into the systems of India's Cosmos Bank and siphoned off roughly 944 million rupees ($13.5 million USD), through simultaneous <span class="short">withdrawals</span></p>
+				<div class="hidden-content">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, vitae!</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea reiciendis illum expedita amet repellendus eveniet quos nulla, hic commodi quaerat?</p>
+				</div>
+				<div class="risks__box-read-more">
+					<span>Read more</span>
+				</div>
+			</div>
+		</article>
+	</div>
+
+	<div class="risks__chart">
+		<div class="container">
+			
+			<h2><strong>Consumer loss through cyber crime worldwide in 2017, <br>
+				by victim country</strong> (in billion U.S. dollars)</h2>
+
+			<img src="images/risks-chart.svg" alt="Consumer loss through cyber crime worldwide in 2017, by victim country (in billion U.S. dollars)">
+		</div>
+	</div>
+
+	<div class="risks__outro-copy">
+		<div class="text container-medium container-center">
+			<p><strong>However, the picture is not as bleak as it seems.</strong> Accenture’s 2018 State of Cyber Resilience Report maintains that only 1 in 8 targeted cybersecurity attacks got through in 2018 which is a comforting statistic. 83% of their survey respondents maintained that emergent tech like AI, ML, IoT, Blockchain actually enhanced cybersecurity.</p>
+
+			<p><strong>While 87% of security breaches were prevented, enterprises only faced 2-3 breaches a month.</strong> 90% of respondents felt investments in cybersecurity would rise over the next 3 years but 31 percent were sure these would double. 71% respondents maintained they were unsure of when and how attacks would impact enterprises but 72% stated they would capitulate if security was breached.</p>
+
+			<p><strong>Warding off cyberattacks and protecting data</strong> then, is possible when enterprises recognise that developing cyber resilience is more a “boardroom imperative” than just an “IT issue” and up the ante for it enterprise-wide. </p>
+		</div>
+	</div>
+</section>
+
+<section class="smart-ways">
+	<div class="smart-ways__jagged"></div>
+	<div class="container-medium container-center">
+		<h2 class="title-big color-orange">5 Smart Ways to Enhance Cyber</h2>
+		<p>Safeguarding future prosperity consequently mandates the adoption of certain measures, such as:</p>
+		<ul class="smart-ways__list">
+			<li>
+				<p><strong>Identifying</strong> threats, recognizing perimeters, pre-empting attacks – internal and external.</p>
+			</li>
+			<li>
+				<p><strong>Resisting</strong> attacks by upgrading security protocols and patches regularly across enterprise networks. </p>
+			</li>
+			<li>
+				<p><strong>Responding</strong> with a comprehensive contingency plan detailing the role of their employees, steps for data retrieval and process of disclosing the attack.</p>
+			</li>
+			<li>
+				<p><strong>Adapting</strong> to a changing business landscape by becoming tech savvy.</p>
+			</li>
+			<li>
+				<p><strong>Harnessing</strong> emergent technologies and rope in automation and analytics to build robust defenses. </p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="outro">
+	<div class="outro__jagged"></div>
+	<div class="container-medium">
+		<p><strong>Digitization drives growth but also attracts its fair share of risks.</strong> Most of these surround a valuable asset – information. By creating a roadmap for developing cyber resilience and investing in state of the art IT security infrastructure, organizations can gain ground on hackers, innovate and expand, leverage customers’ trust and beget the competitive advantage that can set them apart. While this may not eliminate the prospect of breaches totally, it will make defenses more comprehensive and assessment of cyber threats, accurate.</p>
+	</div>
+</section>
+
+<footer class="footer">
+	<div class="footer__source">
+		<p>Sources: <br> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sepor incididunt ut labore et dolore magna aliqua. <br>
+		Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. <br>
+		<br>
+		<em>Map is for illustrative purposes only.</em></p>
+	</div>
+	<div class="next-article">
+		<div class="container">
+			<div class="next-article__container">
+				<span class="next-article__next">Read next</span>
+				<h2 class="title-big">The AI Influence on the Future of India</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut e</p>
+
+				<a href="" class="next-article__link">Find out more ></a>
+			</div>
+		</div>
+	</div>
+	<div class="footer__find-out-more">
+		<a href="" class="footer__logo accenture-logo">Brought to you by <img src="images/accenture-logo-black.svg" alt=""></a>
+		<a href="" class="footer__find-more-link">Find out more ></a>
+	</div>
+</footer>
+
+<div class="footer_btm">
+    <span class="scroll-top" title=""><i class="fa fa-angle-up"></i></span>
+    <div class="share-block">
+        <span class="share-click-ico"><i class="fa fa-share-alt"></i></span>
+    	<ul class="foot-social">
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u=" class="fsocial_fbico" target="_blank" title=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/home?status=" class="fsocial_twitico" target="_blank" title=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href="mailto:?subject=&body=" class="fsocial_mailico" target="_blank" title=""><i class="fa fa-envelope"></i></a></li>
+            <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=" class="fsocial_inico" target="_blank" title=""><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript" src="scripts/include.js"></script>
+<script type="text/javascript">
+
+// include( url:String [, callback:Function ]);
+// include any script files necessary and execute a callback after loading that URL.
+// DEVELOPMENT, IE and ES6 are available as global variables (Boolean) inside the include.js file.
+
+if( DEVELOPMENT && !IE && ES6 ){
+
+	console.log('Development version detected, using original source file.');
+
+	include( 'scripts/maximised/_CNN.js') ;
+	include( 'scripts/maximised/_AF.js' );
+	include( 'scripts/maximised/_core.js' );
+	include( 'scripts/maximised/_share.js' );
+	include( 'scripts/maximised/_eventThrottleController.js' );
+	include( 'scripts/maximised/_inViewportClassController.js' );
+	include( 'scripts/maximised/_parallaxTransformController.js' );
+	include( 'scripts/maximised/main.js' );
+
+} else {
+
+	include( 'scripts/scripts.min.js' );
+
+	/* We will fetch the advertiser name here. But for more specific values, please amend this.
+	 * This also requires the advertiser name to be filled in in the header. */
+
+	var advertiser = 'nec2019';
+		/*advertiser = advertiser.textContent.toLowerCase();
+		advertiser = advertiser.replace( 'sponsor content from', '' ).trim()
+		advertiser = advertiser.replace( /[\b\B]+/g, '-' );*/
+
+	if( advertiser === '[sponsor]' ){
+
+		console.warn( 'Developer reminder: Fill in advertiser name (no tracking scripts have been loaded due to this issue).' );
+
+	} else {
+
+		window.digitalDataLayer = {
+			'page_template': 'article',
+			'sponsored_content': true,
+			'sponsorship_type': 'adfeature',
+			'advertiser_name': advertiser,
+			'ad_enabled': false
+		}
+
+		include( 'https://assets.adobedtm.com/163d1096ee58e69f3c2853388c3bd41996e5fc4f/satelliteLib-d76d1730abb96687bfefdfdb53da02b40150601c.js', function(){
+
+			_satellite.pageBottom();
+
+		});
+
+		// Banners
+
+		include( 'scripts/_cnn_ais.js' );
+		include( 'http://i.cdn.turner.com/ads/cnn_international/adfuel.js' );
+		include( 'scripts/_cnn_epicspec.js', function(){
+
+			setEpicSpec( window, advertiser, 'cnni_adfeature' );
+			delete setEpicSpec; // Make inaccessible
+
+		});
+		include( 'http://i.cdn.turner.com/ads/cnni/cnni_adfeature.js' );
+
+	}
+
+}
+
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script>
+	paceOptions = {
+	  target: '.loader'
+	}
+</script>
+<script src="scripts/objectFitPolyfill.basic.min.js"></script>
+<script src="scripts/pace.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelement-and-player.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script> -->
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script> -->
+<!-- <script src="https://cdn.plyr.io/3.4.8/plyr.polyfilled.js"></script> -->
+<script type="text/javascript" src="scripts/jquery.paroller.min.js"></script>
+<script src="scripts/main.js"></script>
+<!-- <script src="scripts/main.min.js"></script> -->
+
+</body>
+</html>

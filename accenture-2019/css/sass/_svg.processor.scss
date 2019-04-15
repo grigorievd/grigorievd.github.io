@@ -1,0 +1,49 @@
+/*
+ * SVG Processor
+ * Updated version on 04/10/2017
+ *
+ * Basically a URL encoder to convert an SVG file string into a url(data) object for CSS.
+ *
+ */
+
+@function str-concat( $strings... ){
+	$output: '';
+	@each $string in $strings {
+		$output: $output + $string;
+	}
+	@return $output;
+}
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search); 
+    @if $index { 
+        @return str-slice($string, 1, $index - 1) + $replace + 
+        str-replace(str-slice($string, $index + 
+        str-length($search)), $search, $replace); 
+    }
+    @return $string; 
+}
+@function url-encode( $string ){
+
+    $encoded: '';
+    $slice: 2000;
+    $index: 0;
+    $loops: ceil( str-length( $string ) / $slice );
+    
+    @for $i from 1 through $loops {
+        $chunk: str-slice($string, $index, $index + $slice - 1); 
+        $chunk: str-replace($chunk,'"','\'');
+        $chunk: str-replace($chunk,'<','%3C');
+        $chunk: str-replace($chunk,'>','%3E');
+        $chunk: str-replace($chunk,'&','%26');
+        $chunk: str-replace($chunk,'#','%23');       
+        $encoded: #{$encoded}#{$chunk};
+        $index: $index + $slice; 
+    }
+    
+    @return $encoded;
+}
+@function svg-process($svg){
+
+    @return url("data:image/svg+xml;charset=utf8,#{url-encode( $svg )}");   
+    
+}
