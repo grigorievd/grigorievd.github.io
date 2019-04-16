@@ -10,9 +10,16 @@ $(document).ready(function() {
 
 	console.log(12312);
 
-	 $.getJSON('diagram-json.php', function(data){
-	 	console.log(123);
-	 });
+	 // $.getJSON('diagram-json.php', function(data){
+	 // 	console.log(123);
+	 // });
+
+	 $.ajax({
+		  url: "diagram-json.php",
+		  success: function(data){
+		    alert( "Прибыли данные: " + data );
+		  }
+		});
 
 	// $('html, body').scrollTop(0);
 	// $(document).scrollTop(0);
