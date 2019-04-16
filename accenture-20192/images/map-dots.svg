@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="304.48" height="360.65" viewBox="0 0 304.48 360.65">
+  <defs>
+    <style>
+      .clss-1 {
+        opacity: 0.7;
+      }
+
+      .clss-2 {
+        fill: #31c3ad;
+      }
+
+      .clss-3 {
+        fill: #90cd63;
+      }
+
+      .clss-4 {
+        fill: #fadb37;
+      }
+
+      .clss-5 {
+        fill: #f18d05;
+      }
+
+      .clss-6 {
+        fill: #015af5;
+      }
+
+      .clss-7 {
+        fill: #1a8035;
+      }
+
+      .clss-8 {
+        fill: #e43d1f;
+      }
+
+      .clss-9 {
+        fill: #ef7379;
+      }
+    </style>
+  </defs>
+  <title>map-dots</title>
+  <g id="Слой_2" data-name="Слой 2">
+    <g id="Layer_1" data-name="Layer 1">
+      <g class="clss-1">
+        <circle class="clss-2" cx="72.28" cy="5" r="5"/>
+        <circle class="clss-3" cx="41.23" cy="76.16" r="5"/>
+        <circle class="clss-4" cx="5" cy="201.67" r="5"/>
+        <circle class="clss-5" cx="96.87" cy="236.61" r="5"/>
+        <circle class="clss-6" cx="70.99" cy="355.65" r="5"/>
+        <circle class="clss-7" cx="103.34" cy="131.8" r="5"/>
+        <circle class="clss-8" cx="151.21" cy="276.72" r="5"/>
+        <circle class="clss-9" cx="192.62" cy="272.84" r="5"/>
+      </g>
+      <g class="clss-1">
+        <circle class="clss-2" cx="299.48" cy="230" r="5"/>
+        <circle class="clss-3" cx="288.97" cy="175.75" r="5"/>
+        <circle class="clss-4" cx="163.46" cy="139.52" r="5"/>
+        <circle class="clss-5" cx="128.52" cy="231.38" r="5"/>
+        <circle class="clss-6" cx="9.48" cy="205.51" r="5"/>
+        <circle class="clss-7" cx="233.33" cy="237.85" r="5"/>
+        <circle class="clss-8" cx="88.41" cy="285.73" r="5"/>
+        <circle class="clss-9" cx="92.29" cy="327.13" r="5"/>
+      </g>
+      <g class="clss-1">
+        <circle class="clss-2" cx="205.48" cy="331" r="5"/>
+        <circle class="clss-3" cx="194.97" cy="276.75" r="5"/>
+        <circle class="clss-4" cx="69.46" cy="240.52" r="5"/>
+        <circle class="clss-5" cx="34.52" cy="332.38" r="5"/>
+        <circle class="clss-6" cx="123.48" cy="58.51" r="5"/>
+        <circle class="clss-7" cx="139.33" cy="338.85" r="5"/>
+        <circle class="clss-8" cx="202.41" cy="138.73" r="5"/>
+        <circle class="clss-9" cx="206.29" cy="180.13" r="5"/>
+      </g>
+    </g>
+  </g>
+</svg>

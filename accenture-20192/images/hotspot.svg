@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ba4505;
+        opacity: 0.4;
+      }
+
+      .cls-2 {
+        fill: #f26300;
+        opacity: 0.9;
+      }
+    </style>
+  </defs>
+  <title>hotspot</title>
+  <g id="Слой_2" data-name="Слой 2">
+    <g id="Layer_1" data-name="Layer 1">
+      <g>
+        <circle class="cls-1" cx="21" cy="21" r="21"/>
+        <circle class="cls-2" cx="21" cy="21" r="12"/>
+      </g>
+    </g>
+  </g>
+</svg>
