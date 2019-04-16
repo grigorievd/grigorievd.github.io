@@ -113,7 +113,35 @@ The ability for an organization to <strong>quickly recover</strong> and <strong>
 
 	<div class="graph">
 		<h3 class="graph__title">DETECTIONS PER SECOND</h3>
-		<img src="images/graph-img.svg" alt="" class="graph__placeholder">
+
+		<div id="content">
+			<div id="stats_graph">
+				<!-- <div id="stats_graph_header">
+					<h3>REAL-TIME</h3>
+					<h2>DETECTIONS PER SECOND</h2>
+				</div> -->
+
+				<canvas id="graph" class="graph"></canvas>
+
+				<style>
+					#graph {
+						display: block;
+						top: 100px;
+						left: 0;
+						width: 100%;
+					}
+				</style>
+
+				<div id="detection_types_container"></div>
+			</div>
+
+			<!-- TODO: временное решение, из-за того, что данные грузятся в карте -->
+			<div class="webgl" style="display: none;">
+				<canvas id="webgl-canvas"></canvas>
+			</div>
+		</div>
+
+		<!-- <img src="images/graph-img.svg" alt="" class="graph__placeholder"> -->
 	</div>
 
 	
@@ -310,461 +338,6 @@ The ability for an organization to <strong>quickly recover</strong> and <strong>
 	</div>
 
 </section>
-
-<div id="header" style="">
-    <div id="header_mainheader">
-                    <a id="header_menu_button">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="0 397.2 595.3 444.7" enable-background="new 0 397.2 595.3 444.7" xml:space="preserve">
-	                <rect x="2" y="397.2" width="591.2" height="74.7"/>
-                    <rect x="2" y="586.9" width="591.2" height="74.7"/>
-                    <rect x="2" y="767.4" width="591.2" height="74.7"/>
-                </svg>
-            </a>
-        
-                    <h1 id="header_main_title"> <b>CYBERTHREAT</b> REAL-TIME MAP</h1>
-        
-                    <div id="header_language_selector">
-                <ul>
-                    <li id="selected_language">
-                        <div>
-                            <span class="flag flag-en">&nbsp;</span><span
-                                    class="lang_item">EN</span>
-                        </div>
-                        <ul id="alternative_languages">
-                                                            <li>
-                                    <a href="/de/stats">
-                                        <span class="flag flag-de">&nbsp;</span><span
-                                                class="lang_item">DE</span>
-                                    </a>
-                                </li>
-                                                            <li>
-                                    <a href="/es/stats">
-                                        <span class="flag flag-es">&nbsp;</span><span
-                                                class="lang_item">ES</span>
-                                    </a>
-                                </li>
-                                                            <li>
-                                    <a href="/fr/stats">
-                                        <span class="flag flag-fr">&nbsp;</span><span
-                                                class="lang_item">FR</span>
-                                    </a>
-                                </li>
-                                                            <li>
-                                    <a href="/it/stats">
-                                        <span class="flag flag-it">&nbsp;</span><span
-                                                class="lang_item">IT</span>
-                                    </a>
-                                </li>
-                                                            <li>
-                                    <a href="/ja/stats">
-                                        <span class="flag flag-ja">&nbsp;</span><span
-                                                class="lang_item">JA</span>
-                                    </a>
-                                </li>
-                                                            <li>
-                                    <a href="/pt/stats">
-                                        <span class="flag flag-pt">&nbsp;</span><span
-                                                class="lang_item">PT</span>
-                                    </a>
-                                </li>
-                                                            <li>
-                                    <a href="/ru/stats">
-                                        <span class="flag flag-ru">&nbsp;</span><span
-                                                class="lang_item">RU</span>
-                                    </a>
-                                </li>
-                                                            <li>
-                                    <a href="/tr/stats">
-                                        <span class="flag flag-tr">&nbsp;</span><span
-                                                class="lang_item">TR</span>
-                                    </a>
-                                </li>
-                                                            <li>
-                                    <a href="/cn/stats">
-                                        <span class="flag flag-cn">&nbsp;</span><span
-                                                class="lang_item">CN</span>
-                                    </a>
-                                </li>
-                                                    </ul>
-                    </li>
-                </ul>
-            </div>
-        
-
-        
-                    <a target="_blank" href="https://www.kaspersky.com/downloads/thank-you/mac-security-free-trial?redef=1&amp;reseller=gl_cybermap_trd_ona_smm__onl_b2c_cybm_lnk____kism___">
-                <button id="header_main_button">Download Trial</button>
-            </a>
-            </div>
-
-            <div id="header_subheader">
-            <ul class="menu">
-
-                <li><a href="/"
-                       data-subpage="1">MAP</a>
-                </li>
-
-                                    <li><a href="/stats/"
-                           data-subpage="2">STATISTICS</a>
-                    </li>
-                
-                                    <li><a href="/subsystems/"
-                           data-subpage="3">DATA SOURCES</a>
-                    </li>
-                
-                                    <li><a href="/buzz/"
-                           data-subpage="4">BUZZ</a>
-                    </li>
-                
-                                    <li class="last"><a
-                                href="/widget/"
-                                data-subpage="5">WIDGET</a>
-                    </li>
-                
-            </ul>
-
-                        <ul id="share_links">
-                
-                                    <li>
-                        <a href="https://www.facebook.com/dialog/feed?app_id=634328833377154&amp;display=popup&amp;caption=Cyberthreat+Real-Time+Map&amp;name=Cyberthreat+Real-Time+Map&amp;link=https://cybermap.kaspersky.com/&amp;description=Find+out+if+you%E2%80%99re+under+cyber-attack+here+%23CyberSecurityMap+%23CyberSecurity+%23CyberWar&amp;picture=https://cybermap.kaspersky.com/%2Fimages%2Fsocial_share.jpg" target="_blank" class="facebook" id="header_desktop_share_button_facebook">
-                            <svg class="header_sharing_button">
-                                <use xlink:href="#header_sharing_fb"></use>
-                            </svg>
-                        </a>
-                    </li>
-                
-                                    <li>
-                        <a href="http://twitter.com/intent/tweet?url=https%3A%2F%2Fcybermap.kaspersky.com%2F&amp;text=Find+out+if+you%E2%80%99re+under+cyber-attack+here+%23CyberSecurityMap+%23CyberSecurity+%23CyberWar" target="_blank" class="twitter" id="header_desktop_share_button_twitter">
-                            <svg class="header_sharing_button">
-                                <use xlink:href="#header_sharing_tw"></use>
-                            </svg>
-                        </a>
-                    </li>
-                
-                
-            </ul>
-            <span id="share_label">Share</span>
-
-                    </div>
-    
-</div>
-
-<div id="content">
-    
-
-            <div id="stats_graph">
-            <div id="stats_graph_header">
-                <h3>REAL-TIME</h3>
-                <h2>DETECTIONS PER SECOND</h2>
-            </div>
-
-            <canvas id="graph" class="graph"></canvas>
-
-            <style>
-            	#graph {
-            		    display: block;
-    top: 100px;
-    left: 0;
-    width: 100%;
-            	}
-            </style>
-
-            <div id="detection_types_container"></div>
-        </div>
-    
-            <div id="most_infected">
-            <h2>MOST INFECTED TODAY</h2>
-            <ul id="most_infected_links">
-                <li>
-                    <a class='country_link' data-country-id="">
-                        <span class="num">1.</span>
-                        <span class="name"></span>
-                        <span class="info">See historical data</span>
-                    </a>
-                </li>
-                <li>
-                    <a class='country_link' data-country-id="">
-                        <span class="num">2.</span>
-                        <span class="name"></span>
-                        <span class="info">See historical data</span>
-                    </a>
-                </li>
-                <li>
-                    <a class='country_link' data-country-id="">
-                        <span class="num">3.</span>
-                        <span class="name"></span>
-                        <span class="info">See historical data</span>
-                    </a>
-                </li>
-                <li>
-                    <a class='country_link' data-country-id="">
-                        <span class="num">4.</span>
-                        <span class="name"></span>
-                        <span class="info">See historical data</span>
-                    </a>
-                </li>
-                <li>
-                    <a class='country_link' data-country-id="">
-                        <span class="num">5.</span>
-                        <span class="name"></span>
-                        <span class="info">See historical data</span>
-                    </a>
-                </li>
-            </ul>
-            <div id="most_infected_description">Detection totals reset every day at 0:00:00 GMT.</div>
-        </div>
-    
-            <div id="world_stats">
-            <h3 class="panel_header">HISTORICAL STATISTICS</h3>
-            <h2 class="panel_header">WORLDWIDE</h2>
-            <div id="world_stats_controls">
-                <div class="leftcolumn">
-                    <select id="world_stats_detection_type" name="world_stats_detection_type" class="select_stats_control">
-                        <option value="oas">Local infections</option>
-                        <option value="wav">Web threats</option>
-                        <option value="ids">Network attacks</option>
-                        <option value="vul">Vulnerabilities</option>
-                        <option value="kas">Spam</option>
-                        <option value="mav">Infected Mail</option>
-                        <option value="ods">On-Demand Scan</option>
-                        <option value="bad">Botnet activity</option>
-                    </select>
-                </div>
-                <div class="rightcolumn">
-                    <span>TIME PERIOD:</span>
-                    <input id="world_stats_time_period_week" name="world_stats_time_period" type="radio" value="w"
-                           checked><label
-                            for="world_stats_time_period_week">Last week</label>
-                    <input id="world_stats_time_period_month" name="world_stats_time_period" type="radio"
-                           value="m"><label
-                            for="world_stats_time_period_month">Last month</label>
-                </div>
-            </div>
-            <div id="world_stats_container">
-                <div class="three_in_row">
-                    <div class="stats_panel" id="world_stats_world">
-                        <h2>WORLD</h2>
-                        <table class="world_stats_country_list" cellpadding="0" cellspacing="0"></table>
-                    </div>
-                </div><div class="three_in_row">
-                    <div class="stats_panel" id="world_stats_north_america">
-                        <h2>North America</h2>
-                        <table class="world_stats_country_list" cellpadding="0" cellspacing="0"></table>
-                    </div>
-                </div><div class="three_in_row">
-                    <div class="stats_panel" id="world_stats_south_america">
-                        <h2>South America</h2>
-                        <table class="world_stats_country_list" cellpadding="0" cellspacing="0"></table>
-                    </div>
-                </div><div class="three_in_row">
-                    <div class="stats_panel" id="world_stats_asia">
-                        <h2>Asia</h2>
-                        <table class="world_stats_country_list" cellpadding="0" cellspacing="0"></table>
-                    </div>
-                </div><div class="three_in_row">
-                    <div class="stats_panel" id="world_stats_europe">
-                        <h2>Europe</h2>
-                        <table class="world_stats_country_list" cellpadding="0" cellspacing="0"></table>
-                    </div>
-                </div><div class="three_in_row">
-                    <div class="stats_panel" id="world_stats_africa">
-                        <h2>Africa</h2>
-                        <table class="world_stats_country_list" cellpadding="0" cellspacing="0"></table>
-                    </div>
-                </div><div class="three_in_row">
-                    <div class="stats_panel" id="world_stats_oceania">
-                        <h2>Oceania</h2>
-                        <table class="world_stats_country_list" cellpadding="0" cellspacing="0"></table>
-                    </div>
-                </div>
-            </div>
-
-            <div id="world_stats_detail_container">
-                <div class="two_in_row">
-                    <div class="stats_panel" id="world_stats_graph">
-                        <h2></h2>
-                        <div class="graph">
-                            <canvas id="worldChartCanvas"></canvas>
-                            <div class="nodata">NO DATA</div>
-                        </div>
-                    </div>
-                </div><div class="two_in_row">
-                    <div class="stats_panel" id="world_stats_list">
-                        <h2></h2>
-                        <table id="world_stats_threats_list" cellpadding="0" cellspacing="0"></table>
-                        <div class="nodata">NO DATA</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-            <div id="country_stats">
-            <h3 class="panel_header">HISTORICAL STATISTICS</h3>
-            <h2 class="panel_header">PER COUNTRY</h2>
-            <div id="country_stats_controls">
-                <div class="leftcolumn">
-                    <select id="country_stats_country" name="country_stats_country" class="select_stats_control">
-                    </select>
-                </div>
-                <div class="middlecolumn">
-                    <select id="country_stats_detection_type" name="country_stats_detection_type" class="select_stats_control">
-                        <option value="oas">Local infections</option>
-                        <option value="wav">Web threats</option>
-                        <option value="ids">Network attacks</option>
-                        <option value="vul">Vulnerabilities</option>
-                        <option value="kas">Spam</option>
-                        <option value="mav">Infected Mail</option>
-                        <option value="ods">On-Demand Scan</option>
-                        <option value="bad">Botnet activity</option>
-                    </select>
-                </div>
-                <div class="rightcolumn">
-                <span>TIME PERIOD:</span>
-                <input id="country_stats_time_period_week" name="country_stats_time_period" type="radio" value="w"
-                       checked><label
-                        for="country_stats_time_period_week">Last week</label>
-                <input id="country_stats_time_period_month" name="country_stats_time_period" type="radio"
-                       value="m"><label
-                        for="country_stats_time_period_month">Last month</label>
-            </div>
-            </div>
-            <div id="country_stats_detail_container">
-                <div class="two_in_row">
-                    <div class="stats_panel" id="country_stats_graph">
-                        <h2></h2>
-                        <div class="graph">
-                            <canvas id="countryChartCanvas"></canvas>
-                            <div class="nodata">NO DATA</div>
-                        </div>
-                    </div>
-                </div><div class="two_in_row">
-                    <div class="stats_panel" id="country_stats_list">
-                        <h2></h2>
-                        <table id="country_stats_threats_list" cellpadding="0" cellspacing="0"></table>
-                        <div class="nodata">NO DATA</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-    <!-- TODO: временное решение, из-за того, что данные грузятся в карте -->
-    <div class="webgl" style="display: none;">
-        <canvas id="webgl-canvas"></canvas>
-    </div>
-</div>
-
-<div id="footer" class="closed" style="">
-        <a id="footer_logo" href="//www.kaspersky.com/" target="_blank">
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 360.5 115.5" style="enable-background:new 0 0 360.5 115.5;" xml:space="preserve">
-            <g>
-                <path fill="#ffffff" class="st0" d="M300.8,77v-4h20.7v4H300.8z M321.5,55.6v4h-1.4c1.3,0.7,1.9,2.4,1.9,3.9c0,4.2-3.3,6.7-7.1,6.7
-		c-4.4,0-7.1-3.1-7.1-6.7c0-2.2,1.1-3.4,1.9-3.9h-1.4v-4H321.5z M314.9,66.2c1.2,0,3.3-0.9,3.3-3.3c0-1.4-0.7-2.3-1.5-2.8
-		c-0.5-0.3-1.1-0.5-1.7-0.6c-0.6,0-1.2,0.1-1.7,0.3c-0.9,0.4-1.8,1.3-1.8,3C311.5,65.2,313.4,66.2,314.9,66.2L314.9,66.2z
-		 M300.8,52.9v-4h7.5h1c-1.5-1.4-1.5-3.3-1.5-3.9c0-2.8,2-6.5,7-6.5c4.8,0,7.2,3.3,7.2,6.7c0,1.9-0.9,3.3-1.9,3.9h1.4v3.8H300.8z
-		 M314.8,42.5c-1.7,0-3.4,1.3-3.4,3.3c0,2.1,1.7,3.3,3.4,3.3c1.8,0,3.4-1.2,3.4-3.2C318.3,43.8,316.6,42.5,314.8,42.5L314.8,42.5z
-		 M82.2,64.2l5.1,10.2l5.1-10.2H82.2z M174.1,52.7l-10.2,5.1l10.2,5.1V52.7z M288.1,77L283,66.9L277.9,77H288.1z"/>
-                <path fill="#ffffff" class="st0" d="M105.9,77h-7.3L87.3,52.6L75.9,77h-7.3l18.6-40L105.9,77z M179.2,45.8v-7.3h-15.6H160h-3.6V77h3.6h3.6h15.6
-		v-7.3h-15.6v-24H179.2z M45.8,38.5h-7.3V77h7.3V38.5z M54.6,57.8l13.5-19.3h-8.5L46.1,57.8L59.6,77h8.5L54.6,57.8z M244.2,38.5H237
-		V77h7.3V38.5z M253,57.8l13.5-19.3H258l-13.5,19.3L258,77h8.5L253,57.8z M203.9,62.1c3.7-2.4,5.7-6.2,5.7-10.6
-		c0-4.7-2.1-8.6-5.9-10.8c-2.5-1.5-5.7-2.2-9.8-2.2h-9.1l0,0V77h7.3V57.8v-12h1.8c5,0,8.5,1.2,8.5,5.8c0,4.2-4.2,6.1-9,6.2
-		c-0.2,0-0.7,0-1,0v0L205.9,77h8.5L203.9,62.1z M146.4,40.7c-2.5-1.5-5.7-2.2-9.8-2.2h-9.1l0,0V77h7.3V57.8v-12h1.8
-		c5,0,8.5,1.2,8.5,5.8c0,4.2-4.2,6.1-9,6.2c-0.2,0-0.7,0-1,0v0l4.8,6.9c2.4-0.4,4.5-1.2,6.3-2.3c0.1-0.1,0.3-0.2,0.4-0.3
-		c3.7-2.4,5.7-6.2,5.7-10.6C152.4,46.8,150.2,42.9,146.4,40.7z M291.9,38.5L283,54l-8.9-15.5h-7.3l16.2,28l16.2-28H291.9z
-		 M105.3,82.4l3,6.4c14.1-10.8,16.7-22.8,7.5-35.7c-7.3-10.2,0.7-19.3,3.1-21.7l-5.4-4.3c-3.5,3.9-12.8,16-4.7,28.1
-		C116.7,67,115.9,73.4,105.3,82.4z M214.8,82.4l3,6.4c14.1-10.8,16.7-22.8,7.5-35.7c-7.3-10.2,0.7-19.3,3.1-21.7l-5.4-4.3
-		c-3.5,3.9-12.8,16-4.7,28.1C226.2,67,225.4,73.4,214.8,82.4z"/>
-            </g>
-</svg>
-    </a>
-    
-    <div id="footer_openclose_button" class="closed">
-        <div class="open">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 595.3 841.9" enable-background="new 0 0 595.3 841.9" xml:space="preserve">
-                <path d="M297.6,278.8l297.6,248l-30.2,36.2L297.6,340.1L30.2,563.1L0,526.9"/>
-            </svg>
-        </div>
-        <div class="close">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 595.3 841.9" enable-background="new 0 0 595.3 841.9" xml:space="preserve">
-                <path d="M297.6,563.1L0,315l30.2-36.2l267.5,222.9l267.5-222.9l30.2,36.2"/>
-            </svg>
-        </div>
-    </div>
-
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0"
-                 style="position:absolute">
-
-                                <symbol id="facebook" viewBox="0 0 612 792">
-                    <circle cx="305.8" cy="395.6" r="306"/>
-                    <path fill="#FFFFFF" d="M330.3,557.5l0.4-147.8l49.6,0.1l7.6-57.6l-57-0.1l0.1-36.7c0-16.7,4.6-28,28.7-27.9l30.4,0.1l0.1-51.5
-	c-5.3-0.7-23.4-2.3-44.4-2.4c-44-0.2-74.2,26.6-74.2,75.8l-0.1,42.4l-49.7-0.1l-0.2,57.6l49.7,0.1l-0.4,147.8L330.3,557.5
-	L330.3,557.5z"/>
-                </symbol>
-                
-                
-                                <symbol id="linkedin" viewBox="0 0 612 792">
-                    <circle cx="305.8" cy="395.6" r="306"/>
-                    <path fill="#FFFFFF" d="M157.3,323.6h62.9v204.1h-62.9V323.6z M189.3,222.8c20.1,0,36.8,16.6,36.8,36.8c0,20.1-16.6,36.8-36.8,36.8
-	s-36.8-16.6-36.8-36.8S169.2,222.8,189.3,222.8z M260.5,323.6H321v27.3h1.2c8.3-16.7,29.7-33.3,60.5-33.3
-	c64.1,0,75.9,42.8,75.9,97.4v111.5h-62.9v-99.7c0-23.7,0-54.6-33.2-54.6s-38,26.1-38,52.2v100.8h-64.1V323.6L260.5,323.6z"/>
-                </symbol>
-                
-                                <symbol id="twitter" viewBox="0 0 612 792">
-                    <circle cx="305.8" cy="395.6" r="306"/>
-                    <path fill="#FFFFFF" d="M452.7,304.3c-10.9,4.9-22.6,8.1-34.8,9.5c12.5-7.4,22.1-19.3,26.7-33.5c-11.8,6.9-24.7,12-38.5,14.7
-	c-11-11.8-26.8-19.1-44.2-19.1c-33.4,0-60.5,27.1-60.5,60.5c0,4.8,0.6,9.4,1.6,13.8c-50.4-2.6-95-26.7-124.9-63.2
-	c-5.2,9-8.2,19.3-8.2,30.4c0,21.1,10.7,39.5,27,50.4c-9.9-0.3-19.2-3-27.4-7.6v0.8c0,29.4,20.8,53.8,48.5,59.3
-	c-5.1,1.4-10.5,2.2-16,2.2c-3.9,0-7.7-0.4-11.4-1.1c7.7,24.1,30.1,41.6,56.5,42.1c-20.7,16.2-46.8,25.9-75.3,25.9
-	c-4.8,0-9.7-0.3-14.5-0.9c26.8,17.2,58.6,27.2,92.8,27.2c111.4,0,172.2-92.3,172.2-172.2c0-2.6-0.1-5.3-0.2-7.9
-	C434.3,327,444.6,316.3,452.7,304.3L452.7,304.3z"/>
-                </symbol>
-                
-                
-            </svg>
-    <div id="footer_social_channels">
-        <ul>
-            
-                            <li class="facebook">
-                    <a href="//www.facebook.com/Kaspersky" target="_blank" id="footer_social_network_button_facebook">
-                        <svg class="footer-social-icon">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-            
-                            <li class="twitter">
-                    <a href="//twitter.com/kaspersky" target="_blank" id="footer_social_network_button_twitter">
-                        <svg class="footer-social-icon">
-                            <use xlink:href="#twitter"></use>
-                        </svg>
-                    </a>
-                </li>
-            
-            
-                            <li class="linkedin">
-                    <a href="//www.linkedin.com/company/kaspersky-lab" target="_blank" id="footer_social_network_button_linkedin">
-                        <svg class="footer-social-icon">
-                            <use xlink:href="#linkedin"></use>
-                        </svg>
-                    </a>
-                </li>
-                    </ul>
-    </div>
-    
-    <div id="footer_copyright">
-                    <span id="footer_info">
-                &nbsp;&nbsp;Based on data from Kaspersky Lab.<br/>
-            </span>
-                        &copy;&nbsp;2018 AO Kaspersky Lab.&nbsp;All Rights Reserved.
-                            <br/>
-            &nbsp;&nbsp;<a id="tos_link" href="/tos/" about="_blank">Terms of Service</a>
-            <a id="tos_link" href="https://www.kaspersky.com/web-privacy-policy" about="_blank">Privacy policy</a>
-            </div>
-
-</div>
 
 <section class="risks">
 	<div class="container-medium container-center">
@@ -1023,8 +596,8 @@ if( DEVELOPMENT && !IE && ES6 ){
 <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script> -->
 <!-- <script src="https://cdn.plyr.io/3.4.8/plyr.polyfilled.js"></script> -->
 <script src="scripts/main.js"></script>
-<script type="text/javascript" src="scripts/stats-3e2b3fd99f.js"></script>
 <script type="text/javascript" src="scripts/jquery.paroller.min.js"></script>
+<script type="text/javascript" src="scripts/stats-3e2b3fd99f.js"></script>
 <script>
         var showCountryStats = true;
     </script>
