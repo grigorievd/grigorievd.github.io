@@ -14,12 +14,12 @@ $(document).ready(function() {
 	 // 	console.log(123);
 	 // });
 
-	 $.ajax({
-		  url: "diagram-json.php",
-		  success: function(data){
-		    alert( "Прибыли данные: " + data );
-		  }
-		});
+	 // $.ajax({
+		//   url: "diagram-json.php",
+		//   success: function(data){
+		//     console.log( "Прибыли данные: " + data );
+		//   }
+		// });
 
 	// $('html, body').scrollTop(0);
 	// $(document).scrollTop(0);

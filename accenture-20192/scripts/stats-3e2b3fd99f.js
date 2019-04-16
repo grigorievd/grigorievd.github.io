@@ -28635,7 +28635,7 @@ if(typeof(exports) !== 'undefined') {
 
 var GTW = window.GTW || {};
 // todo: remove and move all images
-GTW.resource_url = function(path) { return '/map/' + path; };
+GTW.resource_url = function(path) { return 'map/' + path; };
 
 (function() {
 
@@ -30021,7 +30021,14 @@ var GTW = GTW || {};
         }
 
         var url = '/data/events/'+window.feedUrl+'/'+hour+'.json';
-        $.getJSON(url, process_event_data);
+        // $.getJSON(url, process_event_data);
+
+        $.ajax({
+          url: "diagram-json.php?url="+url,
+          success: function(data){
+            process_event_data(JSON.parse(data));
+          }
+        });
     };
 
     // return a list of events fired since last poll
@@ -33261,8 +33268,8 @@ MAP.init = function (opts) {
         //premultipliedAlpha: false,
         extensions: high_quality ? ['WEBKIT_EXT_texture_filter_anisotropic'] : [],
         shaderSources: [
-            GTW.SHADER_SOURCES || '/map/shaders/all-shaders.glsl',
-            '/map/shaders/demo-shaders.glsl'
+            GTW.SHADER_SOURCES || 'map/shaders/all-shaders.glsl',
+            'map/shaders/demo-shaders.glsl'
         ],
     });
 
@@ -33567,12 +33574,12 @@ MAP.init = function (opts) {
 
 
 
-        var graphElemHeight = ($(document).height() - (250 + $('#header').height() + $('#footer').height()));
+        var graphElemHeight = ($(document).height() - (850 + $('#header').height() + $('#footer').height()));
         if (graphElemHeight < 150) {
             graphElemHeight = 150;
         }
         if (graphElemHeight > 700) {
-            graphElemHeight = 700;
+            graphElemHeight = 500;
         }
         if (graph_h !== graphElemHeight) {
             graph_h = graph_canvas.height = graphElemHeight;
