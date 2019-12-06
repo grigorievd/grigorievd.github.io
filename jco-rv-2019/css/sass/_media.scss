@@ -191,6 +191,11 @@
 			position: relative;
 			left: 50%;
 			transform: translateX(-50%);
+			overflow: visible;
+			
+			circle {
+				opacity: 1 !important;
+			}
 		}
 	}
 	

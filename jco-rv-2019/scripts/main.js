@@ -499,6 +499,19 @@ $(document).ready(function() {
 		$pathSvg = $pathElem.find('svg'),
 		pathOneOffsetTop = isMobile ? $window.height()*0.46 : 0;
 
+	if(isMobile) {
+		$window.resize(function(){
+			$('.hero-wrap').height(window.innerHeight-30);
+		});
+
+		if($window.height() > $window.width()) $('.hero-wrap').css('max-height',(window.innerHeight-30)+'px');
+
+		$window.trigger('resize');
+	}
+
+	$('.hero_video')[0].play();
+	$('.festival-echigo video')[0].play();
+
 	//path
 
 	function updatePath() {
@@ -527,10 +540,8 @@ $(document).ready(function() {
 		updatePath2();
 	});
 
-	console.log($pathElem);
-
 	var path = MorphSVGPlugin.pathDataToBezier($pathSvg.find('.svg-path').selector);
-	var path2 = MorphSVGPlugin.pathDataToBezier("#path-2");
+	var path2 = MorphSVGPlugin.pathDataToBezier(isMobile ? '#path-2-mob' : "#path-2");
 	// var path2 = path;
 
 	var pathSvgWidth = $pathSvg[0].getAttribute("viewBox").split(' ')[2];
@@ -544,9 +555,12 @@ $(document).ready(function() {
 		}
 	})
 
-	var circleTween = new TimelineMax({ paused: true }).to("#circle", 25, {bezier:{values:path, type:"cubic"}, ease:Linear.easeNone});
-	var circleTween2 = new TimelineMax({ paused: true }).to("#circle-2", 25, {bezier:{values:path2, type:"cubic"}, ease:Linear.easeNone});
-	var heroCircle = new TimelineMax({ paused: true }).to(".hero", 25, {bezier:{values:heroPath, type:"cubic"}, ease:Linear.easeNone});
+	var circle1 = isTouchDevice ? '.path-1-mob #circle' : '.path-1-desktop #circle'; 
+	var circle2 = isTouchDevice ? '.path-2-mob #circle-2' : '.path-2-desktop #circle-2'; 
+
+	var circleTween = new TimelineMax({ paused: true }).to(circle1, 25, {bezier:{values:path, type:"cubic"}, ease:Linear.easeNone});
+	var circleTween2 = new TimelineMax({ paused: true }).to(circle2, 25, {bezier:{values:path2, type:"cubic"}, ease:Linear.easeNone});
+	var heroCircle = new TimelineMax({ paused: true }).to(".hero", 25, {bezier:{values: isTouchDevice ? path : heroPath, type:"cubic"}, ease:Linear.easeNone});
 
 	//map
 	function VerticalSlider($elem) {
@@ -745,6 +759,18 @@ $(document).ready(function() {
 			} else {
 				$('.festivals-nav').removeClass('active');
 			}
+
+			//path
+			// var pathOneOffset = ($window.height()/2-90) / (scrollTop + $('.festivals').offset().top);
+
+			var pathOneLimit = $('.festivals').offset().top,
+				patheOneProgress = scrollTop*100/pathOneLimit/100;
+
+			var pathTwoLimit = $('.part-4').offset().top-30,
+				pathTwoProgress = (scrollTop - pathTwoLimit) * 100 / ($('.part-4').height()+$('.part-5').outerHeight()/2) / 100 + 0.2;
+
+			circleTween.progress(patheOneProgress >= 1 ? 1 : patheOneProgress);
+			circleTween2.progress(pathTwoProgress >= 1 ? 1 : pathTwoProgress);
 		})
 	}
 })

@@ -1221,7 +1221,10 @@ body {
       width: auto;
       position: relative;
       left: 50%;
-      transform: translateX(-50%); }
+      transform: translateX(-50%);
+      overflow: visible; }
+      .path svg circle {
+        opacity: 1 !important; }
 
   .part-1 {
     transform: translateY(-17%); }
