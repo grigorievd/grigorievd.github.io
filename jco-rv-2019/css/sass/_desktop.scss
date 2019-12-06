@@ -1071,8 +1071,8 @@ transition: 0.5s;
 	}
 
 	#circle.opacity {
-		opacity: 0;
-		r: 0px;
+		opacity: 0 !important;
+		r: 0px !important;
 	}
 
 	#circle.hidden {

@@ -1042,8 +1042,8 @@ body {
   .path #circle.active {
     r: 45px; }
   .path #circle.opacity {
-    opacity: 0;
-    r: 0px; }
+    opacity: 0 !important;
+    r: 0px !important; }
   .path #circle.hidden {
     cy: 35px; }
 
@@ -1215,7 +1215,8 @@ body {
     .path-1 {
       top: 0; }
       .path-1-mob {
-        top: 46vh; }
+        /* 				top:46vh; */
+        top: calc(100vh - 375px); }
     .path.path-2-mob svg {
       position: absolute; }
     .path svg {
@@ -1228,7 +1229,8 @@ body {
         opacity: 1 !important; }
 
   .part-1 {
-    transform: translateY(-17%); }
+    transform: translateY(-14vh);
+    padding: 38vh 0 0 10vw; }
 
   .festivals-nav {
     padding: 2px 0; }
@@ -1307,33 +1309,43 @@ body {
     padding: 170px 0 0px; }
     .part-2_top {
       padding: 0 0 150px; }
-    .part-2 .map-content {
-      /* 		  transform: translateY(-45%);	 */
-      top: 55%; }
     .part-2 .map-wrap {
-      overflow: visible; }
+      overflow: visible;
+      height: auto; }
+    .part-2 .map-content {
+      min-height: 500px;
+      position: relative;
+      top: 0;
+      transform: none;
+      height: calc(100vh - 40px); }
+      .part-2 .map-content.active .part-2_infographics {
+        transform: none; }
     .part-2_map {
       width: 90%;
+      height: 45vh;
       left: 5%;
-      top: 22vw;
+      top: 50%;
+      transform: translateY(-50%);
       background: transparent;
       box-shadow: none; }
       .part-2_map span {
-        background-size: 100% auto; }
+        background-size: auto 100% !important;
+        background-position: right center !important; }
     .part-2_map-wrap {
       width: 100%; }
     .part-2_map-copy {
-      width: 100%;
-      margin: 115vw 0 0; }
+      width: 90%;
+      margin: 0;
+      position: absolute;
+      bottom: 0; }
       .part-2_map-copy h3 {
         font-size: 14px; }
     .part-2_infographics {
-      /* 			position: relative; */
-      width: 100%;
-      /* 			left: 0; */
+      width: 90%;
       height: auto;
-      padding: 65% 0 0;
-      top: 10%; }
+      padding: 35vh 0 0;
+      top: 0%;
+      transform: scale(0.5); }
 
   .part-4 {
     padding: 0px 0 130px; }

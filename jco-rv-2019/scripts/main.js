@@ -497,7 +497,7 @@ $(document).ready(function() {
 	var Scroll = Scroll ? Scroll : {scrollTop:0};
 	var $pathElem = !isMobile ? $('.path-1-desktop') : $('.path-1-mob'),
 		$pathSvg = $pathElem.find('svg'),
-		pathOneOffsetTop = isMobile ? $window.height()*0.46 : 0;
+		pathOneOffsetTop = isMobile ? ($window.height()-375) : 0;
 
 	if(isMobile) {
 		$window.resize(function(){
@@ -749,9 +749,9 @@ $(document).ready(function() {
 			})
 
 			//map 
-			if(isInView($('.map-content'), scrollTop-200)) {
-				$('.map-content').addClass('active');
-			}
+			// if(isInView($('.map-content'), scrollTop-200)) {
+				// $('.map-content').addClass('active');
+			// }
 
 			//festivals 
 			if($('.festivals').offset().top-35-70 < scrollTop && $('.festivals').offset().top + $('.festivals').height()-200 > scrollTop) {
@@ -764,14 +764,53 @@ $(document).ready(function() {
 			// var pathOneOffset = ($window.height()/2-90) / (scrollTop + $('.festivals').offset().top);
 
 			var pathOneLimit = $('.festivals').offset().top,
-				patheOneProgress = scrollTop*100/pathOneLimit/100;
+				patheOneProgress = scrollTop*100/pathOneLimit/100*1.2;
 
 			var pathTwoLimit = $('.part-4').offset().top-30,
 				pathTwoProgress = (scrollTop - pathTwoLimit) * 100 / ($('.part-4').height()+$('.part-5').outerHeight()/2) / 100 + 0.2;
 
+			patheOneProgress >= 0.996 ? $('.circle-1').addClass('hidden') : $('.circle-1').removeClass('hidden');
+
 			circleTween.progress(patheOneProgress >= 1 ? 1 : patheOneProgress);
 			circleTween2.progress(pathTwoProgress >= 1 ? 1 : pathTwoProgress);
 		})
+
+		var controller = new ScrollMagic.Controller();
+		new ScrollMagic.Scene({
+		  triggerElement: ".map-wrap",
+		  triggerHook: "onLeave",
+		  duration: "100%",
+		  offset:-40
+		})
+		  .setPin(".map-wrap")
+		  .addTo(controller)
+		  .on("progress", function (event) {
+			    var index = Math.floor(event.progress/0.25)
+
+			    index == 4 ? index = 3 : index = index;
+
+			    $('.part-2_infographics li, .part-2_map span, .part-2_map-copy li').removeClass('swiper_current');
+			    $('.part-2_infographics li').eq(index).addClass('swiper_current');
+			    $('.part-2_map span').eq(index).addClass('swiper_current');
+			    $('.part-2_map-copy li').eq(index).addClass('swiper_current');
+			})
+		  .on("enter", function (event) {
+		  		$('.map-content').addClass('active');
+			    $('.circle-1').addClass('opacity');
+			})
+		  .on("leave", function (event) {
+		  	// $('.map-content').removeClass('active');
+			    $('.circle-1').removeClass('opacity');
+			});
+
+		  new ScrollMagic.Scene({
+		  triggerElement: ".map-wrap",
+		  triggerHook: 0,
+		  duration: "100%",
+		  offset:-40
+		})
+		  .setPin(".path-1-mob")
+		  .addTo(controller);
 	}
 })
 

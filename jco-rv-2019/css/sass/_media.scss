@@ -177,7 +177,8 @@
 			top:0;
 
 			&-mob {
-				top:46vh;
+/* 				top:46vh; */
+				top: calc(100vh - 375px);
 			}
 		}
 		
@@ -201,7 +202,8 @@
 	}
 	
 	.part-1 {
-		transform: translateY(-17%);
+		transform: translateY(-14vh);
+		padding: 38vh 0 0 10vw;
 	}
 	
 	.festivals {
@@ -339,24 +341,35 @@
 			padding: 0 0 150px;
 		}
 		
-		.map-content {
-/* 		  transform: translateY(-45%);	 */
-			top:55%;
-		}
-		
 		.map-wrap {
 			overflow: visible;
+			height: auto;
+		}
+		
+		.map-content {
+			min-height: 500px;
+			position: relative;
+			top:0;
+			transform: none;
+			height: calc(100vh - 40px);
+			
+			&.active .part-2_infographics {
+				transform: none;
+			}
 		}
 		
 		&_map {
 			width: 90%;
+			height: 45vh;
 			left: 5%;
-			top: 22vw;
+			top: 50%;
+			transform: translateY(-50%);
 			background: transparent;
 			box-shadow: none;
 			
 			span {
-				background-size: 100% auto;
+				background-size: auto 100% !important;
+				background-position: right center !important;
 			}
 		}
 		
@@ -365,8 +378,10 @@
 		}
 		
 		&_map-copy {
-			width: 100%;
-			margin: 115vw 0 0;
+			width: 90%;
+			margin: 0;
+			position: absolute;
+			bottom: 0;
 			
 			h3 {
 				font-size: 14px;
@@ -374,12 +389,11 @@
 		}
 		
 		&_infographics {
-/* 			position: relative; */
-			width: 100%;
-/* 			left: 0; */
+			width: 90%;
 			height: auto;
-			padding: 65% 0 0;
-			top:10%;
+			padding: 35vh 0 0;
+			top:0%;
+			transform: scale(0.5);
 		}
 	}
 	
