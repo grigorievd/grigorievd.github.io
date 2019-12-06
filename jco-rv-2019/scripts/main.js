@@ -819,7 +819,7 @@ $(document).ready(function() {
 		new ScrollMagic.Scene({
 		  triggerElement: ".map-wrap",
 		  triggerHook: "onLeave",
-		  duration: "200%",
+		  duration: $window.height()*2,
 		  offset:-40
 		})
 		  .setPin(".map-wrap")
@@ -846,7 +846,7 @@ $(document).ready(function() {
 		  new ScrollMagic.Scene({
 		  triggerElement: ".map-wrap",
 		  triggerHook: 0,
-		  duration: "200%",
+		  duration: $window.height()*2,
 		  offset:-40
 		})
 		  .setPin(".path-1-mob")
