@@ -1,0 +1,441 @@
+@media (max-width: 1150px) {
+	.part-2 {
+		.map-wrap {
+			overflow: hidden;
+		}
+		
+		&_map-wrap {
+			width: 42%;
+		}
+		
+		&_infographics {
+			left: 50%;
+		}
+	}
+	
+	.festival-slider .slick-slide {
+		margin: 0;
+	}
+	
+	.part-5 {
+		&_bottom {
+			width: 920px;
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	.container {
+		width: 90%;
+	}
+	
+	.hero-wrap {
+		height: 100vh;
+		position: relative;
+	}
+	
+	.hero {
+		.inner {
+			top:100vh;
+			height: 100%;
+		}
+		
+		&_japan-link {
+			left: 5%;
+			bottom: 60px;
+		}
+		
+		&_heading {
+			width: 100%;
+		}
+	}
+	
+	.path-1 {
+		top: 20vh;
+	}
+	
+	.part-1 {
+		padding: 250px 0 0;
+	}
+	
+	.part-2 {
+		padding: 320px 0 0;
+
+		&_map {
+			position: absolute;
+			right: 3%;
+			top: -7vh;
+			background: #e8dbcfd6;
+			box-shadow: 15px 0px 73px 24px #e8dbcf;
+		}
+
+		&_map-copy {
+			margin: 290px 0 0;
+    		width: 50vw;
+		}
+
+		&_infographics {
+			left: 5%;
+			top: 0;
+		}
+	}
+	
+	.festival-slider .slick-slide {
+		
+		.festival-slider_vertical img {
+			width: 400px;
+		}
+		img {
+			width: 550px;
+		}
+	}
+	
+	.part-4 {
+		padding: 400px 0 200px;
+			
+		&_thin-copy {
+			margin: 120px 0 80px;
+			padding: 0 20px 0 50px !important;
+		}
+		
+		&_container {
+			.text:nth-of-type(3) {
+				padding: 0 0 0 100px;
+				margin: 250px 0 0 auto;
+			}
+		}
+	}
+	
+	.part-5 {
+		&_bottom {
+			width: 90%;
+			left: 5%;
+		}
+		
+		.video-thumb {
+			margin: 0 0 15px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	body {
+	 font-size: 14px;	
+	}
+	
+	.container {
+		&-medium,
+		&-small {
+			width: 100%;
+		}
+	}
+	
+	.mob-hidden {
+		display: none;
+	}
+	
+	.desktop-hidden {
+		display: initial;
+	}
+	
+	.japan-link {
+		width: 250px;
+	}
+	
+	.hero {
+		font-size: 16px;
+		
+		&_title {
+			font-size: 33px;
+			letter-spacing: 4px;
+			
+			span {
+				font-size: 13px;
+			}
+		}
+	}
+	
+	.text {
+		h2 {
+			font-size: 26px;
+		}
+		
+		&-big {
+			font-size: 28px;
+		}
+		
+		p {
+			margin: 20px 0 0;
+		}
+	}
+	
+	.path {
+		overflow: hidden;
+		
+		&-1 {
+			top:0;
+
+			&-mob {
+				top:46vh;
+			}
+		}
+		
+		&.path-2 {
+			&-mob svg {
+				position: absolute;
+			}
+		}
+		
+		svg {
+			width: auto;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	
+	.part-1 {
+		transform: translateY(-17%);
+	}
+	
+	.festivals {
+		&-nav {
+			padding: 2px 0;
+			
+			ul {
+/* 				display: flex; */
+/* 				justify-content: space-between; */
+				margin: 0 -10px;
+			}
+			ul li {
+				width: 70px;
+				height: 70px;
+				margin: 0px 5px;
+				font-size: 11px;
+				
+				&::after {
+					width: 60px;
+					height: 60px;
+				}
+			}
+		}
+	}
+	
+	.festival {
+		&-echigo {
+			padding-top: 90px;
+		}
+		
+		&_container {
+			width: 90%;
+			
+			.shifted {
+				padding: 0;
+			}
+			
+			&-big {
+				width: 90%;
+			}
+		}
+		
+		&_title {
+			font-size: 26px;
+		}
+		
+		&_heading {
+			width: 90%;
+			height: 90vw;
+			margin: 70px auto;
+			
+			&_number {
+				font-size: 78px;
+				top:6px;
+				left: 8px;
+			}
+			
+			&_copy {
+				font-size: 18px;
+				letter-spacing: 2px;
+			}
+			
+			&_caption {
+				font-size: 11px;
+				bottom: 15px;
+			}
+			
+			&_img {
+				video {
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		
+		&-slider {
+			margin: 50px 0;
+			
+			.slick-slide img {
+				width: 90vw;
+			}
+			
+			.slick-slide .festival-slider_vertical img {
+				width: 80vw;
+			}
+			
+			&_slide-caption {
+				margin: 4px 0 0;
+				font-size: 11px;
+			}
+			
+			&_cursor {
+				display: none;
+			}
+		}
+		
+		&-gallery {
+			display: block;
+			margin: 50px 0;
+			
+			&_column {
+				width: 100%;
+			
+				&:nth-child(1) {
+					margin: 0 0 40px;
+				}
+				
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		
+		&-next {
+			width: 90%;
+			height: 120px;
+			margin: 80px auto 0;
+			
+			&_copy {
+				font-size: 10px;
+			}
+			
+			&_title {
+				font-size: 28px;
+			}
+		}
+	}
+	
+	.part-2 {
+		overflow: hidden;
+		padding: 170px 0 0px;
+		
+		&_top {
+			padding: 0 0 150px;
+		}
+		
+		.map-content {
+/* 		  transform: translateY(-45%);	 */
+			top:55%;
+		}
+		
+		.map-wrap {
+			overflow: visible;
+		}
+		
+		&_map {
+			width: 90%;
+			left: 5%;
+			top: 22vw;
+			background: transparent;
+			box-shadow: none;
+			
+			span {
+				background-size: 100% auto;
+			}
+		}
+		
+		&_map-wrap {
+			width: 100%;
+		}
+		
+		&_map-copy {
+			width: 100%;
+			margin: 115vw 0 0;
+			
+			h3 {
+				font-size: 14px;
+			}
+		}
+		
+		&_infographics {
+/* 			position: relative; */
+			width: 100%;
+/* 			left: 0; */
+			height: auto;
+			padding: 65% 0 0;
+			top:10%;
+		}
+	}
+	
+	.part-4 {
+		padding: 0px 0 130px;
+		
+		.text {
+			padding: 120px 0 0;
+		}
+		
+		&_container {
+			.text {
+				&:nth-of-type(1) {
+          padding-right: 21vw;
+				}
+				&:nth-of-type(2) {
+     
+				}
+				&:nth-of-type(3) {
+					padding: 0 10vw 0 14vw;
+          margin: 150px 0 0 auto; 
+				}
+			}
+		}
+		
+		&_thin-copy {
+			margin: 150px 0 0;
+			padding: 0 0px 0 32vw !important;
+		}
+	}
+	
+	.part-5 {
+		height: auto;
+		
+		&_copy-small {
+			padding: 0;
+		}
+		
+		&_bottom {
+			display: block;
+			margin: 50px 0 0;
+			position: static;
+			padding: 0 0 40px;
+		}
+		
+		.japan-link {
+			margin: 30px 0 0;
+		}
+	}
+}
+
+@media (max-width: 374px) {
+	.hero_title {
+		font-size: 29px;
+	}
+	.hero_title span {
+		font-size: 11px;
+	}
+}
+
+.touch {
+	.cls-2 {
+		stroke-dashoffset: 0;
+	}
+}

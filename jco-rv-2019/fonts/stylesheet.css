@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('BebasNeueBold.woff2') format('woff2'),
+        url('BebasNeueBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Korolev';
+    src: url('Korolev-Bold.woff2') format('woff2'),
+        url('Korolev-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Korolev Compressed';
+    src: url('KorolevCompressed-Bold.woff2') format('woff2'),
+        url('KorolevCompressed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Korolev Compressed';
+    src: url('KorolevCompressed-Medium.woff2') format('woff2'),
+        url('KorolevCompressed-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+

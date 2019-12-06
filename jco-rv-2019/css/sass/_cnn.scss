@@ -1,0 +1,254 @@
+/*
+ * CNN Header Layout
+ * Updated version on 04/10/2017
+ *
+ */
+$gold: #b59343;
+$s-phone: 375px;
+$tablet: 768px;
+
+
+.cnn-bar {
+    position: relative;
+    display: block;
+    height: auto;
+    width: 100%;
+    color: #ffffff;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    z-index: 150;
+    // font-family: 'CNNSansDisplay', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    height: 30px;
+
+    strong {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    &--fixed {
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        // transform: translateY(-30px);
+
+        .cnn-bar__row.cnn-bar__row--gold {
+            position: fixed;
+            top:0;
+            left: 0;
+        }
+
+        & .cnn-bar__logo {
+            position: relative;
+            height: 100%;
+        }
+
+        .cnn-bar__content-by {
+            padding-left: 30px !important;
+        }
+    }
+
+    // Outside of main element. Used to prevent content jump when bar becomes fixed
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        height: 60px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 30px;
+        align-items: center;
+        box-sizing: border-box;
+
+        &--black {
+            padding-left: 30px;
+            background-color: #000000;
+        }
+
+        &--gold {
+            background-color: #b59343;
+            position: relative;
+            // justify-content: flex-end;
+        }
+
+    }
+
+    &__logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 30px;
+        margin: 0;
+        margin-right: auto;
+        z-index: 10;
+
+        & svg {
+            width: 30px;
+            height: 100%;
+        }
+    }
+
+    &__back-link {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        align-items: center;
+        line-height: normal;
+        color: #ffffff;
+        text-decoration: none;
+        padding-left: 8px;
+        @media (min-width: $tablet) { padding-left: 10px; };
+
+        &:before {
+            content: '\2039'; // left quote angle (lsaquo)
+            display: block;
+            font-size: 1.6em;
+            width: auto;
+            height: 10px;
+            line-height: 10px;
+            margin-right: 2px;
+        }
+    }
+
+    &__content-by {
+        line-height: normal;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        left: 0;
+        bottom: 50%;
+        transform: translateY(50%);
+        padding: 0 73px 0 30px;
+        transition: 0.3s padding;
+
+        @media (max-width: $tablet) { padding: 0 62px 0 0px; };
+
+        & strong, & a {
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    &__share {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        border-left: 1px solid #ffffff;
+        width: auto;
+        height: 100%;
+        font-size: 1.1em;
+        margin-left: auto;
+
+        &--active {
+
+            & .cnn-bar__share-icons {
+                pointer-events: all;
+                @media (min-width: $tablet) { max-width: 120px; }
+
+                & .share-link {
+                    opacity: 1;
+
+
+                    &:nth-of-type(1){ transition-delay: 0ms; }
+                    &:nth-of-type(2){ transition-delay: 50ms; }
+                    &:nth-of-type(3){ transition-delay: 100ms; }
+
+                    @media (min-width: $tablet) {
+                        &:nth-of-type(1){ transition-delay: 125ms; }
+                        &:nth-of-type(2){ transition-delay: 175ms; }
+                        &:nth-of-type(3){ transition-delay: 225ms; }
+                    }
+                }
+            }
+        }
+
+
+        &-toggle {
+            display: flex;
+            align-items: center;
+            width: auto;
+            height: 100%;
+            line-height: normal;
+            text-transform: uppercase;
+            cursor: pointer;
+            padding: 0 10px;
+
+            @media (min-width: $s-phone) { padding: 0 12px; };
+            @media (min-width: $tablet) { padding: 0 16px; };
+        }
+
+        &-icons {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: -1px;
+            width: calc(100% + 1px);
+            height: auto;
+            max-width: none;
+            pointer-events: none;
+
+            @media (min-width: $tablet) {
+                overflow: hidden;
+                position: relative;
+                top: auto;
+                left: auto;
+                flex-direction: row;
+                max-width: 0;
+                width: auto;
+                height: 100%;
+                transition: max-width 500ms cubic-bezier(0.19, 1, 0.22, 1);
+            };
+
+            & .share-link {
+                display: flex;
+                width: 100%;
+                height: 30px;
+                opacity: 0;
+                background-color: #b59343;
+                border-top: 1px solid #fff;
+                border-left: 1px solid #fff;
+                transition: opacity 100ms ease;
+                &:last-of-type { border-bottom: 1px solid #fff; }
+
+                &:nth-of-type(1){ transition-delay: 100ms; }
+                &:nth-of-type(2){ transition-delay: 50ms; }
+                &:nth-of-type(3){ transition-delay: 0ms; }
+
+                @media (min-width: $tablet) {
+                    width: auto;
+                    height: 100%;
+                    border: 0 !important;
+                    background-color: transparent;
+                    transition: opacity 200ms ease;
+                    &:last-of-type { margin-right: 16px; }
+
+                    &:nth-of-type(1){ transition-delay: 0ms; }
+                    &:nth-of-type(2){ transition-delay: 0ms; }
+                    &:nth-of-type(3){ transition-delay: 0ms; }
+                }
+
+                &--twitter svg { height: 40%; width: 15px; }
+                &--facebook svg { width: 6.6px; }
+                &--linkedin svg { width: 13.2px; }
+            }
+
+            & svg {
+                margin: auto;
+                width: auto;
+                height: 44%;
+
+                @media (min-width: $tablet) { margin: auto 10px; }
+
+                & path { fill: #fff; }
+            }
+        }
+    }
+}

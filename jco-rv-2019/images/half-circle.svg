@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 451 225.5">
+    <defs>
+        <style>
+            .cls-1 {
+                stroke-miterlimit: 10;
+				stroke-dasharray: 1000;
+				stroke-dashoffset: 700;
+				transition: 1s;
+            }
+        </style>
+    </defs>
+    <title>half-circle</title>
+    <g id="Слой_2" data-name="Слой 2">
+        <g xmlns="http://www.w3.org/2000/svg" id="Layer_9" data-name="Layer 9">
+            <path class="cls-1" d="M.5,225.5C.5,101.24,101.24.5,225.5.5s225,100.74,225,225" fill="#fff" style="stroke-dashoffset: 0" stroke="#9caab9" />
+            <path class="cls-1" d="M.5,225.5C.5,101.24,101.24.5,225.5.5s225,100.74,225,225" stroke="#294769" style="" fill="none" />
+        </g>
+    </g>
+</svg>
