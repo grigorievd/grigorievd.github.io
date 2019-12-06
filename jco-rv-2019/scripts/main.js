@@ -87,8 +87,15 @@ $(document).ready(function() {
 				$('.festival-'+festival).find('.festival-slider_slides').on('init', function(slick) {
 					var cursor = new Mouse($('.festival-'+festival + ' .festival-slider')).init();
 		        }).slick(slickOptions);
-				Scroll.scrollIntoView($('.festival-'+festival)[0])
+				if(isTouchDevice) {
+					$('html, body').stop().animate({
+				      scrollTop: $('.festival-'+festival).offset().top-30
+				  }, 1000);
+				} else {
+					Scroll.scrollIntoView($('.festival-'+festival)[0])
+				}
 				$('.festivals-nav li').eq(index).addClass('loaded');
+				isTouchDevice ? $('.festival-next[data-festival="'+ festival +'"]').find('.festival-next_action').text('tap') : false;
 				$('.festival-next[data-festival="'+ festival +'"]').addClass('loaded');
 				if($('.festivals-nav li:not(.loaded)').length) {
 					$('.festival-'+festival)
@@ -150,10 +157,17 @@ $(document).ready(function() {
 					var cursor = new Mouse($('.festival-'+festival + ' .festival-slider')).init();
 		        }).slick(slickOptions);
 		        setTimeout(function(){
-					Scroll.scrollIntoView($('.festival-'+festival)[0])
+					if(isTouchDevice) {
+						$('html, body').stop().animate({
+					      scrollTop: $('.festival-'+festival).offset().top-30
+					  }, 1000);
+					} else {
+						Scroll.scrollIntoView($('.festival-'+festival)[0])
+					}
 		        },400)
 				// Scroll.scrollIntoView($('.festival-'+festival)[0])
 				$('.festivals-nav li[data-festival="'+ festival +'"]').addClass('loaded');
+				isTouchDevice ? $('.festival-next[data-festival="'+ festival +'"]').find('.festival-next_action').text('tap') : false;
 				$rollover.addClass('loaded');
 				if($('.festivals-nav li:not(.loaded)').length) {
 					$('.festival-'+festival)
@@ -533,7 +547,7 @@ $(document).ready(function() {
 	updatePath2();
 
 	$(window).resize(function(){
-		updatePath();
+		// updatePath();
 		updatePath2();
 	})
 
@@ -774,6 +788,25 @@ $(document).ready(function() {
 
 			circleTween.progress(patheOneProgress >= 1 ? 1 : patheOneProgress);
 			circleTween2.progress(pathTwoProgress >= 1 ? 1 : pathTwoProgress);
+
+			//festivals
+
+			$('.festival').each(function(i, elem){
+				var $festival = $(this),
+					festivalTop = $festival.offset().top;
+
+				if(isInView($festival, scrollTop-200)) {
+					$('.festivals').css('background-color', $festival.data('section-color'));
+					$('.festivals-nav').css('background-color', $festival.data('nav-color'))
+						.find('li')
+						.removeClass('active')
+						.addBack()
+						.find('[data-festival="'+ $festival.data('festival') +'"]')
+						.addClass('active');
+
+					return false;
+				}
+			})
 		})
 
 		var controller = new ScrollMagic.Controller();
