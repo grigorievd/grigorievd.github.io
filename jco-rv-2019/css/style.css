@@ -1245,7 +1245,9 @@ body {
       font-size: 11px; }
       .festivals-nav ul li::after {
         width: 60px;
-        height: 60px; }
+        height: 60px;
+        background-size: 60px 60px !important;
+        transform: none !important; }
 
   .festival-echigo {
     padding-top: 90px; }

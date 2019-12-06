@@ -224,6 +224,9 @@
 				&::after {
 					width: 60px;
 					height: 60px;
+					
+					background-size: 60px 60px !important;
+					transform: none !important;
 				}
 			}
 		}

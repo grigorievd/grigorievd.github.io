@@ -74,7 +74,13 @@ $(document).ready(function() {
 			index = $(this).index();
 
 		if($(this).hasClass('loaded')) {
-			Scroll.scrollIntoView($('.festival-'+festival)[0])
+			if(isTouchDevice) {
+				$('html, body').stop().animate({
+			      scrollTop: $('.festival-'+festival).offset().top
+			  }, 1000);
+			} else {
+				Scroll.scrollIntoView($('.festival-'+festival)[0])
+			}
 		} else {
 			$.ajax({
 			  method: "GET",
@@ -89,13 +95,13 @@ $(document).ready(function() {
 		        }).slick(slickOptions);
 				if(isTouchDevice) {
 					$('html, body').stop().animate({
-				      scrollTop: $('.festival-'+festival).offset().top-30
+				      scrollTop: $('.festival-'+festival).offset().top
 				  }, 1000);
 				} else {
 					Scroll.scrollIntoView($('.festival-'+festival)[0])
 				}
 				$('.festivals-nav li').eq(index).addClass('loaded');
-				isTouchDevice ? $('.festival-next[data-festival="'+ festival +'"]').find('.festival-next_action').text('tap') : false;
+				isTouchDevice ? $('.festival-'+festival).find('.festival-next_action').text('tap') : false;
 				$('.festival-next[data-festival="'+ festival +'"]').addClass('loaded');
 				if($('.festivals-nav li:not(.loaded)').length) {
 					$('.festival-'+festival)
@@ -159,7 +165,7 @@ $(document).ready(function() {
 		        setTimeout(function(){
 					if(isTouchDevice) {
 						$('html, body').stop().animate({
-					      scrollTop: $('.festival-'+festival).offset().top-30
+					      scrollTop: $('.festival-'+festival).offset().top
 					  }, 1000);
 					} else {
 						Scroll.scrollIntoView($('.festival-'+festival)[0])
@@ -167,7 +173,7 @@ $(document).ready(function() {
 		        },400)
 				// Scroll.scrollIntoView($('.festival-'+festival)[0])
 				$('.festivals-nav li[data-festival="'+ festival +'"]').addClass('loaded');
-				isTouchDevice ? $('.festival-next[data-festival="'+ festival +'"]').find('.festival-next_action').text('tap') : false;
+				isTouchDevice ? $('.festival-'+festival).find('.festival-next_action').text('tap') : false;
 				$rollover.addClass('loaded');
 				if($('.festivals-nav li:not(.loaded)').length) {
 					$('.festival-'+festival)
@@ -548,7 +554,7 @@ $(document).ready(function() {
 
 	$(window).resize(function(){
 		// updatePath();
-		updatePath2();
+		// updatePath2();
 	})
 
 	$(window).load(function() {
@@ -795,7 +801,7 @@ $(document).ready(function() {
 				var $festival = $(this),
 					festivalTop = $festival.offset().top;
 
-				if(isInView($festival, scrollTop-200)) {
+				if(isInView($festival, scrollTop+200)) {
 					$('.festivals').css('background-color', $festival.data('section-color'));
 					$('.festivals-nav').css('background-color', $festival.data('nav-color'))
 						.find('li')
