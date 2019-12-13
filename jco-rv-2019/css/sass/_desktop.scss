@@ -110,8 +110,6 @@ body {
 		padding: 0 0 12vh;
 		transform: translate3d(0,0,0);
 
-		clip-path: url(#myClip);
-
 		&::after {
 			content: '';
 			position: absolute;
@@ -147,8 +145,8 @@ body {
 		// opacity: 0;
 
 		.inner {
-			// clip-path: circle(15px at 50% 42%);
-			 // -webkit-clip-path: circle(15px at 50% 42%);
+			clip-path: circle(15px at 50% 42%);
+			 -webkit-clip-path: circle(15px at 50% 42%);
 
 			 //     width: 30px;
     // height: 30px;
@@ -339,6 +337,16 @@ body {
 .scroll-content {
 	padding: 750px 0 0;
 	overflow: hidden;
+
+	.bg {
+		position: absolute;
+		top:0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(0, 0, 0, 0) url("../images/bg.png") no-repeat scroll center bottom / 100% auto;
+		z-index: -1;
+	}
 }
 
 .part-1 {
@@ -773,6 +781,26 @@ transition: 0.5s;
 		
 		&_column {
 			width: 49%;
+
+			&-img {
+				overflow: hidden;
+				position: relative;
+
+				img{
+					opacity: 0;
+				}
+
+				span {
+					position: absolute;
+					top:-10%;
+					bottom: -10%;
+					left: 0;
+					width: 100%;
+					background-position: center center;
+					background-size: cover;
+					// height: 100%;
+				}
+			}
 		}
 	}
 	
@@ -1143,28 +1171,6 @@ transition: 0.5s;
 
 	#circle.hidden {
 		cy:35px;
-	}
-}
-
-#svgClip {
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: -1000;
-	opacity: 0;
-	height: 10px;
-
-	&.clipped #myClip {
-		circle {
-			transform: translateX(50vw) translateY(calc((100vh - 30px) * 1.2 * 0.42)) scale(0.0136);
-		}
-	}
-}
-
-#myClip {
-	circle {
-		transform: translateX(50vw) translateY(calc((100vh - 30px) * 1.2 * 0.42));
-		transition: transform 1.1s;
 	}
 }
 

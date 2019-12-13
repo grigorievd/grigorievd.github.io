@@ -443,12 +443,12 @@ $(document).ready(function() {
 
 			if(scrollTop > 100) {
 				if(!$hero.hasClass('clipped')) {
-					$('.hero, #svgClip').addClass('clipped');
+					$hero.addClass('clipped');
 					$('video', $hero)[0].pause();
 				}
 			} else {
 				if($hero.hasClass('clipped')) {
-					$('.hero, #svgClip').removeClass('clipped');
+					$hero.removeClass('clipped');
 					$('video', $hero)[0].play();
 				}
 			}
@@ -470,10 +470,18 @@ $(document).ready(function() {
 			var pathTwoLimit = scrollTop + $('.part-4').offset().top-30,
 				pathTwoProgress = (scrollTop - pathTwoLimit) * 100 / ($('.part-4').height()+$('.part-5').outerHeight()/2) / 100*0.9 + 0.09;
 
+			if(IE) {
+				circleTween.progress(patheOneProgress >= 1 ? 1 : patheOneProgress);
+				patheOneProgress >= 0.996 ? $('.path-1-desktop #circle').addClass('hidden') : $('.path-1-desktop #circle').removeClass('hidden');
+				// patheOneProgress = 0+pathOneOffset;
+			}
+
 			patheOneProgress >= 0.996 ? $('.hero .inner').addClass('hidden') : $('.hero .inner').removeClass('hidden');
 			pathTwoProgress <= 0.005 ? $('.path-2-desktop .circle-2').addClass('hidden') : $('.path-2-desktop .circle-2').removeClass('hidden');
 			(pathTwoProgress >= 0.75 && !$part5.hasClass('clipped')) ? Scroll.scrollTo(0, scrollTop+$part5.offset().top-30, 700, function (scrollbar) {}) : false;
-			heroCircle.progress(patheOneProgress >= 1 ? 1 : patheOneProgress);
+			if(!IE) {heroCircle.progress(patheOneProgress >= 1 ? 1 : patheOneProgress) } else {
+				heroCircle.progress(0+pathOneOffset)
+			}
 			circleTween2.progress(pathTwoProgress >= 1 ? 1 : pathTwoProgress);
 
 			if($part5.offset().top-130 < 0 && $part5.offset().top + $part5.outerHeight()-200 > 0) {
@@ -486,10 +494,10 @@ $(document).ready(function() {
 
 			for (var i = 0; i < points.length; i++) {
 			  if(patheOneProgress >= points[i] - 0.02 && patheOneProgress <= points[i] + 0.02) {
-			  	$('.inner').addClass('active');
+			  	$('.inner,.path-1-desktop #circle').addClass('active');
 			  	break;
 			  } else {
-			  	$('.inner').removeClass('active');
+			  	$('.inner,.path-1-desktop #circle').removeClass('active');
 			  }
 			}
 
@@ -536,7 +544,7 @@ $(document).ready(function() {
 			if(scrollTop >= mapOffsetTop-100 && scrollTop <= mapOffsetTop+100 && canLock && !inSwiper) {
 		    	canLock = false;
 		    	$('html').addClass('scroll-paused');
-				$('.inner').addClass('opacity');
+				$('.inner,.path-1-desktop #circle').addClass('opacity');
 				$('.map-content').addClass('active');
 
 		    	// Scroll.unregisterEvents(/blur/, /click/, /dragend/, /dragover/, /dragstart/, /focus/, /keydown/, /mousedown/, /mousemove/, /mouseup/, /resize/, /scroll/, /selectstart/, /touchend/, /touchmove/, /touchstart/, /wheel/);
@@ -553,6 +561,18 @@ $(document).ready(function() {
 	    		},750)
 		    }
 
+		    //parallax 
+		    $('.festival-gallery_column-img').each(function(){
+		    	var $elem = $(this).find('span');
+		    	if(Scroll.isVisible($(this)[0])) {
+		    		var speed = $elem.data('speed') ? $elem.data('speed') : 0.05;
+		    		var offset = ($(this).offset().top - $(window).height()/2)*speed;
+
+		    		// console.log(offset);
+
+		    		$elem.css('transform', 'translate3d(0,'+ offset+'px,0');
+		    	}
+		    })
 		});
 		
 		Scroll.setMomentum(0, 0)
@@ -726,7 +746,7 @@ $(document).ready(function() {
     			},500)
     			inSwiper = false;
     			$('html').removeClass('scroll-paused');
-    			$('.inner').removeClass('opacity');
+    			$('.inner,.path-1-desktop #circle').removeClass('opacity');
 				$('.map-content').removeClass('active');
 
 				Scroll.options.plugins.filterEvent.blacklist = [];
@@ -760,7 +780,7 @@ $(document).ready(function() {
     			},500)
     			inSwiper = false;
     			$('html').removeClass('scroll-paused');
-    			$('.inner').removeClass('opacity');
+    			$('.inner,.path-1-desktop #circle').removeClass('opacity');
 				$('.map-content').removeClass('active');
 
 				Scroll.options.plugins.filterEvent.blacklist = [];

@@ -1,3 +1,36 @@
+.ie {
+
+	.hero {
+		.inner {
+			height: 113%;
+			overflow: hidden;
+
+			&::after {
+				display: none;
+			}
+
+			video {
+				min-height: 113%;
+			}
+		}
+		&.clipped .inner {
+			clip-path: none !important;
+
+			video {
+				    transform: translate3d(-50%, -50%, 0);
+			}
+		}
+	}
+
+	.path #circle.circle-1 {
+		opacity: 1;
+	}
+
+	.scroll-content {
+		padding: 120vh 0 0;
+	}
+}
+
 @media (max-width: 1150px) {
 	.part-2 {
 		.map-wrap {
