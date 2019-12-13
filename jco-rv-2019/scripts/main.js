@@ -5,6 +5,8 @@ $(document).ready(function() {
 	var $win = $(window),
 		winHeight = $win.outerHeight();
 
+	var isMobile = $win.width() < 768;
+
 	/* Footer Share Animation */
 	$('.share-click-ico').on('click', function() {
 	  $('.foot-social').slideToggle();
@@ -13,9 +15,10 @@ $(document).ready(function() {
 	/* Scroll Up */
 	$('.back-to-top').on('click', function(e) {
 		e.preventDefault();
-	  $('html, body').stop().animate({
-	      scrollTop: 0
-	  }, 1000);
+	  // $('html, body').stop().animate({
+	  //     scrollTop: 0
+	  // }, 1000);
+	  Scroll.scrollTo(0, 0, 500, function (scrollbar) {});
 	});
 
 	var isTouchDevice = (('ontouchstart' in window)
@@ -29,6 +32,12 @@ $(document).ready(function() {
 		isTouchDevice = false;
 	}
 
+	var IE = (/MSIE 10/i.test(navigator.userAgent) || /MSIE 9/i.test(navigator.userAgent) || /rv:11.0/i.test(navigator.userAgent) || /Edge\/\d./i.test(navigator.userAgent));
+
+	if(IE) {
+		$('body').addClass('ie');
+	}
+
 	function isInView($el, scrollTop){
 		var elTop = $el.offset().top;
 		return scrollTop <= elTop + $el.outerHeight() && scrollTop + winHeight >= elTop;
@@ -39,12 +48,17 @@ $(document).ready(function() {
             n += o[r];
         return Math.ceil(n / e)
     }
+    //hero video
+
+	$('.hero_video source').attr('src', isMobile ? $('.hero_video source').data('mob-src') : $('.hero_video source').data('src'))
+	$('.hero video')[0].load();
 
 	setTimeout(function(){
 		$('.loader').fadeOut();
 		setTimeout(function(){
 			$('body').addClass('loaded');
 		},300)
+		
 		$('.hero video')[0].play();
 	}, 1000)
 
@@ -58,16 +72,34 @@ $(document).ready(function() {
 		centerMode: true,
 		slidesToShow: 1,
 		centerPadding: '100px',
-		arrows: false
+		arrows: false,
+		responsive: [
+		    {
+		      breakpoint: 767,
+		      settings: {
+		        adaptiveHeight: true,
+		        variableWidth: false,
+		        centerPadding: '0'
+		      }
+		    }
+		]
 	};
 
 	var festivalsCopy = {
 		setouchi: 'Setouchi Triennale',
-		okayama: 'Triennale Okayama <br> Art Summi',
+		okayama: 'Okayama Art Summit',
 		'oku-noto': 'Oku-Noto Triennale'
 	};
 
 	$('.festival-slider_slides').slick(slickOptions);
+
+	$('body').on('click', '.festival-slider_slides', function(){
+		if($(this).parent().find('.festival-slider_cursor').hasClass('right')) {
+			$(this).slick('slickNext');
+		} else {
+			$(this).slick('slickPrev');
+		}
+	})
 
 	$('.festivals-nav li').click(function(){
 		var festival = $(this).data('festival'),
@@ -113,8 +145,11 @@ $(document).ready(function() {
 					$('.festival-'+festival).addClass('festival--last').find('.festival-next').hide()
 				}
 
+				$('.festival-'+festival).find('.festival-slider_slides').slick('setPosition');
+
 				updatePath2();
 				setTimeout(function(){
+					$('.festival-'+festival).find('.festival-slider_slides').slick('setPosition');
 					updatePath2();
 				},1000)
 			});
@@ -125,7 +160,7 @@ $(document).ready(function() {
 	var events = [],
 		index = -1;
 
-	$('body').on('click'+ isTouchDevice ? ' mouseenter':'', '.festival-next', function(e){
+	$('body').on('click'+ (!isTouchDevice ? ' mouseenter':''), '.festival-next', function(e){
 		canceledNext = false;
 		events.push(false);
 		index++;
@@ -140,7 +175,7 @@ $(document).ready(function() {
 					if (!events[index]) {
 						loadNext();
 					}
-				}, 1950)
+				}, 1150)
 			} else {
 				loadNext();
 			}
@@ -187,6 +222,7 @@ $(document).ready(function() {
 
 				updatePath2();
 				setTimeout(function(){
+					$('.festival-'+festival).find('.festival-slider_slides').slick('setPosition');
 					updatePath2();
 				},1000)
 			});
@@ -286,6 +322,16 @@ $(document).ready(function() {
                 "-ms-transform": "translate3d(".concat(this.mouse.x, "px, ").concat(this.mouse.y, "px, 0px)"),
                 transform: "translate3d(".concat(this.mouse.x, "px, ").concat(this.mouse.y, "px, 0px)")
             }))
+
+            // console.log(this.mouse.x)
+
+            if(this.mouse.x > 0 && this.$cursor.hasClass('in-view')) {
+            	this.$cursor.removeClass('left')
+            	this.$cursor.addClass('right')
+            } else {
+            	this.$cursor.removeClass('right')
+            	this.$cursor.addClass('left')
+            }
         }
         this.lerp = function(t, e, n) {
             return (1 - n) * t + n * e
@@ -313,7 +359,7 @@ $(document).ready(function() {
 		  //   return delta;
 		  // }
 			
-			var speed = !heroAnimated ? 0.6 : this.options.speed;
+			var speed = !heroAnimated ? 1 : this.options.speed;
 
 			// console.log(speed);
 
@@ -383,7 +429,7 @@ $(document).ready(function() {
 		Scroll.addListener(function(s) {
 			var scrollTop = Math.abs(s.offset.y);
 
-		    if($('.festivals').offset().top-35 < 0 && $('.festivals').offset().top + $('.festivals').height()-200 > 0) {
+		    if($('.festivals').offset().top-35 < 0 && $('.part-5').offset().top-200 > 0) {
 				$('.festivals-nav').addClass('active');
 			} else {
 				$('.festivals-nav').removeClass('active');
@@ -397,18 +443,22 @@ $(document).ready(function() {
 
 			if(scrollTop > 100) {
 				if(!$hero.hasClass('clipped')) {
-					$hero.addClass('clipped');
+					$('.hero, #svgClip').addClass('clipped');
 					$('video', $hero)[0].pause();
 				}
 			} else {
 				if($hero.hasClass('clipped')) {
-					$hero.removeClass('clipped');
+					$('.hero, #svgClip').removeClass('clipped');
 					$('video', $hero)[0].play();
 				}
 			}
 
-			if(scrollTop >= 1000) {
+			if(scrollTop >= 400) {
 				// heroAnimated = true;
+
+				$('.back-to-top').addClass('active');
+			} else {
+				$('.back-to-top').removeClass('active');
 			}
 
 			//path
@@ -418,9 +468,10 @@ $(document).ready(function() {
 				patheOneProgress = scrollTop*100/pathOneLimit/100+pathOneOffset;
 
 			var pathTwoLimit = scrollTop + $('.part-4').offset().top-30,
-				pathTwoProgress = (scrollTop - pathTwoLimit) * 100 / ($('.part-4').height()+$('.part-5').outerHeight()/2) / 100*0.9;
+				pathTwoProgress = (scrollTop - pathTwoLimit) * 100 / ($('.part-4').height()+$('.part-5').outerHeight()/2) / 100*0.9 + 0.09;
 
 			patheOneProgress >= 0.996 ? $('.hero .inner').addClass('hidden') : $('.hero .inner').removeClass('hidden');
+			pathTwoProgress <= 0.005 ? $('.path-2-desktop .circle-2').addClass('hidden') : $('.path-2-desktop .circle-2').removeClass('hidden');
 			(pathTwoProgress >= 0.75 && !$part5.hasClass('clipped')) ? Scroll.scrollTo(0, scrollTop+$part5.offset().top-30, 700, function (scrollbar) {}) : false;
 			heroCircle.progress(patheOneProgress >= 1 ? 1 : patheOneProgress);
 			circleTween2.progress(pathTwoProgress >= 1 ? 1 : pathTwoProgress);
@@ -443,7 +494,7 @@ $(document).ready(function() {
 			}
 
 			//in view animation
-			$('.animated').each(function(){
+			$('.animated, .animated2').each(function(){
 				var $elem = $(this);
 				var offset = $elem.data('offset') ? parseInt( $elem.data('offset')) : 0;
 				if($elem.offset().top-$window.height()/2-offset < 0 && $elem.offset().top + $elem.height()-200 > 0) {
@@ -461,6 +512,8 @@ $(document).ready(function() {
 						festivalTop = $festival.offset().top;
 
 					if(festivalTop-$window.height()/2-200 < 0 && festivalTop + $festival.height() > 0) {
+						$('.back-to-top .st4').css('stroke', $festival.data('button-color'));
+						$('.back-to-top .st5').css('fill', $festival.data('button-color'));
 						$('.festivals').css('background-color', $festival.data('section-color'));
 						$('.festivals-nav').css('background-color', $festival.data('nav-color'))
 							.find('li')
@@ -470,6 +523,10 @@ $(document).ready(function() {
 							.addClass('active');
 
 						return false;
+					} else if (Scroll.isVisible($('.part-4')[0])) {
+						$('.festivals-nav').css('background-color', 'rgb(217, 204, 192)');
+						$('.back-to-top .st4').css('stroke', 'rgb(210, 58, 46)');
+						$('.back-to-top .st5').css('fill', 'rgb(210, 58, 46)');
 					}
 				})
 			}
@@ -517,7 +574,7 @@ $(document).ready(function() {
 	var Scroll = Scroll ? Scroll : {scrollTop:0};
 	var $pathElem = !isMobile ? $('.path-1-desktop') : $('.path-1-mob'),
 		$pathSvg = $pathElem.find('svg'),
-		pathOneOffsetTop = isMobile ? ($window.height()-375) : 0;
+		pathOneOffsetTop = isMobile ? ($window.height()-480) : 0;
 
 	if(isMobile) {
 		$window.resize(function(){
@@ -536,7 +593,7 @@ $(document).ready(function() {
 
 	function updatePath() {
 		$pathElem.height(Math.abs(Scroll.scrollTop) + $('.festivals').offset().top-pathOneOffsetTop);
-		$pathElem.css('top', (window.innerHeight-375) + 'px');
+		if(isMobile) $pathElem.css('top', (window.innerHeight-480) + 'px');
 		$pathSvg.css('height',Math.abs(Scroll.scrollTop) + $('.festivals').offset().top-pathOneOffsetTop+'px');
 	}
 
@@ -725,7 +782,7 @@ $(document).ready(function() {
 	    	setTimeout(function(){
 	    		s.$items.removeClass(s.outClass + ' ' + s.inClass);
 	    		s.canScroll = true;
-	    	}, 0.5*1000*2)
+	    	}, 0.5*700*2)
 	    }
     }
 

@@ -4,7 +4,9 @@
 	 viewBox="0 0 657.6 2896" style="enable-background:new 0 0 657.6 2896;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:none;stroke:#3D444B;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:3.1926;}
+	.st1{fill:#D23A2E;}
 </style>
-<polyline class="st0" points="328.3,0 328.3,481 105.3,570 22.3,810 328.3,1089.2 601.7,1220.8 679.3,1979 270.3,2359 83.3,2663 
-	328.3,2855 328.3,2896 "/>
+<polyline id="path-1-mob" class="st0" points="328.3,0 328.3,481 105.3,570 22.3,810 48.5,1121.5 334.4,1286.5 618.6,1386.2 
+	679.3,1979 270.3,2359 83.3,2663 328.3,2855 328.3,2896 "/>
+<circle id="circle" class="st1" cx="0" cy="0" r="15"/>
 </svg>
