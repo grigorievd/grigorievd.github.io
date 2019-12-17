@@ -183,9 +183,13 @@ a:hover {
 
 @media (max-width: 767px) {
   .content {
-    font-size: 12px; }
+    font-size: 12px;
+    position: absolute;
+    top: 11vh;
+    left: 7%; }
     .content_wrap {
-      padding: 12vh 0 0 7%; }
+      /* 			height: 700px; */
+      padding: 0; }
     .content_title_top {
       font-size: 4.6vw;
       font-weight: 400; }
@@ -207,14 +211,17 @@ a:hover {
   .background::before {
     background: url(../images/bg-sun.jpg) no-repeat -15vw top/210vw auto; }
 
-  #lottie svg {
-    height: 90vh !important;
-    width: auto !important;
-    right: auto;
-    left: 0vw;
-    bottom: auto;
-    top: 30vh;
-    /* 			bottom: -10vh; */
-    transform: translateX(-42%) !important; } }
+  #lottie {
+    position: relative; }
+    #lottie svg {
+      height: 90vh !important;
+      width: auto !important;
+      right: auto;
+      left: 0vw;
+      bottom: auto;
+      top: 26vh;
+      left: 50%;
+      /* 			bottom: -10vh; */
+      transform: translateX(-60%) !important; } }
 
 /*# sourceMappingURL=style.css.map */
