@@ -223,5 +223,8 @@ a:hover {
       left: 50%;
       /* 			bottom: -10vh; */
       transform: translateX(-60%) !important; } }
+    @media (max-width: 767px) and (min-height: 700px) {
+      #lottie svg {
+        top: 22vh; } }
 
 /*# sourceMappingURL=style.css.map */
