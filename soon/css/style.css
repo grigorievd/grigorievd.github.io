@@ -189,7 +189,8 @@ a:hover {
     left: 7%; }
     .content_wrap {
       /* 			height: 700px; */
-      padding: 0; }
+      padding: 0;
+      height: auto; }
     .content_title_top {
       font-size: 4.6vw;
       font-weight: 400; }
@@ -212,19 +213,23 @@ a:hover {
     background: url(../images/bg-sun.jpg) no-repeat -15vw top/210vw auto; }
 
   #lottie {
-    position: relative; }
+    position: relative;
+    height: auto; }
     #lottie svg {
+      position: relative;
       height: 90vh !important;
       width: auto !important;
       right: auto;
       left: 0vw;
       bottom: auto;
-      top: 26vh;
+      /* 			top:26vh; */
+      margin: 26vh 0 0;
       left: 50%;
-      /* 			bottom: -10vh; */
+      bottom: -10px;
       transform: translateX(-60%) !important; } }
     @media (max-width: 767px) and (min-height: 700px) {
       #lottie svg {
-        top: 22vh; } }
+        /* 				top:22vh; */
+        margin: 22vh 0 0; } }
 
 /*# sourceMappingURL=style.css.map */
