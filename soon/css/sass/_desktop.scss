@@ -1,0 +1,152 @@
+.content {
+/* 	font-size: 14px; */
+	font-size: 1.15vw;
+/* 	width: 350px; */
+	
+	&_wrap {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		color: white;
+		padding: 20vh 0 0 100px;
+	}
+	
+	&_title {
+		&_top {
+			font-size: 3.6vw;
+			font-weight: 400;
+			
+			> span:first-of-type {
+				text-shadow: 1px 1px 1px black;
+				letter-spacing: 5px;
+				margin: 0 0.7vw 0 0;
+			}
+			
+			.to {
+				font-size: 0.6em;
+			}
+		}
+		
+		.logo {
+			font-size: 0;
+			display: block;
+			transform: translateX(-15px);
+			margin: 0px 0 0;
+			
+			img {
+				width: 28vw;
+				height: auto;
+			}
+		}
+	}
+	
+	&_copy {
+		padding: 0 80px 0 0;
+		margin: 10px 0 0;
+	}
+}
+
+.background {
+	position: absolute;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+/* 	background: url(../images/bg.png) no-repeat right bottom / cover; */
+	z-index: -1;
+	
+	&::before {
+		content:'';
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url(../images/bg-sun.jpg) no-repeat left top / cover;
+		z-index: -2;
+	}
+	
+	&::after {
+		content:'';
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+/* 		background: url(../images/bg.png) no-repeat right bottom / cover; */
+		z-index: -1;
+	}
+}
+
+#lottie {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
+	
+	svg {
+		width: 110% !important;
+		height: auto !important;
+		position: absolute;
+		left: 0;
+		bottom: -5vh;
+/* 		object-fit: cover; */
+		
+		@media (min-width: 1600px) {
+		  bottom: -10vh;	
+		  height: 123vh !important;	
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	
+	.content {
+		&_title {
+			&_top {
+				font-size: 3.6vw;
+				font-weight: 400;
+
+				> span:first-of-type {
+					text-shadow: 1px 1px 1px black;
+					letter-spacing: 5px;
+					margin: 0 0.7vw 0 0;
+				}
+
+				.to {
+					font-size: 0.6em;
+				}
+			}
+
+			.logo {
+				font-size: 0;
+				display: block;
+				transform: translateX(-15px);
+				margin: 0px 0 0;
+
+				img {
+					width: 28vw;
+					height: auto;
+				}
+			}
+		}
+	}
+	
+	.background {
+		&::before {
+			background: url(../images/bg-sun.jpg) no-repeat -15vw top / auto 70%;
+		}
+	}
+	#lottie {
+		svg {
+			height: 100vh !important;
+			right: auto;
+			left: 0vw;
+			bottom: -20vh;
+			transform: translateX(-47%) !important;
+		}
+	}
+}
