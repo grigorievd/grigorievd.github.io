@@ -182,32 +182,39 @@ a:hover {
         height: 123vh !important; } }
 
 @media (max-width: 767px) {
-  .content_title_top {
-    font-size: 3.6vw;
-    font-weight: 400; }
-    .content_title_top > span:first-of-type {
-      text-shadow: 1px 1px 1px black;
-      letter-spacing: 5px;
-      margin: 0 0.7vw 0 0; }
-    .content_title_top .to {
-      font-size: 0.6em; }
-  .content_title .logo {
-    font-size: 0;
-    display: block;
-    transform: translateX(-15px);
-    margin: 0px 0 0; }
-    .content_title .logo img {
-      width: 28vw;
-      height: auto; }
+  .content {
+    font-size: 12px; }
+    .content_wrap {
+      padding: 12vh 0 0 7%; }
+    .content_title_top {
+      font-size: 4.6vw;
+      font-weight: 400; }
+      .content_title_top .to {
+        font-size: 0.6em; }
+    .content_title .cd-headline {
+      letter-spacing: 2px;
+      margin: 0 0.7vw 0 0;
+      font-size: 6vw; }
+    .content_title .logo {
+      font-size: 0;
+      display: block;
+      transform: translateX(-15px);
+      margin: 0px 0 0; }
+      .content_title .logo img {
+        width: 70vw;
+        height: auto; }
 
   .background::before {
-    background: url(../images/bg-sun.jpg) no-repeat -15vw top/auto 70%; }
+    background: url(../images/bg-sun.jpg) no-repeat -15vw top/210vw auto; }
 
   #lottie svg {
-    height: 100vh !important;
+    height: 90vh !important;
+    width: auto !important;
     right: auto;
     left: 0vw;
-    bottom: -20vh;
-    transform: translateX(-47%) !important; } }
+    bottom: auto;
+    top: 30vh;
+    /* 			bottom: -10vh; */
+    transform: translateX(-42%) !important; } }
 
 /*# sourceMappingURL=style.css.map */

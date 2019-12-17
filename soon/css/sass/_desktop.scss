@@ -116,20 +116,25 @@
 @media (max-width: 767px) {
 	
 	.content {
+		font-size: 12px;
+		
+		&_wrap {
+			padding: 12vh 0 0 7%;
+		}
 		&_title {
 			&_top {
-				font-size: 3.6vw;
+				font-size: 4.6vw;
 				font-weight: 400;
-
-				> span:first-of-type {
-					text-shadow: 1px 1px 1px black;
-					letter-spacing: 5px;
-					margin: 0 0.7vw 0 0;
-				}
 
 				.to {
 					font-size: 0.6em;
 				}
+			}
+			
+			.cd-headline {
+				letter-spacing: 2px;
+				margin: 0 0.7vw 0 0;
+				font-size: 6vw;
 			}
 
 			.logo {
@@ -139,7 +144,7 @@
 				margin: 0px 0 0;
 
 				img {
-					width: 28vw;
+					width: 70vw;
 					height: auto;
 				}
 			}
@@ -148,16 +153,19 @@
 	
 	.background {
 		&::before {
-			background: url(../images/bg-sun.jpg) no-repeat -15vw top / auto 70%;
+			background: url(../images/bg-sun.jpg) no-repeat -15vw top / 210vw auto;
 		}
 	}
 	#lottie {
 		svg {
-			height: 100vh !important;
+			height: 90vh !important;
+			width: auto !important;
 			right: auto;
 			left: 0vw;
-			bottom: -20vh;
-			transform: translateX(-47%) !important;
+			bottom: auto;
+			top:30vh;
+/* 			bottom: -10vh; */
+			transform: translateX(-42%) !important;
 		}
 	}
 }
