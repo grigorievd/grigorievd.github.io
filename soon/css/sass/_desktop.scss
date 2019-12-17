@@ -38,6 +38,17 @@
 				height: auto;
 			}
 		}
+		
+		.cd-headline {
+			text-shadow: 1px 1px 1px black;
+			letter-spacing: 5px;
+			margin: 0 0.7vw 0 0;
+			font-size: 3.6vw;
+			
+			i {
+				font-style: normal;
+			}
+		}
 	}
 	
 	&_copy {
@@ -91,7 +102,7 @@
 		width: 110% !important;
 		height: auto !important;
 		position: absolute;
-		left: 0;
+		right: 0;
 		bottom: -5vh;
 /* 		object-fit: cover; */
 		

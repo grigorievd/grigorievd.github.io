@@ -123,6 +123,13 @@ a:hover {
     .content_title .logo img {
       width: 28vw;
       height: auto; }
+  .content_title .cd-headline {
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 5px;
+    margin: 0 0.7vw 0 0;
+    font-size: 3.6vw; }
+    .content_title .cd-headline i {
+      font-style: normal; }
   .content_copy {
     padding: 0 80px 0 0;
     margin: 10px 0 0; }
@@ -166,7 +173,7 @@ a:hover {
     width: 110% !important;
     height: auto !important;
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: -5vh;
     /* 		object-fit: cover; */ }
     @media (min-width: 1600px) {
