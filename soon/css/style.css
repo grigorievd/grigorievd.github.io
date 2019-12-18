@@ -128,7 +128,7 @@ a:hover {
   .content_title .cd-headline {
     text-shadow: 1px 1px 1px black;
     letter-spacing: 5px;
-    margin: 0 0.7vw 0 0;
+    margin: 0 0.7vw 7px 0;
     font-size: 3.6vw; }
     .content_title .cd-headline i {
       font-style: normal; }
@@ -163,7 +163,7 @@ a:hover {
     height: 70vw;
     background: url(../images/rays.png) no-repeat left top/cover;
     z-index: -1;
-    animation: rotate 35s infinite linear;
+    animation: rotate 55s infinite linear;
     transform-origin: 0% 0%;
     /* 		transform: rotate(45deg); */
     transform: translate3d(-50%, -50%, 0); }
@@ -219,7 +219,8 @@ a:hover {
         font-size: 0.6em; }
     .content_title .cd-headline {
       letter-spacing: 2px;
-      margin: 0 0.7vw 0 0;
+      margin: 0 0.7vw 7px 0px;
+      display: block;
       font-size: 6vw; }
     .content_title .logo {
       font-size: 0;
@@ -260,7 +261,7 @@ a:hover {
       margin: 26vh 0 0;
       left: 50%;
       bottom: -10px;
-      transform: translateX(-60%) !important; } }
+      transform: translateX(-63.8%) !important; } }
     @media (max-width: 767px) and (min-height: 700px) {
       #lottie svg {
         /* 				top:22vh; */
