@@ -65,6 +65,7 @@
 	height: 100%;
 /* 	background: url(../images/bg.png) no-repeat right bottom / cover; */
 	z-index: -1;
+	overflow: hidden;
 	
 	&::before {
 		content:'';
@@ -73,19 +74,44 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: url(../images/bg-sun.jpg) no-repeat left top / cover;
+		background: url(../images/bg-sun-empty.jpg) no-repeat left top / cover;
 		z-index: -2;
 	}
 	
 	&::after {
 		content:'';
 		position: absolute;
-		top:0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-/* 		background: url(../images/bg.png) no-repeat right bottom / cover; */
+		top:10vh;
+		left: 15vw;
+		width: 70vw;
+		height: 70vw;
+		background: url(../images/rays.png) no-repeat left top / cover;
 		z-index: -1;
+		animation: rotate 35s infinite linear;
+		transform-origin: 0% 0%;
+/* 		transform: rotate(45deg); */
+		transform: translate3d(-50%,-50%,0);
+	}
+	
+	span {
+		content:'';
+		position: absolute;
+		top:10vh;
+		left: 15vw;
+		width: 70vw;
+		height: 70vw;
+		background: url(../images/token.png) no-repeat center center / 10% auto;
+		z-index: -1;
+		transform: translate3d(-50%,-50%,0)
+	}
+	
+	@keyframes rotate {
+		0% {
+			transform: rotate(0) translate3d(-50%,-50%,0);
+		}
+		100% {
+			transform: rotate(360deg) translate3d(-50%,-50%,0);
+		}
 	}
 }
 
@@ -117,9 +143,14 @@
 	
 	.content {
 		font-size: 12px;
+		position: absolute;
+		top:11vh;
+		left: 7%;
 		
 		&_wrap {
-			padding: 12vh 0 0 7%;
+/* 			height: 700px; */
+			padding: 0;
+			height: auto;
 		}
 		&_title {
 			&_top {
@@ -152,20 +183,49 @@
 	}
 	
 	.background {
+		overflow: hidden;
+		
 		&::before {
 			background: url(../images/bg-sun.jpg) no-repeat -15vw top / 210vw auto;
+			background: url(../images/bg-sun-empty.jpg) no-repeat -15vw top / 210vw auto;
+			
+		}
+		
+		span {
+			top: 4vh;
+			left: 17vw;
+			width: 70vh;
+			height: 70vh;
+		}
+		
+		&::after {
+			top: 4vh;
+			left: 17vw;
+			width: 90vh;
+			height: 90vh;
 		}
 	}
 	#lottie {
+		position: relative;
+		height: auto;
+		
 		svg {
+			position: relative;
 			height: 90vh !important;
 			width: auto !important;
 			right: auto;
 			left: 0vw;
 			bottom: auto;
-			top:30vh;
-/* 			bottom: -10vh; */
-			transform: translateX(-42%) !important;
+/* 			top:26vh; */
+			margin: 26vh 0 0;
+			left: 50%;
+			bottom: -10px;
+			transform: translateX(-60%) !important;
+			
+			@media (min-height: 700px) {
+/* 				top:22vh; */
+				margin: 20vh 0 0;
+			}
 		}
 	}
 }
