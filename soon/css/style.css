@@ -249,7 +249,7 @@ a:hover {
 
   #lottie {
     position: relative;
-    height: auto; }
+    height: auto; height: 600px;}
     #lottie svg {
       position: relative;
       height: 90vh !important;
