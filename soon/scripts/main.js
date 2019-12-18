@@ -10,5 +10,5 @@ $(document).ready(function() {
 
 	var anim;
 
-	// anim = lottie.loadAnimation(params);
+	anim = lottie.loadAnimation(params);
 })
