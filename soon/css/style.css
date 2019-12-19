@@ -163,7 +163,7 @@ a:hover {
     height: 70vw;
     background: url(../images/rays.png) no-repeat left top/cover;
     z-index: -1;
-    animation: rotate 55s infinite linear;
+    /*animation: rotate 55s infinite linear;*/
     transform-origin: 0% 0%;
     /* 		transform: rotate(45deg); */
     transform: translate3d(-50%, -50%, 0); }
