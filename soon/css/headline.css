@@ -10,8 +10,8 @@ Primary style
 }
 
 html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /*-webkit-font-smoothing: antialiased;*/
+  /*-moz-osx-font-smoothing: grayscale;*/
 }
 
 html {
@@ -894,12 +894,15 @@ xrotate-3
   -webkit-perspective: 300px;
   -moz-perspective: 300px;
   perspective: 300px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .cd-headline.rotate-3 b {
   opacity: 0;
 }
 .cd-headline.rotate-3 i {
   display: inline-block;
+  will-change: transform;
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);

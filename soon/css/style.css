@@ -155,15 +155,28 @@ a:hover {
     background: url(../images/bg-sun-empty.jpg) no-repeat left top/cover;
     z-index: -2; }
   .background::after {
+    /* 		content:'';
+    		position: absolute;
+    		top:10vh;
+    		left: 15vw;
+    		width: 70vw;
+    		height: 70vw;
+    		background: url(../images/rays.png) no-repeat left top / cover;
+    		z-index: -1;
+    		transform-origin: 0% 0%;
+    		transform: translate3d(-50%,-50%,0); */
+    /* 		animation: rotate 55s infinite linear; */ }
+  .background .rays {
     content: '';
     position: absolute;
     top: 10vh;
     left: 15vw;
     width: 70vw;
     height: 70vw;
+    will-change: transform;
     background: url(../images/rays.png) no-repeat left top/cover;
     z-index: -1;
-    /*animation: rotate 55s infinite linear;*/
+    animation: rotate 55s infinite linear;
     transform-origin: 0% 0%;
     /* 		transform: rotate(45deg); */
     transform: translate3d(-50%, -50%, 0); }
@@ -249,7 +262,7 @@ a:hover {
 
   #lottie {
     position: relative;
-    height: auto;}
+    height: auto; }
     #lottie svg {
       position: relative;
       height: 90vh !important;
