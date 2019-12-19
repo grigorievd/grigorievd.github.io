@@ -18,10 +18,21 @@ jQuery(document).ready(function($){
 	
 
 	function initHeadline() {
-		//insert <i> element for each letter of a changing word
-		singleLetters($('.cd-headline.letters').find('b'));
-		//initialise headline animation
-		animateHeadline($('.cd-headline'));
+
+		if($(window).width() >= 768) {
+			//insert <i> element for each letter of a changing word
+			singleLetters($('.cd-headline.letters').find('b'));
+			//initialise headline animation
+			animateHeadline($('.cd-headline'));
+		} else {
+			setInterval(function(){
+				var index = $('.cd-words-wrapper b.active').index()+1;
+				if(index == $('.cd-words-wrapper b').length) {
+					index = 0
+				}
+				$('.cd-words-wrapper b').removeClass('active').eq(index).addClass('active');
+			},2500)
+		}
 	}
 
 	function singleLetters($words) {

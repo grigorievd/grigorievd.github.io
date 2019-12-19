@@ -254,7 +254,7 @@ a:hover {
       left: 17vw;
       width: 70vh;
       height: 70vh; }
-    .background::after {
+    .background .rays {
       top: 4vh;
       left: 17vw;
       width: 90vh;
@@ -279,5 +279,11 @@ a:hover {
       #lottie svg {
         /* 				top:22vh; */
         margin: 20vh 0 0; } }
+
+@media (max-width: 767px) {
+  .cd-headline.rotate-3 b {
+    transition: opacity 0.3s linear; }
+  .cd-headline.rotate-3 .active {
+    opacity: 1; } }
 
 /*# sourceMappingURL=style.css.map */
