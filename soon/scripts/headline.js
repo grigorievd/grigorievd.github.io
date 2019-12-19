@@ -25,13 +25,13 @@ jQuery(document).ready(function($){
 			//initialise headline animation
 			animateHeadline($('.cd-headline'));
 		} else {
-			setInterval(function(){
-				var index = $('.cd-words-wrapper b.active').index()+1;
-				if(index == $('.cd-words-wrapper b').length) {
-					index = 0
-				}
-				$('.cd-words-wrapper b').removeClass('active').eq(index).addClass('active');
-			},2500)
+			// setInterval(function(){
+			// 	var index = $('.cd-words-wrapper b.active').index()+1;
+			// 	if(index == $('.cd-words-wrapper b').length) {
+			// 		index = 0
+			// 	}
+			// 	$('.cd-words-wrapper b').removeClass('active').eq(index).addClass('active');
+			// },2500)
 		}
 	}
 
