@@ -1,14 +1,13 @@
 $(document).ready(function() {
+	var animation = ($(window).width() >= 768) ? animationData : animationMob;
 
 	var params = {
 	    container: document.getElementById('lottie'),
 	    renderer: 'svg',
 	    loop: true,
 	    autoplay: true,
-	    animationData: animationData
+	    animationData: animation
 	};
 
-	var anim;
-
-	anim = lottie.loadAnimation(params);
+	var anim = lottie.loadAnimation(params);
 })

@@ -229,20 +229,20 @@
 		
 		svg {
 			position: relative;
-			height: 90vh !important;
-			width: auto !important;
+			height: auto !important;
+			width: 100% !important;
 			right: auto;
 			left: 0vw;
 			bottom: auto;
 /* 			top:26vh; */
 			margin: 26vh 0 0;
-			left: 50%;
+			left: 0%;
 			bottom: -10px;
-			transform: translateX(-63.8%) !important;
+			transform: translateX(0) !important;
 			
 			@media (min-height: 700px) {
 /* 				top:22vh; */
-				margin: 20vh 0 0;
+				margin: 23vh 0 0;
 			}
 		}
 	}
