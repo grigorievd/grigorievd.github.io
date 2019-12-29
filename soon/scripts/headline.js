@@ -19,12 +19,12 @@ jQuery(document).ready(function($){
 
 	function initHeadline() {
 
-		if($(window).width() >= 768) {
+		// if($(window).width() >= 768) {
 			//insert <i> element for each letter of a changing word
 			singleLetters($('.cd-headline.letters').find('b'));
 			//initialise headline animation
 			animateHeadline($('.cd-headline'));
-		} else {
+		// } else {
 			// setInterval(function(){
 			// 	var index = $('.cd-words-wrapper b.active').index()+1;
 			// 	if(index == $('.cd-words-wrapper b').length) {
@@ -32,7 +32,7 @@ jQuery(document).ready(function($){
 			// 	}
 			// 	$('.cd-words-wrapper b').removeClass('active').eq(index).addClass('active');
 			// },2500)
-		}
+		// }
 	}
 
 	function singleLetters($words) {
