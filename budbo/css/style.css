@@ -1,0 +1,443 @@
+@charset "UTF-8";
+/*----------------------------------------------------------------------------------*/
+/*------------------------------RESET DEFAULT STYLES--------------------------------*/
+/*----------------------------------------------------------------------------------*/
+html, body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  padding: 0;
+  margin: 0;
+  font: 18px 'proxima';
+  font-weight: 300;
+  font-family: 'proxima', Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background: #fff;
+  color: #000; }
+
+div, p, a, span, em, strong, img, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, td, tr, form, fieldset, label, select, checkbox, input, textarea, header, section, aside, article {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box; }
+
+select, input, textarea {
+  font-size: 18px;
+  vertical-align: middle; }
+
+textarea {
+  vertical-align: top; }
+
+:focus {
+  outline: none; }
+
+input[type=submit] {
+  cursor: pointer; }
+
+img, fieldset {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a:link, a:visited {
+  text-decoration: none !important; }
+
+a:hover {
+  text-decoration: none; }
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------DEFAULT CLASSES------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.float-r {
+  float: right !important; }
+
+.float-l {
+  float: left !important; }
+
+.no-float {
+  float: none !important; }
+
+.no-border {
+  border: 0 !important; }
+
+.no-bg {
+  background: none !important; }
+
+.no-margin {
+  margin: 0 !important; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.no-display {
+  display: none !important; }
+
+.display {
+  display: block !important; }
+
+.inline {
+  display: inline !important; }
+
+.overflow {
+  overflow: hidden !important; }
+
+.align-r {
+  text-align: right !important; }
+
+.align-l {
+  text-align: left !important; }
+
+.align-c {
+  text-align: center !important; }
+
+.clear {
+  clear: both; }
+
+/*
+ * SVG Processor
+ * Updated version on 04/10/2017
+ *
+ * Basically a URL encoder to convert an SVG file string into a url(data) object for CSS.
+ *
+ */
+/*
+ * SVG=
+ * Updated version on 04/10/2017
+ *
+ * Contains a bunch of functions with pre-built SVG files that can modified by the arguments passed.
+ * Example: SVG-facebook( red ) - Outputs a red facebook logo.
+ *
+ * Add any additional SVG-process functions here.
+ */
+body {
+  font: 16px/1.44 'Averta';
+  color: #3f414d; }
+
+span, a {
+  display: inline-block; }
+
+.container {
+  max-width: 1200px;
+  /* 	padding: 0 5%; */
+  margin: 0 auto; }
+
+.text p:not(:last-child) {
+  margin: 0 0 22px; }
+
+.text-light {
+  color: #696d80; }
+
+.text-center {
+  text-align: center; }
+
+.btn {
+  border: 2px solid #c5d4df;
+  padding: 14px 35px;
+  color: #2d3758;
+  font-weight: 600;
+  border-radius: 27px;
+  cursor: pointer; }
+  .btn-colored {
+    padding: 15px 36px;
+    color: white;
+    background: linear-gradient(90deg, #c873e8 0%, #f89097 50%, #ff67a5 100%);
+    border: none; }
+  .btn-row {
+    margin: 45px 0 0; }
+    .btn-row a:first-child {
+      margin: 0 20px 0 0; }
+
+.download-link {
+  width: 120px;
+  height: 36px;
+  background: url("../images/app-store-icon.png") no-repeat center center/cover; }
+
+.login-link {
+  color: #2d3758;
+  font-weight: 600;
+  vertical-align: middle; }
+  .login-link::before {
+    content: '';
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px 0 0;
+    background: #204479 url(../images/key-icon.svg) no-repeat center center/14px auto;
+    border-radius: 50%; }
+
+.section {
+  padding: 70px 0;
+  position: relative; }
+  .section::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(90deg);
+    bottom: 0;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background: #c5d4df url(../images/arrow-down.svg) no-repeat center center/11px auto; }
+  .section-name {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #ff68a4;
+    font-weight: 600;
+    margin: 0 0 5px; }
+  .section-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #1e2744;
+    margin: 0 0 60px; }
+
+.header {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  padding: 0 5%;
+  margin: 30px 0 0; }
+  .header_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header_menu li a {
+    color: #2d3758; }
+
+.menu li {
+  display: inline-block;
+  margin: 0 20px;
+  vertical-align: middle; }
+  .menu li a {
+    font-weight: 600; }
+.menu_coin {
+  width: 72px;
+  height: 72px;
+  background: url("../images/coin-icon.png") no-repeat center center/cover; }
+
+.hero {
+  background: #e8eff5 url(../images/hero.png) no-repeat center bottom/cover;
+  height: 100vh;
+  min-height: 1000px;
+  z-index: 2; }
+  .hero_container {
+    padding: 100px 0; }
+  .hero_title {
+    font-size: 72px;
+    line-height: 1;
+    color: #1e2744;
+    margin: 0 0 35px; }
+  .hero p {
+    max-width: 360px;
+    font-size: 18px; }
+  .hero::after {
+    display: none; }
+  .hero .socials {
+    left: calc((100% - 1200px) / 2);
+    position: absolute;
+    bottom: 140px; }
+    .hero .socials li a {
+      background: #c5d4df; }
+
+.s-budbo {
+  z-index: 0;
+  height: 620px; }
+  .s-budbo_container {
+    max-width: 600px; }
+  .s-budbo_illustrations {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 600px;
+    background: url(../images/budbo.jpg) no-repeat right center/contain; }
+
+.s-app {
+  padding: 150px 0 120px;
+  z-index: 3; }
+
+.slider {
+  max-width: 1200px;
+  margin: 50px auto 20px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between; }
+  .slider_left {
+    width: 460px; }
+  .slider_content {
+    text-align: left;
+    color: #a7adcc;
+    font-size: 24px;
+    font-weight: 600; }
+    .slider_content span {
+      font-size: 14px;
+      color: #3dddcd;
+      margin: 0px 0 20px;
+      display: block; }
+    .slider_content li {
+      margin: 0 0 40px; }
+    .slider_content-active {
+      color: #1e2744;
+      border-left: 2px solid #3dddcd;
+      padding: 0 0 0 46px; }
+  .slider_right {
+    position: relative; }
+  .slider_mockup {
+    width: 700px;
+    height: 750px;
+    background: url(../images/app-slider.jpg) no-repeat right center/auto 100%; }
+  .slider_controls {
+    position: absolute;
+    right: 0;
+    top: 44%; }
+  .slider_control {
+    border: 2px solid #c5d4df;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: url("../images/chevron.svg") no-repeat center center/5px auto;
+    transform: rotate(90deg);
+    display: block;
+    margin: 12px 0;
+    cursor: pointer; }
+  .slider_up {
+    transform: rotate(-90deg); }
+
+.s-blockchain {
+  background: #e8eff5;
+  padding: 130px 0; }
+  .s-blockchain_container {
+    width: 550px; }
+  .s-blockchain .container {
+    display: flex;
+    /* 		flex-wrap: wrap; */
+    align-content: center;
+    align-items: center; }
+  .s-blockchain_content {
+    width: 60%; }
+  .s-blockchain .checklist {
+    -moz-column-count: 2;
+    /* ╨Ф╨╗╤П Firefox */
+    -webkit-column-count: 2;
+    /* ╨Ф╨╗╤П Safari ╨╕ Chrome */
+    column-count: 2;
+    /* 		height: 230px; */
+    width: 110%;
+    margin: 40px 0; }
+    .s-blockchain .checklist li {
+      margin: 0 0 7px;
+      display: inline-block; }
+      .s-blockchain .checklist li::before {
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        transform: translateY(2px);
+        width: 18px;
+        height: 18px;
+        background: url(../images/bullet.svg) no-repeat center center/cover;
+        margin: 0 10px 0 0; }
+  .s-blockchain_graphics {
+    width: 65%;
+    height: 600px;
+    background: url(../images/graph.png) no-repeat 70% center/contain;
+    position: absolute;
+    right: 0; }
+
+.s-chain {
+  padding: 140px 0;
+  padding-bottom: 0; }
+  .s-chain_container {
+    max-width: 1000px;
+    margin: 0 auto; }
+  .s-chain_graphics {
+    margin: -100px 0 0;
+    height: 750px;
+    width: 100%;
+    background: url(../images/chain.png) no-repeat center center/contain;
+    position: relative; }
+    .s-chain_graphics::after {
+      content: '';
+      width: 100%;
+      height: 260px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #e8eff5;
+      z-index: -1; }
+  .s-chain::after {
+    display: none; }
+
+.s-wallet {
+  background: #e8eff5;
+  padding: 200px 0 280px;
+  z-index: 4;
+  background: #e8eff5 url(../images/wallet.png) no-repeat center 0px; }
+
+.s-contacts {
+  background: url(../images/contacts.jpg) no-repeat center top/100% auto;
+  padding: 110px 0 0; }
+  .s-contacts .section-title {
+    color: white; }
+  .s-contacts .contact-form {
+    width: 950px;
+    margin: 90px auto 0; }
+    .s-contacts .contact-form .btn {
+      font: 16px/1.44 'Averta';
+      font-weight: 600; }
+    .s-contacts .contact-form_fields {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 0 60px; }
+    .s-contacts .contact-form input,
+    .s-contacts .contact-form textarea {
+      background: none;
+      font: 16px/1.44 'Averta';
+      color: #8790ab;
+      border: none;
+      border-bottom: 2px solid #2d3654;
+      padding: 0 0 19px; }
+    .s-contacts .contact-form input {
+      width: 49%; }
+    .s-contacts .contact-form textarea {
+      width: 100%;
+      resize: none;
+      margin: 30px 0 0; }
+  .s-contacts::after {
+    display: none; }
+
+.footer {
+  background: #172748;
+  color: #8790ab;
+  padding: 79px 0px 79px; }
+  .footer a {
+    color: white !important;
+    font-weight: 400 !important; }
+  .footer_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 11px 0; }
+  .footer .menu li:first-child {
+    margin-left: 0; }
+
+.socials li {
+  display: inline-block;
+  margin: 0 0 0 7px; }
+  .socials li a {
+    width: 36px;
+    height: 36px;
+    background: #204479;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    color: white; }
+
+/*# sourceMappingURL=style.css.map */
