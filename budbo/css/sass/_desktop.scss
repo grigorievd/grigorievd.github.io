@@ -10,7 +10,7 @@ span, a {
 }
 
 .container {
-	max-width: 1200px;
+	max-width: 1250px;
 /* 	padding: 0 5%; */
 	margin:0 auto;
 }
@@ -36,12 +36,25 @@ span, a {
 	font-weight: 600;
 	border-radius: 27px;
 	cursor: pointer;
+/* 	transition: 1s; */
+/* 	background: linear-gradient(0deg, transparent 0%, transparent 0%, transparent 0%,transparent 0%, transparent 0%, transparent 0%); */
+	
+	&:hover {
+/* 		background: linear-gradient(90deg, #c873e8 0%, #f89097 20%, #ff67a5 40%,#c873e8 60%, #f89097 80%, #ff67a5 100%); */
+	} 
 	
 	&-colored {
 		padding: 15px 36px;
 		color: white;
 		background: linear-gradient(90deg, rgba(200,115,232,1) 0%, rgba(248,144,151,1) 50%, rgba(255,103,165,1) 100%);
+		background: linear-gradient(90deg, #c873e8 0%, #f89097 20%, #ff67a5 40%,#c873e8 60%, #f89097 80%, #ff67a5 100%);
+		transition: 1s;
+    background-size: 280px auto;
 		border:none;
+		
+		&:hover {
+			background-position: -136px 0px;
+		}
 	}
 	
 	&-row {
@@ -152,6 +165,7 @@ span, a {
 	height: 100vh;
 	min-height: 1000px;
 	z-index: 2;
+	padding: 150px 0 0;
 	
 	&_container {
 		padding: 100px 0;
@@ -164,9 +178,13 @@ span, a {
 		margin: 0 0 35px;
 	}
 	
+	.section-title {
+		margin: 0 0 25px;
+	}
+	
 	p {
-		max-width: 360px;
-		font-size: 18px;
+/* 		max-width: 360px; */
+/* 		font-size: 18px; */
 	}
 	
 	&::after {
@@ -182,6 +200,42 @@ span, a {
 			background: #c5d4df;
 		}
 	}
+	
+	&-patterns {
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		pointer-events: none;
+		
+		div {
+			position: absolute;
+			
+			img {
+				width: 60px;
+			}
+		}
+	}
+}
+
+patterns {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	pointer-events: none;
+
+	div {
+		position: absolute;
+
+		img {
+			width: 60px;
+		}
+	}
 }
 
 .s-budbo {
@@ -189,7 +243,7 @@ span, a {
 	height: 620px;
 	
 	&_container {
-		max-width: 600px;
+		max-width: 555px;
 	}
 	
 	&_illustrations {
@@ -203,7 +257,8 @@ span, a {
 }
 
 .s-app {
-	padding: 150px 0 120px;
+	margin: -70px 0 0;
+	padding: 0px 0 120px;
 	z-index: 3;
 }
 
@@ -371,6 +426,23 @@ span, a {
 	z-index: 4;
 	
 	background: #e8eff5 url(../images/wallet.png) no-repeat center 0px;
+	
+	&_container {
+		max-width: 640px;
+	}
+	
+	.section-title {
+		margin-bottom: 40px;
+	}
+	
+	&_graphics {
+		position: absolute;
+		left: 56%;
+		top:0%;
+		width: 500px;
+		height: 600px;
+		background: url(../images/wallet.jpg) no-repeat right center / contain;
+	}
 }
 
 .s-contacts {
@@ -463,7 +535,20 @@ span, a {
 	}
 }
 
-
+.animated {
+	&.fadeIn {
+		opacity: 0;
+		transform: translateY(60px);
+		transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+				transition-delay: 0s, 0s;
+		transition-delay: .3s;
+		
+		&.in-view {
+			opacity: 1;
+			transform: none;
+		}
+	}
+}
 
 
 
