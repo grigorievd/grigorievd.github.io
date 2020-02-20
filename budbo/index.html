@@ -46,21 +46,21 @@
 
 	<header class="header">
 		<nav class="header_nav">
-			<a href="" class="header_login login-link">Login</a>
+			<a href="" class="header_login login-link"><span>Login</span></a>
 			<ul class="header_menu menu">
-				<li><a href="">Budbo</a></li>
-				<li><a href="">Mobile App</a></li>
-				<li><a href="">Blockchain</a></li>
+				<li><a data-section="budbo" href="" class="active">Budbo</a></li>
+				<li><a data-section="app" href="">Mobile App</a></li>
+				<li><a data-section="blockchain" href="">Blockchain</a></li>
 				<li class="menu_coin"></li>
-				<li><a href="">Supply Chain</a></li>
-				<li><a href="">Wallet</a></li>
-				<li><a href="">Contact us</a></li>
+				<li><a data-section="chain" href="">Supply Chain</a></li>
+				<li><a data-section="wallet" href="">Wallet</a></li>
+				<li><a data-section="contacts" href="">Contact us</a></li>
 			</ul>
 			<a href="" class="header-download download-link"></a>
 		</nav>
 	</header>
 
-	<section class="section hero">
+	<section class="section hero" data-section="budbo">
 		<div class="container">
 			<!-- <div class="hero_container">
 				<h1 class="hero_title">Welcome to <br> Budbo.</h1>
@@ -100,9 +100,9 @@ by blockchain.</p>
 		</div>
 
 		<ul class="socials">
-			<li data-parallax='{"x": -30}'><a href=""><i class="fa fa-facebook"></i></a></li>
-			<li ><a href=""><i class="fa fa-twitter"></i></a></li>
-			<li data-parallax='{"x": 30}'><a href=""><i class="fa fa-instagram"></i></a></li>
+			<li data-parallax='{"x": -30}'><a class="socials_facebook" href=""><i class="fa fa-facebook"></i></a></li>
+			<li ><a class="socials_twitter" href=""><i class="fa fa-twitter"></i></a></li>
+			<li data-parallax='{"x": 30}'><a class="socials_insta" href=""><i class="fa fa-instagram"></i></a></li>
 		</ul>
 
 		<div class="hero-patterns">
@@ -142,7 +142,7 @@ by blockchain.</p>
 		</div>
 	</section> -->
 
-	<section class="section s-app">
+	<section class="section s-app" data-section="app">
 		<div class="s-app_container text-center">
 			<span class="section-name animated fadeIn">Mobile App</span>
 			<h2 class="section-title animated fadeIn">
@@ -201,7 +201,7 @@ retailers, and collectives onto our mobile app, at no cost to you! </p>
 		</div>
 	</section>
 
-	<section class="section s-blockchain">
+	<section class="section s-blockchain" data-section="blockchain">
 		<div class="container">
 			<div class="s-blockchain_content">
 				<span class="section-name animated fadeIn">Blockchain</span>
@@ -248,7 +248,7 @@ retailers, and collectives onto our mobile app, at no cost to you! </p>
 		</div>
 	</section>
 
-	<section class="section s-chain">
+	<section class="section s-chain" data-section="chain">
 		<div class="s-chain_container text-center">
 			<span class="section-name animated fadeIn">Supply Chain</span>
 			<h2 class="section-title animated fadeIn">
@@ -282,7 +282,7 @@ retailers, and collectives onto our mobile app, at no cost to you! </p>
 		</div>
 	</section>
 
-	<section class="section s-wallet">
+	<section class="section s-wallet" data-section="wallet">
 		<div class="container">
 			<div class="s-wallet_container">
 				<span class="section-name animated fadeIn">wallet</span>
@@ -291,7 +291,7 @@ retailers, and collectives onto our mobile app, at no cost to you! </p>
 					of <br> tokens and cryptocurrencies
 				</h2>
 
-				<div class="tex animated fadeInt">
+				<div class="text animated fadeIn">
 					<p>Supported by our partners at Matic, our payment and rewards gateway uses an intuitive layer
 					2 scaling solution for lightning fast transactions and uninterrupted security.</p>
 				</div>
@@ -313,7 +313,7 @@ retailers, and collectives onto our mobile app, at no cost to you! </p>
 		</div>
 	</section>
 
-	<section class="section s-contacts">
+	<section class="section s-contacts" data-section="contacts">
 		<div class="container text-center">
 			<span class="section-name animated fadeIn">contact us</span>
 			<h2 class="section-title animated fadeIn">
@@ -344,12 +344,12 @@ please don't hesitate to contact us
 		<div class="container">
 			<nav class="footer_nav footer_row">
 				<ul class="menu">
-					<li><a href="">Budbo</a></li>
-					<li><a href="">Mobile App</a></li>
-					<li><a href="">Blockchain</a></li>
-					<li><a href="">Supply Chain</a></li>
-					<li><a href="">Wallet</a></li>
-					<li><a href="">Contact us</a></li>
+					<li><a data-section="budbo" href="" class="active">Budbo</a></li>
+					<li><a data-section="app" href="">Mobile App</a></li>
+					<li><a data-section="blockchain" href="">Blockchain</a></li>
+					<li><a data-section="chain" href="">Supply Chain</a></li>
+					<li><a data-section="wallet" href="">Wallet</a></li>
+					<li><a data-section="contacts" href="">Contact us</a></li>
 					<li><a href="" class="login-link">Login</a></li>
 				</ul>
 
@@ -366,6 +366,22 @@ please don't hesitate to contact us
 			</div>
 		</div>
 	</footer>
+
+	<header class="header header-copy">
+		<nav class="header_nav">
+			<a href="" class="header_login login-link"><span>Login</span></a>
+			<ul class="header_menu menu">
+				<li><a data-section="budbo" href="" class="active">Budbo</a></li>
+				<li><a data-section="app" href="">Mobile App</a></li>
+				<li><a data-section="blockchain" href="">Blockchain</a></li>
+				<li class="menu_coin"></li>
+				<li><a data-section="chain" href="">Supply Chain</a></li>
+				<li><a data-section="wallet" href="">Wallet</a></li>
+				<li><a data-section="contacts" href="">Contact us</a></li>
+			</ul>
+			<a href="" class="header-download download-link"></a>
+		</nav>
+	</header>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->

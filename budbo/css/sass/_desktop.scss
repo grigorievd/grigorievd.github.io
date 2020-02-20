@@ -36,11 +36,14 @@ span, a {
 	font-weight: 600;
 	border-radius: 27px;
 	cursor: pointer;
-/* 	transition: 1s; */
+	transition: 0.3s;
 /* 	background: linear-gradient(0deg, transparent 0%, transparent 0%, transparent 0%,transparent 0%, transparent 0%, transparent 0%); */
 	
-	&:hover {
+	&:not(.btn-colored):hover {
 /* 		background: linear-gradient(90deg, #c873e8 0%, #f89097 20%, #ff67a5 40%,#c873e8 60%, #f89097 80%, #ff67a5 100%); */
+		background: #2d3758;
+		color: white;
+		border-color: #2d3758;
 	} 
 	
 	&-colored {
@@ -70,12 +73,24 @@ span, a {
 	width: 120px;
 	height: 36px;
 	background: url('../images/app-store-icon.png') no-repeat center center / cover;
+	transition: 0.3s;
+	
+	&:hover {
+		transform: scale(1.1) rotate(2deg);
+		backface-visibility: hidden;
+	}
 }
 
 .login-link {
 	color:#2d3758;
   font-weight: 600;
 	vertical-align: middle;
+	
+	span {
+		vertical-align: middle;
+		transition:transform 0.3s;
+		backface-visibility: hidden;
+	}
 	
 	&::before {
 		content:'';
@@ -86,6 +101,17 @@ span, a {
 		margin: 0 10px 0 0;
 		background:#204479 url(../images/key-icon.svg) no-repeat center center / 14px auto;
 		border-radius: 50%;
+		transition:transform 1s;
+	}
+	
+	&:hover {
+		&::before {
+			transform: rotate(450deg);
+		}
+		
+		span {
+			transform: translateX(-5px);
+		}
 	}
 }
 
@@ -126,8 +152,29 @@ span, a {
 	position: absolute;
 	z-index:10;
 	width: 100%;
-	padding: 0 5%;
-	margin: 30px 0 0;
+	padding: 30px 5% 0px;
+/* 	margin: 30px 0 0; */
+/* 	padding: 30px 0 0; */
+	
+	&-copy {
+		position: fixed;
+		top:0;
+		left: 0;
+		transform: translate3d(0,-100%,0);
+		transition: 0.5s;
+		padding: 8px 5% 8px;
+		background:#e9f0f6;
+		
+		.menu_coin {
+			width: 60px;
+			height: 60px;
+		}
+		
+		&.fixed {
+			transform: translateZ(0);
+			box-shadow: 0px 0px 8px 8px rgba(black,0.12);
+		}
+	}
 	
 	&_nav {
 		display: flex;
@@ -150,6 +197,36 @@ span, a {
 		
 		a {
 			font-weight: 600;
+			position: relative;
+			
+			&::before {
+				left: 0;
+				content: '';
+				height: 2px;
+				bottom: -3px;
+				background: #2d3758;
+				position: absolute;
+				-webkit-transform: scaleX(0);
+				transform: scaleX(0);
+				will-change: transform;
+				-webkit-transform-origin: right;
+				transform-origin: right;
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+				width: 100%;
+				-webkit-transition: background 500ms linear,-webkit-transform .4s ease-out;
+				transition: background 500ms linear,-webkit-transform .4s ease-out;
+				transition: transform .4s ease-out,background 500ms linear;
+				transition: transform .4s ease-out,background 500ms linear,-webkit-transform .4s ease-out;
+			}
+			
+			&:hover::before,
+			&.active::before{
+				-webkit-transform: scaleX(1);
+				transform: scaleX(1);
+				-webkit-transform-origin: left;
+				transform-origin: left
+			}
 		}
 	}
 	
@@ -392,6 +469,8 @@ patterns {
 	&_container {
 		max-width: 1000px;
 		margin: 0 auto;
+		position: relative;
+		z-index: 2;
 	}
 	
 	&_graphics {
@@ -400,6 +479,7 @@ patterns {
 		width: 100%;
 		background: url(../images/chain.png) no-repeat center center / contain;
 		position: relative;
+/* 		z-index: 0; */
 		
 		&::after {
 			content:'';
@@ -409,7 +489,7 @@ patterns {
 			bottom: 0;
 			left: 0;
 			background: #e8eff5;
-			z-index: -1;
+			z-index: -2;
 		}
 	}
 	
@@ -516,6 +596,10 @@ patterns {
 		li:first-child {
 			margin-left:0;
 		}
+		
+		li a::before {
+			background: white;
+		}
 	}
 }
 
@@ -531,6 +615,65 @@ patterns {
 			text-align: center;
 			line-height: 36px;
 			color: white;
+			position: relative;
+			z-index: 1;
+			transition: 0.4s;
+			
+			&::before {
+				content:'';
+				background: #000000;
+				border-radius: 50%;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				-webkit-transition: opacity 0.2s 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+				transition: opacity 0.2s 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+				transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+				transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s 0.2s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+				-webkit-transform: scale(0.6, 0.6);
+				-ms-transform: scale(0.6, 0.6);
+				transform: scale(0.6, 0.6);
+				opacity: 0;
+				display: inline-block;
+				z-index: -1;
+			}
+			
+			&:hover {
+				background: transparent;
+				
+				&::before {
+					opacity: 1;
+					-webkit-transform: scale(1, 1);
+					-ms-transform: scale(1, 1);
+					transform: scale(1, 1);
+					-webkit-transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+					transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+					transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+					transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+				}
+			}
+			
+			&.socials_facebook {
+				&::before {
+					background: #3b5998;
+				}
+			}
+			
+			&.socials_twitter {
+				font-size: 18px;
+				&::before {
+					background: #1da1f2;
+				}
+			}
+			&.socials_insta {
+				font-size: 21px;
+				
+				&::before {
+					background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+				}
+			}
 		}
 	}
 }
