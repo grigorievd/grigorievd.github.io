@@ -8,17 +8,20 @@ $(document).ready(function() {
 	}
 
 	//lottie
-	var animation = ($(window).width() >= 768) ? animationData : animationMob;
+	// var animation = ($(window).width() >= 768) ? animationData : animationMob;
 
 	var params = {
 	    container: document.getElementById('lottie'),
 	    renderer: 'svg',
 	    loop: true,
 	    autoplay: true,
-	    animationData: animation
+	    animationData: $('.lottie2').length ? animationData2 : animationData
 	};
 
-	var anim = lottie.loadAnimation(params);
+	// console.log(animationData2);
+	// console.log($('.lottie2').length);
+
+	if($('#lottie').length) var anim = lottie.loadAnimation(params);
 
 	//on scroll
 	$win.scroll(function(){
@@ -35,10 +38,10 @@ $(document).ready(function() {
 		//header
 		if(scrolled >= $('.section.hero').offset().top+200) {
 			$('.header-copy').addClass('fixed');
-			anim.pause();
+			if($('#lottie').length) anim.pause();
 		} else {
 			$('.header-copy').removeClass('fixed');
-			anim.play();
+			if($('#lottie').length) anim.play();
 		}
 
 		$('.section').each(function(index, el) {
