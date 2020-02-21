@@ -38,7 +38,7 @@ var ParallaxScroll = {
         if (this.showLogs) console.log("Parallax Scroll / " + message);
     },
     _onScroll: function(noSmooth) {
-        var scroll = $(document).scrollTop();
+        var scroll = window.scrollbar.scrollTop;
         var windowHeight = $(window).height();
         this._log("onScroll " + scroll);
         $("[data-parallax]").each($.proxy(function(index, el) {
@@ -64,7 +64,7 @@ var ParallaxScroll = {
             for(iData = 0; iData < datasLength; iData ++) {
                 var data = datas[iData];
                 var scrollFrom = data["from-scroll"];
-                if (scrollFrom == undefined) scrollFrom = Math.max(0, $(el).offset().top - windowHeight);
+                if (scrollFrom == undefined) scrollFrom = Math.max(0, ($(el).offset().top + scroll) - windowHeight);
                 scrollFrom = scrollFrom | 0;
                 var scrollDistance = data["distance"];
                 var scrollTo = data["to-scroll"];

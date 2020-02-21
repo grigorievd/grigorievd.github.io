@@ -121,7 +121,7 @@ a:hover {
   z-index: 2; }
   .content_wrap {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
     color: white;
     padding: 20vh 0 0 100px; }
@@ -308,6 +308,9 @@ body {
 
 span, a {
   display: inline-block; }
+
+.scroller {
+  height: 100vh; }
 
 .container {
   max-width: 1250px;
@@ -574,7 +577,62 @@ patterns {
   .slider_mockup {
     width: 700px;
     height: 750px;
-    background: url(../images/app-slider.jpg) no-repeat right center/auto 100%; }
+    /* 		background: url(../images/iphone-frames.png) no-repeat 5% center / auto 100%; */
+    position: relative; }
+    .slider_mockup::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      background: url(../images/iphone-mockup.png) no-repeat left center/auto 100%; }
+  .slider_slides {
+    height: 100%; }
+    .slider_slides-wrap {
+      position: absolute;
+      height: 81%;
+      top: 8.5%;
+      left: 20%;
+      width: auto;
+      overflow: hidden; }
+    .slider_slides img {
+      height: 100%;
+      width: auto;
+      display: block; }
+  .slider .rombs span {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    /* 			opacity: 0.4; */
+    z-index: -1;
+    top: 22%;
+    right: 6%; }
+    .slider .rombs span::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(245, 193, 84, 0.2);
+      transform: rotate(45deg);
+      border-radius: 5px; }
+    .slider .rombs span:nth-child(1) {
+      /* 				background:rgba(#fd8a97, 0.2); */
+      top: 22%;
+      left: 0; }
+      .slider .rombs span:nth-child(1)::after {
+        background: rgba(253, 138, 151, 0.2); }
+    .slider .rombs span:nth-child(3) {
+      /* 				background:rgba(#3dddcd, 0.2); */
+      top: 38%;
+      right: 24%;
+      width: 210px;
+      height: 210px; }
+      .slider .rombs span:nth-child(3)::after {
+        background: rgba(61, 221, 205, 0.2); }
   .slider_controls {
     position: absolute;
     right: 0;
@@ -605,15 +663,17 @@ patterns {
     align-items: center; }
   .s-blockchain_content {
     width: 60%; }
+  .s-blockchain .checklist-wrap {
+    margin: 40px 0;
+    display: flex; }
   .s-blockchain .checklist {
-    -moz-column-count: 2;
-    /* ╨Ф╨╗╤П Firefox */
-    -webkit-column-count: 2;
-    /* ╨Ф╨╗╤П Safari ╨╕ Chrome */
-    column-count: 2;
+    /* 		-moz-column-count: 2; ╨Ф╨╗╤П Firefox */
+    /*     -webkit-column-count: 2; ╨Ф╨╗╤П Safari ╨╕ Chrome */
+    /*     column-count: 2; */
     /* 		height: 230px; */
-    width: 110%;
-    margin: 40px 0; }
+    width: 60%; }
+    .s-blockchain .checklist:nth-of-type(2) {
+      width: 40%; }
     .s-blockchain .checklist li {
       margin: 0 0 7px;
       display: inline-block; }
