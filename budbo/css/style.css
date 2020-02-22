@@ -549,11 +549,15 @@ patterns {
 
 .slider {
   max-width: 1200px;
-  margin: 50px auto 20px;
+  margin: 0px auto 20px;
+  padding: 50px  0 0;
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: space-between; }
+  .slider-wrap {
+    position: relative;
+    top: 0; }
   .slider_left {
     width: 460px; }
   .slider_content {
@@ -561,22 +565,30 @@ patterns {
     color: #a7adcc;
     font-size: 24px;
     font-weight: 600; }
-    .slider_content span {
-      font-size: 14px;
-      color: #3dddcd;
-      margin: 0px 0 20px;
-      display: block; }
+    .slider_content-inner {
+      width: 412px;
+      transition: 0.3s; }
+      .slider_content-inner span {
+        font-size: 14px;
+        color: #3dddcd;
+        margin: 0px 0 20px;
+        display: block; }
     .slider_content li {
-      margin: 0 0 40px; }
-    .slider_content-active {
-      color: #1e2744;
-      border-left: 2px solid #3dddcd;
-      padding: 0 0 0 46px; }
+      margin: 0 0 40px;
+      transition: 0.3s; }
+      .slider_content li.show {
+        color: #1e2744;
+        border-left: 2px solid #3dddcd;
+        /* 				padding: 0 0 0 46px; */ }
+      .slider_content li.show .slider_content-inner {
+        transform: translateX(46px); }
   .slider_right {
     position: relative; }
   .slider_mockup {
-    width: 700px;
-    height: 750px;
+    width: 83.7vh;
+    height: 90vh;
+    min-width: 606px;
+    min-height: 650px;
     /* 		background: url(../images/iphone-frames.png) no-repeat 5% center / auto 100%; */
     position: relative; }
     .slider_mockup::after {
@@ -589,7 +601,12 @@ patterns {
       z-index: 2;
       background: url(../images/iphone-mockup.png) no-repeat left center/auto 100%; }
   .slider_slides {
-    height: 100%; }
+    height: 100%;
+    transition: 0.5s; }
+    .slider_slides.show2 {
+      transform: translate3d(0, -100%, 0); }
+    .slider_slides.show3 {
+      transform: translate3d(0, -200%, 0); }
     .slider_slides-wrap {
       position: absolute;
       height: 81%;
@@ -667,8 +684,8 @@ patterns {
     margin: 40px 0;
     display: flex; }
   .s-blockchain .checklist {
-    /* 		-moz-column-count: 2; ╨Ф╨╗╤П Firefox */
-    /*     -webkit-column-count: 2; ╨Ф╨╗╤П Safari ╨╕ Chrome */
+    /* 		-moz-column-count: 2; Для Firefox */
+    /*     -webkit-column-count: 2; Для Safari и Chrome */
     /*     column-count: 2; */
     /* 		height: 230px; */
     width: 60%; }
@@ -689,7 +706,7 @@ patterns {
   .s-blockchain_graphics {
     width: 65%;
     height: 600px;
-    background: url(../images/graph.png) no-repeat 70% center/contain;
+    background: url(../images/BudboChart2.svg) no-repeat 70% center/contain;
     position: absolute;
     right: 0; }
 
@@ -707,6 +724,7 @@ patterns {
     width: 100%;
     background: url(../images/chain.png) no-repeat center center/contain;
     position: relative;
+    /* 		z-index: 2; */
     /* 		z-index: 0; */ }
     .s-chain_graphics::after {
       content: '';
@@ -717,6 +735,15 @@ patterns {
       left: 0;
       background: #e8eff5;
       z-index: -2; }
+    .s-chain_graphics::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: url(../images/chain.png) no-repeat center center/contain;
+      z-index: 1; }
   .s-chain::after {
     display: none; }
 
@@ -735,7 +762,7 @@ patterns {
     top: 0%;
     width: 500px;
     height: 600px;
-    background: url(../images/wallet.jpg) no-repeat right center/contain; }
+    background: url(../images/MaticSideChain2.svg) no-repeat right center/contain; }
 
 .s-contacts {
   background: url(../images/contacts.jpg) no-repeat center top/100% auto;

@@ -87,79 +87,118 @@ $(document).ready(function() {
 
 	$(window).trigger('scroll');
 
+	//slider
+	var controller = new ScrollMagic.Controller();
+
+	var sliderTL = new TimelineMax({delay:0}).pause();
+
+	sliderTL
+		// .staggerTo('.earth-diagram_globe',0.5,{className:"+=show"})
+		.addLabel('start')
+		.staggerTo($('.slider_content li'), 5, {
+	    	className:"+=show",
+	    	onUpdate: function(e) {
+	    		// console.log(e);
+	    		// $('.slider_content li').removeClass('show')
+	    	},
+	    	onStart: function(){
+	    		$('.slider_content li').removeClass('show')
+	    	}
+	    }, 5, 'start')
+	    .to($('.slider_slides'), 5, {
+	    	className:"+=show1"
+	    },'start')
+	    .to($('.slider_slides'), 5, {
+	    	className:"+=show2"
+	    },'start+=5')
+	    .to($('.slider_slides'), 5, {
+	    	className:"+=show3"
+	    },'start+=10')
+
+	var sliderSM = new ScrollMagic.Scene({triggerHook: 0, triggerElement: '.slider-trigger', duration: 4000})
+	.setPin('.slider-wrap')
+	.addTo(controller).on("progress", function (state) {
+
+		// console.log(state.progress);
+		sliderTL.progress(state.progress);
+		// $('.s-hero_animated-graphics_scroll-progress span').width(state.progress*100+'%');
+
+	})
+	//slider
+
 	//scrolling
-	if(!isTouchDevice) {
-		var halfDuration = 0.7;
+	// if(!isTouchDevice) {
+	// 	var halfDuration = 0.7;
 
-		var windowHeight = $(window).height();
-        var windowMiddle = windowHeight / 2;
-        var Scrollbar = window.Scrollbar;
-		var scrollbar = Scrollbar.init(document.querySelector('.scroller'), { speed: 1 });
-		window.scrollbar = scrollbar;
-		var scrollbarLimit = scrollbar.limit.y + windowHeight;
+	// 	var windowHeight = $(window).height();
+ //        var windowMiddle = windowHeight / 2;
+ //        var Scrollbar = window.Scrollbar;
+	// 	var scrollbar = Scrollbar.init(document.querySelector('.scroller'), { speed: 1 });
+	// 	window.scrollbar = scrollbar;
+	// 	var scrollbarLimit = scrollbar.limit.y + windowHeight;
 
-		/* slider */
-		var verticalSlider = new VerticalSlider($('.slider_content'));
-		verticalSlider.init();
-		var canLock = true;
-		var inSwiper = false;
-		/* slider */
+	// 	/* slider */
+	// 	var verticalSlider = new VerticalSlider($('.slider_content'));
+	// 	verticalSlider.init();
+	// 	var canLock = true;
+	// 	var inSwiper = false;
+	// 	/* slider */
 
-		scrollbar.addListener(function (status) {
-		    var scrollbarTop = scrollbar.scrollTop;
-	        var scrollbarLimit = scrollbarLimit;
-	        var scrollbarBottom = scrollbarTop + windowHeight;
-	        var scrollbarMiddle = scrollbarTop + windowMiddle;
+	// 	scrollbar.addListener(function (status) {
+	// 	    var scrollbarTop = scrollbar.scrollTop;
+	//         var scrollbarLimit = scrollbarLimit;
+	//         var scrollbarBottom = scrollbarTop + windowHeight;
+	//         var scrollbarMiddle = scrollbarTop + windowMiddle;
 
-	        /* in view */
-	        $('.animated').each(function(){
+	//         /* in view */
+	//         $('.animated').each(function(){
 	        	
-	        	var $target = $(this);
-	        	var scrollBottom = scrollbarBottom;
-	        	var elementOffset = $target.offset().top + scrollbar.scrollTop;
-	        	var elementLimit = elementOffset + $target.outerHeight();
+	//         	var $target = $(this);
+	//         	var scrollBottom = scrollbarBottom;
+	//         	var elementOffset = $target.offset().top + scrollbar.scrollTop;
+	//         	var elementLimit = elementOffset + $target.outerHeight();
 
-	        	var inview = (scrollBottom >= elementOffset && scrollbarTop <= elementLimit);
+	//         	var inview = (scrollBottom >= elementOffset && scrollbarTop <= elementLimit);
 
-	        	if (inview) {
-	                $target.addClass('in-view');
-	            } else {
-	            }
+	//         	if (inview) {
+	//                 $target.addClass('in-view');
+	//             } else {
+	//             }
 	            
-			})
-			/* in view */
+	// 		})
+	// 		/* in view */
 
-			/* header */
-			if(scrollbarTop >= ($('.section.hero').offset().top+scrollbarTop)+200) {
-				$('.header-copy').addClass('fixed');
-				if($('#lottie').length) anim.pause();
-			} else {
-				$('.header-copy').removeClass('fixed');
-				if($('#lottie').length) anim.play();
-			}
-			/* header */
+	// 		/* header */
+	// 		if(scrollbarTop >= ($('.section.hero').offset().top+scrollbarTop)+200) {
+	// 			$('.header-copy').addClass('fixed');
+	// 			if($('#lottie').length) anim.pause();
+	// 		} else {
+	// 			$('.header-copy').removeClass('fixed');
+	// 			if($('#lottie').length) anim.play();
+	// 		}
+	// 		/* header */
 
-			/* slider */
-	            /*if(scrollbarTop >= 1625 && canLock && !inSwiper) {
-			    	canLock = false;
-			    	$('html').addClass('scroll-paused');
-			    	scrollbar.unregisterEvents(/blur/, /click/, /dragend/, /dragover/, /dragstart/, /focus/, /keydown/, /mousedown/, /mousemove/, /mouseup/, /resize/, /scroll/, /selectstart/, /touchend/, /touchmove/, /touchstart/, /wheel/);
-			    	scrollbar.stop();
-			    	// scrollbar.scrollTo(0, introOffset, 300, function (scrollbar) {});
-			    	// console.log(23213);
+	// 		/* slider */
+	//             /*if(scrollbarTop >= 1625 && canLock && !inSwiper) {
+	// 		    	canLock = false;
+	// 		    	$('html').addClass('scroll-paused');
+	// 		    	scrollbar.unregisterEvents(/blur/, /click/, /dragend/, /dragover/, /dragstart/, /focus/, /keydown/, /mousedown/, /mousemove/, /mouseup/, /resize/, /scroll/, /selectstart/, /touchend/, /touchmove/, /touchstart/, /wheel/);
+	// 		    	scrollbar.stop();
+	// 		    	// scrollbar.scrollTo(0, introOffset, 300, function (scrollbar) {});
+	// 		    	// console.log(23213);
 
-			    	setTimeout(function(){
-		    			verticalSlider.initWheel();
-		    		},750)
-			    }
-			    if(scrollbarTop <= 415 && !inSwiper) {
-			    	canLock = true;
-			    }*/
-		    /* slider */
+	// 		    	setTimeout(function(){
+	// 	    			verticalSlider.initWheel();
+	// 	    		},750)
+	// 		    }
+	// 		    if(scrollbarTop <= 415 && !inSwiper) {
+	// 		    	canLock = true;
+	// 		    }*/
+	// 	    /* slider */
 
-	        // console.log(scrollbarBottom);
-		});
-	}
+	//         // console.log(scrollbarBottom);
+	// 	});
+	// }
 
 	//vertical slider
 	var getAverage = function(t, e) {
