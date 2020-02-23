@@ -14,6 +14,11 @@ img {
 	height: auto;
 }
 
+.s-blockchain_graphics svg * {
+	transform-origin: center;
+  transform-box: fill-box;
+}
+
 .scroller {
 	height: 100vh;
 }
@@ -428,11 +433,27 @@ patterns {
 		li {
 			margin: 0 0 40px;
 			transition: 0.3s;
+			position: relative;
+			
+			&::after {
+				content:'';
+				position: absolute;
+				left: 0;
+				top:0;
+				width: 2px;
+				height: 0;
+				background: #3dddcd;
+				transition: height 0.3s;
+			}
 			
 			&.show {
 				color: #1e2744;
-				border-left:2px solid #3dddcd;
+/* 				border-left:2px solid #3dddcd; */
 /* 				padding: 0 0 0 46px; */
+				
+				&::after {
+					height: 100%;
+				}
 			}
 			
 			&.show .slider_content-inner {
@@ -497,52 +518,6 @@ patterns {
 		}
 	}
 	
-	.rombs {
-		span {
-			position: absolute;
-			width: 160px;
-			height: 160px;
-/* 			opacity: 0.4; */
-			z-index: -1;
-			top:22%;
-			right: 6%;
-			
-			&::after {
-				content:'';
-				position: absolute;
-				top:0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: rgba(#f5c154, 0.2);
-			 transform: rotate(45deg);
-			     border-radius: 5px;
-			}
-			
-			&:nth-child(1) {
-/* 				background:rgba(#fd8a97, 0.2); */
-				top:22%;
-				left: 0;
-				
-				&::after {
-					background:rgba(#fd8a97, 0.2);
-				}
-			}
-			
-			&:nth-child(3) {
-/* 				background:rgba(#3dddcd, 0.2); */
-				top:38%;
-				right: 24%;
-				width: 210px;
-				height: 210px;
-				
-				&::after {
-					background:rgba(#3dddcd, 0.2);
-				}
-			}
-		}
-	}
-	
 	&_controls {
 		position: absolute;
 		right:0;
@@ -564,6 +539,49 @@ patterns {
 	
 	&_up {
 		transform: rotate(-90deg);
+	}
+}
+
+.rombs {
+	span {
+		position: absolute;
+		width: 160px;
+		height: 160px;
+		z-index: -1;
+		top:22%;
+		right: 6%;
+
+		&::after {
+			content:'';
+			position: absolute;
+			top:0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(#f5c154, 0.2);
+			transform: rotate(45deg);
+			border-radius: 5px;
+		}
+
+		&:nth-child(1) {
+			top:22%;
+			left: 0;
+
+			&::after {
+				background:rgba(#fd8a97, 0.2);
+			}
+		}
+
+		&:nth-child(3) {
+			top:38%;
+			right: 24%;
+			width: 210px;
+			height: 210px;
+
+			&::after {
+				background:rgba(#3dddcd, 0.2);
+			}
+		}
 	}
 }
 
@@ -621,16 +639,17 @@ patterns {
 	}
 	
 	&_graphics {
-		width: 65%;
+		width: 55%;
 		height: 600px;
-		background: url(../images/BudboChart2.svg) no-repeat 70% center / contain;
+/* 		background: url(../images/BudboChart2.svg) no-repeat 70% center / contain; */
 		position: absolute;
 		right:0;
 	}
 }
 
 .s-chain {
-	padding: 140px 0;
+	padding: 140px 0 0;
+	overflow: hidden;
 	
 	&_container {
 		max-width: 1000px;
@@ -640,13 +659,14 @@ patterns {
 	}
 	
 	&_graphics {
-		margin: -100px 0 0;
-		height: 750px;
-		width: 100%;
-		background: url(../images/chain.png) no-repeat center center / contain;
+		margin: 60px 0 0;
+/* 		height: 750px; */
+		width: auto;
 		position: relative;
-/* 		z-index: 2; */
-/* 		z-index: 0; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+/* 		overflow: hidden; */
 		
 		&::after {
 			content:'';
@@ -666,12 +686,45 @@ patterns {
 			height: 100%;
 			top:0;
 			left:0;
-		  background: url(../images/chain.png) no-repeat center center / contain;
+/* 		  background: url(../images/chain.png) no-repeat center center / contain; */
 			z-index: 1;
+		}
+		
+		.rombs {
+			span {
+        top:5%;
+				right:3%;
+				
+				&::after {
+					
+				}
+
+				&:nth-child(1) {
+					top:36%;
+					left: auto;
+					right: 10%;
+				}
+
+				&:nth-child(3) {
+					top:11%;
+					right: auto;
+					left: 3%;
+					width: 340px;
+					height: 340px;
+				}
+			}
 		}
 	}
 	
-	padding-bottom: 0;
+	&_iphone {
+		margin: -150px -220px 0 -90px;
+		z-index: 2;
+/* 		padding-top: 100px; */
+	}
+	
+	&_notebook {
+		
+	}
 	
 	&::after {
 		display: none;
@@ -705,6 +758,7 @@ patterns {
 .s-contacts {
 	background: url(../images/contacts.jpg) no-repeat center top / 100% auto;
 	padding: 110px 0 0;
+	z-index: 2;
 	
 	.section-title {
 		color: white;
@@ -852,6 +906,34 @@ patterns {
 				}
 			}
 		}
+	}
+}
+
+.s-blockchain_graphics {
+	#Fill-1 {
+		animation: pulse 2.5s infinite ;
+	}
+
+	#path-15_1_,
+	#path-13_1_,
+	#path-3_1_,#path-5_1_,#path-7_1_,#path-9_1_,#path-11_1_,#path-17_1_ {
+		animation: pulse 2.5s 3s infinite ;
+	}
+
+	#Bg_11_,#Bg_14_,#Bg_2_,#Bg_4_,#Bg_6_,#Bg_8_,#Bg_9_,#Bg_16_ {
+		animation: pulse 2.5s 2s infinite ;
+	}
+}
+
+@keyframes pulse {
+	0%{
+		transform: scale(0.9);
+	}
+	50%{
+		transform: scale(1.1);
+	}
+	100%{
+		transform: scale(0.9);
 	}
 }
 

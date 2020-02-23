@@ -28,6 +28,11 @@ var ParallaxScroll = {
         this._onScroll(true);
     },
 
+    perform: function(){
+        // console.log(111);
+        $.proxy(this._onScroll, this, false)();
+    },
+
     /* PRIVATE VARIABLES */
     _inited: false,
     _properties: ['x', 'y', 'z', 'rotateX', 'rotateY', 'rotateZ', 'scaleX', 'scaleY', 'scaleZ', 'scale'],
@@ -64,7 +69,7 @@ var ParallaxScroll = {
             for(iData = 0; iData < datasLength; iData ++) {
                 var data = datas[iData];
                 var scrollFrom = data["from-scroll"];
-                if (scrollFrom == undefined) scrollFrom = Math.max(0, ($(el).offset().top) - windowHeight);
+                if (scrollFrom == undefined) scrollFrom = Math.max(0, ($(el).offset().top + (window.scrollbar ? scroll : 0)) - windowHeight);
                 scrollFrom = scrollFrom | 0;
                 var scrollDistance = data["distance"];
                 var scrollTo = data["to-scroll"];
@@ -167,7 +172,7 @@ var ParallaxScroll = {
                     properties["scaleY"] *= properties["scale"];
                     properties["scaleZ"] *= properties["scale"];
                 }
-                var translate3d = "translate3d(" + (properties["x"] ? properties["x"] : 0) + "px, " + (properties["y"] ? properties["y"] : 0) + "px, " + (properties["z"] ? properties["z"] : 0) + "px)";
+                var translate3d = "translate(" + (properties["x"] ? properties["x"] : 0) + "px, " + (properties["y"] ? properties["y"] : 0) + "px)";
                 var rotate3d = "rotateX(" + (properties["rotateX"] ? properties["rotateX"] : 0) + "deg) rotateY(" + (properties["rotateY"] ? properties["rotateY"] : 0) + "deg) rotateZ(" + (properties["rotateZ"] ? properties["rotateZ"] : 0) + "deg)";
                 var scale3d = "scaleX(" + properties["scaleX"] + ") scaleY(" + properties["scaleY"] + ") scaleZ(" + properties["scaleZ"] + ")";
                 var cssTransform = translate3d + " " + rotate3d + " " + scale3d + ";";

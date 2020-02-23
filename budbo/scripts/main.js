@@ -54,8 +54,6 @@ $(document).ready(function() {
 			$('.s-wallet_graphics svg').removeClass('in-view');
 		}
 
-		
-
 		//header
 		if(scrolled >= $('.section.hero').offset().top+200) {
 			$('.header-copy').addClass('fixed');
@@ -134,6 +132,25 @@ $(document).ready(function() {
 
 	})
 	//slider
+
+	$(".s-chain_graphics").mousemove(function(e) {
+	  parallaxIt(e, ".s-chain_graphics .rombs span:nth-of-type(1)", -100);
+	  parallaxIt(e, ".s-chain_graphics .rombs span:nth-of-type(2)", -50);
+	  parallaxIt(e, ".s-chain_graphics .rombs span:nth-of-type(3)", 70);
+	  // parallaxIt(e, ".s-chain_graphics .s-chain_iphone", 10);
+	  // parallaxIt(e, ".s-chain_graphics .s-chain_notebook", 30);
+	});
+
+	function parallaxIt(e, target, movement) {
+	  var $this = $(".s-chain_graphics");
+	  var relX = e.pageX - $this.offset().left;
+	  var relY = e.pageY - $this.offset().top;
+
+	  TweenMax.to(target, 1, {
+	    x: (relX - $this.width() / 2) / $this.width() * movement,
+	    y: (relY - $this.height() / 2) / $this.height() * movement
+	  });
+	}
 
 	//scrolling
 	// if(!isTouchDevice) {
