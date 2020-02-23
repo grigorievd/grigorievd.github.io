@@ -47,6 +47,15 @@ $(document).ready(function() {
 			}
 		})
 
+		if(isInView($('.s-wallet_graphics svg'), scrolled)) {
+			// $(window).trigger('resize');
+			$('.s-wallet_graphics svg').removeClass('in-view');
+		} else {
+			$('.s-wallet_graphics svg').removeClass('in-view');
+		}
+
+		
+
 		//header
 		if(scrolled >= $('.section.hero').offset().top+200) {
 			$('.header-copy').addClass('fixed');

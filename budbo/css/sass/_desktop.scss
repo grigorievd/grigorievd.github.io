@@ -9,6 +9,11 @@ span, a {
 	display: inline-block;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 .scroller {
 	height: 100vh;
 }
@@ -242,9 +247,9 @@ span, a {
 }
 
 .hero {
-	background: #e8eff5 url(../images/hero.png) no-repeat center bottom / cover;
+	background: #e8eff5 url(../images/hero.jpg) no-repeat center bottom / cover;
 	height: 100vh;
-	min-height: 1000px;
+	min-height: 800px;
 	z-index: 2;
 	padding: 150px 0 0;
 	
@@ -299,6 +304,47 @@ span, a {
 			}
 		}
 	}
+	
+	&_illustrations {
+		position: absolute;
+		width: 56vw;
+		height: 56vw;
+		right:0;
+		bottom:0;
+/* 		z-index: -1; */
+		
+		div {
+			position: absolute;
+			overflow: hidden;
+			z-index: 2;
+			
+			&.notebook {
+				top:30%;
+				height: 70%;
+				z-index: 1;
+/* 				z-index: -1; */
+			}
+			
+			&.iphone1 {
+				width: 58%;
+				left: -19%;
+				bottom: 0%;
+				height: 26%;
+			}
+			
+			&.iphone2 {
+				width: 53%;
+				right: 0%;
+				top:20%;
+			}
+			
+			&.iphone3 {
+				width: 65%;
+				right: 0%;
+				bottom: -28%;
+			}
+		}
+	}
 }
 
 patterns {
@@ -338,8 +384,8 @@ patterns {
 }
 
 .s-app {
-	margin: -70px 0 0;
-	padding: 0px 0 120px;
+	margin: 0px 0 0;
+	padding: 100px 0 120px;
 	z-index: 3;
 }
 
@@ -636,8 +682,7 @@ patterns {
 	background: #e8eff5; 
 	padding: 200px 0 280px;
 	z-index: 4;
-	
-	background: #e8eff5 url(../images/wallet.png) no-repeat center 0px;
+/* 	background: #e8eff5 url(../images/wallet.png) no-repeat center 0px; */
 	
 	&_container {
 		max-width: 640px;
@@ -653,7 +698,7 @@ patterns {
 		top:0%;
 		width: 500px;
 		height: 600px;
-		background: url(../images/MaticSideChain2.svg) no-repeat right center / contain;
+/* 		background: url(../images/MaticSideChain2.svg) no-repeat right center / contain; */
 	}
 }
 

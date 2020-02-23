@@ -302,12 +302,2035 @@ a:hover {
     transition: opacity 0.3s linear; }
   .cd-headline.rotate-3 .active {
     opacity: 1; } }
+.st0 {
+  fill: none;
+  stroke: #3DDDCD;
+  stroke-width: 2;
+  stroke-dasharray: 6,6; }
+
+.st1 {
+  fill: none;
+  stroke: #C4D4DF;
+  stroke-width: 2;
+  stroke-dasharray: 6,6; }
+
+.st2 {
+  fill: #3DDDCD; }
+
+.st3 {
+  enable-background: new; }
+
+.st4 {
+  fill: #FFFFFF; }
+
+.st5 {
+  fill: #658DCE; }
+
+.st6 {
+  opacity: 0.2084;
+  fill: none;
+  stroke: #CC75E2;
+  stroke-width: 2;
+  enable-background: new; }
+
+.st7 {
+  fill: #CC75E2; }
+
+.st8 {
+  fill: none;
+  stroke: #C5D4DF;
+  stroke-width: 2;
+  stroke-dasharray: 6,6; }
+
+.st9 {
+  filter: url(#filter-2); }
+
+.st10 {
+  fill: #F1F5F9;
+  stroke: #CBD9E3;
+  stroke-width: 1.5; }
+
+.st11 {
+  filter: url(#filter-4); }
+
+.st12 {
+  filter: url(#filter-6); }
+
+.st13 {
+  filter: url(#filter-8); }
+
+.st14 {
+  fill: #C4D4DF; }
+
+.st15 {
+  filter: url(#filter-10); }
+
+.st16 {
+  filter: url(#filter-12); }
+
+.st17 {
+  filter: url(#filter-14); }
+
+.st18 {
+  filter: url(#filter-16); }
+
+.st19 {
+  filter: url(#filter-18); }
+
+.st20 {
+  fill: #BDCEDB; }
+
+.st21 {
+  filter: url(#filter-20); }
+
+.st22 {
+  fill: #EF8D9B; }
+
+.st23 {
+  fill: #FE8A97; }
+
+.st24 {
+  filter: url(#filter-22); }
+
+.st25 {
+  filter: url(#filter-25); }
+
+.st26 {
+  filter: url(#filter-27); }
+
+.st27 {
+  filter: url(#filter-29); }
+
+.st28 {
+  filter: url(#filter-31); }
+
+.st29 {
+  filter: url(#filter-33); }
+
+.st30 {
+  filter: url(#filter-35); }
+
+.st31 {
+  fill: none;
+  stroke: #34C7BE;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round; }
+
+.st32 {
+  fill: none;
+  stroke: #3DDDCD;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round; }
+
+.st33 {
+  fill: none;
+  stroke: #DB9AEC;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round; }
+
+.st34 {
+  fill: none;
+  stroke: #CC75E2;
+  stroke-width: 1.5;
+  stroke-linecap: round; }
+
+.st35 {
+  fill: none;
+  stroke: #CC75E2;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round; }
+
+.st36 {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 1.5; }
+
+.iXWdclyU_0 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 1587 1589;
+  stroke-dashoffset: 1588; }
+
+.in-view .iXWdclyU_0 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_1 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 2134 2136;
+  stroke-dashoffset: 2135; }
+
+.in-view .iXWdclyU_1 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_2 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 515 517;
+  stroke-dashoffset: 516; }
+
+.in-view .iXWdclyU_2 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_3 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 16 18;
+  stroke-dashoffset: 17; }
+
+.in-view .iXWdclyU_3 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_4 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_4 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_5 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 41 43;
+  stroke-dashoffset: 42; }
+
+.in-view .iXWdclyU_5 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_6 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 52 54;
+  stroke-dashoffset: 53; }
+
+.in-view .iXWdclyU_6 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_7 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 28 30;
+  stroke-dashoffset: 29; }
+
+.in-view .iXWdclyU_7 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_8 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_8 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_9 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_9 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_10 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 16 18;
+  stroke-dashoffset: 17; }
+
+.in-view .iXWdclyU_10 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_11 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_11 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_12 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 28 30;
+  stroke-dashoffset: 29; }
+
+.in-view .iXWdclyU_12 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_13 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 43 45;
+  stroke-dashoffset: 44; }
+
+.in-view .iXWdclyU_13 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_14 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_14 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_15 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 59 61;
+  stroke-dashoffset: 60; }
+
+.in-view .iXWdclyU_15 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_16 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 42 44;
+  stroke-dashoffset: 43; }
+
+.in-view .iXWdclyU_16 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_17 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_17 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_18 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 46 48;
+  stroke-dashoffset: 47; }
+
+.in-view .iXWdclyU_18 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_19 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_19 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_20 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_20 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_21 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_21 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_22 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_22 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_23 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 48 50;
+  stroke-dashoffset: 49; }
+
+.in-view .iXWdclyU_23 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_24 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_24 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_25 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 52 54;
+  stroke-dashoffset: 53; }
+
+.in-view .iXWdclyU_25 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_26 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 30 32;
+  stroke-dashoffset: 31; }
+
+.in-view .iXWdclyU_26 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_27 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 52 54;
+  stroke-dashoffset: 53; }
+
+.in-view .iXWdclyU_27 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_28 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 48 50;
+  stroke-dashoffset: 49; }
+
+.in-view .iXWdclyU_28 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_29 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 48 50;
+  stroke-dashoffset: 49; }
+
+.in-view .iXWdclyU_29 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_30 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_30 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_31 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_31 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_32 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 24 26;
+  stroke-dashoffset: 25; }
+
+.in-view .iXWdclyU_32 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_33 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_33 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_34 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 48 50;
+  stroke-dashoffset: 49; }
+
+.in-view .iXWdclyU_34 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_35 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_35 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_36 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 24 26;
+  stroke-dashoffset: 25; }
+
+.in-view .iXWdclyU_36 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_37 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 363 365;
+  stroke-dashoffset: 364; }
+
+.in-view .iXWdclyU_37 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_38 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 59 61;
+  stroke-dashoffset: 60; }
+
+.in-view .iXWdclyU_38 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_39 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 42 44;
+  stroke-dashoffset: 43; }
+
+.in-view .iXWdclyU_39 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_40 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 30 32;
+  stroke-dashoffset: 31; }
+
+.in-view .iXWdclyU_40 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_41 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_41 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_42 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_42 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_43 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_43 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_44 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_44 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_45 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 48 50;
+  stroke-dashoffset: 49; }
+
+.in-view .iXWdclyU_45 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_46 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_46 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_47 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_47 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_48 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 46 48;
+  stroke-dashoffset: 47; }
+
+.in-view .iXWdclyU_48 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_49 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 42 44;
+  stroke-dashoffset: 43; }
+
+.in-view .iXWdclyU_49 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_50 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_50 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_51 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 52 54;
+  stroke-dashoffset: 53; }
+
+.in-view .iXWdclyU_51 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_52 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 695 697;
+  stroke-dashoffset: 696; }
+
+.in-view .iXWdclyU_52 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_53 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 283 285;
+  stroke-dashoffset: 284; }
+
+.in-view .iXWdclyU_53 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_54 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 48 50;
+  stroke-dashoffset: 49; }
+
+.in-view .iXWdclyU_54 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_55 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 48 50;
+  stroke-dashoffset: 49; }
+
+.in-view .iXWdclyU_55 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_56 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 48 50;
+  stroke-dashoffset: 49; }
+
+.in-view .iXWdclyU_56 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_57 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 30 32;
+  stroke-dashoffset: 31; }
+
+.in-view .iXWdclyU_57 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_58 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_58 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_59 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 46 48;
+  stroke-dashoffset: 47; }
+
+.in-view .iXWdclyU_59 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_60 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 42 44;
+  stroke-dashoffset: 43; }
+
+.in-view .iXWdclyU_60 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_61 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_61 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_62 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 52 54;
+  stroke-dashoffset: 53; }
+
+.in-view .iXWdclyU_62 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_63 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 79 81;
+  stroke-dashoffset: 80; }
+
+.in-view .iXWdclyU_63 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_64 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 101 103;
+  stroke-dashoffset: 102; }
+
+.in-view .iXWdclyU_64 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_65 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 101 103;
+  stroke-dashoffset: 102; }
+
+.in-view .iXWdclyU_65 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_66 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_66 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_67 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_67 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_68 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_68 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_69 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_69 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_70 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_70 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_71 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_71 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_72 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_72 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_73 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_73 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_74 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 109 111;
+  stroke-dashoffset: 110; }
+
+.in-view .iXWdclyU_74 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_75 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 38 40;
+  stroke-dashoffset: 39; }
+
+.in-view .iXWdclyU_75 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_76 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_76 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_77 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_77 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_78 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 79 81;
+  stroke-dashoffset: 80; }
+
+.in-view .iXWdclyU_78 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_79 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 101 103;
+  stroke-dashoffset: 102; }
+
+.in-view .iXWdclyU_79 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_80 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 101 103;
+  stroke-dashoffset: 102; }
+
+.in-view .iXWdclyU_80 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_81 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_81 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_82 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_82 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_83 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_83 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_84 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_84 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_85 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_85 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_86 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_86 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_87 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_87 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_88 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_88 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_89 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 109 111;
+  stroke-dashoffset: 110; }
+
+.in-view .iXWdclyU_89 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_90 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 38 40;
+  stroke-dashoffset: 39; }
+
+.in-view .iXWdclyU_90 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_91 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_91 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_92 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_92 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_93 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 22 24;
+  stroke-dashoffset: 23; }
+
+.in-view .iXWdclyU_93 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_94 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 22 24;
+  stroke-dashoffset: 23; }
+
+.in-view .iXWdclyU_94 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_95 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_95 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_96 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 33 35;
+  stroke-dashoffset: 34; }
+
+.in-view .iXWdclyU_96 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_97 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 39 41;
+  stroke-dashoffset: 40; }
+
+.in-view .iXWdclyU_97 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_98 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 30 32;
+  stroke-dashoffset: 31; }
+
+.in-view .iXWdclyU_98 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_99 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 26 28;
+  stroke-dashoffset: 27; }
+
+.in-view .iXWdclyU_99 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_100 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 17 19;
+  stroke-dashoffset: 18; }
+
+.in-view .iXWdclyU_100 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_101 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 24 26;
+  stroke-dashoffset: 25; }
+
+.in-view .iXWdclyU_101 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_102 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 48 50;
+  stroke-dashoffset: 49; }
+
+.in-view .iXWdclyU_102 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_103 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 18 20;
+  stroke-dashoffset: 19; }
+
+.in-view .iXWdclyU_103 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_104 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 17 19;
+  stroke-dashoffset: 18; }
+
+.in-view .iXWdclyU_104 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_105 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_105 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_106 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_106 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_107 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 33 35;
+  stroke-dashoffset: 34; }
+
+.in-view .iXWdclyU_107 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_108 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 377 379;
+  stroke-dashoffset: 378; }
+
+.in-view .iXWdclyU_108 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_109 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 377 379;
+  stroke-dashoffset: 378; }
+
+.in-view .iXWdclyU_109 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_110 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 240 242;
+  stroke-dashoffset: 241; }
+
+.in-view .iXWdclyU_110 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_111 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 377 379;
+  stroke-dashoffset: 378; }
+
+.in-view .iXWdclyU_111 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_112 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 377 379;
+  stroke-dashoffset: 378; }
+
+.in-view .iXWdclyU_112 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_113 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 1181 1183;
+  stroke-dashoffset: 1182; }
+
+.in-view .iXWdclyU_113 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_114 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 79 81;
+  stroke-dashoffset: 80; }
+
+.in-view .iXWdclyU_114 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_115 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 101 103;
+  stroke-dashoffset: 102; }
+
+.in-view .iXWdclyU_115 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_116 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 101 103;
+  stroke-dashoffset: 102; }
+
+.in-view .iXWdclyU_116 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_117 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_117 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_118 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_118 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_119 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_119 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_120 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_120 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_121 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_121 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_122 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_122 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_123 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_123 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_124 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 122 124;
+  stroke-dashoffset: 123; }
+
+.in-view .iXWdclyU_124 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_125 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 109 111;
+  stroke-dashoffset: 110; }
+
+.in-view .iXWdclyU_125 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_126 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 38 40;
+  stroke-dashoffset: 39; }
+
+.in-view .iXWdclyU_126 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_127 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_127 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_128 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 227 229;
+  stroke-dashoffset: 228; }
+
+.in-view .iXWdclyU_128 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_129 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 22 24;
+  stroke-dashoffset: 23; }
+
+.in-view .iXWdclyU_129 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_130 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 22 24;
+  stroke-dashoffset: 23; }
+
+.in-view .iXWdclyU_130 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_131 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 22 24;
+  stroke-dashoffset: 23; }
+
+.in-view .iXWdclyU_131 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_132 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 22 24;
+  stroke-dashoffset: 23; }
+
+.in-view .iXWdclyU_132 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_133 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_133 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_134 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 34 36;
+  stroke-dashoffset: 35; }
+
+.in-view .iXWdclyU_134 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_135 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 39 41;
+  stroke-dashoffset: 40; }
+
+.in-view .iXWdclyU_135 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_136 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 30 32;
+  stroke-dashoffset: 31; }
+
+.in-view .iXWdclyU_136 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_137 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 26 28;
+  stroke-dashoffset: 27; }
+
+.in-view .iXWdclyU_137 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_138 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 17 19;
+  stroke-dashoffset: 18; }
+
+.in-view .iXWdclyU_138 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_139 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 25 27;
+  stroke-dashoffset: 26; }
+
+.in-view .iXWdclyU_139 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_140 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 48 50;
+  stroke-dashoffset: 49; }
+
+.in-view .iXWdclyU_140 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_141 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 18 20;
+  stroke-dashoffset: 19; }
+
+.in-view .iXWdclyU_141 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_142 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 17 19;
+  stroke-dashoffset: 18; }
+
+.in-view .iXWdclyU_142 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_143 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_143 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_144 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_144 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_145 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 34 36;
+  stroke-dashoffset: 35; }
+
+.in-view .iXWdclyU_145 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_146 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_146 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_147 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 34 36;
+  stroke-dashoffset: 35; }
+
+.in-view .iXWdclyU_147 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_148 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 39 41;
+  stroke-dashoffset: 40; }
+
+.in-view .iXWdclyU_148 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_149 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 30 32;
+  stroke-dashoffset: 31; }
+
+.in-view .iXWdclyU_149 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_150 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 26 28;
+  stroke-dashoffset: 27; }
+
+.in-view .iXWdclyU_150 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_151 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 17 19;
+  stroke-dashoffset: 18; }
+
+.in-view .iXWdclyU_151 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_152 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 24 26;
+  stroke-dashoffset: 25; }
+
+.in-view .iXWdclyU_152 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_153 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 48 50;
+  stroke-dashoffset: 49; }
+
+.in-view .iXWdclyU_153 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_154 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 18 20;
+  stroke-dashoffset: 19; }
+
+.in-view .iXWdclyU_154 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_155 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 17 19;
+  stroke-dashoffset: 18; }
+
+.in-view .iXWdclyU_155 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_156 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 40 42;
+  stroke-dashoffset: 41; }
+
+.in-view .iXWdclyU_156 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_157 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_157 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_158 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 34 36;
+  stroke-dashoffset: 35; }
+
+.in-view .iXWdclyU_158 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_159 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 79 81;
+  stroke-dashoffset: 80; }
+
+.in-view .iXWdclyU_159 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_160 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 1 3;
+  stroke-dashoffset: 2; }
+
+.in-view .iXWdclyU_160 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_161 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 1 3;
+  stroke-dashoffset: 2; }
+
+.in-view .iXWdclyU_161 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_162 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 43 45;
+  stroke-dashoffset: 44; }
+
+.in-view .iXWdclyU_162 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_163 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 16 18;
+  stroke-dashoffset: 17; }
+
+.in-view .iXWdclyU_163 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_164 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_164 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_165 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 5 7;
+  stroke-dashoffset: 6; }
+
+.in-view .iXWdclyU_165 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_166 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 8 10;
+  stroke-dashoffset: 9; }
+
+.in-view .iXWdclyU_166 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_167 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 9 11;
+  stroke-dashoffset: 10; }
+
+.in-view .iXWdclyU_167 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_168 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 9 11;
+  stroke-dashoffset: 10; }
+
+.in-view .iXWdclyU_168 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_169 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 37 39;
+  stroke-dashoffset: 38; }
+
+.in-view .iXWdclyU_169 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_170 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 79 81;
+  stroke-dashoffset: 80; }
+
+.in-view .iXWdclyU_170 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_171 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 1 3;
+  stroke-dashoffset: 2; }
+
+.in-view .iXWdclyU_171 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_172 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 1 3;
+  stroke-dashoffset: 2; }
+
+.in-view .iXWdclyU_172 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_173 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 43 45;
+  stroke-dashoffset: 44; }
+
+.in-view .iXWdclyU_173 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_174 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 16 18;
+  stroke-dashoffset: 17; }
+
+.in-view .iXWdclyU_174 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_175 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_175 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_176 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 5 7;
+  stroke-dashoffset: 6; }
+
+.in-view .iXWdclyU_176 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_177 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 8 10;
+  stroke-dashoffset: 9; }
+
+.in-view .iXWdclyU_177 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_178 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 9 11;
+  stroke-dashoffset: 10; }
+
+.in-view .iXWdclyU_178 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_179 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 9 11;
+  stroke-dashoffset: 10; }
+
+.in-view .iXWdclyU_179 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_180 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 37 39;
+  stroke-dashoffset: 38; }
+
+.in-view .iXWdclyU_180 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_181 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 79 81;
+  stroke-dashoffset: 80; }
+
+.in-view .iXWdclyU_181 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_182 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 1 3;
+  stroke-dashoffset: 2; }
+
+.in-view .iXWdclyU_182 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_183 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 1 3;
+  stroke-dashoffset: 2; }
+
+.in-view .iXWdclyU_183 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_184 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 43 45;
+  stroke-dashoffset: 44; }
+
+.in-view .iXWdclyU_184 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_185 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 16 18;
+  stroke-dashoffset: 17; }
+
+.in-view .iXWdclyU_185 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_186 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 44 46;
+  stroke-dashoffset: 45; }
+
+.in-view .iXWdclyU_186 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_187 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 5 7;
+  stroke-dashoffset: 6; }
+
+.in-view .iXWdclyU_187 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_188 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 8 10;
+  stroke-dashoffset: 9; }
+
+.in-view .iXWdclyU_188 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_189 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 9 11;
+  stroke-dashoffset: 10; }
+
+.in-view .iXWdclyU_189 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_190 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 9 11;
+  stroke-dashoffset: 10; }
+
+.in-view .iXWdclyU_190 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_191 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 37 39;
+  stroke-dashoffset: 38; }
+
+.in-view .iXWdclyU_191 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_192 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 110 112;
+  stroke-dashoffset: 111; }
+
+.in-view .iXWdclyU_192 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_193 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 5 7;
+  stroke-dashoffset: 6; }
+
+.in-view .iXWdclyU_193 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_194 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 5 7;
+  stroke-dashoffset: 6; }
+
+.in-view .iXWdclyU_194 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_195 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 10 12;
+  stroke-dashoffset: 11; }
+
+.in-view .iXWdclyU_195 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_196 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 11 13;
+  stroke-dashoffset: 12; }
+
+.in-view .iXWdclyU_196 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_197 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 110 112;
+  stroke-dashoffset: 111; }
+
+.in-view .iXWdclyU_197 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_198 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 5 7;
+  stroke-dashoffset: 6; }
+
+.in-view .iXWdclyU_198 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_199 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 5 7;
+  stroke-dashoffset: 6; }
+
+.in-view .iXWdclyU_199 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_200 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 10 12;
+  stroke-dashoffset: 11; }
+
+.in-view .iXWdclyU_200 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_201 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 11 13;
+  stroke-dashoffset: 12; }
+
+.in-view .iXWdclyU_201 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_202 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 110 112;
+  stroke-dashoffset: 111; }
+
+.in-view .iXWdclyU_202 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_203 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 5 7;
+  stroke-dashoffset: 6; }
+
+.in-view .iXWdclyU_203 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_204 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 5 7;
+  stroke-dashoffset: 6; }
+
+.in-view .iXWdclyU_204 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_205 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 10 12;
+  stroke-dashoffset: 11; }
+
+.in-view .iXWdclyU_205 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_206 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 11 13;
+  stroke-dashoffset: 12; }
+
+.in-view .iXWdclyU_206 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_207 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 62 64;
+  stroke-dashoffset: 63; }
+
+.in-view .iXWdclyU_207 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_208 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_208 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_209 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 12 14;
+  stroke-dashoffset: 13; }
+
+.in-view .iXWdclyU_209 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_210 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 62 64;
+  stroke-dashoffset: 63; }
+
+.in-view .iXWdclyU_210 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_211 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_211 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_212 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 12 14;
+  stroke-dashoffset: 13; }
+
+.in-view .iXWdclyU_212 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_213 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 62 64;
+  stroke-dashoffset: 63; }
+
+.in-view .iXWdclyU_213 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_214 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_214 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_215 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 12 14;
+  stroke-dashoffset: 13; }
+
+.in-view .iXWdclyU_215 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_216 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 62 64;
+  stroke-dashoffset: 63; }
+
+.in-view .iXWdclyU_216 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_217 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_217 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_218 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 12 14;
+  stroke-dashoffset: 13; }
+
+.in-view .iXWdclyU_218 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_219 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 62 64;
+  stroke-dashoffset: 63; }
+
+.in-view .iXWdclyU_219 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_220 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_220 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_221 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 12 14;
+  stroke-dashoffset: 13; }
+
+.in-view .iXWdclyU_221 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_222 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 62 64;
+  stroke-dashoffset: 63; }
+
+.in-view .iXWdclyU_222 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_223 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_223 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_224 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 12 14;
+  stroke-dashoffset: 13; }
+
+.in-view .iXWdclyU_224 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_225 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 62 64;
+  stroke-dashoffset: 63; }
+
+.in-view .iXWdclyU_225 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_226 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_226 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_227 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 12 14;
+  stroke-dashoffset: 13; }
+
+.in-view .iXWdclyU_227 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_228 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 62 64;
+  stroke-dashoffset: 63; }
+
+.in-view .iXWdclyU_228 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_229 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_229 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_230 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 12 14;
+  stroke-dashoffset: 13; }
+
+.in-view .iXWdclyU_230 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_231 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 62 64;
+  stroke-dashoffset: 63; }
+
+.in-view .iXWdclyU_231 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_232 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 19 21;
+  stroke-dashoffset: 20; }
+
+.in-view .iXWdclyU_232 {
+  stroke-dashoffset: 0; }
+
+.iXWdclyU_233 {
+  transition: 1.5s 0.6s linear;
+  stroke-dasharray: 12 14;
+  stroke-dashoffset: 13; }
+
+.in-view .iXWdclyU_233 {
+  stroke-dashoffset: 0; }
+
 body {
   font: 16px/1.44 'Averta';
   color: #3f414d; }
 
 span, a {
   display: inline-block; }
+
+img {
+  max-width: 100%;
+  height: auto; }
 
 .scroller {
   height: 100vh; }
@@ -478,9 +2501,9 @@ span, a {
   background: url("../images/coin-icon.png") no-repeat center center/cover; }
 
 .hero {
-  background: #e8eff5 url(../images/hero.png) no-repeat center bottom/cover;
+  background: #e8eff5 url(../images/hero.jpg) no-repeat center bottom/cover;
   height: 100vh;
-  min-height: 1000px;
+  min-height: 800px;
   z-index: 2;
   padding: 150px 0 0; }
   .hero_container {
@@ -515,6 +2538,35 @@ span, a {
       position: absolute; }
       .hero-patterns div img {
         width: 60px; }
+  .hero_illustrations {
+    position: absolute;
+    width: 56vw;
+    height: 56vw;
+    right: 0;
+    bottom: 0;
+    /* 		z-index: -1; */ }
+    .hero_illustrations div {
+      position: absolute;
+      overflow: hidden;
+      z-index: 2; }
+      .hero_illustrations div.notebook {
+        top: 30%;
+        height: 70%;
+        z-index: 1;
+        /* 				z-index: -1; */ }
+      .hero_illustrations div.iphone1 {
+        width: 58%;
+        left: -19%;
+        bottom: 0%;
+        height: 26%; }
+      .hero_illustrations div.iphone2 {
+        width: 53%;
+        right: 0%;
+        top: 20%; }
+      .hero_illustrations div.iphone3 {
+        width: 65%;
+        right: 0%;
+        bottom: -28%; }
 
 patterns {
   position: absolute;
@@ -543,8 +2595,8 @@ patterns {
     background: url(../images/budbo.jpg) no-repeat right center/contain; }
 
 .s-app {
-  margin: -70px 0 0;
-  padding: 0px 0 120px;
+  margin: 0px 0 0;
+  padding: 100px 0 120px;
   z-index: 3; }
 
 .slider {
@@ -751,7 +2803,7 @@ patterns {
   background: #e8eff5;
   padding: 200px 0 280px;
   z-index: 4;
-  background: #e8eff5 url(../images/wallet.png) no-repeat center 0px; }
+  /* 	background: #e8eff5 url(../images/wallet.png) no-repeat center 0px; */ }
   .s-wallet_container {
     max-width: 640px; }
   .s-wallet .section-title {
@@ -762,7 +2814,7 @@ patterns {
     top: 0%;
     width: 500px;
     height: 600px;
-    background: url(../images/MaticSideChain2.svg) no-repeat right center/contain; }
+    /* 		background: url(../images/MaticSideChain2.svg) no-repeat right center / contain; */ }
 
 .s-contacts {
   background: url(../images/contacts.jpg) no-repeat center top/100% auto;
