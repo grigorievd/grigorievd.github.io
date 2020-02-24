@@ -84,13 +84,19 @@ img {
 }
 
 .download-link {
-	width: 120px;
-	height: 36px;
+	width: 90px;
+	height: 27px;
 	background: url('../images/app-store-icon.png') no-repeat center center / cover;
 	transition: 0.3s;
+	vertical-align: bottom;
+	
+	&.google-play {
+	 background: url('../images/google-play-icon.png') no-repeat center center / cover;
+/* 		margin: 3px 0 0; */
+	}
 	
 	&:hover {
-		transform: scale(1.1) rotate(2deg);
+		transform: scale(0.95);
 		backface-visibility: hidden;
 	}
 }
@@ -197,8 +203,16 @@ img {
 	}
 	
 	&_menu {
+		margin: 0 0 0 107px;
+		
 		li a {
 			color:#2d3758;
+		}
+	}
+	
+	&_buttons {
+		a {
+/* 			display: block; */
 		}
 	}
 }
@@ -209,7 +223,7 @@ img {
 		margin: 0 20px;
 		vertical-align: middle;
 		
-		a {
+		a:not(.menu_coin) {
 			font-weight: 600;
 			position: relative;
 			

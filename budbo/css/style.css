@@ -2383,12 +2383,16 @@ img {
       margin: 0 20px 0 0; }
 
 .download-link {
-  width: 120px;
-  height: 36px;
+  width: 90px;
+  height: 27px;
   background: url("../images/app-store-icon.png") no-repeat center center/cover;
-  transition: 0.3s; }
+  transition: 0.3s;
+  vertical-align: bottom; }
+  .download-link.google-play {
+    background: url("../images/google-play-icon.png") no-repeat center center/cover;
+    /* 		margin: 3px 0 0; */ }
   .download-link:hover {
-    transform: scale(1.1) rotate(2deg);
+    transform: scale(0.95);
     backface-visibility: hidden; }
 
 .login-link {
@@ -2465,17 +2469,21 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  .header_menu li a {
-    color: #2d3758; }
+  .header_menu {
+    margin: 0 0 0 107px; }
+    .header_menu li a {
+      color: #2d3758; }
+  .header_buttons a {
+    /* 			display: block; */ }
 
 .menu li {
   display: inline-block;
   margin: 0 20px;
   vertical-align: middle; }
-  .menu li a {
+  .menu li a:not(.menu_coin) {
     font-weight: 600;
     position: relative; }
-    .menu li a::before {
+    .menu li a:not(.menu_coin)::before {
       left: 0;
       content: '';
       height: 2px;
@@ -2494,7 +2502,7 @@ img {
       transition: background 500ms linear,-webkit-transform .4s ease-out;
       transition: transform .4s ease-out,background 500ms linear;
       transition: transform .4s ease-out,background 500ms linear,-webkit-transform .4s ease-out; }
-    .menu li a:hover::before, .menu li a.active::before {
+    .menu li a:not(.menu_coin):hover::before, .menu li a:not(.menu_coin).active::before {
       -webkit-transform: scaleX(1);
       transform: scaleX(1);
       -webkit-transform-origin: left;
