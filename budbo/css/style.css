@@ -2337,7 +2337,7 @@ img {
   transform-box: fill-box; }
 
 .scroller {
-  height: 100vh; }
+  /* 	height: 100vh; */ }
 
 .container {
   max-width: 1250px;
@@ -2445,10 +2445,14 @@ img {
     margin: 0 0 60px; }
 
 .header {
-  position: absolute;
+  position: sticky;
+  top: 0;
+  background: transparent;
   z-index: 10;
   width: 100%;
-  padding: 30px 5% 0px;
+  padding: 30px 5% 9px;
+  transition: 0.5s;
+  background: #e9f0f6;
   /* 	margin: 30px 0 0; */
   /* 	padding: 30px 0 0; */ }
   .header-copy {
@@ -2465,6 +2469,10 @@ img {
     .header-copy.fixed {
       transform: translateZ(0);
       box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.12); }
+  .header.fixed {
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.12);
+    transform: translateY(-22px);
+    /* 		padding: 8px 5% 9px; */ }
   .header_nav {
     display: flex;
     justify-content: space-between;
@@ -2510,14 +2518,16 @@ img {
 .menu_coin {
   width: 72px;
   height: 72px;
-  background: url("../images/coin-icon.png") no-repeat center center/cover; }
+  background: url("../images/coin-icon.png") no-repeat center center/cover;
+  vertical-align: bottom; }
 
 .hero {
   background: #e8eff5 url(../images/hero.jpg) no-repeat center bottom/cover;
   height: 100vh;
   min-height: 800px;
   z-index: 2;
-  padding: 150px 0 0; }
+  padding: 150px 0 0;
+  margin: -110px 0 0; }
   .hero_container {
     padding: 100px 0; }
   .hero_title {
@@ -2614,7 +2624,7 @@ patterns {
 .slider {
   max-width: 1200px;
   margin: 0px auto 20px;
-  padding: 50px  0 0;
+  padding: 80px  0 0;
   display: flex;
   align-content: center;
   align-items: center;
@@ -2690,7 +2700,7 @@ patterns {
       left: 20%;
       width: auto;
       overflow: hidden; }
-    .slider_slides img {
+    .slider_slides img, .slider_slides video {
       height: 100%;
       width: auto;
       display: block; }
@@ -2841,7 +2851,7 @@ patterns {
 
 .s-wallet {
   background: #e8eff5;
-  padding: 200px 0 280px;
+  padding: 260px 0 260px;
   z-index: 4;
   /* 	background: #e8eff5 url(../images/wallet.png) no-repeat center 0px; */ }
   .s-wallet_container {
@@ -2850,14 +2860,23 @@ patterns {
     margin-bottom: 40px; }
   .s-wallet_graphics {
     position: absolute;
-    left: 56%;
-    top: 0%;
-    width: 500px;
-    height: 600px;
-    /* 		background: url(../images/MaticSideChain2.svg) no-repeat right center / contain; */ }
+    left: 54%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45vw;
+    height: 45vw;
+    max-width: 600px;
+    max-height: 600px;
+    /* 		background: url(../images/MaticSideChain2.svg) no-repeat right center / contain; */
+    display: flex;
+    align-items: center;
+    align-content: center; }
+    .s-wallet_graphics svg {
+      width: 100%;
+      height: auto; }
 
 .s-contacts {
-  background: url(../images/contacts.jpg) no-repeat center top/100% auto;
+  background: #222b48;
   padding: 110px 0 0;
   z-index: 2; }
   .s-contacts .section-title {
@@ -2868,6 +2887,8 @@ patterns {
     .s-contacts .contact-form .btn {
       font: 16px/1.44 'Averta';
       font-weight: 600; }
+      .s-contacts .contact-form .btn:hover {
+        background-position: -96px 0px; }
     .s-contacts .contact-form_fields {
       display: flex;
       justify-content: space-between;
@@ -2889,9 +2910,19 @@ patterns {
       margin: 30px 0 0; }
   .s-contacts::after {
     display: none; }
+  .s-contacts .hero-patterns div img {
+    width: 35px; }
+  .s-contacts_bg {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/footer-bg.jpg) no-repeat center top/100% auto;
+    z-index: -1; }
 
 .footer {
-  background: #172748;
+  background: #222b48;
   color: #8790ab;
   padding: 79px 0px 79px; }
   .footer a {

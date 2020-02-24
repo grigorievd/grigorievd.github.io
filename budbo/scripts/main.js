@@ -55,11 +55,11 @@ $(document).ready(function() {
 		}
 
 		//header
-		if(scrolled >= $('.section.hero').offset().top+200) {
-			$('.header-copy').addClass('fixed');
+		if(scrolled >= $('.section.hero').offset().top) {
+			$('.header').addClass('fixed');
 			if($('#lottie').length) anim.pause();
 		} else {
-			$('.header-copy').removeClass('fixed');
+			$('.header').removeClass('fixed');
 			if($('#lottie').length) anim.play();
 		}
 
