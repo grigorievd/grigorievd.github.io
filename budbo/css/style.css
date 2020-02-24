@@ -2555,7 +2555,8 @@ img {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    pointer-events: none; }
+    pointer-events: none;
+    z-index: -1; }
     .hero-patterns div {
       position: absolute; }
       .hero-patterns div img {
@@ -2795,7 +2796,7 @@ patterns {
     right: 0; }
 
 .s-chain {
-  padding: 140px 0 0;
+  padding: 140px 0 100px;
   overflow: hidden; }
   .s-chain_container {
     max-width: 1000px;
@@ -2811,15 +2812,6 @@ patterns {
     justify-content: center;
     align-items: center;
     /* 		overflow: hidden; */ }
-    .s-chain_graphics::after {
-      content: '';
-      width: 100%;
-      height: 260px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background: #e8eff5;
-      z-index: -2; }
     .s-chain_graphics::before {
       content: '';
       position: absolute;
