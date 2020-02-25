@@ -2449,8 +2449,11 @@ img {
 
 .content_wrap {
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   left: 0; }
+  .content_wrap.opacity {
+    opacity: 0; }
 
 .header {
   position: sticky;

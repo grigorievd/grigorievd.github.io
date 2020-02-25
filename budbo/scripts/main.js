@@ -59,12 +59,18 @@ $(document).ready(function() {
 		//header
 		if(scrolled >= $('.section.hero').offset().top) {
 			$('.header').addClass('fixed');
-			// $('.content_wrap').hide();
+			$('.content_wrap').addClass('opacity');
 			if($('#lottie').length) anim.pause();
 		} else {
-			// $('.content_wrap').show();
+			$('.content_wrap').removeClass('opacity');
 			$('.header').removeClass('fixed');
 			if($('#lottie').length) anim.play();
+		}
+
+		if(scrolled >= $('.section.hero').offset().top+100) {
+			$('.content_wrap').addClass('opacity');
+		} else {
+			$('.content_wrap').removeClass('opacity');
 		}
 
 		$('.section').each(function(index, el) {

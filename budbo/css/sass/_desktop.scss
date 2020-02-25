@@ -173,8 +173,13 @@ img {
 
 .content_wrap {
 	position: sticky;
+	position: -webkit-sticky;
 	top:0;
 	left: 0;
+	
+	&.opacity {
+		opacity: 0;
+	}
 }
 
 .header {
