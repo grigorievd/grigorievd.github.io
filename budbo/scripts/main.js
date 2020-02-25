@@ -57,10 +57,10 @@ $(document).ready(function() {
 		//header
 		if(scrolled >= $('.section.hero').offset().top) {
 			$('.header').addClass('fixed');
-			$('.content_wrap').hide();
+			// $('.content_wrap').hide();
 			if($('#lottie').length) anim.pause();
 		} else {
-			$('.content_wrap').show();
+			// $('.content_wrap').show();
 			$('.header').removeClass('fixed');
 			if($('#lottie').length) anim.play();
 		}
