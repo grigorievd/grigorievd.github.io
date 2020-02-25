@@ -2323,7 +2323,8 @@ a:hover {
 
 body {
   font: 16px/1.44 'Averta';
-  color: #3f414d; }
+  color: #3f414d;
+  background: white; }
 
 span, a {
   display: inline-block; }
@@ -2337,7 +2338,8 @@ img {
   transform-box: fill-box; }
 
 .scroller {
-  /* 	height: 100vh; */ }
+  /* 	height: 100vh; */
+  background: white; }
 
 .container {
   max-width: 1250px;
@@ -2420,7 +2422,8 @@ img {
 
 .section {
   padding: 70px 0;
-  position: relative; }
+  position: relative;
+  background: white; }
   .section::after {
     content: '';
     position: absolute;
@@ -2443,6 +2446,11 @@ img {
     line-height: 1.1;
     color: #1e2744;
     margin: 0 0 60px; }
+
+.content_wrap {
+  position: sticky;
+  top: 0;
+  left: 0; }
 
 .header {
   position: sticky;
@@ -2797,7 +2805,10 @@ patterns {
 
 .s-chain {
   padding: 140px 0 100px;
-  overflow: hidden; }
+  overflow: hidden;
+  /* 	border-bottom: 10px solid #e8eff5; */
+  box-shadow: inset 0px -20px 0px 0px #e8eff5;
+  z-index: 5; }
   .s-chain_container {
     max-width: 1000px;
     margin: 0 auto;
@@ -2839,11 +2850,13 @@ patterns {
     z-index: 2;
     /* 		padding-top: 100px; */ }
   .s-chain::after {
-    display: none; }
+    /* 		display: none; */
+    z-index: 10;
+    bottom: 20px; }
 
 .s-wallet {
   background: #e8eff5;
-  padding: 260px 0 260px;
+  padding: 100px 0 380px;
   z-index: 4;
   /* 	background: #e8eff5 url(../images/wallet.png) no-repeat center 0px; */ }
   .s-wallet_container {
@@ -2853,8 +2866,8 @@ patterns {
   .s-wallet_graphics {
     position: absolute;
     left: 54%;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 100px;
+    /* 		transform: translateY(-50%); */
     width: 45vw;
     height: 45vw;
     max-width: 600px;
@@ -2984,15 +2997,6 @@ patterns {
       font-size: 21px; }
       .socials li a.socials_insta::before {
         background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
-
-.s-blockchain_graphics #Fill-1 {
-  animation: pulse 2.5s infinite; }
-.s-blockchain_graphics #path-15_1_,
-.s-blockchain_graphics #path-13_1_,
-.s-blockchain_graphics #path-3_1_, .s-blockchain_graphics #path-5_1_, .s-blockchain_graphics #path-7_1_, .s-blockchain_graphics #path-9_1_, .s-blockchain_graphics #path-11_1_, .s-blockchain_graphics #path-17_1_ {
-  animation: pulse 2.5s 3s infinite; }
-.s-blockchain_graphics #Bg_11_, .s-blockchain_graphics #Bg_14_, .s-blockchain_graphics #Bg_2_, .s-blockchain_graphics #Bg_4_, .s-blockchain_graphics #Bg_6_, .s-blockchain_graphics #Bg_8_, .s-blockchain_graphics #Bg_9_, .s-blockchain_graphics #Bg_16_ {
-  animation: pulse 2.5s 2s infinite; }
 
 @keyframes pulse {
   0% {

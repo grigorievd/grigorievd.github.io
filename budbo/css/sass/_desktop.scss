@@ -3,6 +3,7 @@ $color-dark: #1e2744;
 body {
 	font: 16px/1.44 'Averta';
 	color: #3f414d;
+	background: white;
 }
 
 span, a {
@@ -21,6 +22,7 @@ img {
 
 .scroller {
 /* 	height: 100vh; */
+	background: white;
 }
 
 .container {
@@ -138,6 +140,7 @@ img {
 .section {
 	padding: 70px 0;
 	position: relative;
+	background: white;
 	
 	&::after {
 		content:'';
@@ -166,6 +169,12 @@ img {
 		color: $color-dark;
 		margin: 0 0 60px;
 	}
+}
+
+.content_wrap {
+	position: sticky;
+	top:0;
+	left: 0;
 }
 
 .header {
@@ -677,6 +686,8 @@ patterns {
 .s-chain {
 	padding: 140px 0 100px;
 	overflow: hidden;
+/* 	border-bottom: 10px solid #e8eff5; */
+	box-shadow: inset 0px -20px 0px 0px #e8eff5;
 	
 	&_container {
 		max-width: 1000px;
@@ -743,13 +754,16 @@ patterns {
 	}
 	
 	&::after {
-		display: none;
+/* 		display: none; */
+		z-index: 10;
+		bottom: 20px;
 	}
+	z-index:5;
 }
 
 .s-wallet {
 	background: #e8eff5; 
-	padding: 260px 0 260px;
+	padding: 100px 0 380px;
 	z-index: 4;
 /* 	background: #e8eff5 url(../images/wallet.png) no-repeat center 0px; */
 	
@@ -764,8 +778,8 @@ patterns {
 	&_graphics {
 		position: absolute;
 		left: 54%;
-		top:50%;
-		transform: translateY(-50%);
+		top:100px;
+/* 		transform: translateY(-50%); */
 		width: 45vw;
 		height: 45vw;
 		max-width: 600px;
@@ -958,17 +972,17 @@ patterns {
 
 .s-blockchain_graphics {
 	#Fill-1 {
-		animation: pulse 2.5s infinite ;
+		// animation: pulse 2.5s infinite ;
 	}
 
 	#path-15_1_,
 	#path-13_1_,
 	#path-3_1_,#path-5_1_,#path-7_1_,#path-9_1_,#path-11_1_,#path-17_1_ {
-		animation: pulse 2.5s 3s infinite ;
+		// animation: pulse 2.5s 3s infinite ;
 	}
 
 	#Bg_11_,#Bg_14_,#Bg_2_,#Bg_4_,#Bg_6_,#Bg_8_,#Bg_9_,#Bg_16_ {
-		animation: pulse 2.5s 2s infinite ;
+		// animation: pulse 2.5s 2s infinite ;
 	}
 }
 
