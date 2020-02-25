@@ -3140,6 +3140,8 @@ patterns {
       height: auto;
       padding: 110% 0 0;
       margin: 10px 0 40px 10%; }
+    .slider .slider_slides img, .slider .slider_slides video {
+      width: 50%; }
 
   .rombs span {
     width: 80px;
