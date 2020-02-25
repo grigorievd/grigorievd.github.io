@@ -19,6 +19,8 @@ $(document).ready(function() {
 		isTouchDevice = false;
 	}
 
+	var isMobile = $win.width() < 768;
+
 	//lottie
 	// var animation = ($(window).width() >= 768) ? animationData : animationMob;
 
@@ -97,42 +99,51 @@ $(document).ready(function() {
 	$(window).trigger('scroll');
 
 	//slider
-	var controller = new ScrollMagic.Controller();
+	if(!isMobile) {
+		var controller = new ScrollMagic.Controller();
 
-	var sliderTL = new TimelineMax({delay:0}).pause();
+		var sliderTL = new TimelineMax({delay:0}).pause();
 
-	sliderTL
-		// .staggerTo('.earth-diagram_globe',0.5,{className:"+=show"})
-		.addLabel('start')
-		.staggerTo($('.slider_content li'), 5, {
-	    	className:"+=show",
-	    	onUpdate: function(e) {
-	    		// console.log(e);
-	    		// $('.slider_content li').removeClass('show')
-	    	},
-	    	onStart: function(){
-	    		$('.slider_content li').removeClass('show')
-	    	}
-	    }, 5, 'start')
-	    .to($('.slider_slides'), 5, {
-	    	className:"+=show1"
-	    },'start')
-	    .to($('.slider_slides'), 5, {
-	    	className:"+=show2"
-	    },'start+=5')
-	    .to($('.slider_slides'), 5, {
-	    	className:"+=show3"
-	    },'start+=10')
+		sliderTL
+			// .staggerTo('.earth-diagram_globe',0.5,{className:"+=show"})
+			.addLabel('start')
+			.staggerTo($('.slider_content li'), 5, {
+		    	className:"+=show",
+		    	onUpdate: function(e) {
+		    		// console.log(e);
+		    		// $('.slider_content li').removeClass('show')
+		    	},
+		    	onStart: function(){
+		    		$('.slider_content li').removeClass('show')
+		    	}
+		    }, 5, 'start')
+		    .to($('.slider_slides'), 5, {
+		    	className:"+=show1"
+		    },'start')
+		    .to($('.slider_slides'), 5, {
+		    	className:"+=show2"
+		    },'start+=5')
+		    .to($('.slider_slides'), 5, {
+		    	className:"+=show3"
+		    },'start+=10')
 
-	var sliderSM = new ScrollMagic.Scene({triggerHook: 0, triggerElement: '.slider-trigger', duration: 4000})
-	.setPin('.slider-wrap')
-	.addTo(controller).on("progress", function (state) {
+		var sliderSM = new ScrollMagic.Scene({triggerHook: 0, triggerElement: '.slider-trigger', duration: 4000})
+		.setPin('.slider-wrap')
+		.addTo(controller).on("progress", function (state) {
 
-		// console.log(state.progress);
-		sliderTL.progress(state.progress);
-		// $('.s-hero_animated-graphics_scroll-progress span').width(state.progress*100+'%');
+			// console.log(state.progress);
+			sliderTL.progress(state.progress);
+			// $('.s-hero_animated-graphics_scroll-progress span').width(state.progress*100+'%');
 
-	})
+		})
+	} else {
+		$('.slider_content li').addClass('show');
+
+		$('.menu-button').click(function(){
+			$('.header_nav').toggleClass('opened');
+		})
+	}
+	
 	//slider
 
 	$(".s-chain_graphics").mousemove(function(e) {
