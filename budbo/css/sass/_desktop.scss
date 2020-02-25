@@ -427,7 +427,7 @@ patterns {
 .s-app {
 	margin: 0px 0 0;
 	padding: 100px 0 120px;
-	z-index: 3;
+	z-index: 7;
 }
 
 .slider {
@@ -551,6 +551,7 @@ patterns {
 			height: 100%;
 			width: auto;
 			display: block;
+			max-width: 100%;
 		}
 	}
 	
@@ -624,6 +625,7 @@ patterns {
 .s-blockchain {
 	background: #e8eff5;
 	padding: 130px 0;
+	z-index: 6;
 	
 	&_container {
 		width: 550px;
@@ -677,9 +679,11 @@ patterns {
 	&_graphics {
 		width: 55%;
 		height: 600px;
+		max-width: 800px;
 /* 		background: url(../images/BudboChart2.svg) no-repeat 70% center / contain; */
 		position: absolute;
-		right:0;
+/* 		right:0; */
+		left: 45%;
 	}
 }
 
@@ -851,6 +855,8 @@ patterns {
 	}
 	
 	.hero-patterns {
+		z-index: 0;
+		
 		div img {
 			width: 35px;
 		}
