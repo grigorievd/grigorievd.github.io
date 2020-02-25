@@ -140,7 +140,7 @@ $(document).ready(function() {
 		$('.slider_content li').addClass('show');
 
 		$('.menu-button').click(function(){
-			$('.header_nav').toggleClass('opened');
+			$('.header_nav, .header').toggleClass('opened');
 		})
 	}
 	

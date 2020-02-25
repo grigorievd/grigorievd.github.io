@@ -179,6 +179,7 @@ img {
 
 .header {
 	position: sticky;
+	position: -webkit-sticky;
 	top:0;
 	background: transparent;
 	z-index:10;
