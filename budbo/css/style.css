@@ -293,8 +293,8 @@ a:hover {
     height: 100%; }
     #lottie svg {
       position: relative;
-      height: 105% !important;
-      width: auto !important;
+      height: auto !important;
+      width: 100% !important;
       right: auto;
       left: 0vw;
       bottom: auto;
@@ -306,8 +306,11 @@ a:hover {
     @media (max-width: 767px) and (min-height: 700px) {
       #lottie svg {
         /* 				top:22vh; */ } }
-
 @media (max-width: 767px) {
+    #lottie.tall svg {
+      height: 100% !important;
+      width: auto !important; }
+
   .cd-headline.rotate-3 b {
     transition: opacity 0.3s linear; }
   .cd-headline.rotate-3 .active {

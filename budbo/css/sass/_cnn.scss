@@ -242,8 +242,8 @@
 		
 		svg {
 			position: relative;
-			height: 105% !important;
-			width: auto !important;
+			height: auto !important;
+			width: 100% !important;
 			right: auto;
 			left: 0vw;
 			bottom: auto;
@@ -255,7 +255,13 @@
 			
 			@media (min-height: 700px) {
 /* 				top:22vh; */
-				// margin: 23vh 0 0;
+			}
+		}
+		
+		&.tall {
+			svg {
+				height: 100% !important;
+				width: auto !important;
 			}
 		}
 	}

@@ -162,11 +162,18 @@ $(document).ready(function() {
 	} else {
 		$('.slider_content li').addClass('show');
 
-		$(window).resize(function(){
-			$('.content_wrap').height(window.innerHeight);
-		})
+		var lottieRatio = 1.778;
 
-		if($(window).height() > $(window).width()) $('.content_wrap').css('max-height',(window.innerHeight)+'px');
+		if(lottieRatio < $win.outerHeight()/$win.width()) {
+			$('#lottie').addClass('tall');
+
+			$(window).resize(function(){
+				$('.content_wrap').height(window.innerHeight);
+			})
+
+			if($(window).height() > $(window).width()) $('.content_wrap').css('max-height',(window.innerHeight)+'px');
+		}
+
 	}
 
 	$(window).trigger('resize');
