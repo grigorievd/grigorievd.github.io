@@ -154,6 +154,19 @@
 		  bottom: -10vh;	
 		  height: 123vh !important;	
 		}
+		
+		@media (max-width: 1280px) {
+		  width:auto !important;
+			height: 100% !important;
+			bottom:0;
+			right: auto;
+			left:50%;
+			transform: translateX(-48%) !important;
+		}
+		
+		@media (max-width: 1023px) {
+			transform: translateX(-50%) !important;
+		}
 	}
 }
 
@@ -235,10 +248,10 @@
 			left: 0vw;
 			bottom: auto;
 /* 			top:26vh; */
-			margin: 26vh 0 0;
+			margin: 0vh 0 0;
 			left: 50%;
 			bottom: 0px;
-			transform: translateX(-65%) !important;
+			transform: translateX(-50%) !important;
 			
 			@media (min-height: 700px) {
 /* 				top:22vh; */

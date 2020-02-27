@@ -231,6 +231,17 @@ a:hover {
       #lottie svg {
         bottom: -10vh;
         height: 123vh !important; } }
+    @media (max-width: 1280px) {
+      #lottie svg {
+        width: auto !important;
+        height: 100% !important;
+        bottom: 0;
+        right: auto;
+        left: 50%;
+        transform: translateX(-48%) !important; } }
+    @media (max-width: 1023px) {
+      #lottie svg {
+        transform: translateX(-50%) !important; } }
 
 @media (max-width: 767px) {
   .content {
@@ -288,10 +299,10 @@ a:hover {
       left: 0vw;
       bottom: auto;
       /* 			top:26vh; */
-      margin: 26vh 0 0;
+      margin: 0vh 0 0;
       left: 50%;
       bottom: 0px;
-      transform: translateX(-65%) !important; } }
+      transform: translateX(-50%) !important; } }
     @media (max-width: 767px) and (min-height: 700px) {
       #lottie svg {
         /* 				top:22vh; */
@@ -2345,6 +2356,9 @@ img {
   max-width: 1250px;
   /* 	padding: 0 5%; */
   margin: 0 auto; }
+  @media (max-width: 1280px) {
+    .container {
+      padding: 0 5%; } }
 
 .text p:not(:last-child) {
   margin: 0 0 22px; }
@@ -2539,7 +2553,8 @@ img {
   min-height: 800px;
   z-index: 2;
   padding: 150px 0 0;
-  margin: -110px 0 0; }
+  margin: -110px 0 0;
+  overflow: hidden; }
   .hero_container {
     padding: 100px 0; }
   .hero_title {
@@ -2650,18 +2665,18 @@ patterns {
   .slider_content {
     text-align: left;
     color: #a7adcc;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600; }
     .slider_content-inner {
-      width: 412px;
+      width: 380px;
       transition: 0.3s; }
       .slider_content-inner span {
         font-size: 14px;
         color: #3dddcd;
-        margin: 0px 0 20px;
+        margin: 0px 0 15px;
         display: block; }
     .slider_content li {
-      margin: 0 0 40px;
+      margin: 0 0 30px;
       transition: 0.3s;
       position: relative; }
       .slider_content li::after {
@@ -2706,6 +2721,8 @@ patterns {
       transform: translate3d(0, -100%, 0); }
     .slider_slides.show3 {
       transform: translate3d(0, -200%, 0); }
+    .slider_slides.show4 {
+      transform: translate3d(0, -300%, 0); }
     .slider_slides-wrap {
       position: absolute;
       height: 81%;
@@ -2946,7 +2963,7 @@ patterns {
   .footer_row {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     padding: 11px 0; }
   .footer .menu li:first-child {
     margin-left: 0; }
@@ -3025,12 +3042,61 @@ patterns {
     opacity: 1;
     transform: none; }
 
-@media (min-width: 768px) {
-  .slider_mockup-mobile, .menu-button, .mobile-logo {
-    display: none; } }
-@media (max-width: 767px) {
-  body {
-    font-size: 16px; }
+@media (max-width: 1280px) {
+  .header {
+    padding: 30px 2% 9px; }
+    .header_menu {
+      margin: 0; }
+      .header_menu li {
+        margin: 0 10px; }
+        .header_menu li a {
+          font-size: 14px; }
+
+  .menu_coin {
+    width: 50px;
+    height: 50px; }
+
+  .hero {
+    margin: -89px 0 0; }
+
+  .s-app_container {
+    padding: 0 5%; }
+
+  .slider_mockup {
+    min-width: 0px;
+    min-height: 0px;
+    width: 72.7vh; }
+
+  .slider_slides-wrap {
+    left: 23%; }
+
+  .slider_controls {
+    right: 13%; }
+
+  .hero_illustrations {
+    right: -9vw; }
+
+  .s-blockchain_graphics {
+    width: 50%;
+    left: 50%;
+    top: 10%; }
+
+  .s-wallet {
+    padding-bottom: 100px; }
+    .s-wallet_container {
+      max-width: 100%;
+      text-align: center; }
+    .s-wallet_graphics {
+      position: relative;
+      left: 0;
+      text-align: center;
+      margin: 60px auto 0;
+      max-height: 100%;
+      max-width: 100%;
+      top: 0; } }
+@media (max-width: 1023px) {
+  .hero {
+    margin: -70px 0 0; }
 
   .header {
     /* 		display: none; */
@@ -3041,6 +3107,7 @@ patterns {
     /* 		overflow: hidden; */
     background: transparent;
     transition: 0.7s;
+    padding: 9px 5% 9px;
     /* 		height: 73px; */ }
     .header.opened {
       /* 		  height: 100vh; */ }
@@ -3094,6 +3161,39 @@ patterns {
       width: 55px;
       height: 55px; }
 
+  .s-contacts .contact-form {
+    width: 100%; }
+
+  .s-app {
+    /* 		overflow: hidden; */ }
+    .s-app_container {
+      overflow: hidden; }
+
+  .slider {
+    padding: 25vh 0 80px; }
+
+  .slider_mockup {
+    width: 38.1vh;
+    height: 47vh; }
+
+  .section-title br {
+    display: none; }
+
+  .s-chain_container {
+    padding: 0 5%; }
+
+  .s-chain_graphics {
+    padding: 0 4%; } }
+@media (min-width: 768px) {
+  .slider_mockup-mobile {
+    display: none; } }
+@media (min-width: 1024px) {
+  .menu-button, .mobile-logo {
+    display: none; } }
+@media (max-width: 767px) {
+  body {
+    font-size: 16px; }
+
   .section-title {
     font-size: 30px;
     margin: 0 0 30px; }
@@ -3116,10 +3216,14 @@ patterns {
 
   .s-app {
     /* 		overflow: hidden; */ }
+    .s-app_container {
+      padding: 0;
+      overflow: visible; }
 
   .slider {
     display: block;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 80px 0 0; }
     .slider_left {
       width: auto; }
     .slider_right {
@@ -3137,12 +3241,14 @@ patterns {
       .slider_content-inner span {
         margin: 0 0 7px; }
     .slider_mockup {
-      width: 109%;
+      width: 110%;
       min-width: 0;
       min-height: 0;
       height: auto;
       padding: 110% 0 0;
       margin: 10px 0 40px 10%; }
+    .slider_slides-wrap {
+      left: 20%; }
     .slider .slider_slides img, .slider .slider_slides video {
       width: 50%; }
 
@@ -3153,28 +3259,30 @@ patterns {
       width: 110px;
       height: 110px; }
 
-  .s-blockchain_content {
-    width: 100%;
-    /* 			padding: 0 5%; */
-    text-align: center; }
-  .s-blockchain_container {
-    width: 100%;
-    /* 			padding: 0 5%; */ }
-  .s-blockchain .checklist-wrap {
-    display: block;
-    text-align: left; }
-  .s-blockchain .checklist {
-    width: 100% !important; }
-    .s-blockchain .checklist li {
+  .s-blockchain {
+    padding-bottom: 70px; }
+    .s-blockchain_content {
+      width: 100%;
+      /* 			padding: 0 5%; */
+      text-align: center; }
+    .s-blockchain_container {
+      width: 100%;
+      /* 			padding: 0 5%; */ }
+    .s-blockchain .checklist-wrap {
+      display: block;
+      text-align: left; }
+    .s-blockchain .checklist {
+      width: 100% !important; }
+      .s-blockchain .checklist li {
+        display: block; }
+    .s-blockchain_graphics {
+      position: relative;
+      width: 100%;
+      left: 0;
+      margin: 50px auto 0;
+      height: auto; }
+    .s-blockchain .container {
       display: block; }
-  .s-blockchain_graphics {
-    position: relative;
-    width: 100%;
-    left: 0;
-    margin: 20px auto 0;
-    height: auto; }
-  .s-blockchain .container {
-    display: block; }
 
   .s-chain_container {
     padding: 0 5%; }

@@ -1,12 +1,80 @@
-@media (min-width: 768px) {
-	.slider_mockup-mobile, .menu-button, .mobile-logo {
-		display: none;
+@media (max-width: 1280px) {
+	.header {
+		padding: 30px 2% 9px;
+		
+		&_menu {
+			margin: 0;
+			
+			li {
+				margin: 0 10px;
+				
+				a {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	
+	.menu_coin {
+		width: 50px;
+		height: 50px;
+	}
+	
+	.hero {
+		margin: -89px 0 0;
+	}
+	
+	.s-app_container {
+		padding: 0 5%;
+	}
+	
+	.slider_mockup {
+		min-width: 0px;
+    min-height: 0px;
+		width: 72.7vh;
+	}
+	
+	.slider_slides-wrap {
+		left: 23%;
+	}
+	
+	.slider_controls {
+		right: 13%;
+	}
+	
+	.hero_illustrations {
+		right: -9vw;
+	}
+	
+	.s-blockchain_graphics {
+		width: 50%;
+		left: 50%;
+		top:10%;
+	}
+	
+	.s-wallet {
+		padding-bottom: 100px;
+		
+		&_container {
+			max-width: 100%;
+			text-align: center;
+		}
+		
+		&_graphics {
+			position: relative;
+			left: 0;
+			text-align: center;
+			margin: 60px auto 0;
+			max-height: 100%;
+			max-width: 100%;
+			top:0;
+		}
 	}
 }
 
-@media (max-width: 767px) {
-	body {
-		font-size: 16px;
+@media (max-width: 1023px) {
+	.hero {
+	 margin: -70px 0 0;
 	}
 	
 	.header {
@@ -18,6 +86,7 @@
 /* 		overflow: hidden; */
 		background: transparent;
 		transition: 0.7s;
+		padding: 9px 5% 9px;
 /* 		height: 73px; */
 		
 		&.opened {
@@ -92,6 +161,59 @@
 		}
 	}
 	
+	.s-contacts .contact-form {
+		width: 100%;
+	}
+	
+	.s-app {
+/* 		overflow: hidden; */
+		
+		&_container {
+			overflow: hidden;
+		}
+	}
+	
+	.slider {
+		padding: 25vh 0 80px;
+	}
+	
+	.slider_mockup {
+		width: 38.1vh;
+    height: 47vh;
+	}
+	
+	.section-title {
+		br {
+			display: none;
+		}
+	}
+	
+	.s-chain_container {
+		padding: 0 5%;
+	}
+	
+	.s-chain_graphics {
+		padding: 0 4%;
+	}
+}
+
+@media (min-width: 768px) {
+	.slider_mockup-mobile {
+		display: none;
+	}
+}
+
+@media (min-width: 1024px) {
+	.menu-button, .mobile-logo {
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+	body {
+		font-size: 16px;
+	}
+	
 	.section-title {
 		font-size: 30px;
 		margin: 0 0 30px;
@@ -119,11 +241,17 @@
 	
 	.s-app {
 /* 		overflow: hidden; */
+		
+		&_container {
+			padding: 0;
+			overflow: visible;
+		}
 	}
 	
 	.slider {
 		display: block;
 		overflow: hidden;
+		padding: 80px 0 0;
 		
 		&_left {
 		  width: auto;	
@@ -156,12 +284,16 @@
 		}
 		
 		&_mockup {
-			width: 109%;
+			width: 110%;
 			min-width: 0;
 			min-height: 0;
 			height: auto;
 			padding: 110% 0 0;
 			margin: 10px 0 40px 10%;
+		}
+		
+		&_slides-wrap {
+			left: 20%;
 		}
 		
 		.slider_slides img, .slider_slides video {
@@ -183,6 +315,8 @@
 	}
 	
 	.s-blockchain {
+		padding-bottom: 70px;
+		
 		&_content {
 			width: 100%;
 /* 			padding: 0 5%; */
@@ -210,7 +344,7 @@
 			position: relative;
 			width: 100%;
 			left: 0;
-			margin: 20px auto 0;
+			margin: 50px auto 0;
 			height: auto;
 		}
 		

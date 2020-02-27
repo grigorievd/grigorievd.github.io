@@ -22,20 +22,34 @@ $(document).ready(function() {
 	var isMobile = $win.width() < 768;
 
 	//lottie
-	// var animation = ($(window).width() >= 768) ? animationData : animationMob;
+	function fetchJSONFile(path, callback) {
+	    var httpRequest = new XMLHttpRequest();
+	    httpRequest.onreadystatechange = function() {
+	        if (httpRequest.readyState === 4) {
+	            if (httpRequest.status === 200) {
+	                var data = JSON.parse(httpRequest.responseText);
+	                if (callback) callback(data);
+	            }
+	        }
+	    };
+	    httpRequest.open('GET', path);
+	    httpRequest.send(); 
+	}
 
-	var params = {
-	    container: document.getElementById('lottie'),
-	    renderer: 'svg',
-	    loop: true,
-	    autoplay: true,
-	    animationData: $('.lottie2').length ? animationData2 : animationData
-	};
+	var lottieData = isMobile ? 'mobile.json' : ($win.width() < 1024) ? 'ipad.json' : 'desktop.json',
+		anim;
 
-	// console.log(animationData2);
-	// console.log($('.lottie2').length);
+	fetchJSONFile('data/'+lottieData, function(data){
+	    var params = {
+		    container: document.getElementById('lottie'),
+		    renderer: 'svg',
+		    loop: true,
+		    autoplay: true,
+		    animationData: data
+		};
 
-	if($('#lottie').length) var anim = lottie.loadAnimation(params);
+		anim = lottie.loadAnimation(params);
+	});
 
 	//on scroll
 	$win.scroll(function(){
@@ -60,11 +74,11 @@ $(document).ready(function() {
 		if(scrolled >= $('.section.hero').offset().top) {
 			$('.header').addClass('fixed');
 			$('.content_wrap').addClass('opacity');
-			if($('#lottie').length) anim.pause();
+			if(anim) anim.pause();
 		} else {
 			$('.content_wrap').removeClass('opacity');
 			$('.header').removeClass('fixed');
-			if($('#lottie').length) anim.play();
+			if(anim) anim.play();
 		}
 
 		if(scrolled >= $('.section.hero').offset().top+100) {
@@ -132,6 +146,9 @@ $(document).ready(function() {
 		    .to($('.slider_slides'), 5, {
 		    	className:"+=show3"
 		    },'start+=10')
+		    .to($('.slider_slides'), 5, {
+		    	className:"+=show4"
+		    },'start+=15')
 
 		var sliderSM = new ScrollMagic.Scene({triggerHook: 0, triggerElement: '.slider-trigger', duration: 4000})
 		.setPin('.slider-wrap')
@@ -144,11 +161,11 @@ $(document).ready(function() {
 		})
 	} else {
 		$('.slider_content li').addClass('show');
-
-		$('.menu-button').click(function(){
-			$('.header_nav, .header').toggleClass('opened');
-		})
 	}
+
+	$('.menu-button').click(function(){
+		$('.header_nav, .header').toggleClass('opened');
+	})
 	
 	//slider
 

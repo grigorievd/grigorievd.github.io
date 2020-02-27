@@ -29,6 +29,10 @@ img {
 	max-width: 1250px;
 /* 	padding: 0 5%; */
 	margin:0 auto;
+	
+	@media (max-width: 1280px) {
+		padding: 0 5%;
+	}
 }
 
 .text {
@@ -298,6 +302,7 @@ img {
 	z-index: 2;
 	padding: 150px 0 0;
 	margin: -110px 0 0;
+	overflow: hidden;
 	
 	&_container {
 		padding: 100px 0;
@@ -457,23 +462,23 @@ patterns {
 	&_content {
 		text-align: left;
 		color:#a7adcc;
-		font-size: 24px;
+		font-size: 22px;
 		font-weight: 600;
 		
 		&-inner {
-			width: 412px;
+			width: 380px;
 			transition: 0.3s;
 			
 			span {
 				font-size: 14px;
 				color: #3dddcd;
-				margin: 0px 0 20px;
+				margin: 0px 0 15px;
 				display: block;
 			}
 		}
 		
 		li {
-			margin: 0 0 40px;
+			margin: 0 0 30px;
 			transition: 0.3s;
 			position: relative;
 			
@@ -542,6 +547,10 @@ patterns {
 		
 		&.show3 {
 			transform: translate3d(0,-200%,0);
+		}
+		
+		&.show4 {
+			transform: translate3d(0,-300%,0);
 		}
 		
 		&-wrap {
@@ -892,7 +901,7 @@ patterns {
 	&_row {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: center;
 		padding: 11px 0;
 	}
 	
