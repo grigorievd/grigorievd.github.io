@@ -161,7 +161,15 @@ $(document).ready(function() {
 		})
 	} else {
 		$('.slider_content li').addClass('show');
+
+		$(window).resize(function(){
+			$('.content_wrap').height(window.innerHeight);
+		})
+
+		if($(window).height() > $(window).width()) $('.content_wrap').css('max-height',(window.innerHeight)+'px');
 	}
+
+	$(window).trigger('resize');
 
 	$('.menu-button').click(function(){
 		$('.header_nav, .header').toggleClass('opened');

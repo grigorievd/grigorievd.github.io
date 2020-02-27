@@ -238,11 +238,11 @@
 	}
 	#lottie {
 		position: relative;
-		height: auto;
+		height: 100%;
 		
 		svg {
 			position: relative;
-			height: 100vh !important;
+			height: 100% !important;
 			width: auto !important;
 			right: auto;
 			left: 0vw;
