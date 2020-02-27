@@ -305,8 +305,7 @@ a:hover {
       transform: translateX(-50%) !important; } }
     @media (max-width: 767px) and (min-height: 700px) {
       #lottie svg {
-        /* 				top:22vh; */
-        margin: 23vh 0 0; } }
+        /* 				top:22vh; */ } }
 
 @media (max-width: 767px) {
   .cd-headline.rotate-3 b {
