@@ -75,6 +75,7 @@ $(document).ready(function() {
                 ease: Power3.easeInOut,
                 onComplete: function(){
                 	$('.scroller').css('transform','none');
+                	$('.preloader').remove();
                 }
             }, .4)
     }
