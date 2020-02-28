@@ -44,12 +44,40 @@ $(document).ready(function() {
 		    container: document.getElementById('lottie'),
 		    renderer: 'svg',
 		    loop: true,
-		    autoplay: true,
+		    autoplay: false,
 		    animationData: data
 		};
 
 		anim = lottie.loadAnimation(params);
+		// anim.addEventListener('data_ready', removeLoader);
+		anim.addEventListener('DOMLoaded', removeLoader);
 	});
+
+	//preloader
+	function removeLoader() {
+		var i = $(".scroller");
+		var f = $(".preloader");
+		var c = $(".preloader_coin");
+
+		new TimelineMax().set(i, {
+                y: 150,
+                onComplete: function(){
+                	anim.play();
+                }
+            }).to(c, 2, {
+                y: -$win.height(),
+                ease: Power3.easeInOut
+            }, .3).to(i, 2, {
+                y: 0,
+                ease: Power3.easeInOut
+            }, .4).to(f, 2, {
+                yPercent: -100,
+                ease: Power3.easeInOut,
+                onComplete: function(){
+                	$('.scroller').css('transform','none');
+                }
+            }, .4)
+    }
 
 	//on scroll
 	$win.scroll(function(){

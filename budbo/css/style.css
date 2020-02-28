@@ -2350,6 +2350,63 @@ img {
   transform-origin: center;
   transform-box: fill-box; }
 
+.preloader {
+  background: #e9f0f6;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50; }
+  .preloader_coin {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* 		transform: translate(-50%,-50%); */
+    margin: -50px 0 0 -50px;
+    /* 		box-shadow: 0px 50px 30px -10px rgba(0,0,0,1); */
+    border-radius: 50%;
+    /* 		transform: translate3d(0,700px,0); */
+    /* 		animation-name: coin;
+    		animation-timing-function: ease-in-out;
+    		animation-duration: 0.7s;
+    		transform-style: preserve-3d; */ }
+    .preloader_coin::after {
+      content: '';
+      width: 100px;
+      height: 1px;
+      display: block;
+      box-shadow: -30px 54px 32px 4px black;
+      transform: skewX(27deg);
+      z-index: -1;
+      position: relative;
+      border-radius: 50%;
+      top: -29px; }
+    .preloader_coin .coin {
+      animation-name: rotation;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-duration: 1.5s;
+      transform: rotateY(0deg);
+      transform-style: preserve-3d; }
+@keyframes coin {
+  0% {
+    transform: translate3d(0, 700px, 0); }
+  100% {
+    transform: translate3d(0, 0px, 0); } }
+@keyframes rotation {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg); }
+  20% {
+    transform: translateY(-20px) rotate3d(0, 1, 0, 180deg); }
+  40% {
+    transform: translateY(-20px) rotate3d(0, 1, 0, 360deg); }
+  60% {
+    transform: translateY(-20px) rotate3d(0, 1, 0, 360deg); }
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg); } }
 .scroller {
   /* 	height: 100vh; */
   background: white; }
@@ -2546,7 +2603,7 @@ img {
 .menu_coin {
   width: 72px;
   height: 72px;
-  background: url("../images/coin-icon.png") no-repeat center center/cover;
+  /* 		background: url('../images/coin-icon.png') no-repeat center center / cover; */
   vertical-align: bottom; }
 
 .hero {
@@ -2828,7 +2885,8 @@ patterns {
     /* 		background: url(../images/BudboChart2.svg) no-repeat 70% center / contain; */
     position: absolute;
     /* 		right:0; */
-    left: 45%; }
+    left: 45%;
+    margin: -100px 0 0; }
 
 .s-chain {
   padding: 140px 0 100px;
@@ -3026,6 +3084,45 @@ patterns {
       font-size: 21px; }
       .socials li a.socials_insta::before {
         background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+
+.menu_coin:hover .coin {
+  transform: rotate3d(0, 1, 0, 360deg); }
+
+.coin {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: 1s; }
+  .coin:hover {
+    /* 		transform: rotate3d(0, 1, 0, 360deg); */ }
+
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backface-visibility: hidden; }
+
+.heads {
+  background-color: green;
+  z-index: 2;
+  transform: rotateY(0deg);
+  color: transparent;
+  background: url("https://grigorievd.github.io/budbo/images/coin-icon.png") no-repeat center center/cover; }
+
+.tails {
+  background: url("https://grigorievd.github.io/budbo/images/coin-icon.png") no-repeat center center/cover;
+  z-index: 1;
+  transform: rotateY(180deg);
+  color: transparent; }
 
 @keyframes pulse {
   0% {

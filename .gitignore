@@ -2,3 +2,4 @@ assets/
 /scss/.sass-cache/
 .idea/
 creditclub/
+dist/
